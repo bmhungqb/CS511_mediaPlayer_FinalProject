@@ -112,9 +112,9 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.WindowFrame;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.InactiveCaptionText;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 2);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(728, 864);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1326, 864);
             this.guna2CustomGradientPanel1.TabIndex = 56;
             // 
             // guna2CustomGradientPanel8
@@ -126,8 +126,8 @@
             this.guna2CustomGradientPanel8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel8.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel8.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel8.Location = new System.Drawing.Point(545, 628);
-            this.guna2CustomGradientPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel8.Location = new System.Drawing.Point(553, 653);
+            this.guna2CustomGradientPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel8.Name = "guna2CustomGradientPanel8";
             this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(173, 194);
             this.guna2CustomGradientPanel8.TabIndex = 43;
@@ -162,7 +162,7 @@
             // 
             this.pictureBox7.Image = global::MediaPlayer.Properties.Resources.giacmotrua;
             this.pictureBox7.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(165, 103);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,8 +178,8 @@
             this.guna2CustomGradientPanel7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel7.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel7.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(365, 628);
-            this.guna2CustomGradientPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(373, 653);
+            this.guna2CustomGradientPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
             this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(173, 194);
             this.guna2CustomGradientPanel7.TabIndex = 43;
@@ -214,7 +214,7 @@
             // 
             this.pictureBox8.Image = global::MediaPlayer.Properties.Resources.ezpapa;
             this.pictureBox8.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(165, 103);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,8 +230,8 @@
             this.guna2CustomGradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel6.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(185, 628);
-            this.guna2CustomGradientPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(193, 653);
+            this.guna2CustomGradientPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(173, 194);
             this.guna2CustomGradientPanel6.TabIndex = 43;
@@ -266,7 +266,7 @@
             // 
             this.pictureBox6.Image = global::MediaPlayer.Properties.Resources.ngaydautien;
             this.pictureBox6.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(165, 103);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -282,8 +282,8 @@
             this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(3, 628);
-            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(11, 653);
+            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(173, 194);
             this.guna2CustomGradientPanel5.TabIndex = 42;
@@ -318,7 +318,7 @@
             // 
             this.pictureBox5.Image = global::MediaPlayer.Properties.Resources.nauanchoem;
             this.pictureBox5.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 103);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,7 +331,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Bookman Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(0, 592);
+            this.label14.Location = new System.Drawing.Point(8, 613);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 36);
@@ -347,8 +347,8 @@
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(417, 383);
-            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(422, 413);
+            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(186, 194);
             this.guna2CustomGradientPanel4.TabIndex = 41;
@@ -386,7 +386,7 @@
             this.guna2CirclePictureBox2.Image = global::MediaPlayer.Properties.Resources.dalab;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
             this.guna2CirclePictureBox2.Location = new System.Drawing.Point(30, 5);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(136, 117);
@@ -401,7 +401,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Bookman Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(1, 343);
+            this.label6.Location = new System.Drawing.Point(8, 374);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 36);
@@ -414,7 +414,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bookman Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(0, 170);
+            this.label5.Location = new System.Drawing.Point(8, 189);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(247, 36);
@@ -430,8 +430,8 @@
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(210, 383);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(215, 413);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(186, 194);
             this.guna2CustomGradientPanel3.TabIndex = 40;
@@ -469,7 +469,7 @@
             this.guna2CirclePictureBox1.Image = global::MediaPlayer.Properties.Resources.phuongly;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(30, 5);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(136, 117);
@@ -487,8 +487,8 @@
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(6, 383);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(11, 413);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(186, 194);
             this.guna2CustomGradientPanel2.TabIndex = 39;
@@ -523,7 +523,7 @@
             // 
             this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.pmc;
             this.pictureBox4.Location = new System.Drawing.Point(21, 6);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(147, 113);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -533,10 +533,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::MediaPlayer.Properties.Resources.mtp;
-            this.pictureBox3.Location = new System.Drawing.Point(373, 214);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(740, 236);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 51);
+            this.pictureBox3.Size = new System.Drawing.Size(103, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
@@ -544,10 +544,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.denvau;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 214);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 236);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 51);
+            this.pictureBox2.Size = new System.Drawing.Size(103, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -555,10 +555,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MediaPlayer.Properties.Resources.hieuthuhai;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 284);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 306);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -574,10 +574,10 @@
             this.button3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(53, 283);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(101, 306);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 52);
+            this.button3.Size = new System.Drawing.Size(320, 66);
             this.button3.TabIndex = 28;
             this.button3.Text = "HIEUTHUHAI";
             this.button3.UseVisualStyleBackColor = false;
@@ -593,10 +593,10 @@
             this.button2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(421, 214);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(788, 236);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 52);
+            this.button2.Size = new System.Drawing.Size(320, 66);
             this.button2.TabIndex = 26;
             this.button2.Text = "Sơn Tùng MTP";
             this.button2.UseVisualStyleBackColor = false;
@@ -612,10 +612,10 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(49, 213);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(101, 236);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 52);
+            this.button1.Size = new System.Drawing.Size(320, 66);
             this.button1.TabIndex = 22;
             this.button1.Text = "Đen Vâu";
             this.button1.UseVisualStyleBackColor = false;
@@ -627,9 +627,9 @@
             this.guna2PictureBox1.Image = global::MediaPlayer.Properties.Resources.music_lifestyle_leisure_entertainment_concept;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(729, 159);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1322, 182);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 18;
             this.guna2PictureBox1.TabStop = false;
@@ -640,9 +640,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "main";
-            this.Size = new System.Drawing.Size(725, 864);
+            this.Size = new System.Drawing.Size(1305, 864);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2CustomGradientPanel8.ResumeLayout(false);
