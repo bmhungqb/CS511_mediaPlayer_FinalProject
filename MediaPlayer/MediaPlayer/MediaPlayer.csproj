@@ -66,6 +66,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uctacc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctacc.Designer.cs">
+      <DependentUpon>uctacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uctsearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctsearch.Designer.cs">
+      <DependentUpon>uctsearch.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +94,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="uctacc.resx">
+      <DependentUpon>uctacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctsearch.resx">
+      <DependentUpon>uctsearch.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,6 +161,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dalabcoverm-1610428601923348372171.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\510861_find_magnifying glass_search_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5402435_account_profile_user_avatar_man_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-06-15 113634.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

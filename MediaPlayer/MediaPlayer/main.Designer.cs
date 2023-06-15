@@ -474,7 +474,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources.maxresdefault__3_;
+            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources.giacmotrua;
             this.pictureBox7.Location = new System.Drawing.Point(7, 10);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(247, 159);
@@ -484,7 +484,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::MediaPlayer.Properties.Resources._1200x1200bf_60;
+            this.pictureBox8.Image = global::MediaPlayer.Properties.Resources.ezpapa;
             this.pictureBox8.Location = new System.Drawing.Point(10, 10);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(247, 159);
@@ -494,7 +494,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::MediaPlayer.Properties.Resources.maxresdefault__2_;
+            this.pictureBox6.Image = global::MediaPlayer.Properties.Resources.ngaydautien;
             this.pictureBox6.Location = new System.Drawing.Point(6, 10);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(247, 159);
@@ -504,7 +504,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::MediaPlayer.Properties.Resources.maxresdefault__1_;
+            this.pictureBox5.Image = global::MediaPlayer.Properties.Resources.nauanchoem;
             this.pictureBox5.Location = new System.Drawing.Point(7, 10);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(247, 159);
@@ -516,7 +516,7 @@
             // 
             this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2CirclePictureBox2.Image = global::MediaPlayer.Properties.Resources.dalabcoverm_1610428601923348372171;
+            this.guna2CirclePictureBox2.Image = global::MediaPlayer.Properties.Resources.dalab;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
             this.guna2CirclePictureBox2.Location = new System.Drawing.Point(45, 8);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
@@ -531,7 +531,7 @@
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2CirclePictureBox1.Image = global::MediaPlayer.Properties.Resources.image_d55287749f;
+            this.guna2CirclePictureBox1.Image = global::MediaPlayer.Properties.Resources.phuongly;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(45, 8);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -544,7 +544,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.maxresdefault;
+            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.pmc;
             this.pictureBox4.Location = new System.Drawing.Point(32, 9);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(221, 174);
@@ -554,7 +554,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::MediaPlayer.Properties.Resources.mmw_4_956;
+            this.pictureBox3.Image = global::MediaPlayer.Properties.Resources.mtp;
             this.pictureBox3.Location = new System.Drawing.Point(560, 329);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(88, 79);
@@ -564,7 +564,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.dsc07770_1654923515827557389390;
+            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.denvau;
             this.pictureBox2.Location = new System.Drawing.Point(16, 329);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(88, 79);
@@ -574,7 +574,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MediaPlayer.Properties.Resources.channels4_profile;
+            this.pictureBox1.Image = global::MediaPlayer.Properties.Resources.hieuthuhai;
             this.pictureBox1.Location = new System.Drawing.Point(15, 437);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(88, 79);
