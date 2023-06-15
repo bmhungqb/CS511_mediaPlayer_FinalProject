@@ -10,3 +10,10 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_Media
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.CopyComplete
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.exe
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.pdb
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.Form1.resources
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.Player.resources
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Interop.WMPLib.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\Interop.WMPLib.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.ResolveComReference.cache

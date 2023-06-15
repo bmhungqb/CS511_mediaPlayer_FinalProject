@@ -15,6 +15,8 @@ namespace MediaPlayer
         public Form1()
         {
             InitializeComponent();
+            Player player = new Player();
+            panel.Controls.Add(player);
         }
     }
 }

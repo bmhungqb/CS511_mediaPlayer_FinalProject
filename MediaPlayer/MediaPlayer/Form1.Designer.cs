@@ -28,13 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel.Location = new System.Drawing.Point(0, 445);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1344, 117);
+            this.panel.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.ClientSize = new System.Drawing.Size(1344, 562);
+            this.Controls.Add(this.panel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel panel;
     }
 }
 
