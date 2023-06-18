@@ -47,10 +47,10 @@
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.SystemColors.WindowFrame;
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.SystemColors.InactiveCaptionText;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 2);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1326, 864);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1385, 864);
             this.guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // panel1
@@ -168,7 +168,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.ForeColor = System.Drawing.Color.LightGray;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::MediaPlayer.Properties.Resources._510861_find_magnifying_glass_search_zoom_icon;
+            this.guna2TextBox1.IconLeft = global::MediaPlayer.Properties.Resources.find;
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(65, 65);
             this.guna2TextBox1.Location = new System.Drawing.Point(27, 16);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -188,7 +188,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uctsearch";
-            this.Size = new System.Drawing.Size(1326, 483);
+            this.Size = new System.Drawing.Size(1385, 533);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
