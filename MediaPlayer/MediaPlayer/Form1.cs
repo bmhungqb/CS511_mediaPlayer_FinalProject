@@ -18,100 +18,125 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
-        private void home1_Click(object sender, EventArgs e)//home
+        private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
-            panel_acc.Visible = false;
+            panel1.Width = 1385;
+            panel1.Location = new Point(58, -1);
+            panel2.Width = 52;
+            panel3.Width = 52;
+            panel2.Height = 50;
+            thunho();
+
             panel1.Controls.Clear();
             main home = new main();
             panel1.Controls.Add(home);
             home1.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
         }
-        private void find_Click(object sender, EventArgs e)//search
+        void morong()
         {
-            panel_acc.Visible = false;
+            panel2.Height = 145;
+            panel2.Location = new Point(0, 42);
+            panel4.Location = new Point(0, 193);
+            panel3.Location = new Point(0, 323);
+        }
+        void thunho()
+        {
+            panel2.Location = new Point(0, 42);
+            panel4.Location = new Point(0, 83);
+            panel3.Location = new Point(0, 211);
+        }
+        private void playlist_b_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel2.Height = 50;
+            thunho();
+            playlist_b.FillColor = SystemColors.AppWorkspace;
+            find.FillColor = SystemColors.WindowFrame;
+            home1.FillColor = SystemColors.WindowFrame;
+
+            playlist Playlist = new playlist();
+            panel1.Controls.Add(Playlist);
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            if (panel2.Width != 160)
+            {
+                pictureBox1.Image = Properties.Resources.reduce;
+                panel1.Location = new Point(165, -1);
+                panel1.Width = 1278;
+                panel2.Width = 160;
+                panel4.Width = 160;
+                panel3.Width = 160;
+            }
+            if (panel2.Height != 145)//mở rộng
+                morong();
+            else
+            {
+                thunho();
+                panel2.Height = 50;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panel2.Height = 50;
+            thunho();
+            if (panel2.Width == 160)//thu nhỏ
+            {
+                pictureBox1.Image = Properties.Resources.expand;
+                panel1.Width = 1385;
+                panel1.Location = new Point(58, -1);
+                panel2.Width = 52;
+                panel4.Width = 52;
+                panel3.Width = 52;
+            }
+            else //expand
+            {
+                pictureBox1.Image = Properties.Resources.reduce;
+                panel1.Location = new Point(165, -1);
+                panel1.Width = 1278;
+                panel2.Width = 160;
+                panel4.Width = 160;
+                panel3.Width = 160;
+            }
+        }
+
+        private void home1_Click_1(object sender, EventArgs e)
+        {
+            panel2.Height = 50;
+            thunho();
+            panel1.Controls.Clear();
+            main home = new main();
+            panel1.Controls.Add(home);
+            home1.FillColor = SystemColors.AppWorkspace;
+            find.FillColor = SystemColors.WindowFrame;
+            playlist_b.FillColor = SystemColors.WindowFrame;
+        }
+
+        private void find_Click(object sender, EventArgs e)
+        {
+            panel2.Height = 50;
+            thunho();
             panel1.Controls.Clear();
             uctsearch uctsearch = new uctsearch();
             panel1.Controls.Add(uctsearch);
             find.FillColor = SystemColors.AppWorkspace;
             home1.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
         }
 
-        private void playlist_b_Click(object sender, EventArgs e)//playlist
+        private void guna2Button1_Click(object sender, EventArgs e)//profile
         {
-            panel_acc.Visible = false;
-            panel1.Controls.Clear();
-            playlist_b.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             home1.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
-        }
-        private void create_b_Click(object sender, EventArgs e)//create
-        {
-            panel_acc.Visible = false;
-            panel1.Controls.Clear();
-            create_b.FillColor = SystemColors.AppWorkspace;
-            find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
-            home1.FillColor = SystemColors.WindowFrame;
-        }
-        private void guna2Button3_Click(object sender, EventArgs e)//account
-        {
+            guna2Button1.FillColor = SystemColors.AppWorkspace;
             panel1.Controls.Clear();
             uctacc uctacc = new uctacc();
             panel1.Controls.Add(uctacc);
-            home1.FillColor = SystemColors.WindowFrame;
-            find.FillColor = SystemColors.WindowFrame;
-            playlist_b.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
-            panel_acc.Visible = true;
-
-        }
-        private void mediaPlayer_Load_1(object sender, EventArgs e)
-        {
-            panel_acc.Visible = false;
-            panel1.Controls.Clear();
-            main home = new main();
-            panel1.Controls.Add(home);
-            home1.FillColor = SystemColors.AppWorkspace;
-            find.FillColor = SystemColors.WindowFrame;
-            playlist_b.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
-        }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)//profile
-        {
-            guna2GradientButton1.FillColor2 = Color.DarkRed; 
-            guna2GradientButton2.FillColor2 = Color.IndianRed;
-            guna2GradientButton3.FillColor2 = Color.IndianRed;
-            panel1.Controls.Clear();
-            uctacc uctacc = new uctacc();
-            panel1.Controls.Add(uctacc);
-            home1.FillColor = SystemColors.WindowFrame;
-            find.FillColor = SystemColors.WindowFrame;
-            playlist_b.FillColor = SystemColors.WindowFrame;
-            create_b.FillColor = SystemColors.WindowFrame;
-            panel_acc.Visible = true;
-        }
-
-        private void guna2GradientButton2_Click(object sender, EventArgs e)//settings
-        {
-            guna2GradientButton2.FillColor2 = Color.DarkRed;
-            guna2GradientButton1.FillColor2 = Color.IndianRed;
-            guna2GradientButton3.FillColor2 = Color.IndianRed;
-            panel1.Controls.Clear();
-        }
-
-        private void guna2GradientButton3_Click(object sender, EventArgs e)//account
-        {
-            guna2GradientButton3.FillColor2 = Color.DarkRed;
-            guna2GradientButton2.FillColor2 = Color.IndianRed;
-            guna2GradientButton1.FillColor2 = Color.IndianRed;
-            panel1.Controls.Clear();
         }
     }
 }
