@@ -56,3 +56,8 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\Interop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.ResolveComReference.cache
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Leaf.xNet.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\xNet.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Leaf.xNet.xml
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Newtonsoft.Json.xml

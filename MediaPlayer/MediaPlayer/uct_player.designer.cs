@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uct_player));
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_song = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_singer = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sliderMusic = new Guna.UI2.WinForms.Guna2TrackBar();
             this.lblPlayCurrentTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPlayDuration = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -59,27 +59,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2HtmlLabel1
+            // lbl_song
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(114, 32);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(66, 21);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Cuối tuần";
+            this.lbl_song.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_song.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_song.Location = new System.Drawing.Point(114, 32);
+            this.lbl_song.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_song.Name = "lbl_song";
+            this.lbl_song.Size = new System.Drawing.Size(66, 21);
+            this.lbl_song.TabIndex = 1;
+            this.lbl_song.Text = "Cuối tuần";
             // 
-            // guna2HtmlLabel2
+            // lbl_singer
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(114, 62);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(121, 17);
-            this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.Text = "Nguyên Hà, Minh Min";
+            this.lbl_singer.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_singer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_singer.Location = new System.Drawing.Point(114, 62);
+            this.lbl_singer.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_singer.Name = "lbl_singer";
+            this.lbl_singer.Size = new System.Drawing.Size(121, 17);
+            this.lbl_singer.TabIndex = 2;
+            this.lbl_singer.Text = "Nguyên Hà, Minh Min";
             // 
             // sliderMusic
             // 
@@ -281,8 +281,8 @@
             this.Controls.Add(this.lblPlayCurrentTime);
             this.Controls.Add(this.sliderMusic);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.lbl_singer);
+            this.Controls.Add(this.lbl_song);
             this.Controls.Add(this.guna2PictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_player";
@@ -305,8 +305,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_song;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_singer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2TrackBar sliderMusic;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPlayCurrentTime;

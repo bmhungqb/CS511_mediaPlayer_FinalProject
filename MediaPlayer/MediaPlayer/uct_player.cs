@@ -10,22 +10,33 @@ using System.Windows.Forms;
 using System.Net.Http;
 using System.Windows;
 using WMPLib;
+using MediaPlayer.API;
 namespace MediaPlayer
 {
     public partial class uct_player : UserControl
     {
+        MediaPlayer.API.APIMusic apiMusic = new MediaPlayer.API.APIMusic();
         public uct_player()
         {
             InitializeComponent();
-            playMusic(musicPath,"Cuối tuần");
+            //playMusic(musicPath,"Cuối tuần");
         }
-        public void playMusic(string url,string name)
+        public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
-            player.URL = url;
+            int minutes = totalSeconds / 60;
+            int seconds = totalSeconds % 60;
+
+            string formattedTime = $"{minutes}:{seconds.ToString("D2")}";
+
+            return formattedTime;
+        }
+        public void playMusic(Song song)
+        {
+            player.URL = apiMusic.getAudio(song.id);
             player.PlayStateChange += Player_PlayStateChange;
-            guna2HtmlLabel1.Text = name;
-            player.controls.pause();
-            btn_Play.Image = Image.FromFile(img_btn_stop);
+            lblPlayDuration.Text = ConvertToMinutesAndSeconds(int.Parse(song.duration));
+            lbl_song.Text = song.name;
+            btn_Play.Image = Image.FromFile(img_btn_play);
         }
         private void Player_PlayStateChange(int NewState)
         {
@@ -33,7 +44,6 @@ namespace MediaPlayer
             {
                 TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
-                lblPlayDuration.Text = player.controls.currentItem.durationString;
             }
         }
         #region define player
@@ -44,7 +54,6 @@ namespace MediaPlayer
         #endregion
         private void toggleMusic(object sender, EventArgs e)
         {
-            lblPlayDuration.Text = player.controls.currentItem.durationString;
             if (player.playState ==  WMPLib.WMPPlayState.wmppsPlaying)
             {
                 player.controls.pause();

@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MediaPlayer.API;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,11 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
+        uct_player player = new uct_player();
+        public void testPlayMusic(Song song)
+        {
+            player.playMusic(song);
+        }
         private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
             panel1.Width = 1385;
@@ -34,7 +40,6 @@ namespace MediaPlayer
             find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
             //Add player into pnl_Player
-            uct_player player = new uct_player();
             pnl_Player.Controls.Add(player);
         }
         void morong()

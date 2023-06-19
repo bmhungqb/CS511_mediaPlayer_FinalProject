@@ -34,30 +34,31 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.name_change = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label4 = new System.Windows.Forms.Label();
-            this.order = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.search_textbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.order = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutSong = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.edit_detail.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,6 +67,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.flowLayoutSong);
             this.guna2CustomGradientPanel1.Controls.Add(this.edit_detail);
             this.guna2CustomGradientPanel1.Controls.Add(this.label7);
             this.guna2CustomGradientPanel1.Controls.Add(this.label6);
@@ -171,6 +173,15 @@
             this.name_change.Size = new System.Drawing.Size(309, 60);
             this.name_change.TabIndex = 0;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Location = new System.Drawing.Point(8, 45);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(173, 177);
+            this.pictureBox6.TabIndex = 76;
+            this.pictureBox6.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -190,12 +201,25 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1077, 388);
+            this.label7.Location = new System.Drawing.Point(1110, 388);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 26);
             this.label7.TabIndex = 91;
             this.label7.Text = "Time";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(614, 388);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 26);
+            this.label6.TabIndex = 90;
+            this.label6.Text = "Singer";
             // 
             // label5
             // 
@@ -231,82 +255,6 @@
             this.label4.Size = new System.Drawing.Size(24, 26);
             this.label4.TabIndex = 87;
             this.label4.Text = "#";
-            // 
-            // order
-            // 
-            this.order.AutoRoundedCorners = true;
-            this.order.BackColor = System.Drawing.Color.Transparent;
-            this.order.BorderColor = System.Drawing.Color.Transparent;
-            this.order.BorderRadius = 17;
-            this.order.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.order.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.order.FillColor = System.Drawing.Color.Gainsboro;
-            this.order.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.order.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.order.Font = new System.Drawing.Font("Times New Roman", 18F);
-            this.order.ForeColor = System.Drawing.Color.Black;
-            this.order.ItemHeight = 30;
-            this.order.Items.AddRange(new object[] {
-            "Title",
-            "Artist",
-            "Date Added"});
-            this.order.Location = new System.Drawing.Point(1136, 310);
-            this.order.Name = "order";
-            this.order.Size = new System.Drawing.Size(177, 36);
-            this.order.TabIndex = 3;
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.name);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox1);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Thistle;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Violet;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.HotPink;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(-5, -8);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1370, 286);
-            this.guna2CustomGradientPanel2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(293, 195);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(258, 24);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Number of songs, Total time";
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(266, 79);
-            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(286, 109);
-            this.name.TabIndex = 72;
-            this.name.Text = "Name";
-            this.name.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(8, 45);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(173, 177);
-            this.pictureBox6.TabIndex = 76;
-            this.pictureBox6.TabStop = false;
             // 
             // search_textbox
             // 
@@ -353,6 +301,29 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // order
+            // 
+            this.order.AutoRoundedCorners = true;
+            this.order.BackColor = System.Drawing.Color.Transparent;
+            this.order.BorderColor = System.Drawing.Color.Transparent;
+            this.order.BorderRadius = 17;
+            this.order.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.order.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.order.FillColor = System.Drawing.Color.Gainsboro;
+            this.order.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.order.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.order.Font = new System.Drawing.Font("Times New Roman", 18F);
+            this.order.ForeColor = System.Drawing.Color.Black;
+            this.order.ItemHeight = 30;
+            this.order.Items.AddRange(new object[] {
+            "Title",
+            "Artist",
+            "Date Added"});
+            this.order.Location = new System.Drawing.Point(1136, 310);
+            this.order.Name = "order";
+            this.order.Size = new System.Drawing.Size(177, 36);
+            this.order.TabIndex = 3;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -363,6 +334,23 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.name);
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox1);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DimGray;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Thistle;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Violet;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.HotPink;
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(-5, -8);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1370, 286);
+            this.guna2CustomGradientPanel2.TabIndex = 0;
             // 
             // pictureBox7
             // 
@@ -398,6 +386,33 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(293, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(258, 24);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "Number of songs, Total time";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(266, 79);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(286, 109);
+            this.name.TabIndex = 72;
+            this.name.Text = "Name";
+            this.name.Click += new System.EventHandler(this.label1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -409,18 +424,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // flowLayoutSong
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(614, 388);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 26);
-            this.label6.TabIndex = 90;
-            this.label6.Text = "Singer";
+            this.flowLayoutSong.AutoScroll = true;
+            this.flowLayoutSong.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutSong.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutSong.Location = new System.Drawing.Point(0, 432);
+            this.flowLayoutSong.Name = "flowLayoutSong";
+            this.flowLayoutSong.Size = new System.Drawing.Size(1371, 543);
+            this.flowLayoutSong.TabIndex = 93;
             // 
             // uct_playlist
             // 
@@ -428,17 +440,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "uct_playlist";
-            this.Size = new System.Drawing.Size(1365, 979);
+            this.Size = new System.Drawing.Size(1371, 975);
             this.Load += new System.EventHandler(this.uct_playlist_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.edit_detail.ResumeLayout(false);
             this.edit_detail.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
-            this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -473,5 +485,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutSong;
     }
 }

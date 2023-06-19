@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MediaPlayer.API;
 namespace MediaPlayer
 {
     public partial class uct_playlist : UserControl
     {
+        MediaPlayer.API.APIMusic apiMusic = new APIMusic();
         public uct_playlist(string y)
         {
             InitializeComponent();
@@ -68,11 +69,19 @@ namespace MediaPlayer
 
         private void uct_playlist_Load(object sender, EventArgs e)
         {
-            uct_song song = new uct_song();
-            song.Location = new Point(13, 437);
-            //panel1.Controls.Clear();
-            guna2CustomGradientPanel1.Controls.Add(song);
-            song.BringToFront();
+            //uct_song song = new uct_song();
+            //song.Location = new Point(13, 437);
+            ////panel1.Controls.Clear();
+            //guna2CustomGradientPanel1.Controls.Add(song);
+            //song.BringToFront();
+            DS_SearchMusic listSong = apiMusic.searchMusic("Đen", "song", 10);
+            int id = 0;
+            foreach(Song song in listSong.Songs)
+            {
+                uct_song new_Song = new uct_song(id,song);
+                flowLayoutSong.Controls.Add(new_Song);
+                id++;
+            }
         }
     }
 }
