@@ -13,7 +13,6 @@ using System.Windows.Forms;
 using WMPLib;
 using xNet;
 using static MediaPlayer.API.APIMusic;
-using static MediaPlayer.API.ZingMp3;
 namespace MediaPlayer
 {
     public partial class Form1 : Form
