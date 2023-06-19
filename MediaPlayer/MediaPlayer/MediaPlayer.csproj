@@ -64,6 +64,12 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="uct_player.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_player.designer.cs">
+      <DependentUpon>uct_player.cs</DependentUpon>
+    </Compile>
     <Compile Include="playlist.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_player.resx">
+      <DependentUpon>uct_player.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="playlist.resx">
       <DependentUpon>playlist.cs</DependentUpon>
@@ -245,6 +254,76 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352132_next_skip_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352132_next_skip_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352133_previous_skip_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4634534_arrow_looping_music_repeat_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6518717_audio_communication_microphone_music_sound_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6518717_audio_communication_microphone_music_sound_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6792164_list_multimedia_music_play_playlist_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6792164_list_multimedia_music_play_playlist_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7252723_volume_low_speaker_sound_music_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9025718_heart_straight_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9025718_heart_straight_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9104257_shuffle_random_mix_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\351752985_936385717576463_3672978110271268401_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352073_circle_fill_play_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3669309_pause_circle_filled_ic_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

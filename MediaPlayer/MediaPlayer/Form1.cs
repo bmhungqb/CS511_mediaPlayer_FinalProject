@@ -33,6 +33,9 @@ namespace MediaPlayer
             home1.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
+            //Add player into pnl_Player
+            uct_player player = new uct_player();
+            pnl_Player.Controls.Add(player);
         }
         void morong()
         {
