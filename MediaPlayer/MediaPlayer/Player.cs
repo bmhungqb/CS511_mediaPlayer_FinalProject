@@ -17,17 +17,23 @@ namespace MediaPlayer
         public Player()
         {
             InitializeComponent();
-            player.URL = musicPath;
-            player.PlayStateChange += Player_PlayStateChange;
-            player.controls.pause();
+            playMusic(musicPath,"Cuối tuần");
         }
-
+        public void playMusic(string url,string name)
+        {
+            player.URL = url;
+            player.PlayStateChange += Player_PlayStateChange;
+            guna2HtmlLabel1.Text = name;
+            player.controls.pause();
+            btn_Play.Image = Image.FromFile(img_btn_stop);
+        }
         private void Player_PlayStateChange(int NewState)
         {
             if (NewState == (int)WMPLib.WMPPlayState.wmppsPlaying)
             {
                 TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
+                lblPlayDuration.Text = player.controls.currentItem.durationString;
             }
         }
         #region define player

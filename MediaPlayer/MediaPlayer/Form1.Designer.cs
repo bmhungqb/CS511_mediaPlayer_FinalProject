@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
-            // 
-            // panel
-            // 
-            this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(0, 620);
-            this.panel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1460, 110);
-            this.panel.TabIndex = 0;
             // 
             // Form1
             // 
@@ -46,7 +36,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1460, 730);
-            this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
@@ -57,8 +46,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel panel;
     }
 }
 

@@ -17,3 +17,6 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_Media
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\Interop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.ResolveComReference.cache
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\bin\Debug\xNet.dll
