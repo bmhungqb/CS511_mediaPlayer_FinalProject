@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_playlist = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_artist = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_song = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_all = new Guna.UI2.WinForms.Guna2Button();
+            this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutSearch.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,145 +50,147 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btn_playlist);
+            this.panel1.Controls.Add(this.btn_artist);
+            this.panel1.Controls.Add(this.btn_song);
+            this.panel1.Controls.Add(this.btn_all);
             this.panel1.Location = new System.Drawing.Point(14, 77);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1297, 50);
             this.panel1.TabIndex = 10;
             // 
-            // guna2Button4
+            // btn_playlist
             // 
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 22;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2Button4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(422, 2);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(152, 46);
-            this.guna2Button4.TabIndex = 13;
-            this.guna2Button4.Text = "Playlists";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btn_playlist.AutoRoundedCorners = true;
+            this.btn_playlist.BackColor = System.Drawing.Color.Transparent;
+            this.btn_playlist.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_playlist.BorderRadius = 22;
+            this.btn_playlist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_playlist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_playlist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_playlist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_playlist.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_playlist.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_playlist.ForeColor = System.Drawing.Color.White;
+            this.btn_playlist.Location = new System.Drawing.Point(422, 2);
+            this.btn_playlist.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_playlist.Name = "btn_playlist";
+            this.btn_playlist.Size = new System.Drawing.Size(152, 46);
+            this.btn_playlist.TabIndex = 13;
+            this.btn_playlist.Text = "Playlists";
+            this.btn_playlist.Click += new System.EventHandler(this.btn_Click_Type_Search);
             // 
-            // guna2Button3
+            // btn_artist
             // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 22;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2Button3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(281, 1);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(128, 46);
-            this.guna2Button3.TabIndex = 12;
-            this.guna2Button3.Text = "Artists";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btn_artist.AutoRoundedCorners = true;
+            this.btn_artist.BackColor = System.Drawing.Color.Transparent;
+            this.btn_artist.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_artist.BorderRadius = 22;
+            this.btn_artist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_artist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_artist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_artist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_artist.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_artist.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_artist.ForeColor = System.Drawing.Color.White;
+            this.btn_artist.Location = new System.Drawing.Point(281, 1);
+            this.btn_artist.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_artist.Name = "btn_artist";
+            this.btn_artist.Size = new System.Drawing.Size(128, 46);
+            this.btn_artist.TabIndex = 12;
+            this.btn_artist.Text = "Artists";
+            this.btn_artist.Click += new System.EventHandler(this.btn_Click_Type_Search);
             // 
-            // guna2Button2
+            // btn_song
             // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 22;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(143, 2);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(128, 46);
-            this.guna2Button2.TabIndex = 11;
-            this.guna2Button2.Text = "Songs";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btn_song.AutoRoundedCorners = true;
+            this.btn_song.BackColor = System.Drawing.Color.Transparent;
+            this.btn_song.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_song.BorderRadius = 22;
+            this.btn_song.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_song.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_song.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_song.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_song.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_song.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_song.ForeColor = System.Drawing.Color.White;
+            this.btn_song.Location = new System.Drawing.Point(143, 2);
+            this.btn_song.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_song.Name = "btn_song";
+            this.btn_song.Size = new System.Drawing.Size(128, 46);
+            this.btn_song.TabIndex = 11;
+            this.btn_song.Text = "Songs";
+            this.btn_song.Click += new System.EventHandler(this.btn_Click_Type_Search);
             // 
-            // guna2Button1
+            // btn_all
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(4, 2);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(128, 46);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "All";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_all.AutoRoundedCorners = true;
+            this.btn_all.BackColor = System.Drawing.Color.Transparent;
+            this.btn_all.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_all.BorderRadius = 22;
+            this.btn_all.Checked = true;
+            this.btn_all.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_all.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_all.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_all.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_all.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_all.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.ForeColor = System.Drawing.Color.White;
+            this.btn_all.Location = new System.Drawing.Point(4, 2);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(128, 46);
+            this.btn_all.TabIndex = 10;
+            this.btn_all.Text = "All";
+            this.btn_all.Click += new System.EventHandler(this.btn_Click_Type_Search);
             // 
-            // guna2TextBox1
+            // tb_search
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.White;
-            this.guna2TextBox1.BorderRadius = 25;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "What do you want to listen to?";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::MediaPlayer.Properties.Resources.find;
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(65, 65);
-            this.guna2TextBox1.Location = new System.Drawing.Point(4, 15);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(495, 52);
-            this.guna2TextBox1.TabIndex = 0;
-            this.guna2TextBox1.Click += new System.EventHandler(this.guna2TextBox1_Click);
+            this.tb_search.AutoRoundedCorners = true;
+            this.tb_search.BackColor = System.Drawing.Color.Transparent;
+            this.tb_search.BorderColor = System.Drawing.Color.White;
+            this.tb_search.BorderRadius = 25;
+            this.tb_search.BorderThickness = 2;
+            this.tb_search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_search.DefaultText = "";
+            this.tb_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_search.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.tb_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_search.Font = new System.Drawing.Font("Times New Roman", 15.75F);
+            this.tb_search.ForeColor = System.Drawing.Color.LightGray;
+            this.tb_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_search.IconLeft = global::MediaPlayer.Properties.Resources.find;
+            this.tb_search.IconLeftSize = new System.Drawing.Size(65, 65);
+            this.tb_search.Location = new System.Drawing.Point(4, 15);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.PasswordChar = '\0';
+            this.tb_search.PlaceholderForeColor = System.Drawing.Color.White;
+            this.tb_search.PlaceholderText = "What do you want to listen to?";
+            this.tb_search.SelectedText = "";
+            this.tb_search.Size = new System.Drawing.Size(495, 52);
+            this.tb_search.TabIndex = 0;
+            this.tb_search.Click += new System.EventHandler(this.guna2TextBox1_Click);
+            this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
             // 
-            // flowLayoutPanel1
+            // flowLayoutSearch
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.flowLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1404, 577);
-            this.flowLayoutPanel1.TabIndex = 11;
+            this.flowLayoutSearch.AutoScroll = true;
+            this.flowLayoutSearch.BackColor = System.Drawing.SystemColors.GrayText;
+            this.flowLayoutSearch.Controls.Add(this.guna2CustomGradientPanel1);
+            this.flowLayoutSearch.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutSearch.Name = "flowLayoutSearch";
+            this.flowLayoutSearch.Size = new System.Drawing.Size(1404, 577);
+            this.flowLayoutSearch.TabIndex = 11;
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.panel2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DimGray;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.WindowFrame;
@@ -265,12 +267,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutSearch);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uctsearch";
             this.Size = new System.Drawing.Size(1404, 577);
             this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutSearch.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -279,13 +281,13 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox tb_search;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Button btn_playlist;
+        private Guna.UI2.WinForms.Guna2Button btn_artist;
+        private Guna.UI2.WinForms.Guna2Button btn_song;
+        private Guna.UI2.WinForms.Guna2Button btn_all;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
