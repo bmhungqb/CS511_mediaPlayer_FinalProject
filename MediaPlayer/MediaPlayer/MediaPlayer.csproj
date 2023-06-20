@@ -353,5 +353,8 @@
   <ItemGroup>
     <None Include="Resources\216437_back_arrow_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tym_active.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

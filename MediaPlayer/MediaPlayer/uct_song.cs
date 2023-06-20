@@ -54,8 +54,8 @@ namespace MediaPlayer
 
         private void pt_thumb_Click(object sender, EventArgs e)
         {
-            uct_player player = new uct_player();
-            player.playMusic(song);
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.testPlayMusic(song);
         }
     }
 }

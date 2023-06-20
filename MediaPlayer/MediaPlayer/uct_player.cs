@@ -11,6 +11,8 @@ using System.Net.Http;
 using System.Windows;
 using WMPLib;
 using MediaPlayer.API;
+using Guna.UI2.WinForms;
+
 namespace MediaPlayer
 {
     public partial class uct_player : UserControl
@@ -37,6 +39,8 @@ namespace MediaPlayer
             lblPlayDuration.Text = ConvertToMinutesAndSeconds(int.Parse(song.duration));
             lbl_song.Text = song.name;
             btn_Play.Image = Image.FromFile(img_btn_play);
+            lbl_singer.Text = song.artist;
+            pt_thumb.Image = apiMusic.getImage(song.thumb);
         }
         private void Player_PlayStateChange(int NewState)
         {
@@ -81,6 +85,12 @@ namespace MediaPlayer
         private void sliderMusic_Scroll(object sender, ScrollEventArgs e)
         {
             player.controls.currentPosition = sliderMusic.Value;
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Guna2ImageButton btn = sender as Guna2ImageButton;
+            btn.Checked = !btn.Checked;
         }
     }
 }
