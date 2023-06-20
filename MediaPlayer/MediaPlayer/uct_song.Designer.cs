@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uct_song));
             this.lb_id = new System.Windows.Forms.Label();
             this.lb_song = new System.Windows.Forms.Label();
             this.lb_time = new System.Windows.Forms.Label();
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_album = new System.Windows.Forms.Label();
             this.btn_tym = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pt_thumb = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pt_thumb = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // lb_id
@@ -116,48 +112,36 @@
             // 
             // pt_thumb
             // 
+            this.pt_thumb.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.pt_thumb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pt_thumb.HoverState.Image = global::MediaPlayer.Properties.Resources.play;
+            this.pt_thumb.HoverState.ImageSize = new System.Drawing.Size(100, 100);
             this.pt_thumb.Image = global::MediaPlayer.Properties.Resources.ezpapa;
+            this.pt_thumb.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pt_thumb.ImageRotate = 0F;
+            this.pt_thumb.ImageSize = new System.Drawing.Size(100, 100);
             this.pt_thumb.Location = new System.Drawing.Point(61, 12);
             this.pt_thumb.Name = "pt_thumb";
+            this.pt_thumb.PressedState.ImageSize = new System.Drawing.Size(100, 100);
             this.pt_thumb.Size = new System.Drawing.Size(100, 73);
-            this.pt_thumb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pt_thumb.TabIndex = 1;
-            this.pt_thumb.TabStop = false;
+            this.pt_thumb.TabIndex = 10;
             this.pt_thumb.Click += new System.EventHandler(this.pt_thumb_Click);
-            this.pt_thumb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(61, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 73);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pt_thumb_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave_1);
             // 
             // uct_song
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.pt_thumb);
             this.Controls.Add(this.btn_tym);
             this.Controls.Add(this.lb_album);
             this.Controls.Add(this.lb_singer);
             this.Controls.Add(this.lb_time);
             this.Controls.Add(this.lb_song);
             this.Controls.Add(this.lb_id);
-            this.Controls.Add(this.pt_thumb);
-            this.Controls.Add(this.pictureBox2);
             this.Name = "uct_song";
             this.Size = new System.Drawing.Size(1329, 100);
             this.Load += new System.EventHandler(this.uct_song_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,12 +150,11 @@
         #endregion
 
         private System.Windows.Forms.Label lb_id;
-        private System.Windows.Forms.PictureBox pt_thumb;
         private System.Windows.Forms.Label lb_song;
         private System.Windows.Forms.Label lb_time;
         private System.Windows.Forms.Label lb_singer;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_album;
         private Guna.UI2.WinForms.Guna2ImageButton btn_tym;
+        private Guna.UI2.WinForms.Guna2ImageButton pt_thumb;
     }
 }

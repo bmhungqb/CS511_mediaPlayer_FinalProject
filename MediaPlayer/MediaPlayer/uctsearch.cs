@@ -125,6 +125,7 @@ namespace MediaPlayer
         {
             if(e.KeyCode == Keys.Enter)
             {
+                if (tb_search.Text == "") return;
                 SearchMusic();
             }
         }

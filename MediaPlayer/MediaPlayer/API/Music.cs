@@ -59,7 +59,7 @@ namespace MediaPlayer.API
             dynamic response = JsonConvert.DeserializeObject(json);
 
             JArray dataArray = response.data;
-            if (dataArray.Count > 0 && dataArray[0] is JObject firstDataObject && firstDataObject.ContainsKey("song"))
+            if (dataArray != null && dataArray.Count > 0 && dataArray[0] is JObject firstDataObject && firstDataObject.ContainsKey("song"))
             {
                 foreach (JObject item in dataArray[0]["song"])
                 {
@@ -74,7 +74,7 @@ namespace MediaPlayer.API
                     songList.Add(song);
                 }
             }
-            if (dataArray.Count > 1 && dataArray[1] is JObject secondDataObject && secondDataObject.ContainsKey("artist"))
+            if (dataArray != null && dataArray.Count > 1 && dataArray[1] is JObject secondDataObject && secondDataObject.ContainsKey("artist"))
             {
                 foreach (JObject item in dataArray[1]["artist"])
                 {

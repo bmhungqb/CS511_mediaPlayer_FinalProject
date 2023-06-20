@@ -216,6 +216,7 @@
             // 
             this.pt_phuongly.BackColor = System.Drawing.Color.Transparent;
             this.pt_phuongly.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pt_phuongly.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_phuongly.Image = global::MediaPlayer.Properties.Resources.phuongly;
             this.pt_phuongly.ImageRotate = 0F;
             this.pt_phuongly.Location = new System.Drawing.Point(30, 5);
@@ -274,6 +275,7 @@
             // 
             // pt_hot_hit
             // 
+            this.pt_hot_hit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_hot_hit.Image = global::MediaPlayer.Properties.Resources.pmc;
             this.pt_hot_hit.Location = new System.Drawing.Point(21, 6);
             this.pt_hot_hit.Margin = new System.Windows.Forms.Padding(2);
@@ -329,6 +331,7 @@
             // 
             // pt_justatee
             // 
+            this.pt_justatee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_justatee.Image = global::MediaPlayer.Properties.Resources.ezpapa;
             this.pt_justatee.Location = new System.Drawing.Point(8, 10);
             this.pt_justatee.Margin = new System.Windows.Forms.Padding(2);
@@ -397,6 +400,7 @@
             // 
             // pt_den
             // 
+            this.pt_den.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_den.Image = global::MediaPlayer.Properties.Resources.nauanchoem;
             this.pt_den.Location = new System.Drawing.Point(8, 10);
             this.pt_den.Margin = new System.Windows.Forms.Padding(2);
@@ -454,6 +458,7 @@
             // 
             this.pt_dalab.BackColor = System.Drawing.Color.Transparent;
             this.pt_dalab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pt_dalab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_dalab.Image = global::MediaPlayer.Properties.Resources.dalab;
             this.pt_dalab.ImageRotate = 0F;
             this.pt_dalab.Location = new System.Drawing.Point(30, 5);
