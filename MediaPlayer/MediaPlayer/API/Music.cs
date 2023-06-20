@@ -26,6 +26,7 @@ namespace MediaPlayer.API
     public class Song
     {
         public string position { get; set; }
+        public string totalListen { get; set; }
         public string id { get; set; }  
         public string artist { get; set; }
         public string name { get; set; }
@@ -40,7 +41,11 @@ namespace MediaPlayer.API
         public string thumb { get; set; }
         public string id { get; set; }
     }
-
+    public class Lyrics
+    {
+        public List<string> lyric { get; set; }
+        public List<int> time { get; set; }
+    }
     public class APIMusic
     {
         #region
@@ -155,6 +160,52 @@ namespace MediaPlayer.API
             }
             return urlAudio;
         }
+        public int convertStringIntoSecond(string str)
+        {
+            string[] components = str.Trim('[', ']').Split(':', '.');
+
+            int minutes = int.Parse(components[0]);
+            int seconds = int.Parse(components[1]);
+            return minutes * 60 + seconds;
+        }
+        public Lyrics getLyrics(string urlLyrics)
+        {
+            Lyrics lyrics = new Lyrics();
+            List<string> lr = new List<string>();
+            List<int> time = new List<int>();   
+            using (HttpRequest http = new HttpRequest())
+            {
+                try
+                {
+                    // Send a GET request to download the lyrics
+                    HttpResponse response = http.Get(urlLyrics);
+
+                    // Check if the request was successful
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        byte[] utf8Bytes = Encoding.Default.GetBytes(response.ToString());
+                        string res = Encoding.UTF8.GetString(utf8Bytes);
+                        using (StringReader reader = new StringReader(res))
+                        {
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                lr.Add(line.Split(']')[1]);
+                                time.Add(convertStringIntoSecond(line.Split(' ')[0]));
+                            }
+                        }
+                        lyrics.lyric = lr;
+                        lyrics.time = time;
+                        return lyrics;  
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+            return lyrics;
+        }
 
         public List<Song> getChartRealtime()
         {
@@ -179,6 +230,7 @@ namespace MediaPlayer.API
                         thumb = item["thumbnail"].ToString(),
                         lyric = item["lyric"].ToString(),
                         position = item["position"].ToString(),
+                        totalListen = item["total"].ToString(),
                     };
                     if(item.ContainsKey("album"))
                     {
