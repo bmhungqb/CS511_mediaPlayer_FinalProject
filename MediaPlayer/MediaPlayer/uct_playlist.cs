@@ -18,55 +18,12 @@ namespace MediaPlayer
             InitializeComponent();
             name.Text = y;
         }
-        private void pictureBox5_Click(object sender, EventArgs e)//find
-        {
-            pictureBox5.Visible=false;
-            search_textbox.Visible = true;
-            pictureBox5.SendToBack();
-            search_textbox.BringToFront();
-        }
-        private void search_textbox_IconLeftClick(object sender, EventArgs e)
-        {
-            pictureBox5.Visible = true;
-            search_textbox.Visible = false;
-            search_textbox.Text = "Search in playlist";
-            pictureBox5.BringToFront();
-            search_textbox.SendToBack();
-        }
-        private void search_textbox_DoubleClick(object sender, EventArgs e)
-        {
-            search_textbox.Text = string.Empty;
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)//edit details
-        {
-            edit_detail.Visible = true;
-            edit_detail.Size = new Size(501, 264);
-            edit_detail.Location = new Point(370, 229);
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            edit_detail.Visible = false ;
-            name.Text = name_change.Text;
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            edit_detail.Visible = false;
-        }
         public void OpenUserControlB()
         {
             // Thực hiện các hành động cần thiết khi mở UserControlB
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)//back
-        {
-            guna2CustomGradientPanel1.Controls.Clear();
-            this.Hide();
-        }
-
+       
         private void uct_playlist_Load(object sender, EventArgs e)
         {
             //uct_song song = new uct_song();
@@ -75,13 +32,47 @@ namespace MediaPlayer
             //guna2CustomGradientPanel1.Controls.Add(song);
             //song.BringToFront();
             DS_SearchMusic listSong = apiMusic.searchMusic("Đen", "song", 10);
-            int id = 0;
-            foreach(Song song in listSong.Songs)
+            int id = 1;
+            int time=0;
+            foreach (Song song in listSong.Songs)
             {
                 uct_song new_Song = new uct_song(id,song);
-                flowLayoutSong.Controls.Add(new_Song);
+                flowLayoutPanel1.Controls.Add(new_Song);
                 id++;
+                time += int.Parse(song.duration);
             }
+            int minutes = time / 60;
+            int seconds = time % 60;
+
+            string formattedTime = $"{minutes} min {seconds.ToString("D2")} secs ";
+            label3.Text = id.ToString() + " songs,  " + formattedTime;
+        }
+
+        private void search_textbox_IconLeftClick_1(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = true;
+            search_textbox.Visible = false;
+            search_textbox.Text = "Search in playlist";
+            pictureBox5.BringToFront();
+            search_textbox.SendToBack();
+        }
+
+        private void search_textbox_DoubleClick_1(object sender, EventArgs e)
+        {
+            search_textbox.Text = string.Empty;
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = false;
+            search_textbox.Visible = true;
+            pictureBox5.SendToBack();
+            search_textbox.BringToFront();
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)//back
+        {
+            this.Hide();
         }
     }
 }

@@ -45,55 +45,55 @@
             // lb_id
             // 
             this.lb_id.AutoSize = true;
-            this.lb_id.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_id.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_id.ForeColor = System.Drawing.Color.White;
-            this.lb_id.Location = new System.Drawing.Point(5, 34);
+            this.lb_id.Location = new System.Drawing.Point(3, 26);
             this.lb_id.Name = "lb_id";
-            this.lb_id.Size = new System.Drawing.Size(28, 31);
+            this.lb_id.Size = new System.Drawing.Size(32, 37);
             this.lb_id.TabIndex = 0;
             this.lb_id.Text = "1";
             // 
             // lb_song
             // 
             this.lb_song.AutoSize = true;
-            this.lb_song.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_song.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_song.ForeColor = System.Drawing.Color.White;
             this.lb_song.Location = new System.Drawing.Point(179, 21);
             this.lb_song.Name = "lb_song";
-            this.lb_song.Size = new System.Drawing.Size(100, 21);
+            this.lb_song.Size = new System.Drawing.Size(119, 25);
             this.lb_song.TabIndex = 2;
             this.lb_song.Text = "Song\'s name";
             // 
             // lb_time
             // 
             this.lb_time.AutoSize = true;
-            this.lb_time.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_time.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_time.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lb_time.Location = new System.Drawing.Point(1169, 37);
             this.lb_time.Name = "lb_time";
-            this.lb_time.Size = new System.Drawing.Size(44, 21);
+            this.lb_time.Size = new System.Drawing.Size(53, 25);
             this.lb_time.TabIndex = 4;
             this.lb_time.Text = "Time";
             // 
             // lb_singer
             // 
             this.lb_singer.AutoSize = true;
-            this.lb_singer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_singer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_singer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lb_singer.Location = new System.Drawing.Point(179, 55);
             this.lb_singer.Name = "lb_singer";
-            this.lb_singer.Size = new System.Drawing.Size(45, 17);
+            this.lb_singer.Size = new System.Drawing.Size(51, 20);
             this.lb_singer.TabIndex = 5;
             this.lb_singer.Text = "Singer";
             // 
             // lb_album
             // 
             this.lb_album.AutoSize = true;
-            this.lb_album.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_album.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_album.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lb_album.Location = new System.Drawing.Point(570, 38);
             this.lb_album.Name = "lb_album";
-            this.lb_album.Size = new System.Drawing.Size(99, 21);
+            this.lb_album.Size = new System.Drawing.Size(119, 25);
             this.lb_album.TabIndex = 7;
             this.lb_album.Text = "Album name";
             // 

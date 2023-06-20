@@ -26,11 +26,6 @@ namespace MediaPlayer
         }
         private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
-            panel1.Width = 1385;
-            panel1.Location = new Point(58, -1);
-            panel2.Width = 52;
-            panel3.Width = 52;
-            panel2.Height = 50;
             thunho();
 
             panel1.Controls.Clear();
@@ -39,21 +34,24 @@ namespace MediaPlayer
             home1.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
+            acc.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.WindowFrame;
             //Add player into pnl_Player
             pnl_Player.Controls.Add(player);
         }
         void morong()
         {
-            panel2.Height = 145;
-            panel2.Location = new Point(0, 42);
-            panel4.Location = new Point(0, 193);
-            panel3.Location = new Point(0, 323);
+            panel2.Height = 148;
+            panel2.Location = new Point(0, 2);
+            panel4.Location = new Point(0, 149);
+            panel3.Location = new Point(0, 280);
         }
         void thunho()
         {
-            panel2.Location = new Point(0, 42);
-            panel4.Location = new Point(0, 83);
-            panel3.Location = new Point(0, 211);
+            panel2.Height = 38;
+            panel2.Location = new Point(0, 2);
+            panel4.Location = new Point(0, 40);
+            panel3.Location = new Point(0, 170);
         }
         private void playlist_b_Click_1(object sender, EventArgs e)
         {
@@ -63,28 +61,19 @@ namespace MediaPlayer
             playlist_b.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             home1.FillColor = SystemColors.WindowFrame;
-
+            acc.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.WindowFrame;
             playlist Playlist = new playlist();
             panel1.Controls.Add(Playlist);
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            if (panel2.Width != 160)
-            {
-                pictureBox1.Image = Properties.Resources.reduce;
-                panel1.Location = new Point(165, -1);
-                panel1.Width = 1278;
-                panel2.Width = 160;
-                panel4.Width = 160;
-                panel3.Width = 160;
-            }
-            if (panel2.Height != 145)//mở rộng
+            if (panel2.Height != 148)//mở rộng
                 morong();
             else
             {
                 thunho();
-                panel2.Height = 50;
             }
         }
 
@@ -92,24 +81,7 @@ namespace MediaPlayer
         {
             panel2.Height = 50;
             thunho();
-            if (panel2.Width == 160)//thu nhỏ
-            {
-                pictureBox1.Image = Properties.Resources.expand;
-                panel1.Width = 1385;
-                panel1.Location = new Point(58, -1);
-                panel2.Width = 52;
-                panel4.Width = 52;
-                panel3.Width = 52;
-            }
-            else //expand
-            {
-                pictureBox1.Image = Properties.Resources.reduce;
-                panel1.Location = new Point(165, -1);
-                panel1.Width = 1278;
-                panel2.Width = 160;
-                panel4.Width = 160;
-                panel3.Width = 160;
-            }
+            
         }
 
         private void home1_Click_1(object sender, EventArgs e)
@@ -122,6 +94,8 @@ namespace MediaPlayer
             home1.FillColor = SystemColors.AppWorkspace;
             find.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
+            acc.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.WindowFrame;
         }
 
         private void find_Click(object sender, EventArgs e)
@@ -134,6 +108,8 @@ namespace MediaPlayer
             find.FillColor = SystemColors.AppWorkspace;
             home1.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
+            acc.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.WindowFrame;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)//profile
@@ -141,10 +117,22 @@ namespace MediaPlayer
             find.FillColor = SystemColors.WindowFrame;
             home1.FillColor = SystemColors.WindowFrame;
             playlist_b.FillColor = SystemColors.WindowFrame;
-            guna2Button1.FillColor = SystemColors.AppWorkspace;
+            acc.FillColor = SystemColors.AppWorkspace;
+            setting.FillColor = SystemColors.WindowFrame;
             panel1.Controls.Clear();
             uctacc uctacc = new uctacc();
             panel1.Controls.Add(uctacc);
+        }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+            find.FillColor = SystemColors.WindowFrame;
+            home1.FillColor = SystemColors.WindowFrame;
+            playlist_b.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.AppWorkspace;
+            acc.FillColor = SystemColors.WindowFrame;
+            panel1.Controls.Clear();
+            uctacc uctacc = new uctacc();
         }
     }
 }
