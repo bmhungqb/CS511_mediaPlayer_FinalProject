@@ -31,6 +31,12 @@ namespace MediaPlayer
 
             return formattedTime;
         }
+        List<Song> currentPlaylist = new List<Song>();
+        int orderSong = 0;
+        public void SetCurrentPlaylist(List<Song> listSongs)
+        {
+            currentPlaylist = listSongs;
+        }
         public void playMusic(Song song)
         {
             player.URL = apiMusic.getAudio(song.id);
@@ -90,6 +96,34 @@ namespace MediaPlayer
         {
             Guna2ImageButton btn = sender as Guna2ImageButton;
             btn.Checked = !btn.Checked;
+        }
+        private void btn_next_back_Click(object sender, EventArgs e)
+        {
+            Guna2ImageButton button = sender as Guna2ImageButton;
+            if (button.Name == "btn_back")
+            {
+                if (currentPlaylist != null)
+                {
+                    if (orderSong == 0)
+                    {
+                        orderSong = currentPlaylist.Count - 1;
+                    }
+                    else orderSong--;
+                    playMusic(currentPlaylist[orderSong]);
+                }
+            }
+            else if (button.Name == "btn_next")
+            {
+                if (currentPlaylist != null)
+                {
+                    if (orderSong + 1 == currentPlaylist.Count)
+                    {
+                        orderSong = 0;
+                    }
+                    else orderSong++;
+                    playMusic(currentPlaylist[orderSong]);
+                }
+            }
         }
     }
 }

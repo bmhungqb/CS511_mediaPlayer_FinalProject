@@ -42,8 +42,8 @@
             this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_next = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Play = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pt_thumb = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -212,39 +212,41 @@
             this.guna2ImageButton4.Size = new System.Drawing.Size(32, 32);
             this.guna2ImageButton4.TabIndex = 22;
             // 
-            // guna2ImageButton3
+            // btn_back
             // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_32;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.Image = global::MediaPlayer.Properties.Resources._352133_previous_skip_icon1;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(650, 19);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_321;
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.TabIndex = 21;
+            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_32;
+            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_back.Image = global::MediaPlayer.Properties.Resources._352133_previous_skip_icon1;
+            this.btn_back.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_back.ImageRotate = 0F;
+            this.btn_back.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_back.Location = new System.Drawing.Point(650, 19);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_321;
+            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_back.Size = new System.Drawing.Size(32, 32);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.Click += new System.EventHandler(this.btn_next_back_Click);
             // 
-            // guna2ImageButton2
+            // btn_next
             // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton2.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Image = global::MediaPlayer.Properties.Resources._352132_next_skip_icon__1_1;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(766, 19);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton2.TabIndex = 20;
+            this.btn_next.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_next.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
+            this.btn_next.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_next.Image = global::MediaPlayer.Properties.Resources._352132_next_skip_icon__1_1;
+            this.btn_next.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_next.ImageRotate = 0F;
+            this.btn_next.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_next.Location = new System.Drawing.Point(766, 19);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
+            this.btn_next.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_next.Size = new System.Drawing.Size(32, 32);
+            this.btn_next.TabIndex = 20;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_back_Click);
             // 
             // btn_Play
             // 
@@ -304,8 +306,8 @@
             this.Controls.Add(this.guna2ImageButton6);
             this.Controls.Add(this.guna2ImageButton5);
             this.Controls.Add(this.guna2ImageButton4);
-            this.Controls.Add(this.guna2ImageButton3);
-            this.Controls.Add(this.guna2ImageButton2);
+            this.Controls.Add(this.btn_back);
+            this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_Play);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.sliderVolume);
@@ -336,8 +338,8 @@
         private System.Windows.Forms.Timer trackTime;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btn_Play;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_next;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_back;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;

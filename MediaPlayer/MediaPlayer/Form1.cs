@@ -24,6 +24,10 @@ namespace MediaPlayer
         {
             player.playMusic(song);
         }
+        public void setCurrentListSong(List<Song> listSongs)
+        {
+            player.SetCurrentPlaylist(listSongs);
+        }
         private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
             thunho();

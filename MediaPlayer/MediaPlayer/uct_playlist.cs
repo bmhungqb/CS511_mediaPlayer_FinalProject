@@ -27,7 +27,9 @@ namespace MediaPlayer
        
         private void uct_playlist_Load(object sender, EventArgs e)
         {
+            mediaPlayer main = this.ParentForm as mediaPlayer;
             DS_SearchMusic res_searchMusic = apiMusic.searchMusic(name.Text, "artist,song", 10);
+            main.setCurrentListSong(res_searchMusic.Songs);
             int id = 0;
             int time=0;
             foreach (Song song in res_searchMusic.Songs)

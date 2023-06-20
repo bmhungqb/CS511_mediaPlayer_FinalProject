@@ -142,3 +142,4 @@ D:\UIT\nam2\HK2\C#\project1\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlay
 D:\UIT\nam2\HK2\C#\project1\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.CopyComplete
 D:\UIT\nam2\HK2\C#\project1\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.exe
 D:\UIT\nam2\HK2\C#\project1\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.pdb
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.AboutBox1.resources
