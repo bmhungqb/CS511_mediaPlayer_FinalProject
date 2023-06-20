@@ -113,9 +113,29 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _352132_next_skip_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("352132_next_skip_icon (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _352133_previous_skip_icon {
             get {
                 object obj = ResourceManager.GetObject("352133_previous_skip_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _352133_previous_skip_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("352133_previous_skip_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +163,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4634534_arrow_looping_music_repeat_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("4634534_arrow_looping_music_repeat_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6518717_audio_communication_microphone_music_sound_icon {
             get {
                 object obj = ResourceManager.GetObject("6518717_audio_communication_microphone_music_sound_icon", resourceCulture);
@@ -156,6 +186,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap _6518717_audio_communication_microphone_music_sound_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("6518717_audio_communication_microphone_music_sound_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6518717_audio_communication_microphone_music_sound_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("6518717_audio_communication_microphone_music_sound_icon (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +223,29 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6792164_list_multimedia_music_play_playlist_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("6792164_list_multimedia_music_play_playlist_icon (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7252723_volume_low_speaker_sound_music_icon {
             get {
                 object obj = ResourceManager.GetObject("7252723_volume_low_speaker_sound_music_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7252723_volume_low_speaker_sound_music_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("7252723_volume_low_speaker_sound_music_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +276,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap _9104257_shuffle_random_mix_icon {
             get {
                 object obj = ResourceManager.GetObject("9104257_shuffle_random_mix_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9104257_shuffle_random_mix_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("9104257_shuffle_random_mix_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +493,166 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_ic_back_32 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_back_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_back_321 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_back_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_list24 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_list24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_list241 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_list241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_mic24 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_mic24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_mic241 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_mic241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_next {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_next_32 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_next_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_pause {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_pause", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_play {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_random32 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_random32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_random321 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_random321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_repeat32 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_repeat32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_repeat321 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_repeat321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_speaker32 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_speaker32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_speaker321 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_speaker321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ngaydautien {
             get {
                 object obj = ResourceManager.GetObject("ngaydautien", resourceCulture);
@@ -553,9 +783,39 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tym_active1 {
+            get {
+                object obj = ResourceManager.GetObject("tym_active1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tym_active2 {
+            get {
+                object obj = ResourceManager.GetObject("tym_active2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tymm {
             get {
                 object obj = ResourceManager.GetObject("tymm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tymm1 {
+            get {
+                object obj = ResourceManager.GetObject("tymm1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,46 +17,67 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
-        private void button1_Click_1(object sender, EventArgs e)//denvau
+        private void button_Click(object sender, EventArgs e)
         {
-            uct_playlist a = new uct_playlist(button1.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
+            Guna2Button guna2Button = sender as Guna2Button;
+            switch(guna2Button.Name)
+            {
+                case "btn_hieuthuhai":
+                    uct_playlist a = new uct_playlist(btn_hieuthuhai.Text);
+                    panel1.Controls.Add(a);
+                    a.BringToFront();
+                    break;
+                case "btn_sontungmtp":
+                    uct_playlist b = new uct_playlist(btn_sontungmtp.Text);
+                    panel1.Controls.Add(b);
+                    b.BringToFront();
+                    break;
+                case "btn_denvau":
+                    uct_playlist c = new uct_playlist(btn_denvau.Text);
+                    panel1.Controls.Add(c);
+                    c.BringToFront();
+                    break;
+            }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)//mtp
+        private void button_Click_Picture(object sender, EventArgs e)
         {
-            uct_playlist a = new uct_playlist(button2.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
+            PictureBox picture = sender as PictureBox;
+            switch (picture.Name)
+            {
+                case "pt_hot_hit":
+                    uct_playlist hot_hit = new uct_playlist("Vũ trụ có anh");
+                    panel1.Controls.Add(hot_hit);
+                    hot_hit.BringToFront();
+                    break;
+                case "pt_den":
+                    uct_playlist den = new uct_playlist(lb_denvau.Text);
+                    panel1.Controls.Add(den);
+                    den.BringToFront();
+                    break;
+                case "pt_justatee":
+                    uct_playlist jus = new uct_playlist(lb_justatee.Text);
+                    panel1.Controls.Add(jus);
+                    jus.BringToFront();
+                    break;
+            }
         }
-
-        private void button3_Click_1(object sender, EventArgs e)//hieuthu2
+        private void button_Click_Picture_Circle(object sender, EventArgs e)
         {
-            uct_playlist a = new uct_playlist(button3.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
-        }
-
-        private void guna2CustomGradientPanel3_Click(object sender, EventArgs e)//ply
-        {
-            uct_playlist a = new uct_playlist(label1.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
-        }
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-            uct_playlist a = new uct_playlist(label4.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
-        }
-
-        private void guna2CustomGradientPanel4_Click(object sender, EventArgs e)//dalab
-        {
-            uct_playlist a = new uct_playlist(label13.Text);
-            panel1.Controls.Add(a);
-            a.BringToFront();
+            Guna2CirclePictureBox picture = sender as Guna2CirclePictureBox;
+            switch (picture.Name)
+            {
+                case "pt_phuongly":
+                    uct_playlist phuongly = new uct_playlist(lb_phuongly.Text);
+                    panel1.Controls.Add(phuongly);
+                    phuongly.BringToFront();
+                    break;
+                case "pt_dalab":
+                    uct_playlist dalab = new uct_playlist(lb_dalab.Text);
+                    panel1.Controls.Add(dalab);
+                    dalab.BringToFront();
+                    break;
+            }
         }
     }
 }

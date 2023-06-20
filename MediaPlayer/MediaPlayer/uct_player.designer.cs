@@ -37,24 +37,16 @@
             this.lblPlayDuration = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sliderVolume = new Guna.UI2.WinForms.Guna2TrackBar();
             this.trackTime = new System.Windows.Forms.Timer(this.components);
+            this.guna2ImageButton8 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_Play = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btn_tym = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btn_Play = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pt_thumb = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_tym)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +54,7 @@
             // 
             this.lbl_song.BackColor = System.Drawing.Color.Transparent;
             this.lbl_song.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_song.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_song.Location = new System.Drawing.Point(114, 32);
             this.lbl_song.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_song.Name = "lbl_song";
@@ -71,8 +64,10 @@
             // 
             // lbl_singer
             // 
+            this.lbl_singer.AutoSize = false;
             this.lbl_singer.BackColor = System.Drawing.Color.Transparent;
             this.lbl_singer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_singer.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_singer.Location = new System.Drawing.Point(114, 62);
             this.lbl_singer.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_singer.Name = "lbl_singer";
@@ -94,22 +89,24 @@
             // lblPlayCurrentTime
             // 
             this.lblPlayCurrentTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayCurrentTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayCurrentTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayCurrentTime.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblPlayCurrentTime.Location = new System.Drawing.Point(438, 68);
             this.lblPlayCurrentTime.Margin = new System.Windows.Forms.Padding(2);
             this.lblPlayCurrentTime.Name = "lblPlayCurrentTime";
-            this.lblPlayCurrentTime.Size = new System.Drawing.Size(30, 17);
+            this.lblPlayCurrentTime.Size = new System.Drawing.Size(34, 17);
             this.lblPlayCurrentTime.TabIndex = 7;
             this.lblPlayCurrentTime.Text = "00:00";
             // 
             // lblPlayDuration
             // 
             this.lblPlayDuration.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayDuration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayDuration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayDuration.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblPlayDuration.Location = new System.Drawing.Point(999, 67);
             this.lblPlayDuration.Margin = new System.Windows.Forms.Padding(2);
             this.lblPlayDuration.Name = "lblPlayDuration";
-            this.lblPlayDuration.Size = new System.Drawing.Size(24, 17);
+            this.lblPlayDuration.Size = new System.Drawing.Size(27, 17);
             this.lblPlayDuration.TabIndex = 8;
             this.lblPlayDuration.Text = "1:10";
             // 
@@ -130,9 +127,146 @@
             this.trackTime.Interval = 1000;
             this.trackTime.Tick += new System.EventHandler(this.trackTime_Tick);
             // 
+            // guna2ImageButton8
+            // 
+            this.guna2ImageButton8.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton8.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker32;
+            this.guna2ImageButton8.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton8.Image = global::MediaPlayer.Properties.Resources._7252723_volume_low_speaker_sound_music_icon1;
+            this.guna2ImageButton8.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton8.ImageRotate = 0F;
+            this.guna2ImageButton8.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton8.Location = new System.Drawing.Point(1219, 28);
+            this.guna2ImageButton8.Name = "guna2ImageButton8";
+            this.guna2ImageButton8.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker321;
+            this.guna2ImageButton8.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton8.Size = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton8.TabIndex = 26;
+            // 
+            // guna2ImageButton7
+            // 
+            this.guna2ImageButton7.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton7.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_list24;
+            this.guna2ImageButton7.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton7.Image = global::MediaPlayer.Properties.Resources._6792164_list_multimedia_music_play_playlist_icon__1_1;
+            this.guna2ImageButton7.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton7.ImageRotate = 0F;
+            this.guna2ImageButton7.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton7.Location = new System.Drawing.Point(1176, 32);
+            this.guna2ImageButton7.Name = "guna2ImageButton7";
+            this.guna2ImageButton7.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_list241;
+            this.guna2ImageButton7.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton7.Size = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton7.TabIndex = 25;
+            // 
+            // guna2ImageButton6
+            // 
+            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton6.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic24;
+            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton6.Image = global::MediaPlayer.Properties.Resources._6518717_audio_communication_microphone_music_sound_icon__1_1;
+            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton6.ImageRotate = 0F;
+            this.guna2ImageButton6.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton6.Location = new System.Drawing.Point(1128, 32);
+            this.guna2ImageButton6.Name = "guna2ImageButton6";
+            this.guna2ImageButton6.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic241;
+            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton6.Size = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton6.TabIndex = 24;
+            // 
+            // guna2ImageButton5
+            // 
+            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton5.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat32;
+            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton5.Image = global::MediaPlayer.Properties.Resources._4634534_arrow_looping_music_repeat_icon1;
+            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton5.ImageRotate = 0F;
+            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton5.Location = new System.Drawing.Point(818, 20);
+            this.guna2ImageButton5.Name = "guna2ImageButton5";
+            this.guna2ImageButton5.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat321;
+            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton5.Size = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton5.TabIndex = 23;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton4.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_random32;
+            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton4.Image = global::MediaPlayer.Properties.Resources._9104257_shuffle_random_mix_icon1;
+            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton4.ImageRotate = 0F;
+            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(595, 19);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_random321;
+            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton4.Size = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton4.TabIndex = 22;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton3.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_32;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton3.Image = global::MediaPlayer.Properties.Resources._352133_previous_skip_icon1;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(650, 19);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_back_321;
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton3.TabIndex = 21;
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton2.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Image = global::MediaPlayer.Properties.Resources._352132_next_skip_icon__1_1;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(766, 19);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_next_32;
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.TabIndex = 20;
+            // 
+            // btn_Play
+            // 
+            this.btn_Play.CheckedState.Image = global::MediaPlayer.Properties.Resources.new_ic_play;
+            this.btn_Play.CheckedState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_Play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Play.HoverState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_Play.Image = global::MediaPlayer.Properties.Resources.new_ic_pause;
+            this.btn_Play.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_Play.ImageRotate = 0F;
+            this.btn_Play.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_Play.Location = new System.Drawing.Point(704, 10);
+            this.btn_Play.Name = "btn_Play";
+            this.btn_Play.PressedState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_Play.Size = new System.Drawing.Size(48, 48);
+            this.btn_Play.TabIndex = 19;
+            this.btn_Play.Click += new System.EventHandler(this.toggleMusic);
+            // 
             // guna2ImageButton1
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ImageButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(24, 24);
             this.guna2ImageButton1.Image = global::MediaPlayer.Properties.Resources._9025718_heart_straight_icon__1_;
@@ -146,113 +280,6 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(24, 24);
             this.guna2ImageButton1.TabIndex = 18;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(1128, 32);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 17;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(1176, 32);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox3.TabIndex = 16;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2CirclePictureBox6
-            // 
-            this.guna2CirclePictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox6.Image")));
-            this.guna2CirclePictureBox6.ImageRotate = 0F;
-            this.guna2CirclePictureBox6.Location = new System.Drawing.Point(1218, 28);
-            this.guna2CirclePictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox6.Name = "guna2CirclePictureBox6";
-            this.guna2CirclePictureBox6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox6.TabIndex = 15;
-            this.guna2CirclePictureBox6.TabStop = false;
-            // 
-            // guna2CirclePictureBox5
-            // 
-            this.guna2CirclePictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox5.Image")));
-            this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(818, 20);
-            this.guna2CirclePictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
-            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox5.TabIndex = 13;
-            this.guna2CirclePictureBox5.TabStop = false;
-            // 
-            // btn_tym
-            // 
-            this.btn_tym.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_tym.Image = ((System.Drawing.Image)(resources.GetObject("btn_tym.Image")));
-            this.btn_tym.ImageRotate = 0F;
-            this.btn_tym.Location = new System.Drawing.Point(595, 19);
-            this.btn_tym.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_tym.Name = "btn_tym";
-            this.btn_tym.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_tym.Size = new System.Drawing.Size(32, 32);
-            this.btn_tym.TabIndex = 12;
-            this.btn_tym.TabStop = false;
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox3.Image")));
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(650, 19);
-            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox3.TabIndex = 11;
-            this.guna2CirclePictureBox3.TabStop = false;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(766, 19);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.guna2CirclePictureBox2.TabIndex = 10;
-            this.guna2CirclePictureBox2.TabStop = false;
-            // 
-            // btn_Play
-            // 
-            this.btn_Play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Play.Image = global::MediaPlayer.Properties.Resources._3669309_pause_circle_filled_ic_icon;
-            this.btn_Play.ImageRotate = 0F;
-            this.btn_Play.Location = new System.Drawing.Point(704, 10);
-            this.btn_Play.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Play.Name = "btn_Play";
-            this.btn_Play.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_Play.Size = new System.Drawing.Size(48, 48);
-            this.btn_Play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_Play.TabIndex = 9;
-            this.btn_Play.TabStop = false;
-            this.btn_Play.Click += new System.EventHandler(this.toggleMusic);
             // 
             // pt_thumb
             // 
@@ -271,17 +298,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.guna2PictureBox4);
-            this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.guna2CirclePictureBox6);
-            this.Controls.Add(this.sliderVolume);
-            this.Controls.Add(this.guna2CirclePictureBox5);
-            this.Controls.Add(this.btn_tym);
-            this.Controls.Add(this.guna2CirclePictureBox3);
-            this.Controls.Add(this.guna2CirclePictureBox2);
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.guna2ImageButton8);
+            this.Controls.Add(this.guna2ImageButton7);
+            this.Controls.Add(this.guna2ImageButton6);
+            this.Controls.Add(this.guna2ImageButton5);
+            this.Controls.Add(this.guna2ImageButton4);
+            this.Controls.Add(this.guna2ImageButton3);
+            this.Controls.Add(this.guna2ImageButton2);
             this.Controls.Add(this.btn_Play);
+            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.sliderVolume);
             this.Controls.Add(this.lblPlayDuration);
             this.Controls.Add(this.lblPlayCurrentTime);
             this.Controls.Add(this.sliderMusic);
@@ -291,14 +318,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_player";
             this.Size = new System.Drawing.Size(1460, 110);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_tym)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,16 +332,16 @@
         private Guna.UI2.WinForms.Guna2TrackBar sliderMusic;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPlayCurrentTime;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPlayDuration;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox btn_Play;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox btn_tym;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
         private Guna.UI2.WinForms.Guna2TrackBar sliderVolume;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.Timer trackTime;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_Play;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
     }
 }

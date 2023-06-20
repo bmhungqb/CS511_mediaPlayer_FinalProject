@@ -26,19 +26,14 @@ namespace MediaPlayer
        
         private void uct_playlist_Load(object sender, EventArgs e)
         {
-            //uct_song song = new uct_song();
-            //song.Location = new Point(13, 437);
-            ////panel1.Controls.Clear();
-            //guna2CustomGradientPanel1.Controls.Add(song);
-            //song.BringToFront();
-            DS_SearchMusic listSong = apiMusic.searchMusic("Đen", "song", 10);
-            int id = 1;
+            DS_SearchMusic res_searchMusic = apiMusic.searchMusic(name.Text, "artist,song", 10);
+            int id = 0;
             int time=0;
-            foreach (Song song in listSong.Songs)
+            foreach (Song song in res_searchMusic.Songs)
             {
+                id++;
                 uct_song new_Song = new uct_song(id,song);
                 flowLayoutPanel1.Controls.Add(new_Song);
-                id++;
                 time += int.Parse(song.duration);
             }
             int minutes = time / 60;
@@ -46,6 +41,12 @@ namespace MediaPlayer
 
             string formattedTime = $"{minutes} min {seconds.ToString("D2")} secs ";
             label3.Text = id.ToString() + " songs,  " + formattedTime;
+            // get avatar artist 
+            if(res_searchMusic.Artists.Count >0)
+            {
+                Artist artist = res_searchMusic.Artists[0];
+                pic_thumb_artist.Image = apiMusic.getImage(artist.thumb);
+            }
         }
 
         private void search_textbox_IconLeftClick_1(object sender, EventArgs e)

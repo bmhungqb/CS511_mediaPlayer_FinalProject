@@ -356,5 +356,35 @@
   <ItemGroup>
     <None Include="Resources\tym_active.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_next_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_back_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_random32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_repeat32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_mic24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_list24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ic_speaker32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

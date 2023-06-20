@@ -74,18 +74,18 @@ namespace MediaPlayer.API
                     songList.Add(song);
                 }
             }
-            //if(dataArray.Count > 0 && dataArray[1] is JObject secondDataObject && secondDataObject.ContainsKey("artist"))
-            //{
-            //    foreach (JObject item in dataArray[1]["artist"] )
-            //    {
-            //        artistList.Add(new Artist
-            //        {
-            //            name = item["name"].ToString(),
-            //            thumb = item["thumb"].ToString(),
-            //            id = item["id"].ToString()
-            //        });
-            //    }
-            //}
+            if (dataArray.Count > 1 && dataArray[1] is JObject secondDataObject && secondDataObject.ContainsKey("artist"))
+            {
+                foreach (JObject item in dataArray[1]["artist"])
+                {
+                    artistList.Add(new Artist
+                    {
+                        name = item["name"].ToString(),
+                        thumb = item["thumb"].ToString(),
+                        id = item["id"].ToString()
+                    });
+                }
+            }
             DS_SearchMusic dS_SearchMusic = new DS_SearchMusic
             { 
                 Songs = songList,
@@ -98,6 +98,7 @@ namespace MediaPlayer.API
         {
             string imageUrl = $"https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/{id}";
             Bitmap bmp = null;
+            if (id == "") return bmp;
             using (HttpRequest http = new HttpRequest())
             {
                 try

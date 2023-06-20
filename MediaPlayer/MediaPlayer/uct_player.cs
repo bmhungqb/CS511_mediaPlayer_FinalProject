@@ -21,7 +21,6 @@ namespace MediaPlayer
         public uct_player()
         {
             InitializeComponent();
-            //playMusic(musicPath,"Cuối tuần");
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
@@ -38,7 +37,8 @@ namespace MediaPlayer
             player.PlayStateChange += Player_PlayStateChange;
             lblPlayDuration.Text = ConvertToMinutesAndSeconds(int.Parse(song.duration));
             lbl_song.Text = song.name;
-            btn_Play.Image = Image.FromFile(img_btn_play);
+            btn_Play.Checked = false;
+            player.controls.pause();    
             lbl_singer.Text = song.artist;
             pt_thumb.Image = apiMusic.getImage(song.thumb);
         }
@@ -58,15 +58,14 @@ namespace MediaPlayer
         #endregion
         private void toggleMusic(object sender, EventArgs e)
         {
+            btn_Play.Checked = !btn_Play.Checked;
             if (player.playState ==  WMPLib.WMPPlayState.wmppsPlaying)
             {
                 player.controls.pause();
-                btn_Play.Image = Image.FromFile(img_btn_stop);
             }
             else
             {
                 player.controls.play();
-                btn_Play.Image = Image.FromFile(img_btn_play);
             }
         }
 
