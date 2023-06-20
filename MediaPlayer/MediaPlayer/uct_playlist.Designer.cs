@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
             this.search_textbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.edit_detail = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,9 +52,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
             this.edit_detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -97,6 +97,20 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1379, 427);
             this.guna2CustomGradientPanel2.TabIndex = 93;
+            // 
+            // pic_thumb_artist
+            // 
+            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.BorderRadius = 10;
+            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.playlist;
+            this.pic_thumb_artist.ImageRotate = 0F;
+            this.pic_thumb_artist.Location = new System.Drawing.Point(30, 57);
+            this.pic_thumb_artist.Name = "pic_thumb_artist";
+            this.pic_thumb_artist.Size = new System.Drawing.Size(243, 222);
+            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_thumb_artist.TabIndex = 106;
+            this.pic_thumb_artist.TabStop = false;
             // 
             // search_textbox
             // 
@@ -346,10 +360,11 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
             this.pictureBox7.Location = new System.Drawing.Point(3, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 51);
+            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 76;
             this.pictureBox7.TabStop = false;
@@ -403,20 +418,6 @@
             this.name.TabIndex = 72;
             this.name.Text = "Name";
             // 
-            // pic_thumb_artist
-            // 
-            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.BorderRadius = 10;
-            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.playlist;
-            this.pic_thumb_artist.ImageRotate = 0F;
-            this.pic_thumb_artist.Location = new System.Drawing.Point(30, 57);
-            this.pic_thumb_artist.Name = "pic_thumb_artist";
-            this.pic_thumb_artist.Size = new System.Drawing.Size(243, 222);
-            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_thumb_artist.TabIndex = 106;
-            this.pic_thumb_artist.TabStop = false;
-            // 
             // uct_playlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +430,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
             this.edit_detail.ResumeLayout(false);
             this.edit_detail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -439,7 +441,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
             this.ResumeLayout(false);
 
         }

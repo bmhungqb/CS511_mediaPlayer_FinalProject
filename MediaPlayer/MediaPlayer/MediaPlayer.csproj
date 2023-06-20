@@ -386,5 +386,11 @@
   <ItemGroup>
     <None Include="Resources\new_ic_speaker32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tym_active32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tym32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

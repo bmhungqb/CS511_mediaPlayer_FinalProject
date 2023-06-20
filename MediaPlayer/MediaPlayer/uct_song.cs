@@ -57,5 +57,10 @@ namespace MediaPlayer
             mediaPlayer main = this.ParentForm as mediaPlayer;
             main.testPlayMusic(song);
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            btn_tym.Checked = !btn_tym.Checked;
+        }
     }
 }

@@ -154,6 +154,9 @@
   <data name="new_ic_repeat321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_repeat32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tym_active32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tym_active32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="352133_previous_skip_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352133_previous_skip_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,6 +186,9 @@
   </data>
   <data name="tym" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tym.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tym_active2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tym_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tym_active1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tym_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,7 +352,7 @@
   <data name="ic_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tym_active2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tym_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tym32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tym32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -91,7 +91,7 @@
             this.lblPlayCurrentTime.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayCurrentTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayCurrentTime.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblPlayCurrentTime.Location = new System.Drawing.Point(438, 68);
+            this.lblPlayCurrentTime.Location = new System.Drawing.Point(434, 68);
             this.lblPlayCurrentTime.Margin = new System.Windows.Forms.Padding(2);
             this.lblPlayCurrentTime.Name = "lblPlayCurrentTime";
             this.lblPlayCurrentTime.Size = new System.Drawing.Size(34, 17);
