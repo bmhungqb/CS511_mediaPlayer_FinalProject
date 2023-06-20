@@ -21,6 +21,7 @@ namespace MediaPlayer
         private void guna2TextBox1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
+            panel2.Visible = true;
             guna2TextBox1.Text= string.Empty;
         }
 

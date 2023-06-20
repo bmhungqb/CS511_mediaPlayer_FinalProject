@@ -28,30 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CustomGradientPanel3.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2TextBox1);
-            this.guna2CustomGradientPanel3.FillColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.SystemColors.WindowFrame;
-            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.SystemColors.InactiveCaptionText;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1385, 864);
-            this.guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // panel1
             // 
@@ -60,7 +54,7 @@
             this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.guna2Button2);
             this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Location = new System.Drawing.Point(38, 83);
+            this.panel1.Location = new System.Drawing.Point(14, 77);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1297, 50);
@@ -170,7 +164,7 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = global::MediaPlayer.Properties.Resources.find;
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(65, 65);
-            this.guna2TextBox1.Location = new System.Drawing.Point(27, 16);
+            this.guna2TextBox1.Location = new System.Drawing.Point(4, 15);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -181,28 +175,122 @@
             this.guna2TextBox1.TabIndex = 0;
             this.guna2TextBox1.Click += new System.EventHandler(this.guna2TextBox1_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.flowLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1404, 577);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.panel2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DimGray;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.WindowFrame;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DimGray;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 189);
+            this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.guna2Separator1);
+            this.panel2.Location = new System.Drawing.Point(14, 133);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1359, 52);
+            this.panel2.TabIndex = 106;
+            this.panel2.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(1152, 8);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 28);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "Time";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(10, 8);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 28);
+            this.label4.TabIndex = 92;
+            this.label4.Text = "#";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(167, 8);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 28);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Title";
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(3, 35);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1353, 13);
+            this.guna2Separator1.TabIndex = 96;
+            // 
             // uctsearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2CustomGradientPanel3);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uctsearch";
-            this.Size = new System.Drawing.Size(1385, 533);
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1404, 577);
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }
