@@ -21,6 +21,7 @@ namespace MediaPlayer
         public void OpenUserControlB()
         {
             // Thực hiện các hành động cần thiết khi mở UserControlB
+            guna2CustomGradientPanel2.Width = 1370;
         }
 
        

@@ -33,7 +33,7 @@ namespace MediaPlayer
         //y+209;
         private void playlist_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 4; i++)
             {
                 userControlA = new uct_playlist1();
                 userControlA.Location = new Point(3, y);
@@ -43,6 +43,11 @@ namespace MediaPlayer
                 userControlA.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
                 y += 209;
             }
+        }
+
+        private void tb_search_Click(object sender, EventArgs e)
+        {
+            tb_search.Text=string.Empty;
         }
     }
 }

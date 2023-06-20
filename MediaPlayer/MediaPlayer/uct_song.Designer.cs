@@ -46,7 +46,7 @@
             this.lb_id.AutoSize = true;
             this.lb_id.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_id.ForeColor = System.Drawing.Color.White;
-            this.lb_id.Location = new System.Drawing.Point(3, 26);
+            this.lb_id.Location = new System.Drawing.Point(14, 26);
             this.lb_id.Name = "lb_id";
             this.lb_id.Size = new System.Drawing.Size(32, 37);
             this.lb_id.TabIndex = 0;

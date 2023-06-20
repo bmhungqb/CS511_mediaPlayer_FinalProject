@@ -58,14 +58,14 @@
             this.label4.Location = new System.Drawing.Point(289, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 40);
+            this.label4.Size = new System.Drawing.Size(247, 40);
             this.label4.TabIndex = 93;
-            this.label4.Text = "Hot Hits VietNam";
+            this.label4.Text = "HIEUTHUHAI";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.pmc;
+            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.ezpapa;
             this.pictureBox4.Location = new System.Drawing.Point(32, 14);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
@@ -77,7 +77,7 @@
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Button1.BorderRadius = 17;
             this.guna2Button1.BorderThickness = 3;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -85,11 +85,11 @@
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(709, 155);
+            this.guna2Button1.Location = new System.Drawing.Point(655, 155);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(88, 37);
+            this.guna2Button1.Size = new System.Drawing.Size(132, 37);
             this.guna2Button1.TabIndex = 95;
             this.guna2Button1.Text = "Remove";
             // 
