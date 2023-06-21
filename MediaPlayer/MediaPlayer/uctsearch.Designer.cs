@@ -129,7 +129,6 @@
             this.btn_all.BackColor = System.Drawing.Color.Transparent;
             this.btn_all.BorderColor = System.Drawing.Color.Transparent;
             this.btn_all.BorderRadius = 22;
-            this.btn_all.Checked = true;
             this.btn_all.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_all.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_all.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

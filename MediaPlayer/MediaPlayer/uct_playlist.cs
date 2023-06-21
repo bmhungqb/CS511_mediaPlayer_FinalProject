@@ -27,30 +27,30 @@ namespace MediaPlayer
        
         private void uct_playlist_Load(object sender, EventArgs e)
         {
-            //mediaPlayer main = this.ParentForm as mediaPlayer;
-            //DS_SearchMusic res_searchMusic = apiMusic.searchMusic(name.Text, "artist,song", 10);
-            //main.setCurrentListSong(res_searchMusic.Songs);
-            //int id = 0;
-            //int time=0;
-            //foreach (Song song in res_searchMusic.Songs)
-            //{
-            //    id++;
-            //    uct_song new_Song = new uct_song(id,song);
-            //    flowLayoutPanel1.Controls.Add(new_Song);
-            //    time += int.Parse(song.duration);
-            //}
-            //int minutes = time / 60;
-            //int seconds = time % 60;
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            DS_SearchMusic res_searchMusic = apiMusic.searchMusic(name.Text, "artist,song", 10);
+            main.setCurrentListSong(res_searchMusic.Songs);
+            int id = 0;
+            int time = 0;
+            foreach (Song song in res_searchMusic.Songs)
+            {
+                id++;
+                uct_song new_Song = new uct_song(id, song);
+                flowLayoutPanel1.Controls.Add(new_Song);
+                time += int.Parse(song.duration);
+            }
+            int minutes = time / 60;
+            int seconds = time % 60;
 
-            //string formattedTime = $"{minutes} min {seconds.ToString("D2")} secs ";
-            //label3.Text = id.ToString() + " songs,  " + formattedTime;
-            //// get avatar artist 
-            //if(res_searchMusic.Artists.Count >0)
-            //{
-            //    Artist artist = res_searchMusic.Artists[0];
-            //    pic_thumb_artist.Image = apiMusic.getImage(artist.thumb);
-            //}
-            apiMusic.getLyrics("https://static-zmp3.zmdcdn.me/lyrics/2/b/8/f/2b8f4c339157d10a8c1ab80fa8d25424.lrc");
+            string formattedTime = $"{minutes} min {seconds.ToString("D2")} secs ";
+            label3.Text = id.ToString() + " songs,  " + formattedTime;
+            // get avatar artist 
+            if (res_searchMusic.Artists.Count > 0)
+            {
+                Artist artist = res_searchMusic.Artists[0];
+                pic_thumb_artist.Image = apiMusic.getImage(artist.thumb);
+            }
+            //apiMusic.getLyrics("https://static-zmp3.zmdcdn.me/lyrics/2/b/8/f/2b8f4c339157d10a8c1ab80fa8d25424.lrc");
         }
 
         private void search_textbox_IconLeftClick_1(object sender, EventArgs e)

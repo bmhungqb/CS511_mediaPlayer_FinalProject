@@ -42,6 +42,7 @@ namespace MediaPlayer
 
         private void button_Click_Picture(object sender, EventArgs e)
         {
+            panel1.AutoScroll = false;
             PictureBox picture = sender as PictureBox;
             switch (picture.Name)
             {
@@ -64,6 +65,7 @@ namespace MediaPlayer
         }
         private void button_Click_Picture_Circle(object sender, EventArgs e)
         {
+            panel1.AutoScroll = false;
             Guna2CirclePictureBox picture = sender as Guna2CirclePictureBox;
             switch (picture.Name)
             {

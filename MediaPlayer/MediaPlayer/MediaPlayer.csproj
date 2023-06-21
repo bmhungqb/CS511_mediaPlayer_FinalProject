@@ -74,11 +74,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="lyrics_line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lyrics_line.Designer.cs">
+      <DependentUpon>lyrics_line.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search_all.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="search_all.Designer.cs">
+      <DependentUpon>search_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uct_lyrics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_lyrics.Designer.cs">
+      <DependentUpon>uct_lyrics.cs</DependentUpon>
     </Compile>
     <Compile Include="uct_player.cs">
       <SubType>UserControl</SubType>
@@ -130,8 +148,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lyrics_line.resx">
+      <DependentUpon>lyrics_line.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_all.resx">
+      <DependentUpon>search_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_lyrics.resx">
+      <DependentUpon>uct_lyrics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_player.resx">
       <DependentUpon>uct_player.cs</DependentUpon>

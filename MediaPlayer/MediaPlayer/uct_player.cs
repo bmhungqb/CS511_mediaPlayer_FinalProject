@@ -125,5 +125,16 @@ namespace MediaPlayer
                 }
             }
         }
+        public event EventHandler OpenUCTLyricsRequested;
+        public event EventHandler OpenUCTKaraRequested;
+        private void guna2ImageButton7_Click(object sender, EventArgs e)//show lyrics
+        {
+            OpenUCTLyricsRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna2ImageButton6_Click(object sender, EventArgs e)//lyrics + kara
+        {
+            OpenUCTKaraRequested?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

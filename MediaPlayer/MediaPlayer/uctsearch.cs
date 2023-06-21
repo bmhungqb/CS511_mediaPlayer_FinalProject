@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace MediaPlayer
         {
             InitializeComponent();
             panel1.Visible = false;
+            panel2.Visible = false;
         }
         string type_search = "artist,song,key,code";
         private void guna2TextBox1_Click(object sender, EventArgs e)
@@ -29,54 +31,6 @@ namespace MediaPlayer
             panel2.Visible = true;
             tb_search.Text= string.Empty;
         }
-
-        //private void guna2Button1_Click(object sender, EventArgs e)//all
-        //{
-        //    btn_all.FillColor = Color.White;
-        //    btn_all.ForeColor = Color.Black;
-        //    btn_song.FillColor = SystemColors.WindowFrame;
-        //    btn_song.ForeColor = Color.White;
-        //    btn_artist.FillColor = SystemColors.WindowFrame;
-        //    btn_artist.ForeColor = Color.White;
-        //    btn_playlist.FillColor = SystemColors.WindowFrame;
-        //    btn_playlist.ForeColor = Color.White;
-        //}
-
-        //private void guna2Button2_Click(object sender, EventArgs e)//songs
-        //{
-        //    btn_song.FillColor = Color.White;
-        //    btn_song.ForeColor = Color.Black;
-        //    btn_all.FillColor = SystemColors.WindowFrame;
-        //    btn_all.ForeColor = Color.White;
-        //    btn_artist.FillColor = SystemColors.WindowFrame;
-        //    btn_artist.ForeColor = Color.White;
-        //    btn_playlist.FillColor = SystemColors.WindowFrame;
-        //    btn_playlist.ForeColor = Color.White;
-        //}
-
-        //private void guna2Button3_Click(object sender, EventArgs e)//artists
-        //{
-        //    btn_artist.FillColor = Color.White;
-        //    btn_artist.ForeColor = Color.Black;
-        //    btn_song.FillColor = SystemColors.WindowFrame;
-        //    btn_song.ForeColor = Color.White;
-        //    btn_all.FillColor = SystemColors.WindowFrame;
-        //    btn_all.ForeColor = Color.White;
-        //    btn_playlist.FillColor = SystemColors.WindowFrame;
-        //    btn_playlist.ForeColor = Color.White;
-        //}
-
-        //private void guna2Button4_Click(object sender, EventArgs e)//playlists
-        //{
-        //    btn_playlist.FillColor = Color.White;
-        //    btn_playlist.ForeColor = Color.Black;
-        //    btn_song.FillColor = SystemColors.WindowFrame;
-        //    btn_song.ForeColor = Color.White;
-        //    btn_artist.FillColor = SystemColors.WindowFrame;
-        //    btn_artist.ForeColor = Color.White;
-        //    btn_all.FillColor = SystemColors.WindowFrame;
-        //    btn_all.ForeColor = Color.White;
-        //}
         private void btn_Click_Type_Search(object sender, EventArgs e)
         {
             Guna2Button button = sender as Guna2Button;
@@ -88,12 +42,14 @@ namespace MediaPlayer
                     btn_song.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
+                    panel2.Visible = false;
                     break;
                 case "btn_song":
                     type_search = "song";
                     btn_all.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
+                    panel2.Visible = true;
                     break;
                 case "btn_artist":
                     //type_search = "artist";
@@ -101,6 +57,7 @@ namespace MediaPlayer
                     btn_song.Checked = false;
                     btn_all.Checked = false;
                     btn_playlist.Checked = false;
+                    panel2.Visible = false;
                     break;
                 case "btn_playlist":
                     type_search = "artist,song,key,code";
