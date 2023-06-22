@@ -31,13 +31,13 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        List<Song> currentPlaylist = new List<Song>();
+        List<DataStructure> currentPlaylist = new List<DataStructure>();
         int orderSong = 0;
-        public void SetCurrentPlaylist(List<Song> listSongs)
+        public void SetCurrentPlaylist(List<DataStructure> listSongs)
         {
             currentPlaylist = listSongs;
         }
-        public void playMusic(Song song)
+        public void playMusic(DataStructure song)
         {
             player.URL = apiMusic.getAudio(song.id);
             player.PlayStateChange += Player_PlayStateChange;

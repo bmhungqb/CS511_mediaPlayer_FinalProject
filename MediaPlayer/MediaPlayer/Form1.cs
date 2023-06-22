@@ -24,12 +24,12 @@ namespace MediaPlayer
         }
         uct_player player = new uct_player();
         string x;
-        public void testPlayMusic(Song song)
+        public void testPlayMusic(DataStructure song)
         {
             player.playMusic(song);
             x = song.name;
         }
-        public void setCurrentListSong(List<Song> listSongs)
+        public void setCurrentListSong(List<DataStructure> listSongs)
         {
             player.SetCurrentPlaylist(listSongs);
         }

@@ -11,8 +11,8 @@
 	+ totalListen: int
 	+ releaseDate: int
 	+ duration: int
-	+ thumnailM: string (size image)
-	+ thumnail: string (size image)
+	+ thumbnailM: string (size image)
+	+ thumbnail: string (size image)
 	+ score: int (rank)
 
 -------------------------
@@ -49,7 +49,7 @@ Class Word
 
 --------------------------
 Class Playlist
-	+ PlaylistId : string
+	+ playlistId : string
 	+ title : string
 	+ thumbnail : string
 	+ thumbnailM : string

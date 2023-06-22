@@ -13,9 +13,9 @@ namespace MediaPlayer
     public partial class uct_song : UserControl
     {
         int Id = 0;
-        MediaPlayer.API.Song song = new Song();
+        MediaPlayer.API.DataStructure song = new DataStructure();
         MediaPlayer.API.APIMusic apimusic = new APIMusic();
-        public uct_song(int id,Song dataSong)
+        public uct_song(int id,DataStructure dataSong)
         {
             InitializeComponent();
             pt_thumb.BringToFront();

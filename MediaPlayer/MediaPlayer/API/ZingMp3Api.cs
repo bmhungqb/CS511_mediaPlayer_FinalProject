@@ -19,13 +19,18 @@ namespace MediaPlayer.API
         private string API_KEY;
         private string CTIME;
 
-        public ZingMp3Api(string VERSION, string URL, string SECRET_KEY, string API_KEY, string CTIME)
+        public ZingMp3Api(string VERSION = "1.6.34"
+            , string URL = "https://zingmp3.vn"
+            , string SECRET_KEY = "2aa2d1c561e809b267f3638c4a307aab"
+            , string API_KEY = "88265e23d4284f25963e6eedac8fbfa3"
+            , string CTIME = null
+            )
         {
             this.VERSION = VERSION;
             this.URL = URL;
             this.SECRET_KEY = SECRET_KEY;
             this.API_KEY = API_KEY;
-            this.CTIME = CTIME;
+            this.CTIME = DateTimeOffset.Now.ToUnixTimeSeconds().ToString();
         }
 
         private string GetHash256(string str)
