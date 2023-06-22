@@ -24,12 +24,12 @@ namespace MediaPlayer
         }
         uct_player player = new uct_player();
         string x;
-        public void testPlayMusic(DataStructure song)
+        public void testPlayMusic(Song song)
         {
             player.playMusic(song);
-            x = song.name;
+            x = song.title;
         }
-        public void setCurrentListSong(List<DataStructure> listSongs)
+        public void setCurrentListSong(List<Song> listSongs)
         {
             player.SetCurrentPlaylist(listSongs);
         }
@@ -54,17 +54,17 @@ namespace MediaPlayer
         {
             uct_lyrics lyrics = new uct_lyrics(x);
             // Gọi phương thức OpenUserControlB
-            lyrics.OpenUCTLyrics();
-            panel1.Controls.Add(lyrics);
-            lyrics.BringToFront();
+            //lyrics.OpenUCTLyrics();
+            //panel1.Controls.Add(lyrics);
+            //lyrics.BringToFront();
         }
         private void UserControlA_OpenUCTKara(object sender, EventArgs e)
         {
             uct_lyrics lyrics = new uct_lyrics(x);
             // Gọi phương thức OpenUserControlB
-            lyrics.OpenUCTKara();
-            panel1.Controls.Add(lyrics);
-            lyrics.BringToFront();
+            //lyrics.OpenUCTKara();
+            //panel1.Controls.Add(lyrics);
+            //lyrics.BringToFront();
         }
         void morong()
         {

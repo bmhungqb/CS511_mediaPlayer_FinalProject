@@ -39,9 +39,9 @@
             this.pt_phuongly = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.lb_hot_hit = new System.Windows.Forms.Label();
             this.pt_hot_hit = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.lb_justatee = new System.Windows.Forms.Label();
@@ -260,19 +260,6 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Hot Hits VietNam";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(16, 366);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 36);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "For you";
-            // 
             // lb_hot_hit
             // 
             this.lb_hot_hit.AutoSize = true;
@@ -298,6 +285,19 @@
             this.pt_hot_hit.TabIndex = 38;
             this.pt_hot_hit.TabStop = false;
             this.pt_hot_hit.Click += new System.EventHandler(this.button_Click_Picture);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(16, 366);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 36);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "For you";
             // 
             // guna2CustomGradientPanel7
             // 
@@ -503,6 +503,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "main";
             this.Size = new System.Drawing.Size(1362, 947);
+            this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();

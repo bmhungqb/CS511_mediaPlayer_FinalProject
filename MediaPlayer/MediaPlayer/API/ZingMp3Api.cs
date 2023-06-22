@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Linq;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace MediaPlayer.API
 {
@@ -130,9 +131,11 @@ namespace MediaPlayer.API
                 client.DefaultRequestHeaders.Add("Cookie", cookie);
                 HttpResponseMessage response = await client.GetAsync(url);
                 string result = await response.Content.ReadAsStringAsync();
+                MessageBox.Show("check data:\n",result);
                 return result;
             }
         }
+
 
         //Get song
         public async Task<dynamic> GetSong(string songId)

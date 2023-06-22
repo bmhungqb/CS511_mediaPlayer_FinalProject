@@ -8,14 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MediaPlayer.API;
 namespace MediaPlayer
 {
     public partial class main : UserControl
     {
+        MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
+        MediaPlayer.API.Utils Utils = new Utils();
+        HomePage dataHomePage = new HomePage();
         public main()
         {
             InitializeComponent();
+        }
+
+        private async void main_Load(object sender, EventArgs e)
+        {
+            string response = await zingMp3Api.GetHome();
+            dataHomePage = Utils.getHome(response);
         }
         private void button_Click(object sender, EventArgs e)
         {

@@ -13,13 +13,14 @@ namespace MediaPlayer
     public partial class uct_song : UserControl
     {
         int Id = 0;
-        MediaPlayer.API.DataStructure song = new DataStructure();
-        MediaPlayer.API.APIMusic apimusic = new APIMusic();
-        public uct_song(int id,DataStructure dataSong)
+        MediaPlayer.API.ZingMp3Api zingMp3Api;
+        MediaPlayer.API.Utils Utils;
+        Song currentSong = new Song();
+        public uct_song(int id,Song dataSong)
         {
             InitializeComponent();
             pt_thumb.BringToFront();
-            song = dataSong;
+            currentSong = dataSong;
             Id = id;
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
@@ -35,11 +36,11 @@ namespace MediaPlayer
         {
             BackColor = Color.Transparent;
             lb_id.Text = Id.ToString();
-            lb_song.Text = song.name;
-            lb_singer.Text = song.artist;
-            lb_album.Text = song.albumName;
-            lb_time.Text = ConvertToMinutesAndSeconds(int.Parse(song.duration));
-            pt_thumb.Image = apimusic.getImage(song.thumb);
+            lb_song.Text = currentSong.title;
+            lb_singer.Text = currentSong.artistsNames;
+            lb_album.Text = currentSong.album.title;
+            lb_time.Text = ConvertToMinutesAndSeconds(currentSong.duration);
+            pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)//
@@ -55,7 +56,7 @@ namespace MediaPlayer
         private void pt_thumb_Click(object sender, EventArgs e)
         {
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.testPlayMusic(song);
+            main.testPlayMusic(currentSong);
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)

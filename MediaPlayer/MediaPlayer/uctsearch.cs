@@ -17,7 +17,8 @@ namespace MediaPlayer
 {
     public partial class uctsearch : UserControl
     {
-        MediaPlayer.API.APIMusic apiMusic = new APIMusic();
+        MediaPlayer.API.ZingMp3Api zingMp3Api;
+        MediaPlayer.API.Utils Utils;
         public uctsearch()
         {
             InitializeComponent();
@@ -86,20 +87,20 @@ namespace MediaPlayer
                 SearchMusic();
             }
         }
-        private void SearchMusic()
+        private async void SearchMusic()
         {
             DeleteUctSongs();
 
-            DS_SearchMusic res_searchMusic = apiMusic.searchMusic(tb_search.Text, type_search, 10);
-            int id = 0;
-            int time = 0;
-            foreach (Song song in res_searchMusic.Songs)
-            {
-                id++;
-                uct_song new_Song = new uct_song(id, song);
-                flowLayoutSearch.Controls.Add(new_Song);
-                time += int.Parse(song.duration);
-            }
+            string resSearch = await zingMp3Api.Search(tb_search.Text);
+            //int id = 0;
+            //int time = 0;
+            //foreach (Song song in res_searchMusic.Songs)
+            //{
+            //    id++;
+            //    uct_song new_Song = new uct_song(id, song);
+            //    flowLayoutSearch.Controls.Add(new_Song);
+            //    time += int.Parse(song.duration);
+            //}
         }
     }
 }

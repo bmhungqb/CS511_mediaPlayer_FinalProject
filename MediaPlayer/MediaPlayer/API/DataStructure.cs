@@ -68,7 +68,7 @@ namespace MediaPlayer.API
         public int releaseDate {  get; set; }
         public int duration {  get; set; }
         public string thumbnailM {  get; set; }
-        public int thumbnail {  get; set; }
+        public string thumbnail {  get; set; }
         public int score { get; set; }
     }
     public class Playlist

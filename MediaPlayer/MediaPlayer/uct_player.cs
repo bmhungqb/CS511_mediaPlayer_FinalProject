@@ -17,7 +17,8 @@ namespace MediaPlayer
 {
     public partial class uct_player : UserControl
     {
-        MediaPlayer.API.APIMusic apiMusic = new MediaPlayer.API.APIMusic();
+        MediaPlayer.API.ZingMp3Api zingMp3Api;
+        MediaPlayer.API.Utils Utils;
         public uct_player()
         {
             InitializeComponent();
@@ -31,22 +32,24 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        List<DataStructure> currentPlaylist = new List<DataStructure>();
+        List<Song> currentPlaylist = new List<Song>();
         int orderSong = 0;
-        public void SetCurrentPlaylist(List<DataStructure> listSongs)
+        public void SetCurrentPlaylist(List<Song> listSongs)
         {
             currentPlaylist = listSongs;
         }
-        public void playMusic(DataStructure song)
+        public async void playMusic(Song song)
         {
-            player.URL = apiMusic.getAudio(song.id);
+            string dataSong = await zingMp3Api.GetSong(song.songId);
+            player.URL = Utils.getSong(dataSong);
+
             player.PlayStateChange += Player_PlayStateChange;
-            lblPlayDuration.Text = ConvertToMinutesAndSeconds(int.Parse(song.duration));
-            lbl_song.Text = song.name;
+            lblPlayDuration.Text = ConvertToMinutesAndSeconds(song.duration);
+            lbl_song.Text = song.title;
             btn_Play.Checked = false;
             player.controls.pause();    
-            lbl_singer.Text = song.artist;
-            pt_thumb.Image = apiMusic.getImage(song.thumb);
+            lbl_singer.Text = song.artistsNames;
+            pt_thumb.Image = Utils.getImage(song.thumbnail);
         }
         private void Player_PlayStateChange(int NewState)
         {
