@@ -68,6 +68,7 @@
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="API\Music.cs" />
+    <Compile Include="API\ZingMp3Api.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,6 +419,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tym32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="API\DataStructure.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

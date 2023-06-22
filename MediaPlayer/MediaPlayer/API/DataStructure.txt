@@ -1,0 +1,107 @@
+﻿Class Song
+	+ songId : string
+	+ title : string
+	+ alias : string
+	+ artistsNames: string
+	+ artists : List<Artist>
+	+ genres : List<Genre>
+	+ album : Class
+	+ lyric : Class
+	+ totalLike : int
+	+ totalListen: int
+	+ releaseDate: int
+	+ duration: int
+	+ thumnailM: string (size image)
+	+ thumnail: string (size image)
+	+ score: int (rank)
+
+-------------------------
+Class Artist
+	+ artistId : string
+	+ name : string
+	+ alias: string
+	+ playlistId: string
+	+ cover: string
+	+ thumbnail : string
+	+ thumbnailM : string
+	+ national : string,
+	+ birthday : string,
+	+ realname : string,
+	+ totalFollow : int,
+	+ listSongs : List<Song>
+	+ listAlbums : List<Album>
+
+--------------------------
+Class Album
+
+--------------------------
+Class Genre
+
+--------------------------
+Class Lyric
+	+ Sentences : List<Sentence>
+Class Sentence:
+	+ Sentence : List<Word>
+Class Word
+	+ startTime: int
+	+ endTime: int
+	+ data : string
+
+--------------------------
+Class Playlist
+	+ PlaylistId : string
+	+ title : string
+	+ thumbnail : string
+	+ thumbnailM : string
+	+ sortDescription: string
+	+ artistsNames: string
+	+ artists: List<Artist>
+	+ genres : List<Genre>
+	+ listSongs : List<Song>
+	+ totalSongs: int,
+	+ totalDuration: int,
+	+ totalLike : int
+	+ totalListen: int
+
+---------------------------
+Class HomePage
+	+ banner: SectionDetail
+	+ newRelease: SectionDetail
+	+ chill : SectionDetail
+	+ artistPopular: SectionDetail
+	+ energyPositive : SectionDetail
+Class SectionDetail
+	+ title: string
+	+ sectionType: string
+	/*
+		Check sectionType 
+		if "playlist" => use listPlaylists
+		if "new-release" => use listSongs
+		if "banner" => use listBanner
+	*/
+	+ listSongs: List<Song>
+	+ listPlaylists: List<Playlist>
+	+ listBanners: List<BannerItem>
+Class BannerItem
+	+ banner: string
+	+ songId : string
+
+----------------------------
+Class ChartHome
+	+listSongs : List<Song>
+
+----------------------------
+Class Search
+	+ artists: List<Artist>
+	+ songs: List<Song>
+	+ videos: List<Video>
+	+ playlists: List<Playlist>
+
+----------------------------
+Class Video
+	song: Song
+	artist: Artist
+	linkVideo: string
+	totalLike: int
+	totalListen: int
+----------------------------

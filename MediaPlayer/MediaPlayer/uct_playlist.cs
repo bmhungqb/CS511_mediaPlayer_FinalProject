@@ -13,6 +13,13 @@ namespace MediaPlayer
     public partial class uct_playlist : UserControl
     {
         MediaPlayer.API.APIMusic apiMusic = new APIMusic();
+        MediaPlayer.API.ZingMp3Api zingMp3 = new ZingMp3Api(
+                "1.6.34", // VERSION
+                "https://zingmp3.vn", // URL
+                "2aa2d1c561e809b267f3638c4a307aab", // SECRET_KEY
+                "88265e23d4284f25963e6eedac8fbfa3", // API_KEY
+                DateTimeOffset.Now.ToUnixTimeSeconds().ToString() // CTIME
+            );
         public uct_playlist(string y)
         {
             InitializeComponent();
@@ -51,6 +58,10 @@ namespace MediaPlayer
                 pic_thumb_artist.Image = apiMusic.getImage(artist.thumb);
             }
             //apiMusic.getLyrics("https://static-zmp3.zmdcdn.me/lyrics/2/b/8/f/2b8f4c339157d10a8c1ab80fa8d25424.lrc");
+            //string lyric = await zingMp3.GetChartHome();
+            //string lyric = await zingMp3.GetNewReleaseChart();
+            //string lyric = await zingMp3.GetListArtistSong("IW6BZA76","1","30");
+            //Console.WriteLine(lyric);
         }
 
         private void search_textbox_IconLeftClick_1(object sender, EventArgs e)
