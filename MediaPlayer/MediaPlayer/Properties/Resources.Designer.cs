@@ -353,6 +353,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap del {
+            get {
+                object obj = ResourceManager.GetObject("del", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap denvau {
             get {
                 object obj = ResourceManager.GetObject("denvau", resourceCulture);
@@ -406,6 +416,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap find_playlist {
             get {
                 object obj = ResourceManager.GetObject("find_playlist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap garbage_trash {
+            get {
+                object obj = ResourceManager.GetObject("garbage_trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

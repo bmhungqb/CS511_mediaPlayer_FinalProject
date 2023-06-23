@@ -49,5 +49,12 @@ namespace MediaPlayer
         {
             tb_search.Text=string.Empty;
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)//create new playlist
+        {
+            uct_create create = new uct_create(); 
+            panel.Controls.Add(create);
+            create.BringToFront();
+        }
     }
 }

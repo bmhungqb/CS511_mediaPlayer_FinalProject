@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +45,20 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1404, 577);
             this.panel.TabIndex = 0;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button2);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 60);
+            this.guna2CustomGradientPanel1.TabIndex = 104;
             // 
             // tb_search
             // 
@@ -95,20 +109,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(74, 45);
             this.guna2Button2.TabIndex = 102;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button2);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 60);
-            this.guna2CustomGradientPanel1.TabIndex = 104;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // playlist
             // 

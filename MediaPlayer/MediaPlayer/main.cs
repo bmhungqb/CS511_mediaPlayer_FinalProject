@@ -24,7 +24,7 @@ namespace MediaPlayer
         private async void main_Load(object sender, EventArgs e)
         {
             string response = await zingMp3Api.GetHome();
-            dataHomePage = Utils.getHome(response);
+            //dataHomePage = Utils.getHome(response);
         }
         private void button_Click(object sender, EventArgs e)
         {

@@ -67,6 +67,12 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_song.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="add_song.Designer.cs">
+      <DependentUpon>add_song.cs</DependentUpon>
+    </Compile>
     <Compile Include="API\DataStructure.cs" />
     <Compile Include="API\Utils.cs" />
     <Compile Include="API\ZingMp3Api.cs" />
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="search_all.Designer.cs">
       <DependentUpon>search_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uct_create.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_create.Designer.cs">
+      <DependentUpon>uct_create.cs</DependentUpon>
     </Compile>
     <Compile Include="uct_lyrics.cs">
       <SubType>UserControl</SubType>
@@ -144,8 +156,17 @@
     <Compile Include="uct_song.Designer.cs">
       <DependentUpon>uct_song.cs</DependentUpon>
     </Compile>
+    <Compile Include="uct_song1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_song1.Designer.cs">
+      <DependentUpon>uct_song1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_song.resx">
+      <DependentUpon>add_song.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -158,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="search_all.resx">
       <DependentUpon>search_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_create.resx">
+      <DependentUpon>uct_create.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_lyrics.resx">
       <DependentUpon>uct_lyrics.cs</DependentUpon>
@@ -192,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_song.resx">
       <DependentUpon>uct_song.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_song1.resx">
+      <DependentUpon>uct_song1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -423,6 +450,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\del.png" />
+    <None Include="Resources\garbage_trash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
