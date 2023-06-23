@@ -9,6 +9,8 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace MediaPlayer.API
 {
@@ -100,7 +102,7 @@ namespace MediaPlayer.API
 
                     if (setCookieValues.Any())
                     {
-                        cookie = setCookieValues.First();
+                        cookie = setCookieValues.ElementAtOrDefault(1);
                     }
 
                     return cookie;
@@ -112,9 +114,9 @@ namespace MediaPlayer.API
 
         private async Task<string> RequestZingMp3(string path, object qs)
         {
-            using (HttpClient client = new HttpClient())
+            try
             {
-                string cookie = await GetCookie();
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 var queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
                 queryString["ctime"] = CTIME;
@@ -127,18 +129,26 @@ namespace MediaPlayer.API
                 }
 
                 string url = $"{URL}{path}?{queryString}";
-                Console.WriteLine(url);
-                client.DefaultRequestHeaders.Add("Cookie", cookie);
-                HttpResponseMessage response = await client.GetAsync(url);
-                string result = await response.Content.ReadAsStringAsync();
-                MessageBox.Show("check data:\n",result);
-                return result;
+                string cookie = await GetCookie();
+                using (HttpRequest http = new HttpRequest())
+                {
+                    http.Cookies = new CookieDictionary();
+                    http.AddHeader("Cookie", cookie);
+                    http.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36";
+                    // Send a GET request
+                    Console.WriteLine(url);
+                    HttpResponse response = http.Get(url);
+
+                    return response.ToString();
+                }
+            }
+            catch
+            {
+                return null;
             }
         }
-
-
-        //Get song
-        public async Task<dynamic> GetSong(string songId)
+        //Get song - DONE
+        public async Task<string> GetSong(string songId)
         {
             try
             {
@@ -154,9 +164,8 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-
-        //Get Detail Playlist
-        public async Task<dynamic> GetDetailPlaylist(string playlistId)
+        //Get Detail Playlist - DONE
+        public async Task<string> GetDetailPlaylist(string playlistId)
         {
             try
             {
@@ -173,8 +182,8 @@ namespace MediaPlayer.API
             }
         }
 
-        //Get Home 
-        public async Task<dynamic> GetHome()
+        //Get Home - DONE
+        public async Task<string> GetHome()
         {
             try
             {
@@ -246,7 +255,7 @@ namespace MediaPlayer.API
             }
         }
 
-        //get Info Song
+        //get Info Song - Done
         public async Task<dynamic> GetInfoSong(string songId)
         {
             try
@@ -264,7 +273,7 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //get List Artist Song
+        //get List Artist Song 
         public async Task<dynamic> GetListArtistSong(string artistId,string page,string count)
         {
             try
@@ -289,14 +298,14 @@ namespace MediaPlayer.API
         }
 
         //get Artist
-        public async Task<dynamic> GetArtist(string name)
+        public async Task<string> GetArtist(string alias1)
         {
             try
             {
                 string res = await RequestZingMp3("/api/v2/page/get/artist",
                     new
                     {
-                        alias = name,
+                        alias = alias1,
                         sig = HashParamNoId("/api/v2/page/get/artist")
                     });
                 return res;
@@ -306,8 +315,8 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //Get lyric
-        public async Task<dynamic> GetLyric(string songId)
+        //Get lyric - Done
+        public async Task<string> GetLyric(string songId)
         {
             try
             {

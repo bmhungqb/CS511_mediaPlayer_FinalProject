@@ -78,7 +78,7 @@
             // sliderMusic
             // 
             this.sliderMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sliderMusic.Location = new System.Drawing.Point(473, 67);
+            this.sliderMusic.Location = new System.Drawing.Point(462, 67);
             this.sliderMusic.Margin = new System.Windows.Forms.Padding(2);
             this.sliderMusic.Name = "sliderMusic";
             this.sliderMusic.Size = new System.Drawing.Size(519, 20);
@@ -91,7 +91,7 @@
             this.lblPlayCurrentTime.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayCurrentTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayCurrentTime.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblPlayCurrentTime.Location = new System.Drawing.Point(434, 68);
+            this.lblPlayCurrentTime.Location = new System.Drawing.Point(423, 68);
             this.lblPlayCurrentTime.Margin = new System.Windows.Forms.Padding(2);
             this.lblPlayCurrentTime.Name = "lblPlayCurrentTime";
             this.lblPlayCurrentTime.Size = new System.Drawing.Size(34, 17);
@@ -103,7 +103,7 @@
             this.lblPlayDuration.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayDuration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayDuration.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblPlayDuration.Location = new System.Drawing.Point(999, 67);
+            this.lblPlayDuration.Location = new System.Drawing.Point(988, 67);
             this.lblPlayDuration.Margin = new System.Windows.Forms.Padding(2);
             this.lblPlayDuration.Name = "lblPlayDuration";
             this.lblPlayDuration.Size = new System.Drawing.Size(27, 17);

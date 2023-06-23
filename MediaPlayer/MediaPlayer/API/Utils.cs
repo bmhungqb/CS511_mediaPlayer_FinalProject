@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
@@ -45,34 +45,32 @@ namespace MediaPlayer.API
         public string getSong(string data)
         {
             string urlSong = null;
-            dynamic dataConvert = JsonConvert.DeserializeObject(data);
-            JArray dataArray = dataConvert.data;
-            if (dataArray != null && dataArray.Count > 0)
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject property1 = (JObject)jsonObject["data"];
+            string audioUrl = property1["128"].ToString();
+            using (HttpRequest http = new HttpRequest())
             {
-                string audioUrl = dataArray[0]["128"].ToString();
-                using (HttpRequest http = new HttpRequest())
+                try
                 {
-                    try
-                    {
-                        // Send a GET request to download the audio
-                        HttpResponse response = http.Get(audioUrl);
+                    // Send a GET request to download the audio
+                    HttpResponse res = http.Get(audioUrl);
 
-                        // Check if the request was successful
-                        if (response.StatusCode == HttpStatusCode.OK)
-                        {
-                            // Retrieve the audio data as a byte array
-                            byte[] audioData = response.ToBytes();
-
-                            urlSong = Path.GetTempFileName();
-                            // Save the audio data to the temporary file
-                            File.WriteAllBytes(urlSong, audioData);
-                            return urlSong;
-                        }
-                    }
-                    catch (Exception ex)
+                    // Check if the request was successful
+                    if (res.StatusCode == HttpStatusCode.OK)
                     {
-                        Console.WriteLine("An error occurred: " + ex.Message);
+                        // Retrieve the audio data as a byte array
+                        byte[] audioData = res.ToBytes();
+
+                        urlSong = Path.GetTempFileName();
+                        // Save the audio data to the temporary file
+                        File.WriteAllBytes(urlSong, audioData);
+                        return urlSong;
                     }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
                 }
             }
             return urlSong;
@@ -80,26 +78,230 @@ namespace MediaPlayer.API
         public Lyric getLyrics(string data)
         {
             Lyric lyrics = new Lyric();
+            lyrics.sentences = new List<Sentence> { new Sentence() };
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject res = (JObject)jsonObject["data"];
+            foreach (var subitem in res.Properties())
+            {
+                if (subitem.Name == "sentences")
+                {
+                    foreach (JToken subsubitem in subitem.Value)
+                    {
+                        Sentence sen = new Sentence();
+                        sen.sentence = new List<Word> { new Word() };
+                        foreach (JToken subsubsubitem in subsubitem["words"])
+                        {
+                            Word word = new Word();
+                            JObject obj = (JObject)subsubsubitem;
+                            word.data = obj["data"].ToString();
+                            word.startTime = int.Parse(obj["startTime"].ToString());
+                            word.endTime = int.Parse(obj["endTime"].ToString());
+                            sen.sentence.Add(word);
+                        }
+                        lyrics.sentences.Add(sen);
+                    }
+                }
+                else if(subitem.Name == "file")
+                {
+                    lyrics.file = subitem.Value.ToString();
+                }
+            }
             return lyrics;
         }
         public HomePage getHome(string data)
         {
-//    public SectionDetail banner { get; set; }
-//public SectionDetail newRelease { get; set; }
-//public SectionDetail chill { get; set; }
-//public SectionDetail artistPopular { get; set; }
-//public SectionDetail energyPositive { get; set; }
             HomePage homePage = new HomePage();
-            MessageBox.Show(data.ToString());
-            dynamic dataConvert = JsonConvert.DeserializeObject(data);
-            JArray dataArray = dataConvert.data;
-            if (dataArray != null && dataArray.Count > 0)
+            homePage.newRelease = new SectionDetail();
+            homePage.chill = new SectionDetail();
+            homePage.artistPopular = new SectionDetail();
+            homePage.energyPositive = new SectionDetail();
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject property1 = (JObject)jsonObject["data"];
+            foreach (var item in property1.Properties())
             {
-                foreach (JObject item in dataArray[0]["items"])
+                if(item.Name == "items")
                 {
+                    foreach(JToken subitem in item.Value)
+                    {
+                        if (subitem["sectionType"].ToString() == "banner")
+                        {
+                            homePage.banner = new SectionDetail();
+                            homePage.banner.listBanners = new List<BannerItem> { new BannerItem() };
+                            BannerItem banner = new BannerItem();
+                            homePage.banner.sectionType = subitem["sectionType"].ToString();
+                            foreach(JToken subsubitem in subitem["items"])
+                            {
+                                banner.banner = subsubitem["banner"].ToString();
+                                banner.songId = subsubitem["encodeId"].ToString();
+                                homePage.banner.listBanners.Add(banner);
+                            }
+                        }
+                        else if (subitem["sectionType"].ToString() == "new-release" && subitem["title"].ToString() == "Mới phát hành")
+                        {
+                            homePage.newRelease = new SectionDetail();
+                            homePage.newRelease.listSongs = new List<Song> { new Song() };
+                            homePage.newRelease.title = subitem["title"].ToString();
+                            homePage.newRelease.sectionType = subitem["sectionType"].ToString();
+                            JObject obj = (JObject)subitem["items"];
+                            foreach (var subsubitem in obj.Properties())
+                            {
+                                Song song = new Song();
+                                if (subsubitem.Name == "all")
+                                {
+                                    foreach(JToken subsubsubitem in subsubitem.Value)
+                                    {
+                                        song.songId = subsubsubitem["encodeId"].ToString();
+                                        song.title = subsubsubitem["title"].ToString();
+                                        song.alias = subsubsubitem["alias"].ToString();
+                                        song.artistsNames = subsubsubitem["artistsNames"].ToString();
+                                        song.thumbnail = subsubsubitem["thumbnail"].ToString();
+                                        song.releaseDate = int.Parse(subsubsubitem["releaseDate"].ToString());
+                                    }
+                                }
+                            }
+                        }
+                        else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Chill")
+                        {
+                            homePage.chill = new SectionDetail();
+                            homePage.chill.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.chill.title = subitem["title"].ToString();
+                            homePage.chill.sectionType = subitem["sectionType"].ToString();
+                            Playlist playlist = new Playlist();
+                            foreach (JObject subsubitem in subitem["items"])
+                            {
+                                playlist.playlistId = subsubitem["encodeId"].ToString();
+                                playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
+                                playlist.sortDescription = subsubitem["sortDescription"].ToString();
+                                homePage.chill.listPlaylists.Add(playlist);
+                            }
+                        }
+                        else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Nghệ sĩ thịnh hành")
+                        {
+                            homePage.artistPopular = new SectionDetail();
+                            homePage.artistPopular.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.artistPopular.title = subitem["title"].ToString();
+                            homePage.artistPopular.sectionType = subitem["sectionType"].ToString();
+                            Playlist playlist = new Playlist();
+                            foreach (JObject subsubitem in subitem["items"])
+                            {
+                                playlist.playlistId = subsubitem["encodeId"].ToString();
+                                playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
+                                playlist.sortDescription = subsubitem["sortDescription"].ToString();
+                                homePage.artistPopular.listPlaylists.Add(playlist);
+                            }
+                        }
+                        else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Năng lượng tích cực")
+                        {
+                            homePage.energyPositive = new SectionDetail();
+                            homePage.energyPositive.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.energyPositive.title = subitem["title"].ToString();
+                            homePage.energyPositive.sectionType = subitem["sectionType"].ToString();
+                            Playlist playlist = new Playlist();
+                            foreach (JObject subsubitem in subitem["items"])
+                            {
+                                playlist.playlistId = subsubitem["encodeId"].ToString();
+                                playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
+                                playlist.sortDescription = subsubitem["sortDescription"].ToString();
+                                homePage.energyPositive.listPlaylists.Add(playlist);
+                            }
+                        }
+                    }
                 }
             }
             return homePage;
+        }
+        public Song getInfoSong(string data)
+        {
+            Song song = new Song();
+            song.artists = new List<Artist>();
+            song.genres = new List<Genre>();
+            song.album = new Album();
+            song.lyric = new Lyric();
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject res = (JObject)jsonObject["data"];
+
+            song.songId = res["encodeId"].ToString();
+            song.title = res["title"].ToString();
+            song.alias = res["alias"].ToString();
+            song.artistsNames = res["artistsNames"].ToString();
+            song.thumbnail = res["thumbnail"].ToString();
+            song.thumbnailM = res["thumbnailM"].ToString();
+            song.duration = int.Parse(res["duration"].ToString());
+            song.releaseDate = int.Parse(res["releaseDate"].ToString());
+            song.totalLike = int.Parse(res["like"].ToString());
+            song.totalListen = int.Parse(res["listen"].ToString());
+            /*
+             * Chưa lấy hết dữ liệu vì không dùng đến
+             * Cần thì call API và lấy tiếp...
+             */
+            return song;
+        }
+        public Artist getArtist(JToken dataArtist)
+        {
+            Artist artist = new Artist();
+            //Handle add artist
+            return artist;
+        }
+        public Genre getGenre(JToken dataGenre)
+        {
+            Genre genre = new Genre();
+            // Handle add genre
+            return genre;
+        }
+        public Album getAlbum(JToken dataAlbum)
+        {
+            Album album = new Album(); 
+            return album;
+        }
+
+        public Playlist getPlaylist(string data)
+        {
+            Playlist playlist = new Playlist();
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject res = (JObject)jsonObject["data"];
+            playlist.playlistId = res["encodeId"].ToString();
+            playlist.title = res["title"].ToString();
+            playlist.thumbnail = res["thumbnail"].ToString();
+            playlist.thumbnailM = res["thumbnailM"].ToString();
+            playlist.sortDescription = res["sortDescription"].ToString();
+            playlist.artistsNames = res["artistsNames"].ToString();
+            playlist.artists = new List<Artist>();
+            playlist.genres = new List<Genre>();
+            playlist.totalLike = int.Parse(res["like"].ToString());
+            playlist.totalListen = int.Parse(res["listen"].ToString());
+            playlist.listSongs = new List<Song> { new Song() };
+            JObject obj = (JObject)res["song"];
+            foreach (var subsubitem in obj.Properties())
+            {
+                Song song = new Song();
+                if (subsubitem.Name == "items")
+                {
+                    foreach (JToken subsubsubitem in subsubitem.Value)
+                    {
+                        song.songId = subsubsubitem["encodeId"].ToString();
+                        song.title = subsubsubitem["title"].ToString();
+                        song.alias = subsubsubitem["alias"].ToString();
+                        song.artistsNames = subsubsubitem["artistsNames"].ToString();
+                        song.thumbnail = subsubsubitem["thumbnail"].ToString();
+                        song.duration = int.Parse(subsubitem["duration"].ToString());
+                        song.releaseDate = int.Parse(subsubsubitem["releaseDate"].ToString());
+                        playlist.listSongs.Add(song);
+                    }
+                }
+                else if(subsubitem.Name == "total")
+                {
+                    playlist.totalSongs = int.Parse(subsubitem["total"].ToString());
+                }
+                else if(subsubitem.Name == "totalDuration")
+                {
+                    playlist.totalDuration = int.Parse(subsubitem["totalDuration"].ToString());
+                }
+            }
+            return playlist;
         }
     }
 }

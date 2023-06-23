@@ -41,17 +41,18 @@ namespace MediaPlayer.API
     }
     public class Lyric
     {
-        public class Word
-        {
-            public int startTime { get; set; }
-            public int endTime { get; set; }
-            public string data { get; set; }
-        }
-        public class Sentence
-        {
-            public List<Word> sentence { get; set; }
-        }
         public List<Sentence> sentences { get; set; }
+        public string file { get; set; }   
+    }
+    public class Sentence
+    {
+        public List<Word> sentence { get; set; }
+    }
+    public class Word
+    {
+        public int startTime { get; set; }
+        public int endTime { get; set; }
+        public string data { get; set; }
     }
     public class Song
     {
@@ -89,17 +90,17 @@ namespace MediaPlayer.API
     }
 
     public class SectionDetail
-    { 
-        public class BannerItem
-        {
-            public string banner { get; set; }
-            public string songId { get; set; }
-        }
+    {
         public string title { get; set; }
         public string sectionType { get; set; }
         public List<Song> listSongs { get; set; }
         public List<Playlist> listPlaylists { get; set; }
         public List<BannerItem> listBanners { get; set; }
+    }
+    public class BannerItem
+    {
+        public string banner { get; set; }
+        public string songId { get; set; }
     }
     public class HomePage
     {

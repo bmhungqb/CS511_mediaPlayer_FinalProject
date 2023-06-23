@@ -23,8 +23,15 @@ namespace MediaPlayer
 
         private async void main_Load(object sender, EventArgs e)
         {
-            string response = await zingMp3Api.GetHome();
+            //string res = await zingMp3Api.GetDetailPlaylist("ZOCIIUWW");
+            string res = await zingMp3Api.GetLyric("Z6B6ZDIB");
+            Lyric ress = Utils.getLyrics(res);
+            //string ress = Utils.getLyrics(res);
+            //string response = await zingMp3Api.GetInfoSong("Z6BFW87E");
+            //string res = await zingMp3Api.GetArtist("Thanh-Dat");
+            //string response = await zingMp3Api.GetHome();
             //dataHomePage = Utils.getHome(response);
+
         }
         private void button_Click(object sender, EventArgs e)
         {
