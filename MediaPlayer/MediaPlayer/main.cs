@@ -20,7 +20,8 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
-
+        int width = 1355;
+        int height = 200;
         private async void main_Load(object sender, EventArgs e)
         {
             /* Test API
@@ -46,7 +47,7 @@ namespace MediaPlayer
             for (int i = 1; i < dataHomePage.banner.listBanners.Count(); i++)
             {
                 BannerItem a = dataHomePage.banner.listBanners[i];
-                banner ban = new banner(a.banner);
+                banner ban = new banner(a);
                 flow_banner.Controls.Add(ban);
             }
             for (int i = 1; i < dataHomePage.newRelease.listSongs.Count(); i++)
@@ -58,16 +59,27 @@ namespace MediaPlayer
             {
                 //usercontrol artist popular use for both chill & popular artists
                 Playlist a = dataHomePage.chill.listPlaylists[i];
-                artist_popular artist_Popular = new artist_popular(a.thumbnailM, a.sortDescription);
+                artist_popular artist_Popular = new artist_popular(a);
+                artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_chill.Controls.Add(artist_Popular);
             }
             for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
             {
                 Playlist a = dataHomePage.artistPopular.listPlaylists[i];
-                artist_popular artist_Popular = new artist_popular(a.thumbnailM, a.sortDescription);
+                artist_popular artist_Popular = new artist_popular(a);
+                artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_artist.Controls.Add(artist_Popular);
             }
         }
+        private void Artist_Popular_OpenPlaylistRequested(object sender, EventArgs e)
+        {
+            artist_popular artist_Popular = sender as artist_popular;
+            uct_playlist uct_Playlist = new uct_playlist();
+            uct_Playlist.OpenUserControlB(artist_Popular.current);
+            flowLayoutPanel1.Controls.Add(uct_Playlist);
+            uct_Playlist.BringToFront();
+        }
+
         private void button_Click(object sender, EventArgs e)
         {
             //Guna2Button guna2Button = sender as Guna2Button;

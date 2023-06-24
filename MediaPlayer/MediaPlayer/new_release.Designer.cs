@@ -31,6 +31,7 @@
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_song = new System.Windows.Forms.Label();
             this.pt_thumb = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.SuspendLayout();
             // 
             // lb_singer
@@ -72,16 +73,26 @@
             this.pt_thumb.TabIndex = 13;
             this.pt_thumb.Click += new System.EventHandler(this.pt_thumb_Click);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.guna2Separator1.Location = new System.Drawing.Point(-9, 85);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(607, 11);
+            this.guna2Separator1.TabIndex = 97;
+            // 
             // new_release
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.pt_thumb);
             this.Controls.Add(this.lb_singer);
             this.Controls.Add(this.lb_song);
             this.Name = "new_release";
-            this.Size = new System.Drawing.Size(598, 84);
+            this.Size = new System.Drawing.Size(598, 99);
             this.Load += new System.EventHandler(this.new_release_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -93,5 +104,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton pt_thumb;
         private System.Windows.Forms.Label lb_singer;
         private System.Windows.Forms.Label lb_song;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

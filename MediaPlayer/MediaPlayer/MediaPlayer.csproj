@@ -477,6 +477,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\rank.png" />
     <None Include="Resources\del.png" />
     <None Include="Resources\garbage_trash.png" />
   </ItemGroup>

@@ -69,6 +69,7 @@
             this.pt_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pt_artist.TabIndex = 0;
             this.pt_artist.TabStop = false;
+            this.pt_artist.Click += new System.EventHandler(this.pt_artist_Click);
             // 
             // artist_popular
             // 

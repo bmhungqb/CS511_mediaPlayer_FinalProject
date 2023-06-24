@@ -162,5 +162,16 @@ namespace MediaPlayer
             panel1.Controls.Clear();
             uctacc uctacc = new uctacc();
         }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)//rank
+        {
+            find.FillColor = SystemColors.WindowFrame;
+            home1.FillColor = SystemColors.WindowFrame;
+            playlist_b.FillColor = SystemColors.WindowFrame;
+            setting.FillColor = SystemColors.WindowFrame;
+            guna2Button1.FillColor = SystemColors.AppWorkspace;
+            acc.FillColor = SystemColors.WindowFrame;
+            panel1.Controls.Clear();
+        }
     }
 }

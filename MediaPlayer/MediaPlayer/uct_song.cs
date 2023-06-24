@@ -12,16 +12,16 @@ namespace MediaPlayer
 {
     public partial class uct_song : UserControl
     {
-        int Id = 0;
-        MediaPlayer.API.ZingMp3Api zingMp3Api;
-        MediaPlayer.API.Utils Utils;
+        string ID = null;
+        MediaPlayer.API.ZingMp3Api zingMp3Ap = new ZingMp3Api();
+        MediaPlayer.API.Utils Utils = new Utils();
         Song currentSong = new Song();
-        public uct_song(int id,Song dataSong)
+        public uct_song(string id, Song song)
         {
             InitializeComponent();
             pt_thumb.BringToFront();
-            currentSong = dataSong;
-            Id = id;
+            currentSong = song;
+            ID= id;
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
@@ -35,10 +35,10 @@ namespace MediaPlayer
         private void uct_song_Load(object sender, EventArgs e)
         {
             BackColor = Color.Transparent;
-            lb_id.Text = Id.ToString();
+            lb_id.Text = ID;
             lb_song.Text = currentSong.title;
             lb_singer.Text = currentSong.artistsNames;
-            lb_album.Text = currentSong.album.title;
+         //   lb_album.Text = currentSong.totalLike.ToString();
             lb_time.Text = ConvertToMinutesAndSeconds(currentSong.duration);
             pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
         }

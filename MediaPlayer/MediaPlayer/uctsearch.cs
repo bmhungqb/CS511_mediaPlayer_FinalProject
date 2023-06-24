@@ -17,19 +17,17 @@ namespace MediaPlayer
 {
     public partial class uctsearch : UserControl
     {
-        MediaPlayer.API.ZingMp3Api zingMp3Api;
-        MediaPlayer.API.Utils Utils;
+        MediaPlayer.API.ZingMp3Api zingMp3Api= new ZingMp3Api();
+        MediaPlayer.API.Utils Utils = new Utils();
         public uctsearch()
         {
             InitializeComponent();
             panel1.Visible = false;
-            panel2.Visible = false;
         }
         string type_search = "artist,song,key,code";
         private void guna2TextBox1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
-            panel2.Visible = true;
             tb_search.Text= string.Empty;
         }
         private void btn_Click_Type_Search(object sender, EventArgs e)
@@ -43,14 +41,12 @@ namespace MediaPlayer
                     btn_song.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
-                    panel2.Visible = false;
                     break;
                 case "btn_song":
                     type_search = "song";
                     btn_all.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
-                    panel2.Visible = true;
                     break;
                 case "btn_artist":
                     //type_search = "artist";
@@ -58,7 +54,6 @@ namespace MediaPlayer
                     btn_song.Checked = false;
                     btn_all.Checked = false;
                     btn_playlist.Checked = false;
-                    panel2.Visible = false;
                     break;
                 case "btn_playlist":
                     type_search = "artist,song,key,code";
@@ -90,17 +85,11 @@ namespace MediaPlayer
         private async void SearchMusic()
         {
             DeleteUctSongs();
-
             string resSearch = await zingMp3Api.Search(tb_search.Text);
-            //int id = 0;
-            //int time = 0;
-            //foreach (Song song in res_searchMusic.Songs)
-            //{
-            //    id++;
-            //    uct_song new_Song = new uct_song(id, song);
-            //    flowLayoutSearch.Controls.Add(new_Song);
-            //    time += int.Parse(song.duration);
-            //}
+            Search search = new Search();
+            search = Utils.handleSearch(resSearch);
+            search_all search_All = new search_all(search);
+            flowLayoutSearch.Controls.Add(search_All);
         }
     }
 }

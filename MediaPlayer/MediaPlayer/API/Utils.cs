@@ -421,28 +421,29 @@ namespace MediaPlayer.API
             JObject obj = (JObject)res["song"];
             foreach (var subsubitem in obj.Properties())
             {
-                Song song = new Song();
                 if (subsubitem.Name == "items")
                 {
                     foreach (JToken subsubsubitem in subsubitem.Value)
                     {
+                        
+                        Song song = new Song();
                         song.songId = subsubsubitem["encodeId"].ToString();
                         song.title = subsubsubitem["title"].ToString();
                         song.alias = subsubsubitem["alias"].ToString();
                         song.artistsNames = subsubsubitem["artistsNames"].ToString();
-                        song.thumbnail = subsubsubitem["thumbnail"].ToString();
-                        song.duration = int.Parse(subsubitem["duration"].ToString());
+                        song.thumbnail = subsubsubitem["thumbnail"].ToString(); 
+                        song.duration = int.Parse(subsubsubitem["duration"].ToString());
                         song.releaseDate = int.Parse(subsubsubitem["releaseDate"].ToString());
                         playlist.listSongs.Add(song);
                     }
                 }
                 else if(subsubitem.Name == "total")
                 {
-                    playlist.totalSongs = int.Parse(subsubitem["total"].ToString());
+               playlist.totalSongs = int.Parse(subsubitem.Value.ToString());
                 }
                 else if(subsubitem.Name == "totalDuration")
                 {
-                    playlist.totalDuration = int.Parse(subsubitem["totalDuration"].ToString());
+              playlist.totalDuration = int.Parse(subsubitem.Value.ToString());
                 }
             }
             return playlist;

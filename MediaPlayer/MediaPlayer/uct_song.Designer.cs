@@ -86,7 +86,7 @@
             this.lb_album.AutoSize = true;
             this.lb_album.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_album.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lb_album.Location = new System.Drawing.Point(570, 38);
+            this.lb_album.Location = new System.Drawing.Point(677, 41);
             this.lb_album.Name = "lb_album";
             this.lb_album.Size = new System.Drawing.Size(119, 25);
             this.lb_album.TabIndex = 7;
@@ -140,7 +140,7 @@
             this.Controls.Add(this.lb_song);
             this.Controls.Add(this.lb_id);
             this.Name = "uct_song";
-            this.Size = new System.Drawing.Size(1329, 100);
+            this.Size = new System.Drawing.Size(1304, 100);
             this.Load += new System.EventHandler(this.uct_song_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

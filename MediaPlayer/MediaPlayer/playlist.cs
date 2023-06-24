@@ -23,11 +23,11 @@ namespace MediaPlayer
         string x;
         private void UserControlA_OpenUserControlBRequested(object sender, EventArgs e)
         {
-            uct_playlist playlist = new uct_playlist(x);
-            // Gọi phương thức OpenUserControlB
-            playlist.OpenUserControlB();
-            panel.Controls.Add(playlist);
-            playlist.BringToFront();
+            //uct_playlist playlist = new uct_playlist(x);
+            //// Gọi phương thức OpenUserControlB
+            //playlist.OpenUserControlB();
+            //panel.Controls.Add(playlist);
+            //playlist.BringToFront();
         }
         int y = 65;
         //y+209;

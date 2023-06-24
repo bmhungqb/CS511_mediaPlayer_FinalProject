@@ -14,16 +14,15 @@ namespace MediaPlayer
     public partial class banner : UserControl
     {
         MediaPlayer.API.Utils Utils = new Utils();
-        string url;
-        public banner(string image)
+        BannerItem bannerItem = new BannerItem();
+        public banner(BannerItem banner) 
         {
             InitializeComponent();
-            url = image;
+            bannerItem = banner;
         }
-
         private void banner_Load(object sender, EventArgs e)
         {
-            guna2PictureBox1.Image = Utils.getImage(url);
+           guna2PictureBox1.Image = Utils.getImage(bannerItem.banner);
         }
     }
 }
