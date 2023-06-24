@@ -28,26 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pt_thumb = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_song = new System.Windows.Forms.Label();
+            this.pt_thumb = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
-            // 
-            // pt_thumb
-            // 
-            this.pt_thumb.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.pt_thumb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pt_thumb.HoverState.Image = global::MediaPlayer.Properties.Resources.play;
-            this.pt_thumb.HoverState.ImageSize = new System.Drawing.Size(100, 100);
-            this.pt_thumb.Image = global::MediaPlayer.Properties.Resources.ezpapa;
-            this.pt_thumb.ImageOffset = new System.Drawing.Point(0, 0);
-            this.pt_thumb.ImageRotate = 0F;
-            this.pt_thumb.ImageSize = new System.Drawing.Size(100, 100);
-            this.pt_thumb.Location = new System.Drawing.Point(7, 6);
-            this.pt_thumb.Name = "pt_thumb";
-            this.pt_thumb.PressedState.ImageSize = new System.Drawing.Size(100, 100);
-            this.pt_thumb.Size = new System.Drawing.Size(100, 73);
-            this.pt_thumb.TabIndex = 13;
             // 
             // lb_singer
             // 
@@ -71,6 +55,23 @@
             this.lb_song.TabIndex = 11;
             this.lb_song.Text = "Song\'s name";
             // 
+            // pt_thumb
+            // 
+            this.pt_thumb.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pt_thumb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pt_thumb.HoverState.Image = global::MediaPlayer.Properties.Resources.play;
+            this.pt_thumb.HoverState.ImageSize = new System.Drawing.Size(100, 100);
+            this.pt_thumb.Image = global::MediaPlayer.Properties.Resources.ezpapa;
+            this.pt_thumb.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pt_thumb.ImageRotate = 0F;
+            this.pt_thumb.ImageSize = new System.Drawing.Size(100, 100);
+            this.pt_thumb.Location = new System.Drawing.Point(7, 6);
+            this.pt_thumb.Name = "pt_thumb";
+            this.pt_thumb.PressedState.ImageSize = new System.Drawing.Size(100, 100);
+            this.pt_thumb.Size = new System.Drawing.Size(100, 73);
+            this.pt_thumb.TabIndex = 13;
+            this.pt_thumb.Click += new System.EventHandler(this.pt_thumb_Click);
+            // 
             // new_release
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,7 +81,7 @@
             this.Controls.Add(this.lb_singer);
             this.Controls.Add(this.lb_song);
             this.Name = "new_release";
-            this.Size = new System.Drawing.Size(653, 84);
+            this.Size = new System.Drawing.Size(598, 84);
             this.Load += new System.EventHandler(this.new_release_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

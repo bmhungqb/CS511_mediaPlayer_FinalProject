@@ -55,7 +55,7 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(253, 63);
+            this.guna2TextBox1.Size = new System.Drawing.Size(236, 63);
             this.guna2TextBox1.TabIndex = 1;
             // 
             // pt_artist
@@ -65,7 +65,7 @@
             this.pt_artist.ImageRotate = 0F;
             this.pt_artist.Location = new System.Drawing.Point(3, 0);
             this.pt_artist.Name = "pt_artist";
-            this.pt_artist.Size = new System.Drawing.Size(255, 155);
+            this.pt_artist.Size = new System.Drawing.Size(237, 155);
             this.pt_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pt_artist.TabIndex = 0;
             this.pt_artist.TabStop = false;
@@ -77,7 +77,7 @@
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.pt_artist);
             this.Name = "artist_popular";
-            this.Size = new System.Drawing.Size(261, 220);
+            this.Size = new System.Drawing.Size(243, 220);
             this.Load += new System.EventHandler(this.artist_popular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pt_artist)).EndInit();
             this.ResumeLayout(false);

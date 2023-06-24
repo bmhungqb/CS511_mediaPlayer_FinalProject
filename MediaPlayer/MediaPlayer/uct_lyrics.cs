@@ -15,8 +15,8 @@ namespace MediaPlayer
 {
     public partial class uct_lyrics : UserControl
     {
-        MediaPlayer.API.ZingMp3Api zingMp3Api;
-        MediaPlayer.API.Utils Utils;
+        MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
+        MediaPlayer.API.Utils Utils = new Utils();
         string x, y;
         public uct_lyrics(string name)
         {
@@ -31,7 +31,7 @@ namespace MediaPlayer
                 string resLyric = await zingMp3Api.GetLyric(song.songId);
                 song.lyric = Utils.getLyrics(resLyric);
             }
-            //name.Text = x;
+            name.Text = x;
             //List<string> lyricsList = lyrics.lyric;
             //// Thực hiện các hành động cần thiết khi mở UserControlB
             //foreach (string line in lyricsList)

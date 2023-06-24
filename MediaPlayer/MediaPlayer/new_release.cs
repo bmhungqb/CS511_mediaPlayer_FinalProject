@@ -29,5 +29,11 @@ namespace MediaPlayer
             lb_song.Text = currentSong.title;
             lb_singer.Text = currentSong.artistsNames;
         }
+
+        private void pt_thumb_Click(object sender, EventArgs e)
+        {
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.testPlayMusic(currentSong);
+        }
     }
 }

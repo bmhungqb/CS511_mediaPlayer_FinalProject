@@ -17,8 +17,8 @@ namespace MediaPlayer
 {
     public partial class uct_player : UserControl
     {
-        MediaPlayer.API.ZingMp3Api zingMp3Api;
-        MediaPlayer.API.Utils Utils;
+        MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
+        MediaPlayer.API.Utils Utils = new Utils();
         public uct_player()
         {
             InitializeComponent();

@@ -56,7 +56,7 @@
             // 
             this.flow_banner.Location = new System.Drawing.Point(3, 209);
             this.flow_banner.Name = "flow_banner";
-            this.flow_banner.Size = new System.Drawing.Size(1356, 179);
+            this.flow_banner.Size = new System.Drawing.Size(1355, 179);
             this.flow_banner.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -72,7 +72,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flow_artist);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1362, 1157);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1368, 1157);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flow_new
@@ -80,7 +80,7 @@
             this.flow_new.AutoScroll = true;
             this.flow_new.Location = new System.Drawing.Point(3, 444);
             this.flow_new.Name = "flow_new";
-            this.flow_new.Size = new System.Drawing.Size(1356, 179);
+            this.flow_new.Size = new System.Drawing.Size(1355, 179);
             this.flow_new.TabIndex = 2;
             // 
             // label2
@@ -99,7 +99,7 @@
             this.flow_chill.AutoScroll = true;
             this.flow_chill.Location = new System.Drawing.Point(3, 679);
             this.flow_chill.Name = "flow_chill";
-            this.flow_chill.Size = new System.Drawing.Size(1356, 179);
+            this.flow_chill.Size = new System.Drawing.Size(1357, 192);
             this.flow_chill.TabIndex = 3;
             // 
             // label3
@@ -107,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 861);
+            this.label3.Location = new System.Drawing.Point(3, 874);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(344, 50);
             this.label3.TabIndex = 4;
@@ -115,9 +115,9 @@
             // 
             // flow_artist
             // 
-            this.flow_artist.Location = new System.Drawing.Point(3, 914);
+            this.flow_artist.Location = new System.Drawing.Point(3, 927);
             this.flow_artist.Name = "flow_artist";
-            this.flow_artist.Size = new System.Drawing.Size(1356, 221);
+            this.flow_artist.Size = new System.Drawing.Size(1360, 221);
             this.flow_artist.TabIndex = 4;
             // 
             // guna2PictureBox1
@@ -126,7 +126,7 @@
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1356, 200);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1355, 200);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -135,10 +135,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "main";
-            this.Size = new System.Drawing.Size(1362, 1147);
+            this.Size = new System.Drawing.Size(1387, 577);
             this.Load += new System.EventHandler(this.main_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
