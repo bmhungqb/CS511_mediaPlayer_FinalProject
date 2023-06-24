@@ -171,17 +171,18 @@ namespace MediaPlayer.API
                             JObject obj = (JObject)subitem["items"];
                             foreach (var subsubitem in obj.Properties())
                             {
-                                Song song = new Song();
                                 if (subsubitem.Name == "all")
                                 {
                                     foreach(JToken subsubsubitem in subsubitem.Value)
                                     {
+                                        Song song = new Song();
                                         song.songId = subsubsubitem["encodeId"].ToString();
                                         song.title = subsubsubitem["title"].ToString();
                                         song.alias = subsubsubitem["alias"].ToString();
                                         song.artistsNames = subsubsubitem["artistsNames"].ToString();
                                         song.thumbnail = subsubsubitem["thumbnail"].ToString();
                                         song.releaseDate = int.Parse(subsubsubitem["releaseDate"].ToString());
+                                        homePage.newRelease.listSongs.Add(song);
                                     }
                                 }
                             }
@@ -192,9 +193,9 @@ namespace MediaPlayer.API
                             homePage.chill.listPlaylists = new List<Playlist> { new Playlist() };
                             homePage.chill.title = subitem["title"].ToString();
                             homePage.chill.sectionType = subitem["sectionType"].ToString();
-                            Playlist playlist = new Playlist();
                             foreach (JObject subsubitem in subitem["items"])
                             {
+                                Playlist playlist = new Playlist();
                                 playlist.playlistId = subsubitem["encodeId"].ToString();
                                 playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
                                 playlist.sortDescription = subsubitem["sortDescription"].ToString();
@@ -207,9 +208,9 @@ namespace MediaPlayer.API
                             homePage.artistPopular.listPlaylists = new List<Playlist> { new Playlist() };
                             homePage.artistPopular.title = subitem["title"].ToString();
                             homePage.artistPopular.sectionType = subitem["sectionType"].ToString();
-                            Playlist playlist = new Playlist();
                             foreach (JObject subsubitem in subitem["items"])
                             {
+                                Playlist playlist = new Playlist();
                                 playlist.playlistId = subsubitem["encodeId"].ToString();
                                 playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
                                 playlist.sortDescription = subsubitem["sortDescription"].ToString();
@@ -222,9 +223,9 @@ namespace MediaPlayer.API
                             homePage.energyPositive.listPlaylists = new List<Playlist> { new Playlist() };
                             homePage.energyPositive.title = subitem["title"].ToString();
                             homePage.energyPositive.sectionType = subitem["sectionType"].ToString();
-                            Playlist playlist = new Playlist();
                             foreach (JObject subsubitem in subitem["items"])
                             {
+                                Playlist playlist = new Playlist();
                                 playlist.playlistId = subsubitem["encodeId"].ToString();
                                 playlist.thumbnailM = subsubitem["thumbnailM"].ToString();
                                 playlist.sortDescription = subsubitem["sortDescription"].ToString();
