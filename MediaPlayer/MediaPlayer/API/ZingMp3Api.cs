@@ -202,7 +202,7 @@ namespace MediaPlayer.API
             }
         }
 
-        //Get Top 100
+        //Get Top 100 - Khong can thiet
         public async Task<dynamic> GetTop100()
         {
             try
@@ -220,8 +220,8 @@ namespace MediaPlayer.API
             }
         }
 
-        //Get Chart Home
-        public async Task<dynamic> GetChartHome()
+        //Get Chart Home - 
+        public async Task<string> GetChartHome()
         {
             try
             {
@@ -237,7 +237,7 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //Get new Release Chart
+        //Get new Release Chart  - khong can thiet 
         public async Task<dynamic> GetNewReleaseChart()
         {
             try
@@ -273,8 +273,8 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //get List Artist Song 
-        public async Task<dynamic> GetListArtistSong(string artistId,string page,string count)
+        //get List Artist Song - DONE
+        public async Task<string> GetListArtistSong(string artistId,string page = "1",string count= "30")
         {
             try
             {
@@ -296,16 +296,15 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-
-        //get Artist
-        public async Task<string> GetArtist(string alias1)
+        //get Artist - DONE
+        public async Task<string> GetArtist(string aliasArtist)
         {
             try
             {
                 string res = await RequestZingMp3("/api/v2/page/get/artist",
                     new
                     {
-                        alias = alias1,
+                        alias = aliasArtist,
                         sig = HashParamNoId("/api/v2/page/get/artist")
                     });
                 return res;
@@ -332,14 +331,14 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //Search
-        public async Task<dynamic> Search(string name)
+        //Search - Done
+        public async Task<string> Search(string content)
         {
             try
             {
                 string res = await RequestZingMp3("/api/v2/search/multi",
                     new { 
-                        q = name, 
+                        q = content, 
                         sig = HashParamNoId("/api/v2/search/multi") 
                     });
                 return res;
@@ -349,8 +348,8 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //get List MV
-        public async Task<dynamic> GetListMV(string id,string page,string count)
+        //get List MV - Khong can thiet
+        public async Task<dynamic> GetListMV(string id,string page = "1",string count = "30")
         {
             try
             {
@@ -372,7 +371,7 @@ namespace MediaPlayer.API
             }
         }
 
-        //get Category MV
+        //get Category MV - Khong can thiet
         public async Task<dynamic> GetCategoryMV(string id)
         {
             try
@@ -391,7 +390,7 @@ namespace MediaPlayer.API
                 throw ex;
             }
         }
-        //get video
+        //get video (videoId = songId) - DONE
         public async Task<dynamic> GetVideo(string videoId)
         {
             try

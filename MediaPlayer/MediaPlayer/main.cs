@@ -23,15 +23,25 @@ namespace MediaPlayer
 
         private async void main_Load(object sender, EventArgs e)
         {
-            //string res = await zingMp3Api.GetDetailPlaylist("ZOCIIUWW");
-            string res = await zingMp3Api.GetLyric("Z6B6ZDIB");
-            Lyric ress = Utils.getLyrics(res);
-            //string ress = Utils.getLyrics(res);
-            //string response = await zingMp3Api.GetInfoSong("Z6BFW87E");
-            //string res = await zingMp3Api.GetArtist("Thanh-Dat");
-            //string response = await zingMp3Api.GetHome();
-            //dataHomePage = Utils.getHome(response);
-
+            /* Test API
+                string res = await zingMp3Api.GetDetailPlaylist("ZOCIIUWW");
+                string res = await zingMp3Api.GetLyric("Z6B6ZDIB");
+                Lyric ress = Utils.getLyrics(res);
+                string ress = Utils.getLyrics(res);
+                string response = await zingMp3Api.GetListMV("ZOAC7BUF");
+                string res = await zingMp3Api.GetArtist("Thanh-Dat");
+                string response = await zingMp3Api.GetHome();
+                dataHomePage = Utils.getHome(response);
+                string res = await zingMp3Api.GetArtist("Den");
+                Artist ar = Utils.getArtist(res);
+                string res = await zingMp3Api.GetListArtistSong("IW6BZA76");
+                string res = await zingMp3Api.GetVideo("Z6B6ZDIB");
+                Video v = Utils.getVideo(res);
+                string res = await zingMp3Api.GetInfoSong("ZOAC7BUF");
+                string res = await zingMp3Api.Search("Den");
+                Search searchData = Utils.handleSearch(res);
+            */
+            string res = await zingMp3Api.GetChartHome();
         }
         private void button_Click(object sender, EventArgs e)
         {

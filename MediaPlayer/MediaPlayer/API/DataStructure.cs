@@ -20,7 +20,7 @@ namespace MediaPlayer.API
         public string national { get; set; }   
         public string birthday { get; set; }
         public string realname { get; set; }
-        public string totalFollow { get; set; }
+        public int totalFollow { get; set; }
         public List<Song> listSongs { get; set; }
         public List<Album> listAlbums { get; set; }
     }
@@ -71,6 +71,7 @@ namespace MediaPlayer.API
         public string thumbnailM {  get; set; }
         public string thumbnail {  get; set; }
         public int score { get; set; }
+        public Video video { get; set; }   
     }
     public class Playlist
     {
@@ -117,17 +118,19 @@ namespace MediaPlayer.API
     }
     public class Search
     {
-        List<Artist> listArtists { get; set; }
-        List<Song> listSongs { get; set; }
-        List<Video> listVideos { get; set; }
-        List<Playlist> listPlaylists { get; set; }
+        public List<Artist> listArtists { get; set; }
+        public List<Song> listSongs { get; set; }
+        public List<Video> listVideos { get; set; }
+        public List<Playlist> listPlaylists { get; set; }
     }
     public class Video
     {
         public Song song { get; set; }
         public Artist artist { get; set; }
         public string linkVideo { get; set; }
+        public string linkFileTempVideo { get; set; }
+        public string videoId { get; set; }
         public int totalLike { get; set; }
-        public int totalListen { get; set; }    
+        public int totalListen { get; set; }
     }
 }

@@ -14,6 +14,12 @@ namespace MediaPlayer.API
 {
     public class Utils
     {
+        /*
+         * function getImage()
+         * Input: imageUrl
+         * Output: Bitmap
+         * Use: picture.Image = getImage(imageUrl);
+        */
         public Bitmap getImage(string imageUrl)
         {
             Bitmap bmp = null;
@@ -41,7 +47,13 @@ namespace MediaPlayer.API
                 }
             }
             return bmp;
-        }
+        } 
+        /*
+         * function getSong()
+         * Input: data when call api GetSong(songId)
+         * Ouput: string(url of tempfile save audiodata)
+         * use: player.URL = getSong(data);
+        */
         public string getSong(string data)
         {
             string urlSong = null;
@@ -75,6 +87,12 @@ namespace MediaPlayer.API
             }
             return urlSong;
         }
+        /*
+         * function getLyrics()
+         * Input: data when call api GetLyric(songId);
+         * Ouput: Lyric
+         * use: Lyric lyric = getLyrics(data);
+         */
         public Lyric getLyrics(string data)
         {
             Lyric lyrics = new Lyric();
@@ -109,6 +127,12 @@ namespace MediaPlayer.API
             }
             return lyrics;
         }
+        /*
+         * function getHome()
+         * Input: data when call API GetHome()
+         * Output: HomePage
+         * Use: HomePage homepage = getHome(data);
+         */
         public HomePage getHome(string data)
         {
             HomePage homePage = new HomePage();
@@ -212,6 +236,12 @@ namespace MediaPlayer.API
             }
             return homePage;
         }
+        /*
+         * function getInfoSong()
+         * Input: data when call API GetInfoSong(songId)
+         * Output: Song
+         * Use: Song song = getInfoSong(data)
+         */
         public Song getInfoSong(string data)
         {
             Song song = new Song();
@@ -239,11 +269,125 @@ namespace MediaPlayer.API
              */
             return song;
         }
-        public Artist getArtist(JToken dataArtist)
+        /*
+         * funtion getArtist()
+         * Input: data when call API GetArtist(aliasArtist)
+         * Output: Artist
+         * Use: Artist artist = getArtist(dataArtist)
+         */
+        public Artist getArtist(string dataArtist)
         {
+            dynamic response = JsonConvert.DeserializeObject(dataArtist);
+            JObject jsonObject = (JObject)response;
+            JObject res = (JObject)jsonObject["data"];
+
             Artist artist = new Artist();
-            //Handle add artist
+            artist.listSongs = new List<Song>();
+            artist.listAlbums = new List<Album>();
+            artist.artistId = res["id"].ToString();
+            artist.name = res["name"].ToString();
+            artist.alias = res["alias"].ToString();
+            artist.playlistId = res["playlistId"].ToString();
+            artist.thumbnail = res["thumbnail"].ToString();
+            artist.thumbnailM = res["thumbnailM"].ToString();
+            artist.realname = res["realname"].ToString();
+            artist.birthday = res["birthday"].ToString();
+            artist.cover = res["cover"].ToString();
+            artist.national = res["national"].ToString();
+            artist.totalFollow = int.Parse(res["totalFollow"].ToString());
+            /*
+             * When click artist => call API GetListArtistSong() to get all song.
+             */
             return artist;
+        }
+        /*
+         * function getListArtistSong()
+         * Input: data when call API GetArtistSong(artistId,..)
+         * Output: List<Song>
+         * Use: List<Song> list = getListArtistSong(data)
+         */
+        public List<Song> getListArtistSong(string data) 
+        {
+            List<Song> list = new List<Song>();
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject res = (JObject)jsonObject["data"];
+            foreach (var item in res.Properties())
+            {
+                if (item.Name == "items")
+                {
+                    Song song = new Song();
+                    foreach (JToken subitem in item.Value)
+                    {
+                        song.songId = subitem["encodeId"].ToString();
+                        song.title = subitem["title"].ToString();
+                        song.alias = subitem["alias"].ToString();
+                        song.artistsNames = subitem["artistsNames"].ToString();
+                        song.thumbnail = subitem["thumbnail"].ToString();
+                        song.thumbnailM = subitem["thumbnailM"].ToString();
+                        song.duration = int.Parse(subitem["duration"].ToString());
+                        song.releaseDate = int.Parse(subitem["releaseDate"].ToString());
+                        list.Add(song);
+                    }
+                }
+            }
+            return list;
+        }
+        /*
+         * functtion getVideo()
+         * Input: data when call API GetVideo(videoId)
+         * Check if err == -1023 => Bài hát không có video
+         * else if err == 0 => Bài hát có video
+         * Output: Video 
+         * Use: ....
+         */
+        public Video getVideo(string data)
+        {
+            Video video = new Video();  
+            string urlVideo = null;
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            var err = jsonObject["err"];
+            if(err.ToString() == "-1023")
+            {
+                return null;
+            }
+            else if(err.ToString() == "0")
+            {
+                JObject property1 = (JObject)jsonObject["data"];
+                video.videoId = property1["encodeId"].ToString();
+                JObject property2 = (JObject)property1["streaming"];
+                JObject property3 = (JObject)property2["mp4"];
+                video.linkVideo = ((JObject)property3["360p"]).ToString();
+
+                using (HttpRequest http = new HttpRequest())
+                {
+                    try
+                    {
+                        // Send a GET request to download the audio
+                        HttpResponse res = http.Get(video.linkVideo);
+
+                        // Check if the request was successful
+                        if (res.StatusCode == HttpStatusCode.OK)
+                        {
+                            // Retrieve the audio data as a byte array
+                            byte[] videoData = res.ToBytes();
+
+                            urlVideo = Path.GetTempFileName();
+                            // Save the audio data to the temporary file
+                            File.WriteAllBytes(urlVideo, videoData);
+                            video.linkFileTempVideo = urlVideo;
+                            return video;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                    }
+                }
+
+            }
+            return video;
         }
         public Genre getGenre(JToken dataGenre)
         {
@@ -256,7 +400,6 @@ namespace MediaPlayer.API
             Album album = new Album(); 
             return album;
         }
-
         public Playlist getPlaylist(string data)
         {
             Playlist playlist = new Playlist();
@@ -303,5 +446,78 @@ namespace MediaPlayer.API
             }
             return playlist;
         }
+        public Search handleSearch(string data)
+        {
+            Search search = new Search();
+            search.listArtists = new List<Artist>();
+            search.listSongs = new List<Song>();
+            search.listVideos = new List<Video>();
+            search.listPlaylists = new List<Playlist>();
+
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject property1 = (JObject)jsonObject["data"];
+            foreach (var item in property1.Properties())
+            {
+                if (item.Name == "artists")
+                {
+                    foreach(JToken subitem in item.Value)
+                    {
+                        Artist artist = new Artist();
+                        artist.name = subitem["name"].ToString();
+                        artist.artistId = subitem["id"].ToString();
+                        artist.alias = subitem["alias"].ToString();
+                        artist.thumbnail = subitem["thumbnail"].ToString();
+                        artist.thumbnailM = subitem["thumbnailM"].ToString();
+                        artist.totalFollow = int.Parse(subitem["totalFollow"].ToString());
+                        search.listArtists.Add(artist);
+                    }    
+                }
+                else if(item.Name == "songs")
+                {
+                    foreach (JToken subitem in item.Value)
+                    {
+                        Song song = new Song();
+                        song.songId = subitem["encodeId"].ToString();
+                        song.title = subitem["title"].ToString();
+                        song.alias = subitem["alias"].ToString();
+                        song.artistsNames = subitem["artistsNames"].ToString();
+                        song.thumbnail = subitem["thumbnail"].ToString();
+                        song.thumbnailM = subitem["thumbnailM"].ToString();
+                        song.duration = int.Parse(subitem["duration"].ToString());
+                        song.releaseDate = int.Parse(subitem["releaseDate"].ToString());
+                        search.listSongs.Add(song);
+                    }
+                }
+                else if(item.Name == "videos")
+                {
+                    foreach (JToken subitem in item.Value)
+                    {
+                        Video video = new Video();
+                        video.song = new Song();
+                        video.videoId = subitem["encodeId"].ToString();
+                        video.song.title = subitem["title"].ToString();
+                        video.song.artistsNames = subitem["artistsNames"].ToString();
+                        search.listVideos.Add(video);
+                    }
+                }
+                else if(item.Name == "playlists")
+                {
+                    foreach (JToken subitem in item.Value)
+                    {
+                        Playlist playlist = new Playlist();
+                        playlist.title = subitem["title"].ToString();
+                        playlist.playlistId = subitem["encodeId"].ToString();
+                        playlist.thumbnail = subitem["thumbnail"].ToString();
+                        playlist.thumbnailM = subitem["thumbnailM"].ToString();
+                        playlist.sortDescription = subitem["sortDescription"].ToString();
+                        playlist.artistsNames = subitem["artistsNames"].ToString();
+                        search.listPlaylists.Add(playlist);
+                    }
+                }
+            }
+            return search;
+        }
+
     }
 }
