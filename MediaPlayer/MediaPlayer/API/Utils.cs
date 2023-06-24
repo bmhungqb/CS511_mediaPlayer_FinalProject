@@ -153,10 +153,10 @@ namespace MediaPlayer.API
                         {
                             homePage.banner = new SectionDetail();
                             homePage.banner.listBanners = new List<BannerItem> { new BannerItem() };
-                            BannerItem banner = new BannerItem();
                             homePage.banner.sectionType = subitem["sectionType"].ToString();
                             foreach(JToken subsubitem in subitem["items"])
                             {
+                                BannerItem banner = new BannerItem();
                                 banner.banner = subsubitem["banner"].ToString();
                                 banner.songId = subsubitem["encodeId"].ToString();
                                 homePage.banner.listBanners.Add(banner);

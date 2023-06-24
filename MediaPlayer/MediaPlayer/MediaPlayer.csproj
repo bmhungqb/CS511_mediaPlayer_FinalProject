@@ -76,6 +76,18 @@
     <Compile Include="API\DataStructure.cs" />
     <Compile Include="API\Utils.cs" />
     <Compile Include="API\ZingMp3Api.cs" />
+    <Compile Include="artist_popular.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="artist_popular.Designer.cs">
+      <DependentUpon>artist_popular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="banner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="banner.Designer.cs">
+      <DependentUpon>banner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_release.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="new_release.Designer.cs">
+      <DependentUpon>new_release.cs</DependentUpon>
     </Compile>
     <Compile Include="search_all.cs">
       <SubType>UserControl</SubType>
@@ -168,6 +186,12 @@
     <EmbeddedResource Include="add_song.resx">
       <DependentUpon>add_song.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="artist_popular.resx">
+      <DependentUpon>artist_popular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="banner.resx">
+      <DependentUpon>banner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_release.resx">
+      <DependentUpon>new_release.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="search_all.resx">
       <DependentUpon>search_all.cs</DependentUpon>
