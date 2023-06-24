@@ -317,9 +317,9 @@ namespace MediaPlayer.API
             {
                 if (item.Name == "items")
                 {
-                    Song song = new Song();
                     foreach (JToken subitem in item.Value)
                     {
+                        Song song = new Song();
                         song.songId = subitem["encodeId"].ToString();
                         song.title = subitem["title"].ToString();
                         song.alias = subitem["alias"].ToString();
