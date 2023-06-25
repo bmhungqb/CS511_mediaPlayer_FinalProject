@@ -38,7 +38,7 @@
             this.sliderVolume = new Guna.UI2.WinForms.Guna2TrackBar();
             this.trackTime = new System.Windows.Forms.Timer(this.components);
             this.btn_video = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton8 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_speaker = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -146,22 +146,24 @@
             this.btn_video.TabIndex = 27;
             this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
             // 
-            // guna2ImageButton8
+            // btn_speaker
             // 
-            this.guna2ImageButton8.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton8.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker32;
-            this.guna2ImageButton8.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton8.Image = global::MediaPlayer.Properties.Resources._7252723_volume_low_speaker_sound_music_icon1;
-            this.guna2ImageButton8.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton8.ImageRotate = 0F;
-            this.guna2ImageButton8.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton8.Location = new System.Drawing.Point(1219, 28);
-            this.guna2ImageButton8.Name = "guna2ImageButton8";
-            this.guna2ImageButton8.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker321;
-            this.guna2ImageButton8.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton8.Size = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton8.TabIndex = 26;
+            this.btn_speaker.CheckedState.Image = global::MediaPlayer.Properties.Resources.ic_speaker_mute_active32;
+            this.btn_speaker.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_speaker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_speaker.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker322;
+            this.btn_speaker.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_speaker.Image = global::MediaPlayer.Properties.Resources.ic_speaker32;
+            this.btn_speaker.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_speaker.ImageRotate = 0F;
+            this.btn_speaker.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_speaker.Location = new System.Drawing.Point(1219, 28);
+            this.btn_speaker.Name = "btn_speaker";
+            this.btn_speaker.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_speaker321;
+            this.btn_speaker.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_speaker.Size = new System.Drawing.Size(32, 32);
+            this.btn_speaker.TabIndex = 26;
+            this.btn_speaker.Click += new System.EventHandler(this.btn_speaker_Click);
             // 
             // guna2ImageButton7
             // 
@@ -323,7 +325,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.btn_video);
-            this.Controls.Add(this.guna2ImageButton8);
+            this.Controls.Add(this.btn_speaker);
             this.Controls.Add(this.guna2ImageButton7);
             this.Controls.Add(this.guna2ImageButton6);
             this.Controls.Add(this.guna2ImageButton5);
@@ -366,7 +368,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_speaker;
         private Guna.UI2.WinForms.Guna2ImageButton btn_video;
     }
 }

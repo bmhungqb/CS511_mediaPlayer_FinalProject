@@ -145,5 +145,21 @@ namespace MediaPlayer
         {
             OpenUCTVideoRequested?.Invoke(this, EventArgs.Empty);
         }
+
+        private void btn_speaker_Click(object sender, EventArgs e)
+        {
+            Guna2ImageButton btn = sender as Guna2ImageButton;
+            btn.Checked = !btn.Checked;
+            if(btn.Checked)
+            {
+                player.settings.volume = 0;
+                sliderVolume.Value = 0; 
+            }
+            else
+            {
+                player.settings.volume = 20;
+                sliderVolume.Value = 20;
+            }
+        }
     }
 }

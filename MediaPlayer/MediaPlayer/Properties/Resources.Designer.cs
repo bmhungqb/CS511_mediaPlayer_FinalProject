@@ -573,6 +573,36 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_speaker_active32 {
+            get {
+                object obj = ResourceManager.GetObject("ic_speaker_active32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_speaker_mute_active32 {
+            get {
+                object obj = ResourceManager.GetObject("ic_speaker_mute_active32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_speaker32 {
+            get {
+                object obj = ResourceManager.GetObject("ic_speaker32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_stop {
             get {
                 object obj = ResourceManager.GetObject("ic_stop", resourceCulture);
@@ -626,6 +656,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap new_ic_back_321 {
             get {
                 object obj = ResourceManager.GetObject("new_ic_back_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_back_322 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_back_322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -766,6 +806,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap new_ic_speaker321 {
             get {
                 object obj = ResourceManager.GetObject("new_ic_speaker321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_speaker322 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_speaker322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
