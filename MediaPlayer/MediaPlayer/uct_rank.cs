@@ -35,6 +35,9 @@ namespace MediaPlayer
             Series top1 = new Series();
             Series top2 = new Series();
             Series top3 = new Series();
+            top1.BorderWidth = 2;
+            top2.BorderWidth = 2;
+            top3.BorderWidth = 2;
             top1.MarkerStyle = MarkerStyle.Circle;
             top2.MarkerStyle = MarkerStyle.Circle;
             top3.MarkerStyle = MarkerStyle.Circle;
@@ -59,17 +62,6 @@ namespace MediaPlayer
                 top3.Points.AddXY(data.time, data.counter);
             }
             chart.Series.Add(top3);
-            chart.ChartAreas[0].AxisX.IsMarginVisible = false;
-            chart.ChartAreas[0].AxisX.Enabled = AxisEnabled.False;
-            //chart.ChartAreas[0].AxisY.Enabled = AxisEnabled.False;
-            chart.ChartAreas[0].AxisX.IsLogarithmic = false;
-            chart.ChartAreas[0].AxisY.IsMarginVisible=false;
-            chart.ChartAreas[0].AxisY.IsLogarithmic = false;
-            chart.ChartAreas[0].Position.Auto = false;
-            chart.ChartAreas[0].Position.Width = 100;
-            chart.ChartAreas[0].Position.Height = 100;
-            chart.ChartAreas[0].Position.X = 0;
-            chart.ChartAreas[0].Position.Y = 0;
             chart.Show();
         }
         private void loadSongs(ChartHome chartdata)
