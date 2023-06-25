@@ -118,6 +118,18 @@
     <Compile Include="search_all.Designer.cs">
       <DependentUpon>search_all.cs</DependentUpon>
     </Compile>
+    <Compile Include="search_artist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="search_artist.Designer.cs">
+      <DependentUpon>search_artist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uct_artist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_artist.Designer.cs">
+      <DependentUpon>uct_artist.cs</DependentUpon>
+    </Compile>
     <Compile Include="uct_create.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="search_all.resx">
       <DependentUpon>search_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_artist.resx">
+      <DependentUpon>search_artist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_artist.resx">
+      <DependentUpon>uct_artist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_create.resx">
       <DependentUpon>uct_create.cs</DependentUpon>

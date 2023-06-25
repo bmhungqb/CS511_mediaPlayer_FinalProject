@@ -172,3 +172,5 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\Doan\CS511_
 D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.artist_popular.resources
 D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.banner.resources
 D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.new_release.resources
+D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.search_artist.resources
+D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.uct_artist.resources

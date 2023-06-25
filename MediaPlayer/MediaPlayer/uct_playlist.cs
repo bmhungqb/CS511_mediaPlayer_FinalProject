@@ -32,7 +32,7 @@ namespace MediaPlayer
         public async void OpenUserControlB(Playlist a)
         {
             // Thực hiện các hành động cần thiết khi mở UserControlB
-            guna2CustomGradientPanel2.Width = 1370;
+          //  guna2CustomGradientPanel2.Width = 1370;
             string res = await zingMp3Api.GetDetailPlaylist(a.playlistId);
             a=Utils.getPlaylist(res);
             List<Song> song = a.listSongs;

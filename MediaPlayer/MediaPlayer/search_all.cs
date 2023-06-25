@@ -24,7 +24,6 @@ namespace MediaPlayer
 
         private void search_all_Load(object sender, EventArgs e)
         {
-           // pt_thumb.Image = Utils.getImage(a.thumbnail);
            for (int i = 0; i < a.listSongs.Count; i++)
             {
                 uct_song uct_Song = new uct_song((i+1).ToString(), a.listSongs[i]);
@@ -32,14 +31,35 @@ namespace MediaPlayer
             }
             for (int i = 0; i < a.listPlaylists.Count; i++)
             {
-                artist_popular artist = new artist_popular(a.listPlaylists[i]);
-                flow_playlist.Controls.Add(artist);
+                //usercontrol artist_popular use for playlist
+                artist_popular playlist = new artist_popular(a.listPlaylists[i]);
+                playlist.OpenPlaylistRequested += Playlist_OpenPlaylistRequested;
+                flow_playlist.Controls.Add(playlist);
             }
             for (int i = 0; i < a.listArtists.Count; i++)
             {
-                artist_popular artist = new artist_popular(a.listPlaylists[i]);
+                search_artist artist = new search_artist(a.listArtists[i]);
+                artist.OpenArtistSongRequested += Artist_OpenArtistSongRequested;
                 flow_artist.Controls.Add(artist);
             }
+        }
+
+        private void Artist_OpenArtistSongRequested(object sender, EventArgs e)
+        {
+            search_artist artist = sender as search_artist;
+            uct_artist uct_Playlist = new uct_artist();
+            uct_Playlist.OpenUserControl(artist.currentArtist);
+            panel1.Controls.Add(uct_Playlist);
+            uct_Playlist.BringToFront();
+        }
+
+        private void Playlist_OpenPlaylistRequested(object sender, EventArgs e)
+        {
+            artist_popular playlist = sender as artist_popular;
+            uct_playlist uct_Playlist = new uct_playlist();
+            uct_Playlist.OpenUserControlB(playlist.current);
+            panel1.Controls.Add(uct_Playlist);
+            uct_Playlist.BringToFront();
         }
     }
 }

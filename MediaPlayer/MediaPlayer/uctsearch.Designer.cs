@@ -33,12 +33,12 @@
             this.btn_artist = new Guna.UI2.WinForms.Guna2Button();
             this.btn_song = new Guna.UI2.WinForms.Guna2Button();
             this.btn_all = new Guna.UI2.WinForms.Guna2Button();
-            this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel_search = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.flowLayoutSearch.SuspendLayout();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.panel_search.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,6 +138,29 @@
             this.btn_all.Text = "All";
             this.btn_all.Click += new System.EventHandler(this.btn_Click_Type_Search);
             // 
+            // flowLayoutSearch
+            // 
+            this.flowLayoutSearch.AutoScroll = true;
+            this.flowLayoutSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.flowLayoutSearch.Controls.Add(this.panel_search);
+            this.flowLayoutSearch.Location = new System.Drawing.Point(0, 3);
+            this.flowLayoutSearch.Name = "flowLayoutSearch";
+            this.flowLayoutSearch.Size = new System.Drawing.Size(1385, 574);
+            this.flowLayoutSearch.TabIndex = 11;
+            // 
+            // panel_search
+            // 
+            this.panel_search.Controls.Add(this.tb_search);
+            this.panel_search.Controls.Add(this.panel1);
+            this.panel_search.FillColor = System.Drawing.Color.DimGray;
+            this.panel_search.FillColor2 = System.Drawing.SystemColors.WindowFrame;
+            this.panel_search.FillColor3 = System.Drawing.Color.Black;
+            this.panel_search.FillColor4 = System.Drawing.Color.DimGray;
+            this.panel_search.Location = new System.Drawing.Point(3, 3);
+            this.panel_search.Name = "panel_search";
+            this.panel_search.Size = new System.Drawing.Size(1360, 131);
+            this.panel_search.TabIndex = 0;
+            // 
             // tb_search
             // 
             this.tb_search.AutoRoundedCorners = true;
@@ -170,29 +193,6 @@
             this.tb_search.Click += new System.EventHandler(this.guna2TextBox1_Click);
             this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
             // 
-            // flowLayoutSearch
-            // 
-            this.flowLayoutSearch.AutoScroll = true;
-            this.flowLayoutSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.flowLayoutSearch.Controls.Add(this.guna2CustomGradientPanel1);
-            this.flowLayoutSearch.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutSearch.Name = "flowLayoutSearch";
-            this.flowLayoutSearch.Size = new System.Drawing.Size(1404, 577);
-            this.flowLayoutSearch.TabIndex = 11;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
-            this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.WindowFrame;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 131);
-            this.guna2CustomGradientPanel1.TabIndex = 0;
-            // 
             // uctsearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,10 +200,10 @@
             this.Controls.Add(this.flowLayoutSearch);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uctsearch";
-            this.Size = new System.Drawing.Size(1404, 577);
+            this.Size = new System.Drawing.Size(1385, 577);
             this.panel1.ResumeLayout(false);
             this.flowLayoutSearch.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.panel_search.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,6 +216,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_song;
         private Guna.UI2.WinForms.Guna2Button btn_all;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panel_search;
     }
 }

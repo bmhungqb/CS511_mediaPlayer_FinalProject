@@ -38,7 +38,10 @@ namespace MediaPlayer
             lb_id.Text = ID;
             lb_song.Text = currentSong.title;
             lb_singer.Text = currentSong.artistsNames;
-         //   lb_album.Text = currentSong.totalLike.ToString();
+            if (currentSong.album==null)
+                lb_album.Text = string.Empty;
+            else 
+                lb_album.Text = currentSong.album.title;
             lb_time.Text = ConvertToMinutesAndSeconds(currentSong.duration);
             pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
         }

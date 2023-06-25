@@ -76,7 +76,7 @@ namespace MediaPlayer
             artist_popular artist_Popular = sender as artist_popular;
             uct_playlist uct_Playlist = new uct_playlist();
             uct_Playlist.OpenUserControlB(artist_Popular.current);
-            flowLayoutPanel1.Controls.Add(uct_Playlist);
+            panel1.Controls.Add(uct_Playlist);
             uct_Playlist.BringToFront();
         }
 

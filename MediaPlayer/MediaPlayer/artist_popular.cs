@@ -14,10 +14,7 @@ namespace MediaPlayer
 {
     public partial class artist_popular : UserControl
     {
-        string descrip;
-        MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
-        string url;
         public Playlist current;
         public artist_popular(Playlist playlist)
         {
