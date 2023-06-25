@@ -44,8 +44,16 @@ namespace MediaPlayer
         }
         public async void playMusic(Song song)
         {
-            string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
-            currentSong = Utils.getInfoSong(res);
+            if (song == null)
+            {
+                string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
+                currentSong = Utils.getInfoSong(res);
+            }
+            else
+            {
+                string res = await zingMp3Api.GetInfoSong(song.songId);
+                currentSong = Utils.getInfoSong(res);
+            }
             string dataSong = await zingMp3Api.GetSong(currentSong.songId);
             player.URL = Utils.getSong(dataSong);
 

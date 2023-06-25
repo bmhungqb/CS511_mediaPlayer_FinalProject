@@ -258,6 +258,8 @@ namespace MediaPlayer
                 btn_search.Checked = false;
                 btn_setting.Checked = false;
                 btn_list.Checked = false;
+                uct_rank rank = new uct_rank();
+                panel1.Controls.Add(rank);
             }
             else if(button.Name == "btn_setting")
             {

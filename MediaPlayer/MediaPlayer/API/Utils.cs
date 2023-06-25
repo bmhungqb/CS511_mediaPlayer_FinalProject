@@ -521,13 +521,15 @@ namespace MediaPlayer.API
             }
             return search;
         }
-        public Chart getHomeChart(string data)
+        public ChartHome getHomeChart(string data)
         {
-            Chart chart = new Chart();
-            chart.top1 = new List<dataChart>();
-            chart.top2 = new List<dataChart>();
-            chart.top3 = new List<dataChart>();
-            chart.times = new List<string>();
+            ChartHome chart = new ChartHome();
+            chart.listSongs = new List<Song>();
+            chart.chart = new Chart();
+            chart.chart.top1 = new List<dataChart>();
+            chart.chart.top2 = new List<dataChart>();
+            chart.chart.top3 = new List<dataChart>();
+            chart.chart.times = new List<string>();
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             JObject property1 = (JObject)jsonObject["data"];
@@ -543,46 +545,64 @@ namespace MediaPlayer.API
                         {
                             foreach(var subsubsubitem in subsubitem.Value)
                             {
-                                chart.times.Add(subsubsubitem["hour"].ToString());
+                                chart.chart.times.Add(subsubsubitem["hour"].ToString());
                             }
                         }
                         else if(subsubitem.Name == "minScore")
                         {
-                            chart.minScore = float.Parse(subsubitem.Value.ToString());
+                            chart.chart.minScore = float.Parse(subsubitem.Value.ToString());
                         }
                         else if(subsubitem.Name == "maxScore")
                         {
-                            chart.maxScore = float.Parse(subsubitem.Value.ToString());
+                            chart.chart.maxScore = float.Parse(subsubitem.Value.ToString());
                         }
                         else if( subsubitem.Name == "items")
                         {
+                            int i = 1;
                             foreach(var subsubsubitem in subsubitem.Value)
                             {
-                                int i = 1;
+                                List<dataChart> list = new List<dataChart>();
                                 foreach(var subsubsubsubitem in subsubsubitem)
                                 {
                                     foreach(JToken subsubsubsubsubitem in subsubsubsubitem)
                                     {
-                                        dataChart datachart = new dataChart();
-                                        datachart.time = subsubsubsubsubitem["hour"].ToString();
-                                        datachart.counter = float.Parse(subsubsubsubsubitem["counter"].ToString());
-                                        if (i == 1)
-                                        {
-                                            chart.top1.Add(datachart);
-                                        }
-                                        else if(i == 2)
-                                        {
-                                            chart.top2.Add(datachart);
-                                        }
-                                        else
-                                        {
-                                            chart.top3.Add(datachart);
-                                        }
+                                        dataChart it = new dataChart();
+                                        it.time = subsubsubsubsubitem["hour"].ToString();
+                                        it.counter = float.Parse(subsubsubsubsubitem["counter"].ToString());
+                                        list.Add(it);
                                     }
-                                    i++;
                                 }
+                                if (i == 1)
+                                {
+                                    chart.chart.top1 = list;
+                                }
+                                else if(i == 2)
+                                {
+                                    chart.chart.top2 = list;
+                                }
+                                else if(i == 3)
+                                {
+                                    chart.chart.top3 = list;
+                                }
+                                i++;
                             }
                         }
+                    }
+                }
+                else if(item.Name == "items")
+                {
+                    foreach (JToken subitem in item.Value)
+                    {
+                        Song song = new Song();
+                        song.songId = subitem["encodeId"].ToString();
+                        song.title = subitem["title"].ToString();
+                        song.alias = subitem["alias"].ToString();
+                        song.artistsNames = subitem["artistsNames"].ToString();
+                        song.thumbnail = subitem["thumbnail"].ToString();
+                        song.thumbnailM = subitem["thumbnailM"].ToString();
+                        song.duration = int.Parse(subitem["duration"].ToString());
+                        song.releaseDate = int.Parse(subitem["releaseDate"].ToString());
+                        chart.listSongs.Add(song);
                     }
                 }
             }
