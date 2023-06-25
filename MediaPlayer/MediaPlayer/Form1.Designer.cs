@@ -29,50 +29,160 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mediaPlayer));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_setting = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_account = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_list = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_playlist = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_rank = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_home = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnl_Player = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.home1 = new Guna.UI2.WinForms.Guna2Button();
-            this.find = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.playlist_b = new Guna.UI2.WinForms.Guna2Button();
-            this.setting = new Guna.UI2.WinForms.Guna2Button();
-            this.acc = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // btn_setting
             // 
-            this.panel2.Controls.Add(this.setting);
-            this.panel2.Controls.Add(this.acc);
-            this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(54, 150);
-            this.panel2.TabIndex = 0;
+            this.btn_setting.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_setting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_setting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_setting.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_setting.ForeColor = System.Drawing.Color.White;
+            this.btn_setting.Image = global::MediaPlayer.Properties.Resources.setting1;
+            this.btn_setting.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_setting.Location = new System.Drawing.Point(3, 59);
+            this.btn_setting.Name = "btn_setting";
+            this.btn_setting.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_setting.Size = new System.Drawing.Size(50, 50);
+            this.btn_setting.TabIndex = 86;
+            this.btn_setting.Visible = false;
+            this.btn_setting.Click += new System.EventHandler(this.button_Click);
             // 
-            // panel3
+            // btn_account
             // 
-            this.panel3.Controls.Add(this.guna2Button1);
-            this.panel3.Controls.Add(this.playlist_b);
-            this.panel3.Location = new System.Drawing.Point(2, 321);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(54, 151);
-            this.panel3.TabIndex = 87;
+            this.btn_account.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_account.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_account.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_account.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_account.ForeColor = System.Drawing.Color.White;
+            this.btn_account.Image = global::MediaPlayer.Properties.Resources._5402435_account_profile_user_avatar_man_icon;
+            this.btn_account.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_account.Location = new System.Drawing.Point(3, 115);
+            this.btn_account.Name = "btn_account";
+            this.btn_account.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_account.Size = new System.Drawing.Size(50, 50);
+            this.btn_account.TabIndex = 84;
+            this.btn_account.Visible = false;
+            this.btn_account.Click += new System.EventHandler(this.button_Click);
             // 
-            // panel4
+            // btn_list
             // 
-            this.panel4.Controls.Add(this.home1);
-            this.panel4.Controls.Add(this.find);
-            this.panel4.Location = new System.Drawing.Point(0, 174);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(54, 129);
-            this.panel4.TabIndex = 84;
+            this.btn_list.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_list.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_list.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_list.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_list.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_list.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_list.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_list.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_list.ForeColor = System.Drawing.Color.White;
+            this.btn_list.Image = global::MediaPlayer.Properties.Resources._9218457_list_checklist_menu_icon;
+            this.btn_list.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_list.Location = new System.Drawing.Point(3, 3);
+            this.btn_list.Name = "btn_list";
+            this.btn_list.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_list.Size = new System.Drawing.Size(50, 50);
+            this.btn_list.TabIndex = 87;
+            this.btn_list.Click += new System.EventHandler(this.btn_list_Click);
+            // 
+            // btn_playlist
+            // 
+            this.btn_playlist.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_playlist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_playlist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_playlist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_playlist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_playlist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_playlist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_playlist.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_playlist.ForeColor = System.Drawing.Color.White;
+            this.btn_playlist.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
+            this.btn_playlist.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_playlist.Location = new System.Drawing.Point(3, 339);
+            this.btn_playlist.Name = "btn_playlist";
+            this.btn_playlist.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_playlist.Size = new System.Drawing.Size(50, 50);
+            this.btn_playlist.TabIndex = 81;
+            this.btn_playlist.Click += new System.EventHandler(this.button_Click);
+            // 
+            // btn_rank
+            // 
+            this.btn_rank.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_rank.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rank.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_rank.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_rank.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_rank.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_rank.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_rank.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_rank.ForeColor = System.Drawing.Color.White;
+            this.btn_rank.Image = global::MediaPlayer.Properties.Resources.rank1;
+            this.btn_rank.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_rank.Location = new System.Drawing.Point(3, 227);
+            this.btn_rank.Name = "btn_rank";
+            this.btn_rank.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_rank.Size = new System.Drawing.Size(50, 50);
+            this.btn_rank.TabIndex = 80;
+            this.btn_rank.Click += new System.EventHandler(this.button_Click);
+            // 
+            // btn_home
+            // 
+            this.btn_home.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_home.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_home.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_home.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_home.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_home.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_home.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_home.ForeColor = System.Drawing.Color.White;
+            this.btn_home.Image = global::MediaPlayer.Properties.Resources._2931150_building_home_homepage_house_architecture_icon;
+            this.btn_home.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_home.Location = new System.Drawing.Point(3, 171);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_home.Size = new System.Drawing.Size(50, 50);
+            this.btn_home.TabIndex = 83;
+            this.btn_home.Click += new System.EventHandler(this.button_Click);
+            // 
+            // btn_search
+            // 
+            this.btn_search.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.Image = global::MediaPlayer.Properties.Resources._510861_find_magnifying_glass_search_zoom_icon1;
+            this.btn_search.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_search.Location = new System.Drawing.Point(3, 283);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_search.Size = new System.Drawing.Size(50, 50);
+            this.btn_search.TabIndex = 82;
+            this.btn_search.Click += new System.EventHandler(this.button_Click);
             // 
             // pnl_Player
             // 
@@ -90,166 +200,20 @@
             this.panel1.Size = new System.Drawing.Size(1385, 580);
             this.panel1.TabIndex = 0;
             // 
-            // home1
+            // flowLayoutPanel1
             // 
-            this.home1.AutoRoundedCorners = true;
-            this.home1.BackColor = System.Drawing.Color.Transparent;
-            this.home1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.home1.BorderRadius = 22;
-            this.home1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.home1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.home1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.home1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.home1.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.home1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.home1.ForeColor = System.Drawing.Color.White;
-            this.home1.Image = global::MediaPlayer.Properties.Resources.home;
-            this.home1.ImageSize = new System.Drawing.Size(35, 35);
-            this.home1.Location = new System.Drawing.Point(2, 8);
-            this.home1.Margin = new System.Windows.Forms.Padding(2);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(50, 47);
-            this.home1.TabIndex = 76;
-            this.home1.UseTransparentBackground = true;
-            this.home1.Click += new System.EventHandler(this.home1_Click_1);
-            // 
-            // find
-            // 
-            this.find.AutoRoundedCorners = true;
-            this.find.BackColor = System.Drawing.Color.Transparent;
-            this.find.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.find.BorderRadius = 22;
-            this.find.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.find.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.find.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.find.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.find.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.find.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.find.ForeColor = System.Drawing.Color.White;
-            this.find.Image = global::MediaPlayer.Properties.Resources.search;
-            this.find.ImageSize = new System.Drawing.Size(35, 35);
-            this.find.Location = new System.Drawing.Point(2, 72);
-            this.find.Margin = new System.Windows.Forms.Padding(2);
-            this.find.Name = "find";
-            this.find.Size = new System.Drawing.Size(50, 47);
-            this.find.TabIndex = 77;
-            this.find.UseTransparentBackground = true;
-            this.find.Click += new System.EventHandler(this.find_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::MediaPlayer.Properties.Resources.rank;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 70);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(50, 47);
-            this.guna2Button1.TabIndex = 79;
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
-            // 
-            // playlist_b
-            // 
-            this.playlist_b.AutoRoundedCorners = true;
-            this.playlist_b.BackColor = System.Drawing.Color.Transparent;
-            this.playlist_b.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.playlist_b.BorderRadius = 22;
-            this.playlist_b.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.playlist_b.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.playlist_b.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.playlist_b.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.playlist_b.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.playlist_b.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.playlist_b.ForeColor = System.Drawing.Color.White;
-            this.playlist_b.Image = global::MediaPlayer.Properties.Resources.playlist;
-            this.playlist_b.ImageSize = new System.Drawing.Size(35, 35);
-            this.playlist_b.Location = new System.Drawing.Point(0, 5);
-            this.playlist_b.Margin = new System.Windows.Forms.Padding(2);
-            this.playlist_b.Name = "playlist_b";
-            this.playlist_b.Size = new System.Drawing.Size(50, 47);
-            this.playlist_b.TabIndex = 78;
-            this.playlist_b.UseTransparentBackground = true;
-            this.playlist_b.Click += new System.EventHandler(this.playlist_b_Click_1);
-            // 
-            // setting
-            // 
-            this.setting.AutoRoundedCorners = true;
-            this.setting.BackColor = System.Drawing.Color.Transparent;
-            this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.setting.BorderRadius = 22;
-            this.setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.setting.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.setting.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.setting.ForeColor = System.Drawing.Color.White;
-            this.setting.Image = global::MediaPlayer.Properties.Resources.setting;
-            this.setting.ImageSize = new System.Drawing.Size(35, 35);
-            this.setting.Location = new System.Drawing.Point(0, 95);
-            this.setting.Margin = new System.Windows.Forms.Padding(2);
-            this.setting.Name = "setting";
-            this.setting.Size = new System.Drawing.Size(50, 47);
-            this.setting.TabIndex = 87;
-            this.setting.UseTransparentBackground = true;
-            this.setting.Click += new System.EventHandler(this.setting_Click);
-            // 
-            // acc
-            // 
-            this.acc.AutoRoundedCorners = true;
-            this.acc.BackColor = System.Drawing.Color.Transparent;
-            this.acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.acc.BorderRadius = 22;
-            this.acc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.acc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.acc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.acc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.acc.FillColor = System.Drawing.SystemColors.WindowFrame;
-            this.acc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.acc.ForeColor = System.Drawing.Color.White;
-            this.acc.Image = global::MediaPlayer.Properties.Resources.profile;
-            this.acc.ImageSize = new System.Drawing.Size(35, 35);
-            this.acc.Location = new System.Drawing.Point(0, 40);
-            this.acc.Margin = new System.Windows.Forms.Padding(2);
-            this.acc.Name = "acc";
-            this.acc.Size = new System.Drawing.Size(50, 47);
-            this.acc.TabIndex = 85;
-            this.acc.UseTransparentBackground = true;
-            this.acc.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Button3.BorderRadius = 16;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = global::MediaPlayer.Properties.Resources.menu;
-            this.guna2Button3.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2Button3.Location = new System.Drawing.Point(2, 2);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(50, 34);
-            this.guna2Button3.TabIndex = 80;
-            this.guna2Button3.UseTransparentBackground = true;
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click_1);
+            this.flowLayoutPanel1.Controls.Add(this.btn_list);
+            this.flowLayoutPanel1.Controls.Add(this.btn_setting);
+            this.flowLayoutPanel1.Controls.Add(this.btn_account);
+            this.flowLayoutPanel1.Controls.Add(this.btn_home);
+            this.flowLayoutPanel1.Controls.Add(this.btn_rank);
+            this.flowLayoutPanel1.Controls.Add(this.btn_search);
+            this.flowLayoutPanel1.Controls.Add(this.btn_playlist);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(57, 581);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // mediaPlayer
             // 
@@ -257,37 +221,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1444, 691);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnl_Player);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mediaPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mediaPlayer";
             this.Load += new System.EventHandler(this.mediaPlayer_Load_1);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button playlist_b;
-        private Guna.UI2.WinForms.Guna2Button find;
-        private Guna.UI2.WinForms.Guna2Button home1;
-        private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Button setting;
-        private Guna.UI2.WinForms.Guna2Button acc;
         private System.Windows.Forms.Panel pnl_Player;
         private System.Windows.Forms.FlowLayoutPanel panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_rank;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_playlist;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_search;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_home;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_setting;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_account;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_list;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

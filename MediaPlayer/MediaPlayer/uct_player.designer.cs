@@ -79,12 +79,19 @@
             // sliderMusic
             // 
             this.sliderMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sliderMusic.DisplayFocus = true;
+            this.sliderMusic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.sliderMusic.HoverState.FillColor = System.Drawing.Color.MediumOrchid;
+            this.sliderMusic.HoverState.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.sliderMusic.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
+            this.sliderMusic.IndicateFocus = true;
             this.sliderMusic.Location = new System.Drawing.Point(462, 67);
             this.sliderMusic.Margin = new System.Windows.Forms.Padding(2);
+            this.sliderMusic.MouseWheelBarPartitions = 1;
             this.sliderMusic.Name = "sliderMusic";
             this.sliderMusic.Size = new System.Drawing.Size(519, 20);
             this.sliderMusic.TabIndex = 4;
-            this.sliderMusic.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sliderMusic.ThumbColor = System.Drawing.Color.Magenta;
             this.sliderMusic.Scroll += new System.Windows.Forms.ScrollEventHandler(this.sliderMusic_Scroll);
             // 
             // lblPlayCurrentTime
@@ -114,12 +121,16 @@
             // sliderVolume
             // 
             this.sliderVolume.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sliderVolume.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.sliderVolume.Location = new System.Drawing.Point(1264, 35);
             this.sliderVolume.Margin = new System.Windows.Forms.Padding(2);
+            this.sliderVolume.MouseWheelBarPartitions = 5;
             this.sliderVolume.Name = "sliderVolume";
             this.sliderVolume.Size = new System.Drawing.Size(168, 20);
+            this.sliderVolume.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
             this.sliderVolume.TabIndex = 14;
-            this.sliderVolume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sliderVolume.ThumbColor = System.Drawing.Color.Fuchsia;
+            this.sliderVolume.Value = 40;
             this.sliderVolume.ValueChanged += new System.EventHandler(this.slider_volume);
             // 
             // trackTime

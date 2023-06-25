@@ -41,7 +41,6 @@ namespace MediaPlayer
                 string res = await zingMp3Api.Search("Den");
                 Search searchData = Utils.handleSearch(res);
             */
-            //string res = await zingMp3Api.GetChartHome();
             string response = await zingMp3Api.GetHome();
             dataHomePage = Utils.getHome(response);
             for (int i = 1; i < dataHomePage.banner.listBanners.Count(); i++)

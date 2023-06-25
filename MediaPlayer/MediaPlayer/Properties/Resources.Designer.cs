@@ -73,6 +73,26 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2931150_building_home_homepage_house_architecture_icon {
+            get {
+                object obj = ResourceManager.GetObject("2931150_building_home_homepage_house_architecture_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _326656_home_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("326656_home_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _351752985_936385717576463_3672978110271268401_n {
             get {
                 object obj = ResourceManager.GetObject("351752985_936385717576463_3672978110271268401_n", resourceCulture);
@@ -143,6 +163,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3669182_video_library_ic_icon {
+            get {
+                object obj = ResourceManager.GetObject("3669182_video_library_ic_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3669309_pause_circle_filled_ic_icon {
             get {
                 object obj = ResourceManager.GetObject("3669309_pause_circle_filled_ic_icon", resourceCulture);
@@ -166,6 +196,46 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap _4634534_arrow_looping_music_repeat_icon1 {
             get {
                 object obj = ResourceManager.GetObject("4634534_arrow_looping_music_repeat_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _510861_find_magnifying_glass_search_zoom_icon {
+            get {
+                object obj = ResourceManager.GetObject("510861_find_magnifying glass_search_zoom_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _510861_find_magnifying_glass_search_zoom_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("510861_find_magnifying glass_search_zoom_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _510861_find_magnifying_glass_search_zoom_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("510861_find_magnifying glass_search_zoom_icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5402435_account_profile_user_avatar_man_icon {
+            get {
+                object obj = ResourceManager.GetObject("5402435_account_profile_user_avatar_man_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +323,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _809403_magnifying_glass_miscellaneous_view_zoom_icon {
+            get {
+                object obj = ResourceManager.GetObject("809403_magnifying glass_miscellaneous_view_zoom_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9025718_heart_straight_icon {
             get {
                 object obj = ResourceManager.GetObject("9025718_heart_straight_icon", resourceCulture);
@@ -286,6 +366,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap _9104257_shuffle_random_mix_icon1 {
             get {
                 object obj = ResourceManager.GetObject("9104257_shuffle_random_mix_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9218457_list_checklist_menu_icon {
+            get {
+                object obj = ResourceManager.GetObject("9218457_list_checklist_menu_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -903,6 +993,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rank1 {
+            get {
+                object obj = ResourceManager.GetObject("rank1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reduce {
             get {
                 object obj = ResourceManager.GetObject("reduce", resourceCulture);
@@ -926,6 +1026,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap setting {
             get {
                 object obj = ResourceManager.GetObject("setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting1 {
+            get {
+                object obj = ResourceManager.GetObject("setting1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

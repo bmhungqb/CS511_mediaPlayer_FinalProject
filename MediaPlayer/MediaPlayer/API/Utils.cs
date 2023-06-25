@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using xNet;
 namespace MediaPlayer.API
 {
@@ -520,6 +521,72 @@ namespace MediaPlayer.API
             }
             return search;
         }
-
+        public Chart getHomeChart(string data)
+        {
+            Chart chart = new Chart();
+            chart.top1 = new List<dataChart>();
+            chart.top2 = new List<dataChart>();
+            chart.top3 = new List<dataChart>();
+            chart.times = new List<string>();
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject property1 = (JObject)jsonObject["data"];
+            JObject property2 = (JObject)property1["RTChart"];
+            foreach(var item in property2.Properties())
+            {
+                if (item.Name == "chart")
+                {
+                    JObject subtime = (JObject)item.Value;
+                    foreach (var subsubitem in subtime.Properties())
+                    {
+                        if(subsubitem.Name == "times")
+                        {
+                            foreach(var subsubsubitem in subsubitem.Value)
+                            {
+                                chart.times.Add(subsubsubitem["hour"].ToString());
+                            }
+                        }
+                        else if(subsubitem.Name == "minScore")
+                        {
+                            chart.minScore = float.Parse(subsubitem.Value.ToString());
+                        }
+                        else if(subsubitem.Name == "maxScore")
+                        {
+                            chart.maxScore = float.Parse(subsubitem.Value.ToString());
+                        }
+                        else if( subsubitem.Name == "items")
+                        {
+                            foreach(var subsubsubitem in subsubitem.Value)
+                            {
+                                int i = 1;
+                                foreach(var subsubsubsubitem in subsubsubitem)
+                                {
+                                    foreach(JToken subsubsubsubsubitem in subsubsubsubitem)
+                                    {
+                                        dataChart datachart = new dataChart();
+                                        datachart.time = subsubsubsubsubitem["hour"].ToString();
+                                        datachart.counter = float.Parse(subsubsubsubsubitem["counter"].ToString());
+                                        if (i == 1)
+                                        {
+                                            chart.top1.Add(datachart);
+                                        }
+                                        else if(i == 2)
+                                        {
+                                            chart.top2.Add(datachart);
+                                        }
+                                        else
+                                        {
+                                            chart.top3.Add(datachart);
+                                        }
+                                    }
+                                    i++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+                return chart;
+        }
     }
 }

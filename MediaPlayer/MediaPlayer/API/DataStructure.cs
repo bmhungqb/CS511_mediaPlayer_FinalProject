@@ -89,7 +89,6 @@ namespace MediaPlayer.API
         public int totalLike { get; set; }
         public int totalListen { get; set; }
     }
-
     public class SectionDetail
     {
         public string title { get; set; }
@@ -115,6 +114,21 @@ namespace MediaPlayer.API
     public class ChartHome
     {
         public List<Song> listSongs { get; set; }
+        public Chart chart { get; set; }    
+    }
+    public class Chart
+    {
+        public List<string> times { get; set; }
+        public float minScore { get; set; }
+        public float maxScore { get; set; }
+        public List<dataChart> top1 { get; set; }
+        public List<dataChart> top2 { get; set; }
+        public List<dataChart> top3 { get; set; }
+    }
+    public class dataChart
+    {
+        public float counter { get; set; }
+        public string time { get; set; }
     }
     public class Search
     {
