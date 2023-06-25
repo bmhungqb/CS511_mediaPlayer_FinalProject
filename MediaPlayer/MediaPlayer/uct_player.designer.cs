@@ -37,6 +37,7 @@
             this.lblPlayDuration = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sliderVolume = new Guna.UI2.WinForms.Guna2TrackBar();
             this.trackTime = new System.Windows.Forms.Timer(this.components);
+            this.btn_video = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton8 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -126,6 +127,24 @@
             this.trackTime.Enabled = true;
             this.trackTime.Interval = 1000;
             this.trackTime.Tick += new System.EventHandler(this.trackTime_Tick);
+            // 
+            // btn_video
+            // 
+            this.btn_video.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_video.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_video.HoverState.Image = global::MediaPlayer.Properties.Resources.video32active1;
+            this.btn_video.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_video.Image = global::MediaPlayer.Properties.Resources.video321;
+            this.btn_video.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_video.ImageRotate = 0F;
+            this.btn_video.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_video.Location = new System.Drawing.Point(1076, 28);
+            this.btn_video.Name = "btn_video";
+            this.btn_video.PressedState.Image = global::MediaPlayer.Properties.Resources.video32active2;
+            this.btn_video.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_video.Size = new System.Drawing.Size(32, 32);
+            this.btn_video.TabIndex = 27;
+            this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
             // 
             // guna2ImageButton8
             // 
@@ -303,6 +322,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.btn_video);
             this.Controls.Add(this.guna2ImageButton8);
             this.Controls.Add(this.guna2ImageButton7);
             this.Controls.Add(this.guna2ImageButton6);
@@ -347,5 +367,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_video;
     }
 }

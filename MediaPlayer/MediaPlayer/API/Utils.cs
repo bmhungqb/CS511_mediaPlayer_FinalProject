@@ -96,7 +96,7 @@ namespace MediaPlayer.API
         public Lyric getLyrics(string data)
         {
             Lyric lyrics = new Lyric();
-            lyrics.sentences = new List<Sentence> { new Sentence() };
+            lyrics.sentences = new List<Sentence>();
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             JObject res = (JObject)jsonObject["data"];
@@ -120,7 +120,7 @@ namespace MediaPlayer.API
                         lyrics.sentences.Add(sen);
                     }
                 }
-                else if(subitem.Name == "file")
+                else if (subitem.Name == "file")
                 {
                     lyrics.file = subitem.Value.ToString();
                 }
@@ -344,22 +344,22 @@ namespace MediaPlayer.API
          */
         public Video getVideo(string data)
         {
-            Video video = new Video();  
+            Video video = new Video();
             string urlVideo = null;
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             var err = jsonObject["err"];
-            if(err.ToString() == "-1023")
+            if (err.ToString() == "-1023")
             {
                 return null;
             }
-            else if(err.ToString() == "0")
+            else if (err.ToString() == "0")
             {
                 JObject property1 = (JObject)jsonObject["data"];
                 video.videoId = property1["encodeId"].ToString();
                 JObject property2 = (JObject)property1["streaming"];
                 JObject property3 = (JObject)property2["mp4"];
-                video.linkVideo = ((JObject)property3["360p"]).ToString();
+                video.linkVideo = (property3["360p"]).ToString();
 
                 using (HttpRequest http = new HttpRequest())
                 {

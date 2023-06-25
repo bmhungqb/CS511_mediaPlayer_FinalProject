@@ -61,12 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </Compile>
     <Compile Include="add_song.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,9 +186,12 @@
     <Compile Include="uct_song1.Designer.cs">
       <DependentUpon>uct_song1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="uct_video.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_video.designer.cs">
+      <DependentUpon>uct_video.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="add_song.resx">
       <DependentUpon>add_song.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_song1.resx">
       <DependentUpon>uct_song1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_video.resx">
+      <DependentUpon>uct_video.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -495,6 +495,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\ic_record_active_32.png" />
+    <None Include="Resources\ic_record_hover_32.png" />
+    <None Include="Resources\ic_record32.png" />
+    <None Include="Resources\ic_record48.png" />
+    <None Include="Resources\video32active2.png" />
+    <None Include="Resources\video32active1.png" />
+    <None Include="Resources\video321.png" />
+    <None Include="Resources\ic_backactive2.png" />
+    <None Include="Resources\ic_backactive1.png" />
+    <None Include="Resources\ic_back1.png" />
+    <None Include="Resources\video32active.png" />
+    <None Include="Resources\video32.png" />
+    <None Include="Resources\ic_backactive.png" />
+    <None Include="Resources\ic_back.png" />
     <None Include="Resources\rank.png" />
     <None Include="Resources\del.png" />
     <None Include="Resources\garbage_trash.png" />

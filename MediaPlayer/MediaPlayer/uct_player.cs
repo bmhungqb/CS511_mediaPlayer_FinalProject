@@ -12,6 +12,7 @@ using System.Windows;
 using WMPLib;
 using MediaPlayer.API;
 using Guna.UI2.WinForms;
+using System.Runtime.CompilerServices;
 
 namespace MediaPlayer
 {
@@ -19,9 +20,12 @@ namespace MediaPlayer
     {
         MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
+        public Song currentSong = new Song();
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         public uct_player()
         {
             InitializeComponent();
+            playMusic(null);
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
@@ -40,16 +44,18 @@ namespace MediaPlayer
         }
         public async void playMusic(Song song)
         {
-            string dataSong = await zingMp3Api.GetSong(song.songId);
+            string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
+            currentSong = Utils.getInfoSong(res);
+            string dataSong = await zingMp3Api.GetSong(currentSong.songId);
             player.URL = Utils.getSong(dataSong);
 
             player.PlayStateChange += Player_PlayStateChange;
-            lblPlayDuration.Text = ConvertToMinutesAndSeconds(song.duration);
-            lbl_song.Text = song.title;
+            lblPlayDuration.Text = ConvertToMinutesAndSeconds(currentSong.duration);
+            lbl_song.Text = currentSong.title;
             btn_Play.Checked = false;
-            player.controls.pause();    
-            lbl_singer.Text = song.artistsNames;
-            pt_thumb.Image = Utils.getImage(song.thumbnail);
+            player.controls.pause();
+            lbl_singer.Text = currentSong.artistsNames;
+            pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
         }
         private void Player_PlayStateChange(int NewState)
         {
@@ -59,16 +65,10 @@ namespace MediaPlayer
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
             }
         }
-        #region define player
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
-        string img_btn_stop = "C:\\Users\\bmhun\\Documents\\TaiLieuHocTapDaiHoc\\Year2\\HK_II\\UIT\\C-Sharp\\Doan\\CS511_mediaPlayer_FinalProject\\MediaPlayer\\MediaPlayer\\Resources\\352073_circle_fill_play_icon.png";
-        string img_btn_play = "C:\\Users\\bmhun\\Documents\\TaiLieuHocTapDaiHoc\\Year2\\HK_II\\UIT\\C-Sharp\\Doan\\CS511_mediaPlayer_FinalProject\\MediaPlayer\\MediaPlayer\\Resources\\3669309_pause_circle_filled_ic_icon.png";
-        string musicPath = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/Doan/CS511_mediaPlayer_FinalProject/MediaPlayer/MediaPlayer/Resources/cuoituan.mp3";
-        #endregion
         private void toggleMusic(object sender, EventArgs e)
         {
             btn_Play.Checked = !btn_Play.Checked;
-            if (player.playState ==  WMPLib.WMPPlayState.wmppsPlaying)
+            if (player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 player.controls.pause();
             }
@@ -130,6 +130,7 @@ namespace MediaPlayer
         }
         public event EventHandler OpenUCTLyricsRequested;
         public event EventHandler OpenUCTKaraRequested;
+        public event EventHandler OpenUCTVideoRequested;
         private void guna2ImageButton7_Click(object sender, EventArgs e)//show lyrics
         {
             OpenUCTLyricsRequested?.Invoke(this, EventArgs.Empty);
@@ -138,6 +139,11 @@ namespace MediaPlayer
         private void guna2ImageButton6_Click(object sender, EventArgs e)//lyrics + kara
         {
             OpenUCTKaraRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btn_video_Click(object sender, EventArgs e)
+        {
+            OpenUCTVideoRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

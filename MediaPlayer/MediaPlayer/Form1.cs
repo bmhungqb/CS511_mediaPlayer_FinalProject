@@ -23,11 +23,9 @@ namespace MediaPlayer
 
         }
         uct_player player = new uct_player();
-        Song x;
-        public void testPlayMusic(Song song)
+         public void testPlayMusic(Song song)
         {
             player.playMusic(song);
-            x = song;
         }
         public void setCurrentListSong(List<Song> listSongs)
         {
@@ -47,21 +45,35 @@ namespace MediaPlayer
             //Add player into pnl_Player
             player.OpenUCTLyricsRequested += UserControlA_OpenUCTLyrics;
             player.OpenUCTKaraRequested += UserControlA_OpenUCTKara;
+            player.OpenUCTVideoRequested += UserControlA_OpenUCTVideo;
             pnl_Player.Controls.Add(player);
+        }
+        private void UserControlA_OpenUCTVideo(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            uct_video lyrics = new uct_video();
+            // Gọi phương thức OpenUserControlB
+            //lyrics.OpenUCTLyrics(player.currentSong);
+            panel1.Controls.Add(lyrics);
+            lyrics.BringToFront();
         }
         private void UserControlA_OpenUCTLyrics(object sender, EventArgs e)
         {
-            uct_lyrics lyrics = new uct_lyrics(x.title);
+            panel1.Controls.Clear();
+            uct_player player = sender as uct_player;
+            uct_lyrics lyrics = new uct_lyrics();
             // Gọi phương thức OpenUserControlB
-            lyrics.OpenUCTLyrics(x);
+            lyrics.OpenUCTLyrics(player.currentSong);
             panel1.Controls.Add(lyrics);
             lyrics.BringToFront();
         }
         private void UserControlA_OpenUCTKara(object sender, EventArgs e)
         {
-            uct_lyrics lyrics = new uct_lyrics(x.title);
+            panel1.Controls.Clear();
+            uct_player player = sender as uct_player;
+            uct_lyrics lyrics = new uct_lyrics();
             // Gọi phương thức OpenUserControlB
-            lyrics.OpenUCTKara(x);
+            lyrics.OpenUCTKara(player.currentSong);
             panel1.Controls.Add(lyrics);
             lyrics.BringToFront();
         }
