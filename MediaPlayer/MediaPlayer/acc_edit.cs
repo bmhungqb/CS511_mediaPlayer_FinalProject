@@ -15,16 +15,14 @@ namespace MediaPlayer
 {
     public partial class acc_edit : UserControl
     {
-        string username;
-        public acc_edit(string name)
+        public acc_edit()
         {
             InitializeComponent();
-            username= name;
         }
         private void acc_edit_Load(object sender, EventArgs e)
         {
             BackColor = Color.Transparent;
-            using (StreamReader sr = new StreamReader(Path.Combine(username, "infor.txt")))
+            using (StreamReader sr = new StreamReader(Path.Combine(user.x.name, "infor.txt")))
             {
                 string s = sr.ReadLine();
                 string[] s1 = s.Split('\t');
@@ -41,8 +39,8 @@ namespace MediaPlayer
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(Path.Combine(username, "infor.txt"), string.Empty);
-            using (StreamWriter sw = new StreamWriter(Path.Combine(username, "infor.txt")))
+            File.WriteAllText(Path.Combine(user.x.name, "infor.txt"), string.Empty);
+            using (StreamWriter sw = new StreamWriter(Path.Combine(user.x.name, "infor.txt")))
             {
                 string birth = day.SelectedItem.ToString() + "/" + month.SelectedItem.ToString() + "/" + year.Text;
                 string s = tb_name.Text + "\t" + tb_email.Text + "\t" + gender.SelectedItem.ToString() + "\t" + 

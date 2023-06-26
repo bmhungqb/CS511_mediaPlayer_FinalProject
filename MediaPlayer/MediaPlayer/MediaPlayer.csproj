@@ -223,6 +223,7 @@
     <Compile Include="uct_video.designer.cs">
       <DependentUpon>uct_video.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="acc_edit.resx">
       <DependentUpon>acc_edit.cs</DependentUpon>
     </EmbeddedResource>

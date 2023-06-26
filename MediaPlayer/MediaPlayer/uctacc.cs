@@ -13,11 +13,9 @@ namespace MediaPlayer
 {
     public partial class uctacc : UserControl
     {
-        string username;
-        public uctacc(string name)
+        public uctacc()
         {
             InitializeComponent();
-            username = name;
         }
         string filepath;
         private void guna2CirclePictureBox1_MouseMove(object sender, MouseEventArgs e)//ava
@@ -53,7 +51,7 @@ namespace MediaPlayer
             BackColor = Color.Transparent;
             aboutme.FillColor2 = Color.DimGray;
             edit_profile.FillColor2 = Color.Transparent;
-            acc_infor acc_Infor = new acc_infor(username);
+            acc_infor acc_Infor = new acc_infor();
             flowLayoutPanel1.Controls.Add(acc_Infor);            
         }
         private void aboutme_Click(object sender, EventArgs e)
@@ -61,7 +59,7 @@ namespace MediaPlayer
             
             aboutme.FillColor2 = Color.DimGray;
             edit_profile.FillColor2 = Color.Transparent;
-            acc_infor infor = new acc_infor(username);
+            acc_infor infor = new acc_infor();
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(infor);
         }
@@ -71,7 +69,7 @@ namespace MediaPlayer
             
             edit_profile.FillColor2 = Color.DimGray;
             aboutme.FillColor2 = Color.Transparent;
-            acc_edit edit = new acc_edit(username);
+            acc_edit edit = new acc_edit();
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(edit);
         }

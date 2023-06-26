@@ -17,11 +17,9 @@ namespace MediaPlayer
 {
     public partial class mediaPlayer : Form
     {
-        string username;
-        public mediaPlayer(string name)
+        public mediaPlayer()
         {
             InitializeComponent();
-            username = name;
         //    panel1.AutoScroll = false;
 
         }
@@ -283,7 +281,7 @@ namespace MediaPlayer
                 btn_search.Checked = false;
                 btn_setting.Checked = false;
                 panel1.Controls.Clear();
-                uctacc uctacc = new uctacc(username);
+                uctacc uctacc = new uctacc();
                 panel1.Controls.Add(uctacc);
             }
         }

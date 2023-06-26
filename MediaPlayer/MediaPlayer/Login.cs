@@ -50,8 +50,9 @@ namespace MediaPlayer
                 }
                 if (tb_password.Text == pass)
                 {
-                    mediaPlayer mediaPlayer = new mediaPlayer(tb_name.Text);
+                    mediaPlayer mediaPlayer = new mediaPlayer();
                     mediaPlayer.Show();
+                    user.x = new User(tb_name.Text);
                     this.Hide();
                 }
                 else

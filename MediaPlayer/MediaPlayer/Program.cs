@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace MediaPlayer
 {
+    public static class user
+    {
+        public static User x { get; set; }
+    }
     internal static class Program
     {
         /// <summary>

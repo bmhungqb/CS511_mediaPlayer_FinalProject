@@ -13,17 +13,15 @@ namespace MediaPlayer
 {
     public partial class acc_infor : UserControl
     {
-        string username;
-        public acc_infor(string name)
+        public acc_infor()
         {
             InitializeComponent();
-            username=name;
         }
 
         private void acc_infor_Load(object sender, EventArgs e)
         {
             BackColor = Color.Transparent;
-            string directoryPath = username;
+            string directoryPath = user.x.name;
             string pass = string.Empty;
             using (StreamReader sr = new StreamReader(Path.Combine(directoryPath, "infor.txt")))
             {
