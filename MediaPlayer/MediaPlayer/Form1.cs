@@ -78,50 +78,6 @@ namespace MediaPlayer
             panel1.Controls.Add(lyrics);
             lyrics.BringToFront();
         }
-        //private void morong()
-        //{
-        //    panel2.Height = 170;
-        //    panel2.Location = new Point(0, 2);
-        //    panel4.Location = new Point(0, 149);
-        //    panel3.Location = new Point(0, 280);
-        //}
-        //private void thunho()
-        //{
-        //    panel2.Height = 80;
-        //    panel2.Location = new Point(0, 2);
-        //    panel4.Location = new Point(0, 40);
-        //    panel3.Location = new Point(0, 170);
-        //}
-        //private void playlist_b_Click_1(object sender, EventArgs e)
-        //{
-        //    panel1.Controls.Clear();
-        //    panel1.AutoScroll = false;
-        //    panel2.Height = 50;
-        //    thunho();
-        //    playlist_b.FillColor = SystemColors.AppWorkspace;
-        //    find.FillColor = SystemColors.WindowFrame;
-        //    home1.FillColor = SystemColors.WindowFrame;
-        //    acc.FillColor = SystemColors.WindowFrame;
-        //    setting.FillColor = SystemColors.WindowFrame;
-        //    playlist Playlist = new playlist();
-        //    panel1.Controls.Add(Playlist);
-        //}
-
-        //private void guna2Button3_Click_1(object sender, EventArgs e)
-        //{
-        //    if (panel2.Height != 148)//mở rộng
-        //        morong();
-        //    else
-        //    {
-        //        thunho();
-        //    }
-        //}
-
-        //private void pictureBox1_Click(object sender, EventArgs e)
-        //{
-        //    panel2.Height = 50;
-        //    thunho();
-        //}
         private void btn_list_Click(object sender, EventArgs e)
         {
             Guna2CircleButton btn = sender as Guna2CircleButton;
