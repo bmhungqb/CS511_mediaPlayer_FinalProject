@@ -68,6 +68,7 @@
             // flow_song
             // 
             this.flow_song.AutoScroll = true;
+            this.flow_song.BackColor = System.Drawing.Color.Black;
             this.flow_song.Location = new System.Drawing.Point(0, 489);
             this.flow_song.Name = "flow_song";
             this.flow_song.Size = new System.Drawing.Size(1379, 747);
@@ -85,10 +86,10 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.name);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.PaleVioletRed;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.DeepPink;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.LavenderBlush;
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1379, 486);
@@ -290,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "uct_artist";
-            this.Size = new System.Drawing.Size(1349, 1239);
+            this.Size = new System.Drawing.Size(1353, 1239);
             this.Load += new System.EventHandler(this.uct_artist_Load);
             this.panel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);

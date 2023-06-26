@@ -41,6 +41,7 @@ namespace MediaPlayer
                 string res = await zingMp3Api.Search("Den");
                 Search searchData = Utils.handleSearch(res);
             */
+            BackColor = Color.Transparent;
             string response = await zingMp3Api.GetHome();
             dataHomePage = Utils.getHome(response);
             for (int i = 1; i < dataHomePage.banner.listBanners.Count(); i++)
@@ -75,7 +76,7 @@ namespace MediaPlayer
             artist_popular artist_Popular = sender as artist_popular;
             uct_playlist uct_Playlist = new uct_playlist();
             uct_Playlist.OpenUserControlB(artist_Popular.current);
-            panel1.Controls.Add(uct_Playlist);
+            flowLayoutPanel1.Controls.Add(uct_Playlist);
             uct_Playlist.BringToFront();
         }
 

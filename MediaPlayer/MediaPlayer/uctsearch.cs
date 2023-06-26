@@ -95,30 +95,34 @@ namespace MediaPlayer
         private void SearchMusicAll(Search search)
         {
             DeleteUctSongs();
-            clear();
+            //  clear();
+            flowLayoutSearch.Controls.Clear();
             search_all search_All = new search_all(search);
             flowLayoutSearch.Controls.Add(search_All);
-           
+            search_All.BringToFront();
         }
         private void SearchSong(Search search)
         {
             DeleteUctSongs();
-            clear();
+            //  clear();
+            flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listSongs.Count; i++)
             {
-                uct_song uct_Song = new uct_song((i + 1).ToString(), search.listSongs[i]);
+                uct_song uct_Song = new uct_song((i+1).ToString(), search.listSongs[i]);
                 flowLayoutSearch.Controls.Add(uct_Song);
             }
         }
         private void SearchArtist(Search search)
         {
             DeleteUctSongs();
-            clear();
+            //   clear();
+            flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listArtists.Count; i++)
             {
                 search_artist artist = new search_artist(search.listArtists[i]);
                 artist.OpenArtistSongRequested += Artist_OpenArtistSongRequested;
                 flowLayoutSearch.Controls.Add(artist);
+                artist.BringToFront();
             }
         }
 
@@ -127,14 +131,15 @@ namespace MediaPlayer
             search_artist artist = sender as search_artist;
             uct_artist uct_Playlist = new uct_artist();
             uct_Playlist.OpenUserControl(artist.currentArtist);
-            flowLayoutSearch.Controls.Add(uct_Playlist);
+            guna2Panel1.Controls.Add(uct_Playlist);
             uct_Playlist.BringToFront();
         }
 
         private void SearchPlaylist(Search search)
         {
             DeleteUctSongs();
-            clear();
+            //  clear();
+            flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listPlaylists.Count; i++)
             {
                 artist_popular playlist = new artist_popular(search.listPlaylists[i]);
@@ -148,7 +153,7 @@ namespace MediaPlayer
             artist_popular playlist = sender as artist_popular;
             uct_playlist uct_Playlist = new uct_playlist();
             uct_Playlist.OpenUserControlB(playlist.current);
-            flowLayoutSearch.Controls.Add(uct_Playlist);
+            guna2Panel1.Controls.Add(uct_Playlist);
             uct_Playlist.BringToFront();
         }
     }

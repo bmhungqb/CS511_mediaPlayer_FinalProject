@@ -17,10 +17,12 @@ namespace MediaPlayer
 {
     public partial class mediaPlayer : Form
     {
-        public mediaPlayer()
+        string username;
+        public mediaPlayer(string name)
         {
             InitializeComponent();
-            panel1.AutoScroll = false;
+            username = name;
+        //    panel1.AutoScroll = false;
 
         }
         uct_player player = new uct_player();
@@ -51,7 +53,7 @@ namespace MediaPlayer
         }
         private void UserControlA_OpenUCTVideo(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+           // panel1.Controls.Clear();
             uct_video lyrics = new uct_video();
             // Gọi phương thức OpenUserControlB
             //lyrics.OpenUCTLyrics(player.currentSong);
@@ -60,7 +62,7 @@ namespace MediaPlayer
         }
         private void UserControlA_OpenUCTLyrics(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+          //  panel1.Controls.Clear();
             uct_player player = sender as uct_player;
             uct_lyrics lyrics = new uct_lyrics();
             // Gọi phương thức OpenUserControlB
@@ -70,7 +72,7 @@ namespace MediaPlayer
         }
         private void UserControlA_OpenUCTKara(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+          //  panel1.Controls.Clear();
             uct_player player = sender as uct_player;
             uct_lyrics lyrics = new uct_lyrics();
             // Gọi phương thức OpenUserControlB
@@ -210,7 +212,7 @@ namespace MediaPlayer
             Guna2CircleButton button = sender as Guna2CircleButton;
             if(button.Name == "btn_home")
             {
-                panel1.Controls.Clear();
+             panel1.Controls.Clear();
                 main home = new main();
                 panel1.Controls.Add(home);
                 btn_home.Checked = true;
@@ -223,7 +225,7 @@ namespace MediaPlayer
             }
             else if(button.Name == "btn_search")
             {
-                panel1.Controls.Clear();
+               panel1.Controls.Clear();
                 uctsearch uctsearch = new uctsearch();
                 panel1.Controls.Add(uctsearch);
                 btn_home.Checked = false;
@@ -237,7 +239,7 @@ namespace MediaPlayer
             else if( button.Name == "btn_playlist")
             {
                 panel1.Controls.Clear();
-                panel1.AutoScroll = false;
+              //  panel1.AutoScroll = false;
                 playlist Playlist = new playlist();
                 panel1.Controls.Add(Playlist);
                 btn_home.Checked = false;
@@ -270,7 +272,7 @@ namespace MediaPlayer
                 btn_search.Checked = false;
                 btn_setting.Checked = true;
                 panel1.Controls.Clear();
-                uctacc uctacc = new uctacc();
+                //uctacc uctacc = new uctacc();
             }
             else if(button.Name == "btn_account")
             {
@@ -281,7 +283,7 @@ namespace MediaPlayer
                 btn_search.Checked = false;
                 btn_setting.Checked = false;
                 panel1.Controls.Clear();
-                uctacc uctacc = new uctacc();
+                uctacc uctacc = new uctacc(username);
                 panel1.Controls.Add(uctacc);
             }
         }

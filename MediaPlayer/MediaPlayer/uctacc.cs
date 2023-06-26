@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,11 @@ namespace MediaPlayer
 {
     public partial class uctacc : UserControl
     {
-        public uctacc()
+        string username;
+        public uctacc(string name)
         {
             InitializeComponent();
+            username = name;
         }
         string filepath;
         private void guna2CirclePictureBox1_MouseMove(object sender, MouseEventArgs e)//ava
@@ -47,57 +50,39 @@ namespace MediaPlayer
 
         private void uctacc_Load(object sender, EventArgs e)
         {
-            label1.Text = name.Text;
-            edit.Visible = false ;
-            about.Size = new Size(1348, 533);
-            about.Location = new Point(7, 423);
-            aboutme.FillColor2= Color.DimGray;
-            edit_profile.FillColor2= Color.Transparent;
-        }
-
-        private void aboutme_Click(object sender, EventArgs e)
-        {
-            edit.Visible = false;
-            about.Visible = true;
-            edit.SendToBack();
-            about.BringToFront();
-            about.Size = new Size(1348, 533);
-            about.Location = new Point(7, 423);
+            BackColor = Color.Transparent;
             aboutme.FillColor2 = Color.DimGray;
             edit_profile.FillColor2 = Color.Transparent;
+            acc_infor acc_Infor = new acc_infor(username);
+            flowLayoutPanel1.Controls.Add(acc_Infor);            
+        }
+        private void aboutme_Click(object sender, EventArgs e)
+        {
+            
+            aboutme.FillColor2 = Color.DimGray;
+            edit_profile.FillColor2 = Color.Transparent;
+            acc_infor infor = new acc_infor(username);
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Add(infor);
         }
 
         private void edit_profile_Click(object sender, EventArgs e)
         {
-            about.Visible = false;
-            edit.Visible= true;
-            about.SendToBack();
-            edit.Size = new Size(1348, 533);
-            edit.Location = new Point(7, 423);
-            edit.BringToFront();
+            
             edit_profile.FillColor2 = Color.DimGray;
             aboutme.FillColor2 = Color.Transparent;
+            acc_edit edit = new acc_edit(username);
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Add(edit);
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            edit.SendToBack();
-            about.BringToFront();
-            edit.Visible = false;
-            about.Visible= true;
-            about.Size = new Size(1348, 533);
-            about.Location = new Point(7, 423);
+          
             aboutme.FillColor2 = Color.DimGray;
             edit_profile.FillColor2 = Color.Transparent;
         }
 
-        private void save_Click(object sender, EventArgs e)
-        {
-            name.Text = textBox1.Text;
-            label1.Text = name.Text;
-            gender.Text = comboBox1.Text;
-            birth.Text = month.Text + " "+ day.Text+", "+ year.Text;
-            email.Text = textBox2.Text;
-        }
+        
     }
 }
