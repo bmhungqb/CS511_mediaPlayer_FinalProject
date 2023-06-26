@@ -29,32 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lb_record_timer = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.name = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pnl_flow_lyric = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pt_thumb = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_record = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.name = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.timer_lyric = new System.Windows.Forms.Timer(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1404, 577);
-            this.panel1.TabIndex = 0;
-            // 
-            // timer
-            // 
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -62,13 +53,14 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox7);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_record);
             this.guna2CustomGradientPanel1.Controls.Add(this.name);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 75);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1404, 75);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // lb_record_timer
@@ -83,12 +75,80 @@
             this.lb_record_timer.Text = "0:00:00";
             this.lb_record_timer.Visible = false;
             // 
+            // name
+            // 
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.name.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.name.Location = new System.Drawing.Point(113, 14);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(1053, 40);
+            this.name.TabIndex = 94;
+            this.name.Text = "HIEUTHUHAI";
+            this.name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2CustomGradientPanel2.Controls.Add(this.pnl_flow_lyric);
+            this.guna2CustomGradientPanel2.Controls.Add(this.pt_thumb);
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2CustomGradientPanel1);
+            this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(67)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1404, 577);
+            this.guna2CustomGradientPanel2.TabIndex = 98;
+            // 
+            // pnl_flow_lyric
+            // 
+            this.pnl_flow_lyric.AutoScroll = true;
+            this.pnl_flow_lyric.Location = new System.Drawing.Point(566, 116);
+            this.pnl_flow_lyric.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.pnl_flow_lyric.Name = "pnl_flow_lyric";
+            this.pnl_flow_lyric.Size = new System.Drawing.Size(750, 400);
+            this.pnl_flow_lyric.TabIndex = 2;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::MediaPlayer.Properties.Resources.giff;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(129, 487);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 62);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 3;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pt_thumb
+            // 
+            this.pt_thumb.Image = global::MediaPlayer.Properties.Resources._1200x1200bf_60;
+            this.pt_thumb.ImageRotate = 0F;
+            this.pt_thumb.Location = new System.Drawing.Point(107, 100);
+            this.pt_thumb.Name = "pt_thumb";
+            this.pt_thumb.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pt_thumb.Size = new System.Drawing.Size(370, 370);
+            this.pt_thumb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pt_thumb.TabIndex = 1;
+            this.pt_thumb.TabStop = false;
+            // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 1);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(54, 54);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,45 +177,40 @@
             this.btn_record.Visible = false;
             this.btn_record.Click += new System.EventHandler(this.btn_record_Click);
             // 
-            // name
+            // timer_lyric
             // 
-            this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.name.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(540, 17);
-            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(247, 40);
-            this.name.TabIndex = 94;
-            this.name.Text = "HIEUTHUHAI";
-            this.name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer_lyric.Interval = 200;
+            this.timer_lyric.Tick += new System.EventHandler(this.timer_lyric_Tick);
             // 
             // uct_lyrics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Name = "uct_lyrics";
             this.Size = new System.Drawing.Size(1404, 577);
-            this.panel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2ImageButton btn_record;
         private System.Windows.Forms.Timer timer;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_record_timer;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pt_thumb;
+        private System.Windows.Forms.FlowLayoutPanel pnl_flow_lyric;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Timer timer_lyric;
     }
 }

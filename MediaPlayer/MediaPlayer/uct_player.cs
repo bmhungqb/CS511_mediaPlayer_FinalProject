@@ -23,6 +23,7 @@ namespace MediaPlayer
         MediaPlayer.API.Utils Utils = new Utils();
         public Song currentSong = new Song();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
+        List<Song> currentPlaylist = new List<Song>();
         public uct_player()
         {
             InitializeComponent();
@@ -37,7 +38,6 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        List<Song> currentPlaylist = new List<Song>();
         int orderSong = 0;
         public void SetCurrentPlaylist(List<Song> listSongs)
         {
@@ -94,7 +94,7 @@ namespace MediaPlayer
             {
                 player.controls.pause();
             }
-            else
+            else if(btn_Play.Checked)
             {
                 player.controls.play();
             }

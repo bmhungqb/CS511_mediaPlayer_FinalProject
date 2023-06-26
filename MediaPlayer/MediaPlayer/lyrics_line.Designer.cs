@@ -35,12 +35,12 @@
             // 
             this.lbl_lyrics.AutoSize = false;
             this.lbl_lyrics.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_lyrics.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lyrics.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lyrics.ForeColor = System.Drawing.Color.White;
             this.lbl_lyrics.Location = new System.Drawing.Point(0, 0);
             this.lbl_lyrics.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_lyrics.Name = "lbl_lyrics";
-            this.lbl_lyrics.Size = new System.Drawing.Size(1379, 35);
+            this.lbl_lyrics.Size = new System.Drawing.Size(700, 35);
             this.lbl_lyrics.TabIndex = 3;
             this.lbl_lyrics.Text = "Nguyên Hà, Minh Min";
             this.lbl_lyrics.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -52,7 +52,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.lbl_lyrics);
             this.Name = "lyrics_line";
-            this.Size = new System.Drawing.Size(1379, 37);
+            this.Size = new System.Drawing.Size(700, 37);
             this.ResumeLayout(false);
 
         }
