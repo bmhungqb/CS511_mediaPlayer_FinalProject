@@ -38,6 +38,18 @@ namespace MediaPlayer
         {
             BackColor = Color.Transparent;
             lb_id.Text = ID;
+            if(ID == "1")
+            {
+                lb_id.ForeColor = Color.Yellow;
+            }
+            else if(ID == "2")
+            {
+                lb_id.ForeColor= Color.Orange;
+            }
+            else if(ID == "3")
+            {
+                lb_id.ForeColor = Color.Silver;
+            }
             lb_song.Text = currentSong.title;
             lb_singer.Text = currentSong.artistsNames;
             if (currentSong.album==null)

@@ -37,7 +37,7 @@ namespace MediaPlayer
             a=Utils.getPlaylist(res);
             List<Song> song = a.listSongs;
             name.Text = a.title;
-            pic_thumb_artist.Image = Utils.getImage(a.thumbnail);
+            pic_thumb_artist.Image = Utils.getImage(a.thumbnailM);
             //List<string> lyricsList = lyrics.lyric;
             //// Thực hiện các hành động cần thiết khi mở UserControlB
             int i;

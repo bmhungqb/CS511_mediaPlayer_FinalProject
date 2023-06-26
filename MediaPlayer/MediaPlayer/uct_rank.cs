@@ -47,19 +47,19 @@ namespace MediaPlayer
 
             foreach (dataChart data in chartdata.chart.top1)
             {
-                top1.Points.AddXY(data.time, data.counter);
+                top1.Points.AddXY($"{data.time}:00", data.counter);
             }
             chart.Series.Add(top1);
 
             foreach (dataChart data in chartdata.chart.top2)
             {
-                top2.Points.AddXY(data.time, data.counter);
+                top2.Points.AddXY($"{data.time}:00", data.counter);
             }
             chart.Series.Add(top2);
 
             foreach (dataChart data in chartdata.chart.top3)
             {
-                top3.Points.AddXY(data.time, data.counter);
+                top3.Points.AddXY($"{data.time}:00", data.counter);
             }
             chart.Series.Add(top3);
             chart.Show();
@@ -67,10 +67,10 @@ namespace MediaPlayer
         private void loadSongs(ChartHome chartdata)
         {
             int i = 1;
-            foreach(Song song in chartdata.listSongs)
+            foreach (Song song in chartdata.listSongs)
             {
                 if (i > 30) return;
-                pnl_flow_rank.Controls.Add(new uct_song(i.ToString(),song));
+                pnl_flow_rank.Controls.Add(new uct_song(i.ToString(), song));
                 i++;
             }
         }
