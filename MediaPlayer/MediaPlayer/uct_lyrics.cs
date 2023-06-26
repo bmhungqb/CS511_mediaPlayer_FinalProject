@@ -18,29 +18,10 @@ namespace MediaPlayer
     {
         MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
-        [DllImport("winmm.dll", EntryPoint = "mciSendStringA", ExactSpelling = true, CharSet = CharSet.Ansi, SetLastError = true)]
-        private static extern int record(string lpstrCommand, string lpstrReturnString, int uReturnLength, int hwndCallback);
-        SaveFileDialog saveFileRecord = new SaveFileDialog();
-        int currentTimerRecord = 0;
+
         public uct_lyrics()
         {
             InitializeComponent();
-        }
-        public async void OpenUCTLyrics(Song song)
-        {
-            string resLyric = await zingMp3Api.GetLyric(song.songId);
-            song.lyric = Utils.getLyrics(resLyric);
-            name.Text = song.title;
-            foreach (Sentence sentence in song.lyric.sentences)
-            {
-                string line = "";
-                foreach (Word word in sentence.sentence)
-                {
-                    line = line + " " + word.data;
-                }
-                lyrics_line line1 = new lyrics_line(line);
-                panel1.Controls.Add(line1);
-            }
         }
         public async void OpenUCTKara(Song song)
         {
@@ -48,21 +29,26 @@ namespace MediaPlayer
             string resLyric = await zingMp3Api.GetLyric(song.songId);
             song.lyric = Utils.getLyrics(resLyric);
             name.Text = song.title;
-            foreach (Sentence sentence in song.lyric.sentences)
-            {
-                string line = "";
-                foreach (Word word in sentence.sentence)
-                {
-                    line = line + " " + word.data;
-                }
-                lyrics_line line1 = new lyrics_line(line);
-                panel1.Controls.Add(line1);
-            }
+            //foreach (Sentence sentence in song.lyric.sentences)
+            //{
+            //    string line = "";
+            //    foreach (Word word in sentence.sentence)
+            //    {
+            //        line = line + " " + word.data;
+            //    }
+            //    lyrics_line line1 = new lyrics_line(line);
+            //    panel1.Controls.Add(line1);
+            //}
         }
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
             this.Hide();
         }
+        #region Record
+        [DllImport("winmm.dll", EntryPoint = "mciSendStringA", ExactSpelling = true, CharSet = CharSet.Ansi, SetLastError = true)]
+        private static extern int record(string lpstrCommand, string lpstrReturnString, int uReturnLength, int hwndCallback);
+        SaveFileDialog saveFileRecord = new SaveFileDialog();
+        int currentTimerRecord = 0;
         private void handleStartRecord()
         {
             lb_record_timer.Visible = true;
@@ -86,7 +72,7 @@ namespace MediaPlayer
         private void btn_record_Click(object sender, EventArgs e)
         {
             Guna2ImageButton btn = sender as Guna2ImageButton;
-            if(btn.Checked == false)
+            if (btn.Checked == false)
             {
                 handleStartRecord();
             }
@@ -114,5 +100,33 @@ namespace MediaPlayer
             currentTimerRecord++;
             lb_record_timer.Text = getCurrentTimeToString(currentTimerRecord);
         }
+        #endregion
+        #region Lyric
+        public async void OpenUCTLyrics(Song song)
+        {
+            string resLyric = await zingMp3Api.GetLyric(song.songId);
+            song.lyric = Utils.getLyrics(resLyric);
+            name.Text = song.title;
+            int start = 0;
+            int end = 0;
+            foreach (Sentence sentence in song.lyric.sentences)
+            {
+                string line = "";
+                foreach (Word word in sentence.sentence)
+                {
+                    line = line + " " + word.data;
+                    end += word.endTime - word.startTime;
+                }
+                lyrics_line line1 = new lyrics_line(line, start, end);
+                start = end;
+                panel1.Controls.Add(line1);
+            }
+        }
+        private void timer_lyric_Tick(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
     }
 }

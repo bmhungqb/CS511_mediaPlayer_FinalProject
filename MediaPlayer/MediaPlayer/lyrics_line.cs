@@ -12,7 +12,7 @@ namespace MediaPlayer
 {
     public partial class lyrics_line : UserControl
     {
-        public lyrics_line(string x)
+        public lyrics_line(string x, int startTime, int endTime)
         {
             InitializeComponent();
             lbl_lyrics.Text = x;

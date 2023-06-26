@@ -95,6 +95,12 @@
     <Compile Include="banner.Designer.cs">
       <DependentUpon>banner.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmEmail.Designer.cs">
+      <DependentUpon>ConfirmEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,7 @@
     <Compile Include="lyrics_line.Designer.cs">
       <DependentUpon>lyrics_line.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mail\MailRequest.cs" />
     <Compile Include="main.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="banner.resx">
       <DependentUpon>banner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmEmail.resx">
+      <DependentUpon>ConfirmEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
