@@ -33,16 +33,6 @@ namespace MediaPlayer
         }
         int y = 65;
         //y+209;
-        public void load()
-        {
-            string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
-            userControlA = new uct_playlist1(filepath);
-            userControlA.Location = new Point(3, y);
-            // Thêm UserControlA vào Form
-            panel.Controls.Add(userControlA);
-            userControlA.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
-            y += 209;
-        }
         private void playlist_Load(object sender, EventArgs e)
         {
             string filepath = Path.Combine( Path.Combine(user.x.name, "playlists"), "favor");
