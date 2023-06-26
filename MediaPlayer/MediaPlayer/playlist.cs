@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MediaPlayer.API;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,29 +22,36 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
-        string x;
         private void UserControlA_OpenUserControlBRequested(object sender, EventArgs e)
         {
-            //uct_playlist playlist = new uct_playlist(x);
-            //// Gọi phương thức OpenUserControlB
-            //playlist.OpenUserControlB();
-            //panel.Controls.Add(playlist);
-            //playlist.BringToFront();
+            uct_playlist1 uct_Playlist1 = sender as uct_playlist1;
+            userplaylist playlist = new userplaylist();
+            // Gọi phương thức OpenUserControlB
+            playlist.OpenUserControlB(uct_Playlist1.filepath);
+            panel1.Controls.Add(playlist);
+            playlist.BringToFront();
         }
         int y = 65;
         //y+209;
+        public void load()
+        {
+            string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
+            userControlA = new uct_playlist1(filepath);
+            userControlA.Location = new Point(3, y);
+            // Thêm UserControlA vào Form
+            panel.Controls.Add(userControlA);
+            userControlA.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
+            y += 209;
+        }
         private void playlist_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                userControlA = new uct_playlist1();
-                userControlA.Location = new Point(3, y);
-                x = userControlA.name();
-                // Thêm UserControlA vào Form
-                panel.Controls.Add(userControlA);
-                userControlA.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
-                y += 209;
-            }
+            string filepath = Path.Combine( Path.Combine(user.x.name, "playlists"), "favor");
+            userControlA = new uct_playlist1(filepath);
+            userControlA.Location = new Point(3, y);
+            // Thêm UserControlA vào Form
+            panel.Controls.Add(userControlA);
+            userControlA.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
+            y += 209;
         }
 
         private void tb_search_Click(object sender, EventArgs e)
@@ -53,7 +62,7 @@ namespace MediaPlayer
         private void guna2Button2_Click(object sender, EventArgs e)//create new playlist
         {
             uct_create create = new uct_create(); 
-            panel.Controls.Add(create);
+            panel1.Controls.Add(create);
             create.BringToFront();
         }
     }

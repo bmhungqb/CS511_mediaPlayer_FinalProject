@@ -224,6 +224,12 @@
       <DependentUpon>uct_video.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="userplaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userplaylist.Designer.cs">
+      <DependentUpon>userplaylist.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="acc_edit.resx">
       <DependentUpon>acc_edit.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_video.resx">
       <DependentUpon>uct_video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userplaylist.resx">
+      <DependentUpon>userplaylist.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -542,6 +551,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\3671846_refresh_icon.png" />
     <None Include="Resources\ic_speaker_mute_active32.png" />
     <None Include="Resources\ic_speaker_active32.png" />
     <None Include="Resources\ic_speaker32.png" />

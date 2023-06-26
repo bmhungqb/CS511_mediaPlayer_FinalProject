@@ -30,8 +30,8 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,14 +39,14 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(309, 91);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 26);
+            this.label6.Size = new System.Drawing.Size(113, 36);
             this.label6.TabIndex = 94;
-            this.label6.Text = "Date created:";
+            this.label6.Text = "0 songs";
             // 
             // label4
             // 
@@ -62,17 +62,6 @@
             this.label4.TabIndex = 93;
             this.label4.Text = "HIEUTHUHAI";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.ezpapa;
-            this.pictureBox4.Location = new System.Drawing.Point(32, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(225, 178);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 38;
-            this.pictureBox4.TabStop = false;
             // 
             // guna2Button1
             // 
@@ -93,13 +82,27 @@
             this.guna2Button1.TabIndex = 95;
             this.guna2Button1.Text = "Remove";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BorderRadius = 12;
+            this.pictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
+            this.pictureBox4.ImageRotate = 0F;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(272, 189);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 96;
+            this.pictureBox4.TabStop = false;
+            // 
             // uct_playlist1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.guna2Button1);
+            this.BackColor = System.Drawing.Color.RosyBrown;
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Name = "uct_playlist1";
@@ -116,7 +119,7 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBox4;
     }
 }

@@ -126,10 +126,7 @@ namespace MediaPlayer
             string filePath = Path.Combine(favor, "listSongs.txt");
             if (btn.Checked)//add to favorites
             {
-                using (StreamWriter sr = new StreamWriter(filePath))
-                {
-                    sr.WriteLine(currentSong.songId);
-                }
+                File.AppendAllText(filePath, currentSong.songId + "\n");
             }
             else //delete from favorites
             {

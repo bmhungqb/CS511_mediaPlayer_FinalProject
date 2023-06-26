@@ -30,18 +30,17 @@ namespace MediaPlayer
         }
         private void btn_signup_Click(object sender, EventArgs e)
         {
-            string directoryPath = tb_name.Text;
-            if (Directory.Exists(directoryPath))//already exists
+            if (Directory.Exists(tb_name.Text))//already exists
             {
                 DialogResult dlr = MessageBox.Show("User's name already exists!", "Warning", MessageBoxButtons.OK);
                 tb_name.Text = string.Empty;
             }
             else//create
             {
-                Directory.CreateDirectory(directoryPath);
+                Directory.CreateDirectory(tb_name.Text);
                 //tạo file thông tin của user
                 string infor = "infor.txt";
-                using(StreamWriter sw = File.CreateText(Path.Combine(directoryPath, infor)))
+                using(StreamWriter sw = File.CreateText(Path.Combine(tb_name.Text, infor)))
                 {
                   
                     string birth = day.SelectedItem.ToString()+ "/" + month.SelectedItem.ToString() + "/" + year.Text;
@@ -49,7 +48,7 @@ namespace MediaPlayer
                     sw.WriteLine(s);
                 }
                 //tạo folder playlists
-                string playlists = Path.Combine(directoryPath, "playlists");
+                string playlists = Path.Combine(tb_name.Text, "playlists");
                 Directory.CreateDirectory(playlists);
 
                 //tạo folder records trong playlists
@@ -61,7 +60,12 @@ namespace MediaPlayer
                 Directory.CreateDirectory(favor);
 
                 //tạo infor của favorites song
-                File.Create(Path.Combine(favor, "playlistInfor.txt"));
+                using (StreamWriter sw = File.CreateText(Path.Combine(favor, "playlistInfor.txt")))
+                {
+
+                    string s = "Bài hát yêu thích";
+                    sw.WriteLine(s);
+                }
                 //tạo danh sách bài hát
                 File.Create(Path.Combine(favor, "listSongs.txt"));
 
