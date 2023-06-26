@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.flow_artist);
             this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 869);
+            this.panel1.Size = new System.Drawing.Size(1349, 869);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -116,7 +116,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel1);
             this.Name = "search_all";
-            this.Size = new System.Drawing.Size(1346, 869);
+            this.Size = new System.Drawing.Size(1351, 852);
             this.Load += new System.EventHandler(this.search_all_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

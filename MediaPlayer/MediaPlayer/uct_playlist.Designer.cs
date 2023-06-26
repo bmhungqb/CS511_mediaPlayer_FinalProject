@@ -426,7 +426,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "uct_playlist";
-            this.Size = new System.Drawing.Size(1364, 1239);
+            this.Size = new System.Drawing.Size(1382, 1239);
             this.Load += new System.EventHandler(this.uct_playlist_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
