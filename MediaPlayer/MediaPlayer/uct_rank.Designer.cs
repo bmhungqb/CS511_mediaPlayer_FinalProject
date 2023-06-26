@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.pnl_flow_rank = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnl_flow_rank.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_flow_rank
@@ -48,7 +48,7 @@
             this.pnl_flow_rank.Location = new System.Drawing.Point(0, 0);
             this.pnl_flow_rank.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_flow_rank.Name = "pnl_flow_rank";
-            this.pnl_flow_rank.Size = new System.Drawing.Size(1379, 580);
+            this.pnl_flow_rank.Size = new System.Drawing.Size(1384, 580);
             this.pnl_flow_rank.TabIndex = 0;
             // 
             // guna2Panel1
@@ -73,54 +73,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "#ZingChart";
             // 
-            // chart
-            // 
-            this.chart.BackColor = System.Drawing.Color.Transparent;
-            this.chart.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            this.chart.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.chart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chart.BorderlineWidth = 0;
-            this.chart.BorderSkin.BackColor = System.Drawing.Color.Transparent;
-            this.chart.BorderSkin.BorderWidth = 3;
-            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea1.AxisX.Crossing = 1.7976931348623157E+308D;
-            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.MajorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis;
-            chartArea1.AxisX.MaximumAutoSize = 90F;
-            chartArea1.AxisX.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
-            chartArea1.AxisY.InterlacedColor = System.Drawing.Color.White;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.LabelStyle.IsEndLabelVisible = false;
-            chartArea1.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DeepSkyBlue;
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisY.MajorTickMark.Enabled = false;
-            chartArea1.AxisY.MajorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis;
-            chartArea1.AxisY.MaximumAutoSize = 90F;
-            chartArea1.AxisY.MinorTickMark.Interval = double.NaN;
-            chartArea1.AxisY.MinorTickMark.IntervalOffset = double.NaN;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.chart.ChartAreas.Add(chartArea1);
-            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart.Location = new System.Drawing.Point(0, 0);
-            this.chart.Margin = new System.Windows.Forms.Padding(0);
-            this.chart.Name = "chart";
-            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Coral,
-        System.Drawing.Color.Silver};
-            this.chart.Size = new System.Drawing.Size(1366, 304);
-            this.chart.TabIndex = 0;
-            this.chart.Text = "chart1";
-            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.chart);
@@ -135,6 +87,54 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1366, 304);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
+            // chart
+            // 
+            this.chart.BackColor = System.Drawing.Color.Transparent;
+            this.chart.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            this.chart.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.chart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chart.BorderlineWidth = 0;
+            this.chart.BorderSkin.BackColor = System.Drawing.Color.Transparent;
+            this.chart.BorderSkin.BorderWidth = 3;
+            chartArea3.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea3.AxisX.Crossing = 1.7976931348623157E+308D;
+            chartArea3.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea3.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.MajorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis;
+            chartArea3.AxisX.MaximumAutoSize = 90F;
+            chartArea3.AxisX.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
+            chartArea3.AxisY.InterlacedColor = System.Drawing.Color.White;
+            chartArea3.AxisY.IsLabelAutoFit = false;
+            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.LabelStyle.IsEndLabelVisible = false;
+            chartArea3.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DeepSkyBlue;
+            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea3.AxisY.MajorTickMark.Enabled = false;
+            chartArea3.AxisY.MajorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis;
+            chartArea3.AxisY.MaximumAutoSize = 90F;
+            chartArea3.AxisY.MinorTickMark.Interval = double.NaN;
+            chartArea3.AxisY.MinorTickMark.IntervalOffset = double.NaN;
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            chartArea3.Name = "ChartArea1";
+            chartArea3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.chart.ChartAreas.Add(chartArea3);
+            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart.Location = new System.Drawing.Point(0, 0);
+            this.chart.Margin = new System.Windows.Forms.Padding(0);
+            this.chart.Name = "chart";
+            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Coral,
+        System.Drawing.Color.Silver};
+            this.chart.Size = new System.Drawing.Size(1366, 304);
+            this.chart.TabIndex = 0;
+            this.chart.Text = "chart1";
+            // 
             // uct_rank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,13 +143,13 @@
             this.Controls.Add(this.pnl_flow_rank);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uct_rank";
-            this.Size = new System.Drawing.Size(1366, 580);
+            this.Size = new System.Drawing.Size(1391, 580);
             this.Load += new System.EventHandler(this.uct_rank_Load);
             this.pnl_flow_rank.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
 
         }

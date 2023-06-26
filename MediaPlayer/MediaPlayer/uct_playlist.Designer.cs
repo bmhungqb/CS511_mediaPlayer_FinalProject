@@ -69,7 +69,7 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.flowLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -90,10 +90,10 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.name);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.PaleVioletRed;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.DeepPink;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.LavenderBlush;
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(3, 3);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1379, 427);
@@ -426,7 +426,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "uct_playlist";
-            this.Size = new System.Drawing.Size(1349, 1239);
+            this.Size = new System.Drawing.Size(1382, 1239);
             this.Load += new System.EventHandler(this.uct_playlist_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);

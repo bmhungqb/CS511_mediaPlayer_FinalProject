@@ -36,9 +36,10 @@
             this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_search = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
-            this.flowLayoutSearch.SuspendLayout();
             this.panel_search.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +65,7 @@
             this.btn_playlist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_playlist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_playlist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_playlist.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_playlist.FillColor = System.Drawing.Color.Gray;
             this.btn_playlist.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_playlist.ForeColor = System.Drawing.Color.White;
             this.btn_playlist.Location = new System.Drawing.Point(422, 2);
@@ -85,7 +86,7 @@
             this.btn_artist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_artist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_artist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_artist.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_artist.FillColor = System.Drawing.Color.Gray;
             this.btn_artist.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_artist.ForeColor = System.Drawing.Color.White;
             this.btn_artist.Location = new System.Drawing.Point(281, 1);
@@ -106,7 +107,7 @@
             this.btn_song.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_song.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_song.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_song.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_song.FillColor = System.Drawing.Color.Gray;
             this.btn_song.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_song.ForeColor = System.Drawing.Color.White;
             this.btn_song.Location = new System.Drawing.Point(143, 2);
@@ -127,7 +128,7 @@
             this.btn_all.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_all.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_all.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_all.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_all.FillColor = System.Drawing.Color.Gray;
             this.btn_all.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_all.ForeColor = System.Drawing.Color.White;
             this.btn_all.Location = new System.Drawing.Point(4, 2);
@@ -141,24 +142,23 @@
             // flowLayoutSearch
             // 
             this.flowLayoutSearch.AutoScroll = true;
-            this.flowLayoutSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.flowLayoutSearch.Controls.Add(this.panel_search);
-            this.flowLayoutSearch.Location = new System.Drawing.Point(0, 3);
+            this.flowLayoutSearch.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutSearch.Location = new System.Drawing.Point(-3, 129);
             this.flowLayoutSearch.Name = "flowLayoutSearch";
-            this.flowLayoutSearch.Size = new System.Drawing.Size(1385, 574);
+            this.flowLayoutSearch.Size = new System.Drawing.Size(1385, 448);
             this.flowLayoutSearch.TabIndex = 11;
             // 
             // panel_search
             // 
             this.panel_search.Controls.Add(this.tb_search);
             this.panel_search.Controls.Add(this.panel1);
-            this.panel_search.FillColor = System.Drawing.Color.DimGray;
-            this.panel_search.FillColor2 = System.Drawing.SystemColors.WindowFrame;
-            this.panel_search.FillColor3 = System.Drawing.Color.Black;
-            this.panel_search.FillColor4 = System.Drawing.Color.DimGray;
-            this.panel_search.Location = new System.Drawing.Point(3, 3);
+            this.panel_search.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel_search.FillColor2 = System.Drawing.Color.PaleVioletRed;
+            this.panel_search.FillColor3 = System.Drawing.Color.DeepPink;
+            this.panel_search.FillColor4 = System.Drawing.Color.LavenderBlush;
+            this.panel_search.Location = new System.Drawing.Point(0, 0);
             this.panel_search.Name = "panel_search";
-            this.panel_search.Size = new System.Drawing.Size(1360, 131);
+            this.panel_search.Size = new System.Drawing.Size(1382, 131);
             this.panel_search.TabIndex = 0;
             // 
             // tb_search
@@ -167,14 +167,14 @@
             this.tb_search.BackColor = System.Drawing.Color.Transparent;
             this.tb_search.BorderColor = System.Drawing.Color.White;
             this.tb_search.BorderRadius = 25;
-            this.tb_search.BorderThickness = 2;
+            this.tb_search.BorderThickness = 0;
             this.tb_search.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_search.DefaultText = "";
             this.tb_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tb_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tb_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tb_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_search.FillColor = System.Drawing.SystemColors.WindowFrame;
+            this.tb_search.FillColor = System.Drawing.Color.Gray;
             this.tb_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_search.Font = new System.Drawing.Font("Times New Roman", 15.75F);
             this.tb_search.ForeColor = System.Drawing.Color.LightGray;
@@ -193,17 +193,26 @@
             this.tb_search.Click += new System.EventHandler(this.guna2TextBox1_Click);
             this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.panel_search);
+            this.guna2Panel1.Controls.Add(this.flowLayoutSearch);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1382, 577);
+            this.guna2Panel1.TabIndex = 12;
+            // 
             // uctsearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutSearch);
+            this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uctsearch";
             this.Size = new System.Drawing.Size(1385, 577);
             this.panel1.ResumeLayout(false);
-            this.flowLayoutSearch.ResumeLayout(false);
             this.panel_search.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -217,5 +226,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_all;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panel_search;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

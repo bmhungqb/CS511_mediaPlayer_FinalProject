@@ -13,6 +13,7 @@ using WMPLib;
 using MediaPlayer.API;
 using Guna.UI2.WinForms;
 using System.Runtime.CompilerServices;
+using System.IO;
 
 namespace MediaPlayer
 {
@@ -44,6 +45,8 @@ namespace MediaPlayer
         }
         public async void playMusic(Song song)
         {
+            
+
             if (song == null)
             {
                 string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
@@ -64,6 +67,17 @@ namespace MediaPlayer
             player.controls.pause();
             lbl_singer.Text = currentSong.artistsNames;
             pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
+
+            string favor = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
+            // Đường dẫn đến danh sách bài hát yêu thích
+            string filePath = Path.Combine(favor, "listSongs.txt");
+            string lineToRemove = currentSong.songId;
+            string[] lines = File.ReadAllLines(filePath);
+            if (Array.IndexOf(lines, lineToRemove) != -1)
+            {
+                guna2ImageButton1.Checked = true;
+            }
+            else guna2ImageButton1.Checked = false;
         }
         private void Player_PlayStateChange(int NewState)
         {
@@ -107,6 +121,26 @@ namespace MediaPlayer
         {
             Guna2ImageButton btn = sender as Guna2ImageButton;
             btn.Checked = !btn.Checked;
+            string favor = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
+            // Đường dẫn đến danh sách bài hát yêu thích
+            string filePath = Path.Combine(favor, "listSongs.txt");
+            if (btn.Checked)//add to favorites
+            {
+                using (StreamWriter sr = new StreamWriter(filePath))
+                {
+                    sr.WriteLine(currentSong.songId);
+                }
+            }
+            else //delete from favorites
+            {
+                string songToRemove = currentSong.songId;
+                string[] lines = File.ReadAllLines(filePath);
+                if (Array.IndexOf(lines, songToRemove) != -1)
+                {
+                    lines = lines.Where(line => line != songToRemove).ToArray();
+                    File.WriteAllLines(filePath, lines);
+                }
+            }
         }
         private void btn_next_back_Click(object sender, EventArgs e)
         {

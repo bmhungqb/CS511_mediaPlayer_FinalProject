@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace MediaPlayer
 {
+    public static class user
+    {
+        public static User x { get; set; }
+    }
     internal static class Program
     {
         /// <summary>
@@ -16,7 +20,7 @@ namespace MediaPlayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mediaPlayer());
+            Application.Run(new Login());
         }
     }
 }

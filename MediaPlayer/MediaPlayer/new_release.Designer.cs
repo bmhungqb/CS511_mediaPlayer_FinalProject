@@ -38,7 +38,7 @@
             // 
             this.lb_singer.AutoSize = true;
             this.lb_singer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_singer.ForeColor = System.Drawing.Color.Gray;
+            this.lb_singer.ForeColor = System.Drawing.Color.DarkGray;
             this.lb_singer.Location = new System.Drawing.Point(125, 49);
             this.lb_singer.Name = "lb_singer";
             this.lb_singer.Size = new System.Drawing.Size(51, 20);
@@ -48,6 +48,7 @@
             // lb_song
             // 
             this.lb_song.AutoSize = true;
+            this.lb_song.BackColor = System.Drawing.Color.Transparent;
             this.lb_song.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_song.ForeColor = System.Drawing.Color.White;
             this.lb_song.Location = new System.Drawing.Point(123, 13);
@@ -86,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.pt_thumb);
             this.Controls.Add(this.lb_singer);

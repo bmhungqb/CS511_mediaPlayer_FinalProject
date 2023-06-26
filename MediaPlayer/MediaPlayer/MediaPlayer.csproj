@@ -62,6 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="acc_edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="acc_edit.Designer.cs">
+      <DependentUpon>acc_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="acc_infor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="acc_infor.Designer.cs">
+      <DependentUpon>acc_infor.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_song.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="lyrics_line.cs">
       <SubType>UserControl</SubType>
@@ -118,6 +136,12 @@
     </Compile>
     <Compile Include="search_artist.Designer.cs">
       <DependentUpon>search_artist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
     </Compile>
     <Compile Include="uct_artist.cs">
       <SubType>UserControl</SubType>
@@ -199,6 +223,13 @@
     <Compile Include="uct_video.designer.cs">
       <DependentUpon>uct_video.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="acc_edit.resx">
+      <DependentUpon>acc_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="acc_infor.resx">
+      <DependentUpon>acc_infor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_song.resx">
       <DependentUpon>add_song.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lyrics_line.resx">
       <DependentUpon>lyrics_line.cs</DependentUpon>
@@ -225,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="search_artist.resx">
       <DependentUpon>search_artist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_artist.resx">
       <DependentUpon>uct_artist.cs</DependentUpon>
