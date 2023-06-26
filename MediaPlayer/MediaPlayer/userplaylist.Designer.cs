@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label3 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.flow_song = new System.Windows.Forms.FlowLayoutPanel();
-            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel2
@@ -67,8 +69,33 @@
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.LavenderBlush;
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1379, 290);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1385, 290);
             this.guna2CustomGradientPanel2.TabIndex = 94;
+            // 
+            // pic_thumb_artist
+            // 
+            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.BorderRadius = 17;
+            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.phuongly;
+            this.pic_thumb_artist.ImageRotate = 0F;
+            this.pic_thumb_artist.Location = new System.Drawing.Point(63, 10);
+            this.pic_thumb_artist.Name = "pic_thumb_artist";
+            this.pic_thumb_artist.Size = new System.Drawing.Size(267, 215);
+            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_thumb_artist.TabIndex = 106;
+            this.pic_thumb_artist.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.player;
+            this.pictureBox2.Location = new System.Drawing.Point(336, 158);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 100;
+            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -131,43 +158,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(1353, 13);
             this.guna2Separator1.TabIndex = 96;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(359, 123);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 22);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Number of songs, Total time";
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(336, 61);
-            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(145, 55);
-            this.name.TabIndex = 72;
-            this.name.Text = "Name";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.player;
-            this.pictureBox2.Location = new System.Drawing.Point(336, 158);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 100;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
@@ -204,6 +194,32 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.Location = new System.Drawing.Point(359, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(297, 26);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "Number of songs, Total time";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Font = new System.Drawing.Font("Times New Roman", 68.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(335, 20);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(273, 103);
+            this.name.TabIndex = 72;
+            this.name.Text = "Name";
+            // 
             // flow_song
             // 
             this.flow_song.AutoScroll = true;
@@ -213,37 +229,32 @@
             this.flow_song.Size = new System.Drawing.Size(1389, 288);
             this.flow_song.TabIndex = 95;
             // 
-            // pic_thumb_artist
+            // panel2
             // 
-            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.BorderRadius = 17;
-            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.phuongly;
-            this.pic_thumb_artist.ImageRotate = 0F;
-            this.pic_thumb_artist.Location = new System.Drawing.Point(63, 10);
-            this.pic_thumb_artist.Name = "pic_thumb_artist";
-            this.pic_thumb_artist.Size = new System.Drawing.Size(267, 215);
-            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_thumb_artist.TabIndex = 106;
-            this.pic_thumb_artist.TabStop = false;
+            this.panel2.Controls.Add(this.guna2CustomGradientPanel2);
+            this.panel2.Controls.Add(this.flow_song);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1401, 577);
+            this.panel2.TabIndex = 96;
             // 
             // userplaylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flow_song);
-            this.Controls.Add(this.guna2CustomGradientPanel2);
+            this.Controls.Add(this.panel2);
             this.Name = "userplaylist";
             this.Size = new System.Drawing.Size(1404, 577);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -264,5 +275,6 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.FlowLayoutPanel flow_song;
         private Guna.UI2.WinForms.Guna2PictureBox pic_thumb_artist;
+        private System.Windows.Forms.Panel panel2;
     }
 }

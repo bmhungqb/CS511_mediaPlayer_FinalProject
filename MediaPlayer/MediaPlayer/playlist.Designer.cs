@@ -80,7 +80,7 @@
             this.tb_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_search.IconLeft = global::MediaPlayer.Properties.Resources.find;
             this.tb_search.IconLeftSize = new System.Drawing.Size(65, 65);
-            this.tb_search.Location = new System.Drawing.Point(18, 5);
+            this.tb_search.Location = new System.Drawing.Point(13, 3);
             this.tb_search.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tb_search.Name = "tb_search";
             this.tb_search.PasswordChar = '\0';
@@ -105,7 +105,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Image = global::MediaPlayer.Properties.Resources.add_playlist;
             this.guna2Button2.ImageSize = new System.Drawing.Size(33, 33);
-            this.guna2Button2.Location = new System.Drawing.Point(1302, 3);
+            this.guna2Button2.Location = new System.Drawing.Point(1279, 3);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(74, 45);
             this.guna2Button2.TabIndex = 102;
@@ -116,7 +116,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel1.Controls.Add(this.panel);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1401, 574);
             this.panel1.TabIndex = 1;

@@ -111,7 +111,10 @@ namespace MediaPlayer
 
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
-            this.Hide();
+           // this.Hide();
+            playlist play  = new playlist();
+            panel2.Controls.Add(play);
+            play.BringToFront();
         }
     }
 }
