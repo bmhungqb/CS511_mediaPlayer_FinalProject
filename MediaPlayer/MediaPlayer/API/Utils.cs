@@ -88,6 +88,37 @@ namespace MediaPlayer.API
             }
             return urlSong;
         }
+        public void handleDownloadSong(string data)
+        {
+            dynamic response = JsonConvert.DeserializeObject(data);
+            JObject jsonObject = (JObject)response;
+            JObject property1 = (JObject)jsonObject["data"];
+            string audioUrl = property1["128"].ToString();
+            SaveFileDialog saveFileRecord = new SaveFileDialog();
+            using (HttpRequest http = new HttpRequest())
+            {
+                try
+                {
+                    // Send a GET request to download the audio
+                    HttpResponse res = http.Get(audioUrl);
+
+                    // Check if the request was successful
+                    if (res.StatusCode == HttpStatusCode.OK)
+                    {
+                        // Retrieve the audio data as a byte array
+                        byte[] audioData = res.ToBytes();
+                        saveFileRecord.Filter = "(.mp3)|*.mp3";
+                        saveFileRecord.ShowDialog();
+                        // Save the audio data to the temporary file
+                        File.WriteAllBytes(saveFileRecord.FileName, audioData);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+        }
         /*
          * function getLyrics()
          * Input: data when call api GetLyric(songId);

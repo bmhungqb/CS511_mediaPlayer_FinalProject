@@ -33,8 +33,9 @@
             this.lb_time = new System.Windows.Forms.Label();
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_album = new System.Windows.Forms.Label();
-            this.btn_tym = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_dowload = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pt_thumb = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_tym = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // lb_id
@@ -92,23 +93,23 @@
             this.lb_album.TabIndex = 7;
             this.lb_album.Text = "Album name";
             // 
-            // btn_tym
+            // btn_dowload
             // 
-            this.btn_tym.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btn_tym.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_tym.HoverState.Image = global::MediaPlayer.Properties.Resources.tym_active32;
-            this.btn_tym.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btn_tym.Image = global::MediaPlayer.Properties.Resources.tym32;
-            this.btn_tym.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_tym.ImageRotate = 0F;
-            this.btn_tym.ImageSize = new System.Drawing.Size(32, 32);
-            this.btn_tym.Location = new System.Drawing.Point(1104, 34);
-            this.btn_tym.Name = "btn_tym";
-            this.btn_tym.PressedState.Image = global::MediaPlayer.Properties.Resources.tym_active32;
-            this.btn_tym.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btn_tym.Size = new System.Drawing.Size(32, 32);
-            this.btn_tym.TabIndex = 9;
-            this.btn_tym.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.btn_dowload.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_dowload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_dowload.HoverState.Image = global::MediaPlayer.Properties.Resources.ic_download_active32;
+            this.btn_dowload.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_dowload.Image = global::MediaPlayer.Properties.Resources.ic_download32;
+            this.btn_dowload.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_dowload.ImageRotate = 0F;
+            this.btn_dowload.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_dowload.Location = new System.Drawing.Point(1041, 34);
+            this.btn_dowload.Name = "btn_dowload";
+            this.btn_dowload.PressedState.Image = global::MediaPlayer.Properties.Resources.ic_download_active321;
+            this.btn_dowload.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_dowload.Size = new System.Drawing.Size(32, 32);
+            this.btn_dowload.TabIndex = 11;
+            this.btn_dowload.Click += new System.EventHandler(this.btn_dowload_Click);
             // 
             // pt_thumb
             // 
@@ -127,11 +128,30 @@
             this.pt_thumb.TabIndex = 10;
             this.pt_thumb.Click += new System.EventHandler(this.pt_thumb_Click);
             // 
+            // btn_tym
+            // 
+            this.btn_tym.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_tym.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_tym.HoverState.Image = global::MediaPlayer.Properties.Resources.tym_active32;
+            this.btn_tym.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_tym.Image = global::MediaPlayer.Properties.Resources.tym32;
+            this.btn_tym.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_tym.ImageRotate = 0F;
+            this.btn_tym.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_tym.Location = new System.Drawing.Point(1104, 34);
+            this.btn_tym.Name = "btn_tym";
+            this.btn_tym.PressedState.Image = global::MediaPlayer.Properties.Resources.tym_active32;
+            this.btn_tym.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_tym.Size = new System.Drawing.Size(32, 32);
+            this.btn_tym.TabIndex = 9;
+            this.btn_tym.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // uct_song
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.btn_dowload);
             this.Controls.Add(this.pt_thumb);
             this.Controls.Add(this.btn_tym);
             this.Controls.Add(this.lb_album);
@@ -156,5 +176,6 @@
         private System.Windows.Forms.Label lb_album;
         private Guna.UI2.WinForms.Guna2ImageButton btn_tym;
         private Guna.UI2.WinForms.Guna2ImageButton pt_thumb;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_dowload;
     }
 }

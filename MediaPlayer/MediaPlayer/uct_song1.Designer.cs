@@ -42,7 +42,7 @@
             this.lb_singer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lb_singer.Location = new System.Drawing.Point(125, 46);
             this.lb_singer.Name = "lb_singer";
-            this.lb_singer.Size = new System.Drawing.Size(51, 20);
+            this.lb_singer.Size = new System.Drawing.Size(66, 25);
             this.lb_singer.TabIndex = 14;
             this.lb_singer.Text = "Singer";
             // 
@@ -53,7 +53,7 @@
             this.lb_song.ForeColor = System.Drawing.Color.White;
             this.lb_song.Location = new System.Drawing.Point(123, 3);
             this.lb_song.Name = "lb_song";
-            this.lb_song.Size = new System.Drawing.Size(152, 32);
+            this.lb_song.Size = new System.Drawing.Size(189, 41);
             this.lb_song.TabIndex = 12;
             this.lb_song.Text = "Song\'s name";
             // 

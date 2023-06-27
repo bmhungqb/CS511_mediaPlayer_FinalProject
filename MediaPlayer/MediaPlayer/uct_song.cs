@@ -141,5 +141,11 @@ namespace MediaPlayer
             File.AppendAllText(infor, inforPlaylist[0] + "\n" +
                 listSongs.Length.ToString() + " songs, " + ConvertToHoursAndSeconds(time) + "\n");
         }
+
+        private async void btn_dowload_Click(object sender, EventArgs e)
+        {
+            string res = await zingMp3Api.GetSong(currentSong.songId);
+            Utils.handleDownloadSong(res);
+        }
     }
 }

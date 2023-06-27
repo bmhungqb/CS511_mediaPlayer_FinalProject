@@ -226,7 +226,9 @@ namespace MediaPlayer
                 btn_search.Checked = false;
                 btn_setting.Checked = true;
                 panel1.Controls.Clear();
-                //uctacc uctacc = new uctacc();
+                uct_setting uctsetting = new uct_setting();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(uctsetting);
             }
             else if(button.Name == "btn_account")
             {
