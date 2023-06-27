@@ -87,6 +87,7 @@ namespace MediaPlayer
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
             }
         }
+        public event EventHandler OpenUCTPauseLyric;
         private void toggleMusic(object sender, EventArgs e)
         {
             btn_Play.Checked = !btn_Play.Checked;
@@ -98,8 +99,11 @@ namespace MediaPlayer
             {
                 player.controls.play();
             }
+            if(btn_kara.Checked || btn_lyric.Checked)
+            {
+                OpenUCTPauseLyric?.Invoke(this, new EventArgs());   
+            }
         }
-
         private void slider_volume(object sender, EventArgs e)
         {
             int volume = (int)sliderVolume.Value;
@@ -194,18 +198,26 @@ namespace MediaPlayer
         public event EventHandler OpenUCTLyricsRequested;
         public event EventHandler OpenUCTKaraRequested;
         public event EventHandler OpenUCTVideoRequested;
-        private void guna2ImageButton7_Click(object sender, EventArgs e)//show lyrics
+
+        private void btn_lyric_Click(object sender, EventArgs e)
         {
+            btn_kara.Checked = false;
+            Guna2ImageButton btn = sender as Guna2ImageButton;
+            btn.Checked = !btn.Checked;
             OpenUCTLyricsRequested?.Invoke(this, EventArgs.Empty);
         }
-
-        private void guna2ImageButton6_Click(object sender, EventArgs e)//lyrics + kara
+        private void btn_kara_Click(object sender, EventArgs e)
         {
+            btn_lyric.Checked = false;
+            Guna2ImageButton btn = sender as Guna2ImageButton;
+            btn.Checked = !btn.Checked;
             OpenUCTKaraRequested?.Invoke(this, EventArgs.Empty);
         }
 
         private void btn_video_Click(object sender, EventArgs e)
         {
+            btn_kara.Checked = false;
+            btn_lyric.Checked = false;
             OpenUCTVideoRequested?.Invoke(this, EventArgs.Empty);
         }
 
@@ -224,5 +236,7 @@ namespace MediaPlayer
                 sliderVolume.Value = 20;
             }
         }
+
+       
     }
 }

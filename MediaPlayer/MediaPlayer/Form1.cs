@@ -47,16 +47,22 @@ namespace MediaPlayer
             player.OpenUCTLyricsRequested += UserControlA_OpenUCTLyrics;
             player.OpenUCTKaraRequested += UserControlA_OpenUCTKara;
             player.OpenUCTVideoRequested += UserControlA_OpenUCTVideo;
+            player.OpenUCTPauseLyric += UserControlA_OpenUCTPauseLyric;
             pnl_Player.Controls.Add(player);
+        }
+        private void UserControlA_OpenUCTPauseLyric(object sender, EventArgs e)
+        {
+            uct_lyrics lyric = panel1.Controls.OfType<uct_lyrics>().FirstOrDefault();
+            lyric.toggleTimerLyric();
         }
         private void UserControlA_OpenUCTVideo(object sender, EventArgs e)
         {
-           // panel1.Controls.Clear();
-            uct_video lyrics = new uct_video();
+            uct_player player = sender as uct_player;
+            panel1.Controls.Clear();
+            uct_video video = new uct_video(player.currentSong);
             // Gọi phương thức OpenUserControlB
-            //lyrics.OpenUCTLyrics(player.currentSong);
-            panel1.Controls.Add(lyrics);
-            lyrics.BringToFront();
+            panel1.Controls.Add(video);
+            video.BringToFront();
         }
         private void UserControlA_OpenUCTLyrics(object sender, EventArgs e)
         {
@@ -100,67 +106,6 @@ namespace MediaPlayer
             }
         }
 
-        //private void home1_Click_1(object sender, EventArgs e)
-        //{
-        //    panel2.Height = 50;
-        //    thunho();
-        //    panel1.Controls.Clear();
-        //    main home = new main();
-        //    panel1.Controls.Add(home);
-        //    home1.FillColor = SystemColors.AppWorkspace;
-        //    find.FillColor = SystemColors.WindowFrame;
-        //    playlist_b.FillColor = SystemColors.WindowFrame;
-        //    acc.FillColor = SystemColors.WindowFrame;
-        //    setting.FillColor = SystemColors.WindowFrame;
-        //}
-
-        //private void find_Click(object sender, EventArgs e)
-        //{
-        //    panel2.Height = 50;
-        //    thunho();
-        //    panel1.Controls.Clear();
-        //    uctsearch uctsearch = new uctsearch();
-        //    panel1.Controls.Add(uctsearch);
-        //    find.FillColor = SystemColors.AppWorkspace;
-        //    home1.FillColor = SystemColors.WindowFrame;
-        //    playlist_b.FillColor = SystemColors.WindowFrame;
-        //    acc.FillColor = SystemColors.WindowFrame;
-        //    setting.FillColor = SystemColors.WindowFrame;
-        //}
-
-        //private void guna2Button1_Click(object sender, EventArgs e)//profile
-        //{
-        //    find.FillColor = SystemColors.WindowFrame;
-        //    home1.FillColor = SystemColors.WindowFrame;
-        //    playlist_b.FillColor = SystemColors.WindowFrame;
-        //    acc.FillColor = SystemColors.AppWorkspace;
-        //    setting.FillColor = SystemColors.WindowFrame;
-        //    panel1.Controls.Clear();
-        //    uctacc uctacc = new uctacc();
-        //    panel1.Controls.Add(uctacc);
-        //}
-
-        //private void setting_Click(object sender, EventArgs e)
-        //{
-        //    find.FillColor = SystemColors.WindowFrame;
-        //    home1.FillColor = SystemColors.WindowFrame;
-        //    playlist_b.FillColor = SystemColors.WindowFrame;
-        //    setting.FillColor = SystemColors.AppWorkspace;
-        //    acc.FillColor = SystemColors.WindowFrame;
-        //    panel1.Controls.Clear();
-        //    uctacc uctacc = new uctacc();
-        //}
-
-        //private void guna2Button1_Click_1(object sender, EventArgs e)//rank
-        //{
-        //    find.FillColor = SystemColors.WindowFrame;
-        //    home1.FillColor = SystemColors.WindowFrame;
-        //    playlist_b.FillColor = SystemColors.WindowFrame;
-        //    setting.FillColor = SystemColors.WindowFrame;
-        //    guna2Button1.FillColor = SystemColors.AppWorkspace;
-        //    acc.FillColor = SystemColors.WindowFrame;
-        //    panel1.Controls.Clear();
-        //}
         private void button_Click(object sender, EventArgs e)
         {
             Guna2CircleButton button = sender as Guna2CircleButton;

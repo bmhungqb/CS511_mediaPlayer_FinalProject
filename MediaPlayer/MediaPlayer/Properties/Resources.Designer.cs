@@ -863,6 +863,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_ic_list242 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_list242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_ic_mic24 {
             get {
                 object obj = ResourceManager.GetObject("new_ic_mic24", resourceCulture);
@@ -876,6 +886,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap new_ic_mic241 {
             get {
                 object obj = ResourceManager.GetObject("new_ic_mic241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_ic_mic242 {
+            get {
+                object obj = ResourceManager.GetObject("new_ic_mic242", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

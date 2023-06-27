@@ -127,8 +127,8 @@
   <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9218457_list_checklist_menu_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_download32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_download32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="352073_circle_fill_play_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352073_circle_fill_play_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,11 +223,14 @@
   <data name="new_ic_mic241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_mic24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_ic_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_ic_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="choose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2023-06-15 113634.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_ic_list241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_list24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_ic_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_ic_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="del" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\del.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,6 +271,9 @@
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\809403_magnifying glass_miscellaneous_view_zoom_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="new_ic_mic242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_ic_mic24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="new_ic_speaker322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_speaker32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,9 +288,6 @@
   </data>
   <data name="phuongly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_d55287749f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_download32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_download32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6518717_audio_communication_microphone_music_sound_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6518717_audio_communication_microphone_music_sound_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,8 +307,8 @@
   <data name="5402435_account_profile_user_avatar_man_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5402435_account_profile_user_avatar_man_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="choose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2023-06-15 113634.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_backactive1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_backactive1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_ic_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -327,6 +330,9 @@
   </data>
   <data name="ic_speaker_mute_active32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_speaker_mute_active32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9218457_list_checklist_menu_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,8 +388,8 @@
   <data name="2931150_building_home_homepage_house_architecture_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2931150_building_home_homepage_house_architecture_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_backactive1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_backactive1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_record_active_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_record_active_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ezpapa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200x1200bf-60.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -448,8 +454,8 @@
   <data name="video321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_record_active_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_record_active_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_download_active321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_download_active32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="352132_next_skip_icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352132_next_skip_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -478,7 +484,7 @@
   <data name="ic_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_download_active321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_download_active32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_ic_list242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_ic_list24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

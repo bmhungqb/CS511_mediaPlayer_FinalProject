@@ -39,8 +39,8 @@
             this.trackTime = new System.Windows.Forms.Timer(this.components);
             this.btn_video = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_speaker = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_lyric = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_kara = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -176,41 +176,43 @@
             this.btn_speaker.TabIndex = 26;
             this.btn_speaker.Click += new System.EventHandler(this.btn_speaker_Click);
             // 
-            // guna2ImageButton7
+            // btn_lyric
             // 
-            this.guna2ImageButton7.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton7.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_list24;
-            this.guna2ImageButton7.HoverState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton7.Image = global::MediaPlayer.Properties.Resources._6792164_list_multimedia_music_play_playlist_icon__1_1;
-            this.guna2ImageButton7.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton7.ImageRotate = 0F;
-            this.guna2ImageButton7.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton7.Location = new System.Drawing.Point(1176, 32);
-            this.guna2ImageButton7.Name = "guna2ImageButton7";
-            this.guna2ImageButton7.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_list241;
-            this.guna2ImageButton7.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton7.Size = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton7.TabIndex = 25;
-            this.guna2ImageButton7.Click += new System.EventHandler(this.guna2ImageButton7_Click);
+            this.btn_lyric.CheckedState.Image = global::MediaPlayer.Properties.Resources.new_ic_list242;
+            this.btn_lyric.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_lyric.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_lyric.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_list24;
+            this.btn_lyric.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_lyric.Image = global::MediaPlayer.Properties.Resources._6792164_list_multimedia_music_play_playlist_icon__1_1;
+            this.btn_lyric.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_lyric.ImageRotate = 0F;
+            this.btn_lyric.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_lyric.Location = new System.Drawing.Point(1176, 32);
+            this.btn_lyric.Name = "btn_lyric";
+            this.btn_lyric.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_list241;
+            this.btn_lyric.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_lyric.Size = new System.Drawing.Size(24, 24);
+            this.btn_lyric.TabIndex = 25;
+            this.btn_lyric.Click += new System.EventHandler(this.btn_lyric_Click);
             // 
-            // guna2ImageButton6
+            // btn_kara
             // 
-            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton6.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic24;
-            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton6.Image = global::MediaPlayer.Properties.Resources._6518717_audio_communication_microphone_music_sound_icon__1_1;
-            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton6.ImageRotate = 0F;
-            this.guna2ImageButton6.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton6.Location = new System.Drawing.Point(1128, 32);
-            this.guna2ImageButton6.Name = "guna2ImageButton6";
-            this.guna2ImageButton6.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic241;
-            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton6.Size = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton6.TabIndex = 24;
-            this.guna2ImageButton6.Click += new System.EventHandler(this.guna2ImageButton6_Click);
+            this.btn_kara.CheckedState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic242;
+            this.btn_kara.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_kara.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_kara.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic24;
+            this.btn_kara.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_kara.Image = global::MediaPlayer.Properties.Resources._6518717_audio_communication_microphone_music_sound_icon__1_1;
+            this.btn_kara.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_kara.ImageRotate = 0F;
+            this.btn_kara.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_kara.Location = new System.Drawing.Point(1128, 32);
+            this.btn_kara.Name = "btn_kara";
+            this.btn_kara.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_mic241;
+            this.btn_kara.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btn_kara.Size = new System.Drawing.Size(24, 24);
+            this.btn_kara.TabIndex = 24;
+            this.btn_kara.Click += new System.EventHandler(this.btn_kara_Click);
             // 
             // guna2ImageButton5
             // 
@@ -337,8 +339,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.btn_video);
             this.Controls.Add(this.btn_speaker);
-            this.Controls.Add(this.guna2ImageButton7);
-            this.Controls.Add(this.guna2ImageButton6);
+            this.Controls.Add(this.btn_lyric);
+            this.Controls.Add(this.btn_kara);
             this.Controls.Add(this.guna2ImageButton5);
             this.Controls.Add(this.guna2ImageButton4);
             this.Controls.Add(this.btn_back);
@@ -377,8 +379,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton btn_back;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_kara;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_lyric;
         private Guna.UI2.WinForms.Guna2ImageButton btn_speaker;
         private Guna.UI2.WinForms.Guna2ImageButton btn_video;
     }

@@ -18,17 +18,18 @@ namespace MediaPlayer
         MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
         public Song currentSong = new Song();
-        public uct_video()
+        public uct_video(Song song)
         {
             InitializeComponent();
-            playVideo(null);
+            currentSong = song;
+            playVideo(currentSong);
         }
         public async void playVideo(Song song)
         {
-            string res = await zingMp3Api.GetVideo("ZWADIOCC");
+            name.Text = song.title;
+            string res = await zingMp3Api.GetVideo(song.songId);
             Video video = Utils.getVideo(res);
             player.URL = video.linkFileTempVideo;
-            //lb_title.Text = song.title;
         }
 
         private void btn_back_Click(object sender, EventArgs e)

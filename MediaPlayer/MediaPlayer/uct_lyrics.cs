@@ -45,11 +45,15 @@ namespace MediaPlayer
                 start = end;
                 pnl_flow_lyric.Controls.Add(line1);
             }
-            timer_lyric.Enabled = true;
+            timer_lyric.Enabled = false;
         }
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
             this.Hide();
+        }
+        public void toggleTimerLyric()
+        {
+            timer_lyric.Enabled = !timer_lyric.Enabled;
         }
         #region Record
         [DllImport("winmm.dll", EntryPoint = "mciSendStringA", ExactSpelling = true, CharSet = CharSet.Ansi, SetLastError = true)]
@@ -129,7 +133,7 @@ namespace MediaPlayer
                 start = end;
                 pnl_flow_lyric.Controls.Add(line1);
             }
-            timer_lyric.Enabled = true;
+            timer_lyric.Enabled = false;
         }
         private void timer_lyric_Tick(object sender, EventArgs e)
         {
