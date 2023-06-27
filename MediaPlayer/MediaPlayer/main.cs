@@ -19,9 +19,8 @@ namespace MediaPlayer
         public main()
         {
             InitializeComponent();
+            flowLayoutPanel1.AutoScroll = true;
         }
-        int width = 1355;
-        int height = 200;
         private async void main_Load(object sender, EventArgs e)
         {
             /* Test API
@@ -65,7 +64,7 @@ namespace MediaPlayer
             }
             for (int i = 1; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
             {
-                label3.Text = "Năng lượng tích cực";
+                label8.Text = "Positive Energy";
                 Playlist a = dataHomePage.energyPositive.listPlaylists[i];
                 artist_popular artist_Popular = new artist_popular(a);
                 artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
@@ -73,7 +72,7 @@ namespace MediaPlayer
             }
             //for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
             //{
-            //    label3.Text = "Nghệ sĩ thịnh hành";
+            //    label8.Text = "Popular Artists";
             //    Playlist a = dataHomePage.artistPopular.listPlaylists[i];
             //    artist_popular artist_Popular = new artist_popular(a);
             //    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
@@ -85,7 +84,7 @@ namespace MediaPlayer
             artist_popular artist_Popular = sender as artist_popular;
             uct_playlist uct_Playlist = new uct_playlist();
             uct_Playlist.OpenUserControlB(artist_Popular.current);
-            flowLayoutPanel1.Controls.Add(uct_Playlist);
+            panel1.Controls.Add(uct_Playlist);
             uct_Playlist.BringToFront();
         }
 
@@ -114,7 +113,6 @@ namespace MediaPlayer
 
         private void button_Click_Picture(object sender, EventArgs e)
         {
-            //panel1.AutoScroll = false;
             //PictureBox picture = sender as PictureBox;
             //switch (picture.Name)
             //{
@@ -137,7 +135,6 @@ namespace MediaPlayer
         }
         private void button_Click_Picture_Circle(object sender, EventArgs e)
         {
-            //panel1.AutoScroll = false;
             //Guna2CirclePictureBox picture = sender as Guna2CirclePictureBox;
             //switch (picture.Name)
             //{
@@ -152,6 +149,11 @@ namespace MediaPlayer
             //        dalab.BringToFront();
             //        break;
             //}
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

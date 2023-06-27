@@ -38,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +60,6 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.panel1);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.name);
@@ -80,7 +77,7 @@
             this.pt_add.BackColor = System.Drawing.Color.Transparent;
             this.pt_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_add.Image = global::MediaPlayer.Properties.Resources._2931178_change_edit_pencil_creative_design_icon;
-            this.pt_add.Location = new System.Drawing.Point(1302, 10);
+            this.pt_add.Location = new System.Drawing.Point(1282, 10);
             this.pt_add.Name = "pt_add";
             this.pt_add.Size = new System.Drawing.Size(41, 51);
             this.pt_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +119,7 @@
             this.panel1.Controls.Add(this.guna2Separator1);
             this.panel1.Location = new System.Drawing.Point(3, 231);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1359, 52);
+            this.panel1.Size = new System.Drawing.Size(1379, 52);
             this.panel1.TabIndex = 105;
             // 
             // label7
@@ -131,7 +128,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1152, 8);
+            this.label7.Location = new System.Drawing.Point(1169, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 28);
@@ -171,7 +168,7 @@
             this.guna2Separator1.FillThickness = 2;
             this.guna2Separator1.Location = new System.Drawing.Point(3, 35);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1353, 13);
+            this.guna2Separator1.Size = new System.Drawing.Size(1376, 14);
             this.guna2Separator1.TabIndex = 96;
             // 
             // pictureBox7
@@ -187,23 +184,12 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.download;
-            this.pictureBox4.Location = new System.Drawing.Point(1202, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 51);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::MediaPlayer.Properties.Resources._3671846_refresh_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(1255, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(1235, 10);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,7 +256,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -287,7 +272,6 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label name;

@@ -84,24 +84,24 @@ namespace MediaPlayer
 
         private void search_textbox_IconLeftClick_1(object sender, EventArgs e)
         {
-            pictureBox5.Visible = true;
-            search_textbox.Visible = false;
-            search_textbox.Text = "Search in playlist";
-            pictureBox5.BringToFront();
-            search_textbox.SendToBack();
+            //pictureBox5.Visible = true;
+            //search_textbox.Visible = false;
+            //search_textbox.Text = "Search in playlist";
+            //pictureBox5.BringToFront();
+            //search_textbox.SendToBack();
         }
 
         private void search_textbox_DoubleClick_1(object sender, EventArgs e)
         {
-            search_textbox.Text = string.Empty;
+            //search_textbox.Text = string.Empty;
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
-            pictureBox5.Visible = false;
-            search_textbox.Visible = true;
-            pictureBox5.SendToBack();
-            search_textbox.BringToFront();
+            //pictureBox5.Visible = false;
+            //search_textbox.Visible = true;
+            //pictureBox5.SendToBack();
+            //search_textbox.BringToFront();
         }
         private void pictureBox7_Click_1(object sender, EventArgs e)//back
         {

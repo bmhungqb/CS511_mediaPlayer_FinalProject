@@ -75,9 +75,9 @@ namespace MediaPlayer
             }
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)//back
         {
-            this.Hide();
+            //this.Hide();
         }
     }
 }

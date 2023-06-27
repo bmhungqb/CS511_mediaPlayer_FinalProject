@@ -50,10 +50,17 @@ namespace MediaPlayer
             string[] listSong = File.ReadAllLines(list);
             name.Text = lines[0];
             label3.Text = lines[1].Split(',')[0];
-            if (listSong.Length==0)
+            if (listSong.Length == 0)
+            {
                 list_song.Controls.Clear();
+                pictureBox4.Image = Properties.Resources._3669182_video_library_ic_icon;
+            }
             else
             {
+                Song firstSong = new Song();
+                string res = await zingMp3Api.GetInfoSong(listSong[0]);
+                firstSong = Utils.getInfoSong(res);
+                pictureBox4.Image = Utils.getImage(firstSong.thumbnail);
                 foreach (string line in listSong)
                 {
                     Song song = new Song();
@@ -65,10 +72,21 @@ namespace MediaPlayer
                 }
             }
         }
-        private void update()
+        private async void update()
         {
             string[] listSong = File.ReadAllLines(list);
             label3.Text = listSong.Length.ToString() + " songs";
+            if (File.ReadAllText(list).Length == 0)
+            {
+                pictureBox4.Image = Properties.Resources._3669182_video_library_ic_icon;
+            }
+            else
+            {
+                Song song = new Song();
+                string res = await zingMp3Api.GetInfoSong(listSong[0]);
+                song = Utils.getInfoSong(res);
+                pictureBox4.Image = Utils.getImage(song.thumbnail);
+            }
         }
         private async void pictureBox7_Click(object sender, EventArgs e)//back
         {
@@ -144,21 +162,21 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        int time = 0;
         private void Uct_Song_AddMusicRequested(object sender, EventArgs e)
         {
-            uct_song1 uct = sender as uct_song1;
-            uct_song2 uct_Song2 = new uct_song2(uct.listSong, uct.currentSong);
-            uct_Song2.DelSongRequested += Uct_Song2_DelSongRequested;
-            list_song.Controls.Add(uct_Song2);
-            string[] totalSong = File.ReadAllLines(uct.listSong);
-            time += uct.currentSong.duration;
-            label3.Text = totalSong.Length.ToString() + " songs";
+            //uct_song1 uct = sender as uct_song1;
+            //uct_song2 uct_Song2 = new uct_song2(uct.listSong, uct.currentSong);
+            //uct_Song2.DelSongRequested += Uct_Song2_DelSongRequested;
+            //list_song.Controls.Add(uct_Song2);
+            //string[] totalSong = File.ReadAllLines(uct.listSong);
+            //label3.Text = totalSong.Length.ToString() + " songs";
+            update();
+            reload();
         }
         private async void reload()
         {
-            list_song.Controls.Clear();
             string[] listSong = File.ReadAllLines(list);
+            list_song.Controls.Clear();
             foreach (string line in listSong)
             {
                 Song song = new Song();
@@ -168,6 +186,7 @@ namespace MediaPlayer
                 uct_Song.DelSongRequested += Uct_Song2_DelSongRequested;
                 list_song.Controls.Add(uct_Song);
             }
+            
         }
         private void Uct_Song2_DelSongRequested(object sender, EventArgs e)
         {
@@ -185,10 +204,12 @@ namespace MediaPlayer
 
         private void name_Click(object sender, EventArgs e)
         {
-            edit.Visible = true;
-            edit.Focus();
-            name.Visible = false;
-
+            if (name.Text != "Your favorite songs")
+            {
+                edit.Visible = true;
+                edit.Focus();
+                name.Visible = false;
+            }
         }
 
         private void edit_KeyDown(object sender, KeyEventArgs e)

@@ -30,29 +30,29 @@
         {
             this.list_song = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
+            this.edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // list_song
@@ -81,6 +81,33 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(810, 226);
             this.guna2CustomGradientPanel2.TabIndex = 0;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BorderRadius = 12;
+            this.pictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
+            this.pictureBox4.ImageRotate = 0F;
+            this.pictureBox4.Location = new System.Drawing.Point(46, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(213, 165);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 111;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 98;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -98,7 +125,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(573, 8);
+            this.label7.Location = new System.Drawing.Point(553, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 28);
@@ -155,6 +182,31 @@
             this.name.Text = "Name";
             this.name.Click += new System.EventHandler(this.name_Click);
             // 
+            // edit
+            // 
+            this.edit.BackColor = System.Drawing.Color.Transparent;
+            this.edit.BorderRadius = 7;
+            this.edit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.edit.DefaultText = "";
+            this.edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.ForeColor = System.Drawing.Color.Black;
+            this.edit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.edit.Location = new System.Drawing.Point(272, 60);
+            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Name = "edit";
+            this.edit.PasswordChar = '\0';
+            this.edit.PlaceholderText = "";
+            this.edit.SelectedText = "";
+            this.edit.Size = new System.Drawing.Size(298, 50);
+            this.edit.TabIndex = 112;
+            this.edit.Visible = false;
+            this.edit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.edit_KeyDown);
+            // 
             // flowLayoutSearch
             // 
             this.flowLayoutSearch.AutoScroll = true;
@@ -175,33 +227,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(507, 68);
             this.guna2CustomGradientPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.flowLayoutSearch);
-            this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
-            this.panel2.Location = new System.Drawing.Point(833, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(551, 568);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.guna2CustomGradientPanel2);
-            this.panel3.Controls.Add(this.list_song);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(816, 571);
-            this.panel3.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1401, 577);
-            this.panel4.TabIndex = 5;
             // 
             // tb_search
             // 
@@ -235,57 +260,32 @@
             this.tb_search.Click += new System.EventHandler(this.tb_search_Click);
             this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
             // 
-            // pictureBox4
+            // panel2
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BorderRadius = 12;
-            this.pictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
-            this.pictureBox4.ImageRotate = 0F;
-            this.pictureBox4.Location = new System.Drawing.Point(46, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(213, 169);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 111;
-            this.pictureBox4.TabStop = false;
+            this.panel2.Controls.Add(this.flowLayoutSearch);
+            this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel2.Location = new System.Drawing.Point(833, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(551, 568);
+            this.panel2.TabIndex = 3;
             // 
-            // pictureBox7
+            // panel3
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 44);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 98;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.panel3.Controls.Add(this.guna2CustomGradientPanel2);
+            this.panel3.Controls.Add(this.list_song);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(816, 571);
+            this.panel3.TabIndex = 4;
             // 
-            // edit
+            // panel4
             // 
-            this.edit.BackColor = System.Drawing.Color.Transparent;
-            this.edit.BorderRadius = 7;
-            this.edit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.edit.DefaultText = "";
-            this.edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.ForeColor = System.Drawing.Color.Black;
-            this.edit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.edit.Location = new System.Drawing.Point(272, 60);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.edit.Name = "edit";
-            this.edit.PasswordChar = '\0';
-            this.edit.PlaceholderText = "";
-            this.edit.SelectedText = "";
-            this.edit.Size = new System.Drawing.Size(298, 50);
-            this.edit.TabIndex = 112;
-            this.edit.Visible = false;
-            this.edit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.edit_KeyDown);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1401, 577);
+            this.panel4.TabIndex = 5;
             // 
             // uct_create
             // 
@@ -298,14 +298,14 @@
             this.Load += new System.EventHandler(this.uct_create_Load);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -66,7 +66,7 @@ namespace MediaPlayer
                     using (StreamWriter sw = File.CreateText(Path.Combine(favor, "playlistInfor.txt")))
                     {
 
-                        string s = "Bài hát yêu thích";
+                        string s = "Your favorite songs";
                         sw.WriteLine(s);
                         sw.WriteLine("0 songs");
                     }

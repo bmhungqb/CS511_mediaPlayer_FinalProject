@@ -63,7 +63,7 @@ namespace MediaPlayer
             string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
             label4.Text = inforPlaylist[0];
-            if (label4.Text=="Bài hát yêu thích")
+            if (label4.Text== "Your favorite songs")
                 guna2Button1.Visible = false;
             label6.Text = inforPlaylist[1];
             if (listSongs.Length != 0)

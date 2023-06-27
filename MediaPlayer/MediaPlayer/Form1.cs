@@ -20,8 +20,6 @@ namespace MediaPlayer
         public mediaPlayer()
         {
             InitializeComponent();
-        //    panel1.AutoScroll = false;
-
         }
         uct_player player = new uct_player();
          public void testPlayMusic(Song song)
@@ -111,7 +109,7 @@ namespace MediaPlayer
             Guna2CircleButton button = sender as Guna2CircleButton;
             if(button.Name == "btn_home")
             {
-             panel1.Controls.Clear();
+                panel1.Controls.Clear();
                 main home = new main();
                 panel1.Controls.Add(home);
                 btn_home.Checked = true;
@@ -124,7 +122,7 @@ namespace MediaPlayer
             }
             else if(button.Name == "btn_search")
             {
-               panel1.Controls.Clear();
+                panel1.Controls.Clear();
                 uctsearch uctsearch = new uctsearch();
                 panel1.Controls.Add(uctsearch);
                 btn_home.Checked = false;
@@ -138,7 +136,6 @@ namespace MediaPlayer
             else if( button.Name == "btn_playlist")
             {
                 panel1.Controls.Clear();
-              //  panel1.AutoScroll = false;
                 playlist Playlist = new playlist();
                 panel1.Controls.Add(Playlist);
                 btn_home.Checked = false;
