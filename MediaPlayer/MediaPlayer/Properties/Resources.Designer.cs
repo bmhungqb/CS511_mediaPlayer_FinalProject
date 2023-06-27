@@ -363,6 +363,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9004799_arrow_direction_left_back_icon {
+            get {
+                object obj = ResourceManager.GetObject("9004799_arrow_direction_left_back_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9025718_heart_straight_icon {
             get {
                 object obj = ResourceManager.GetObject("9025718_heart_straight_icon", resourceCulture);

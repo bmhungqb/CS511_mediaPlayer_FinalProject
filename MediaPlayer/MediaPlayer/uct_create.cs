@@ -206,10 +206,12 @@ namespace MediaPlayer
         {
             if (name.Text != "Your favorite songs")
             {
+                edit.Enabled = true;
                 edit.Visible = true;
                 edit.Focus();
                 name.Visible = false;
             }
+            else edit.Enabled = false;
         }
 
         private void edit_KeyDown(object sender, KeyEventArgs e)

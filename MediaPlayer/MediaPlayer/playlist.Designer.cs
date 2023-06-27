@@ -30,11 +30,13 @@
         {
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_back = new System.Windows.Forms.PictureBox();
             this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -49,6 +51,7 @@
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_back);
             this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button2);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Black;
@@ -59,6 +62,28 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 60);
             this.guna2CustomGradientPanel1.TabIndex = 104;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel1.Controls.Add(this.panel);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1401, 574);
+            this.panel1.TabIndex = 1;
+            // 
+            // btn_back
+            // 
+            this.btn_back.Image = global::MediaPlayer.Properties.Resources._9004799_arrow_direction_left_back_icon;
+            this.btn_back.Location = new System.Drawing.Point(10, 9);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(60, 41);
+            this.btn_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_back.TabIndex = 104;
+            this.btn_back.TabStop = false;
+            this.btn_back.Visible = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // tb_search
             // 
@@ -80,7 +105,7 @@
             this.tb_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_search.IconLeft = global::MediaPlayer.Properties.Resources.find;
             this.tb_search.IconLeftSize = new System.Drawing.Size(65, 65);
-            this.tb_search.Location = new System.Drawing.Point(13, 3);
+            this.tb_search.Location = new System.Drawing.Point(74, 3);
             this.tb_search.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tb_search.Name = "tb_search";
             this.tb_search.PasswordChar = '\0';
@@ -90,6 +115,7 @@
             this.tb_search.Size = new System.Drawing.Size(495, 52);
             this.tb_search.TabIndex = 103;
             this.tb_search.Click += new System.EventHandler(this.tb_search_Click);
+            this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
             // 
             // guna2Button2
             // 
@@ -111,16 +137,6 @@
             this.guna2Button2.TabIndex = 102;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.panel1.Controls.Add(this.panel);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 574);
-            this.panel1.TabIndex = 1;
-            // 
             // playlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +148,7 @@
             this.Load += new System.EventHandler(this.playlist_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -143,5 +160,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tb_search;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox btn_back;
     }
 }

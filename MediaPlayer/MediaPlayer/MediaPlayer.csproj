@@ -579,6 +579,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\9004799_arrow_direction_left_back_icon.png" />
     <None Include="Resources\ic_download_active32.png" />
     <None Include="Resources\ic_download32.png" />
     <None Include="Resources\2931178_change_edit_pencil_creative_design_icon.png" />

@@ -86,7 +86,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox4.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.FillColor = System.Drawing.Color.Gray;
             this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
             this.pictureBox4.ImageRotate = 0F;
             this.pictureBox4.Location = new System.Drawing.Point(21, 9);

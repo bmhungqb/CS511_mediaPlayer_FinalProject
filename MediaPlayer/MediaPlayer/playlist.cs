@@ -21,7 +21,8 @@ namespace MediaPlayer
         {
             InitializeComponent();
             filepath = Path.Combine(user.x.name, "playlists");
-
+            btn_back.Enabled = false;
+            btn_back.Visible = false;
         }
         private void UserControlA_OpenUserControlBRequested(object sender, EventArgs e)
         {
@@ -77,12 +78,18 @@ namespace MediaPlayer
             {
                 Directory.Delete(uct_Playlist1.filepath, true);
                 this.reload();
+                tb_search.Text = string.Empty;
+                btn_back.Enabled = false;
+                btn_back.Visible = false;
             }
         }
 
         private void tb_search_Click(object sender, EventArgs e)
         {
             tb_search.Text=string.Empty;
+            panel.Controls.Clear();
+            btn_back.Visible = true;
+            btn_back.Enabled = true;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)//create new playlist
@@ -115,6 +122,41 @@ namespace MediaPlayer
             uct_create create = new uct_create(new_playlist); 
             panel1.Controls.Add(create);
             create.BringToFront();
+        }
+
+        private void tb_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (tb_search.Text == "") return;
+                string[] thuMucCon = Directory.GetDirectories(filepath);
+                foreach (string thuMuc in thuMucCon)
+                {
+                    string tenThuMuc = Path.GetFileName(thuMuc);
+                    if (tenThuMuc == "records")
+                        continue;
+                    else
+                    {
+                        string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), tenThuMuc);
+                        string[] infor = File.ReadAllLines(Path.Combine(filepath, "playlistInfor.txt"));
+                        if (infor[0] == tb_search.Text)
+                        {
+                            uct_playlist1 uct_Playlist = new uct_playlist1(filepath);
+                            panel.Controls.Add(uct_Playlist);
+                            uct_Playlist.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
+                            uct_Playlist.DelPlaylistRequested += Uct_Playlist_DelPlaylistRequested;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.reload();
+            tb_search.Text = string.Empty;
+            btn_back.Enabled = false;
+            btn_back.Visible = false;
         }
     }
 }
