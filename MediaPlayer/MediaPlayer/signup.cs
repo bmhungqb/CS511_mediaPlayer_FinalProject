@@ -68,6 +68,7 @@ namespace MediaPlayer
 
                         string s = "Bài hát yêu thích";
                         sw.WriteLine(s);
+                        sw.WriteLine("0 songs");
                     }
                     //tạo danh sách bài hát
                     File.Create(Path.Combine(favor, "listSongs.txt"));

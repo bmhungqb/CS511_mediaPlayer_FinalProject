@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using MediaPlayer.API;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+
 namespace MediaPlayer
 {
     public partial class uct_song : UserControl
     {
         string ID = null;
-        MediaPlayer.API.ZingMp3Api zingMp3Ap = new ZingMp3Api();
+        MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
         Song currentSong = new Song();
         public uct_song(string id, Song song)
@@ -85,16 +87,27 @@ namespace MediaPlayer
             mediaPlayer main = this.ParentForm as mediaPlayer;
             main.testPlayMusic(currentSong);
         }
+        public static string ConvertToHoursAndSeconds(int totalSeconds)
+        {
+            int hour = totalSeconds / 3600;
+            int minutes = totalSeconds % 3600 / 60;
+            int seconds = totalSeconds % 3600 % 60;
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+            string formattedTime = $"{hour} hours " +
+                $"{minutes} mins " + $"{seconds.ToString("D2")} secs";
+
+            return formattedTime;
+        }
+        private async void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             string favor = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
             // Đường dẫn đến danh sách bài hát yêu thích
-            string filePath = Path.Combine(favor, "listSongs.txt");
+            string list = Path.Combine(favor, "listSongs.txt");
+            string infor = Path.Combine(favor, "playlistInfor.txt");
             btn_tym.Checked = !btn_tym.Checked;
             if (btn_tym.Checked )//add to favorites
             {
-                File.AppendAllText(filePath, currentSong.songId + "\n");
+                File.AppendAllText(list, currentSong.songId + "\n");
             }
             else //delete from favorites
             {
@@ -102,7 +115,7 @@ namespace MediaPlayer
                 string lineToRemove = currentSong.songId;
 
                 // Mảng chứa các dòng trong tập tin
-                string[] lines = File.ReadAllLines(filePath);
+                string[] lines = File.ReadAllLines(list);
 
                 // Kiểm tra xem dòng cần tìm có trong tập tin hay không
                 if (Array.IndexOf(lines, lineToRemove) != -1)
@@ -111,10 +124,22 @@ namespace MediaPlayer
                     lines = lines.Where(line => line != lineToRemove).ToArray();
 
                     // Ghi lại các dòng còn lại vào tập tin
-                    File.WriteAllLines(filePath, lines);
+                    File.WriteAllLines(list, lines);
                 }
-
             }
+            string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
+            int time = 0;
+            foreach (string line in listSongs)
+            {
+                Song song = new Song();
+                string ress = await zingMp3Api.GetInfoSong(line);
+                song = Utils.getInfoSong(ress);
+                time += song.duration;
+            }
+            File.WriteAllText(infor, string.Empty);
+            File.AppendAllText(infor, inforPlaylist[0] + "\n" +
+                listSongs.Length.ToString() + " songs, " + ConvertToHoursAndSeconds(time) + "\n");
         }
     }
 }

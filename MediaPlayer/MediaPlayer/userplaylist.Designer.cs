@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pt_add = new System.Windows.Forms.PictureBox();
             this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.flow_song = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pt_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.pt_add);
             this.guna2CustomGradientPanel2.Controls.Add(this.pic_thumb_artist);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.panel1);
@@ -71,6 +74,19 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1385, 290);
             this.guna2CustomGradientPanel2.TabIndex = 94;
+            // 
+            // pt_add
+            // 
+            this.pt_add.BackColor = System.Drawing.Color.Transparent;
+            this.pt_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pt_add.Image = global::MediaPlayer.Properties.Resources._2931178_change_edit_pencil_creative_design_icon;
+            this.pt_add.Location = new System.Drawing.Point(1302, 10);
+            this.pt_add.Name = "pt_add";
+            this.pt_add.Size = new System.Drawing.Size(41, 51);
+            this.pt_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pt_add.TabIndex = 107;
+            this.pt_add.TabStop = false;
+            this.pt_add.Click += new System.EventHandler(this.pt_add_Click);
             // 
             // pic_thumb_artist
             // 
@@ -175,7 +191,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.download;
-            this.pictureBox4.Location = new System.Drawing.Point(1247, 10);
+            this.pictureBox4.Location = new System.Drawing.Point(1202, 10);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 51);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,8 +201,9 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::MediaPlayer.Properties.Resources._3671846_refresh_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(1300, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(1255, 10);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,6 +264,7 @@
             this.Size = new System.Drawing.Size(1404, 577);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pt_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -276,5 +294,6 @@
         private System.Windows.Forms.FlowLayoutPanel flow_song;
         private Guna.UI2.WinForms.Guna2PictureBox pic_thumb_artist;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pt_add;
     }
 }

@@ -224,6 +224,12 @@
     <Compile Include="uct_song1.Designer.cs">
       <DependentUpon>uct_song1.cs</DependentUpon>
     </Compile>
+    <Compile Include="uct_song2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uct_song2.Designer.cs">
+      <DependentUpon>uct_song2.cs</DependentUpon>
+    </Compile>
     <Compile Include="uct_video.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uct_song1.resx">
       <DependentUpon>uct_song1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uct_song2.resx">
+      <DependentUpon>uct_song2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_video.resx">
       <DependentUpon>uct_video.cs</DependentUpon>
@@ -561,6 +570,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\2931178_change_edit_pencil_creative_design_icon.png" />
     <None Include="Resources\giff.gif" />
     <None Include="Resources\music_gif.gif" />
     <None Include="Resources\1200x1200bf-601.jpg" />

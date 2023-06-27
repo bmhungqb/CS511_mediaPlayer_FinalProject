@@ -81,26 +81,26 @@
             this.guna2Button1.Size = new System.Drawing.Size(132, 37);
             this.guna2Button1.TabIndex = 95;
             this.guna2Button1.Text = "Remove";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BorderRadius = 12;
-            this.pictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pictureBox4.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox4.FillColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
             this.pictureBox4.ImageRotate = 0F;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox4.Location = new System.Drawing.Point(21, 9);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(272, 189);
+            this.pictureBox4.Size = new System.Drawing.Size(231, 183);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 96;
+            this.pictureBox4.TabIndex = 112;
             this.pictureBox4.TabStop = false;
             // 
             // uct_playlist1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label6);

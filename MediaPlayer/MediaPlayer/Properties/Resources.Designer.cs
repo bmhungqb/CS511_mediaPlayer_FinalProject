@@ -93,6 +93,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2931178_change_edit_pencil_creative_design_icon {
+            get {
+                object obj = ResourceManager.GetObject("2931178_change_edit_pencil_creative_design_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _326656_home_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("326656_home_icon (1)", resourceCulture);

@@ -116,28 +116,52 @@ namespace MediaPlayer
         {
             player.controls.currentPosition = sliderMusic.Value;
         }
+        public static string ConvertToHoursAndSeconds(int totalSeconds)
+        {
+            int hour = totalSeconds / 3600;
+            int minutes = totalSeconds % 3600 / 60;
+            int seconds = totalSeconds % 3600 % 60;
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+            string formattedTime = $"{hour} hours " +
+                $"{minutes} mins " + $"{seconds.ToString("D2")} secs";
+
+            return formattedTime;
+        }
+        private async void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             Guna2ImageButton btn = sender as Guna2ImageButton;
             btn.Checked = !btn.Checked;
             string favor = Path.Combine(Path.Combine(user.x.name, "playlists"), "favor");
             // Đường dẫn đến danh sách bài hát yêu thích
-            string filePath = Path.Combine(favor, "listSongs.txt");
+            string list = Path.Combine(favor, "listSongs.txt");
+            string infor = Path.Combine(favor, "playlistInfor.txt");
             if (btn.Checked)//add to favorites
             {
-                File.AppendAllText(filePath, currentSong.songId + "\n");
+                File.AppendAllText(list, currentSong.songId + "\n");
             }
             else //delete from favorites
             {
                 string songToRemove = currentSong.songId;
-                string[] lines = File.ReadAllLines(filePath);
+                string[] lines = File.ReadAllLines(list);
                 if (Array.IndexOf(lines, songToRemove) != -1)
                 {
                     lines = lines.Where(line => line != songToRemove).ToArray();
-                    File.WriteAllLines(filePath, lines);
+                    File.WriteAllLines(list, lines);
                 }
             }
+            string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
+            int time = 0;
+            foreach (string line in listSongs)
+            {
+                Song song = new Song();
+                string ress = await zingMp3Api.GetInfoSong(line);
+                song = Utils.getInfoSong(ress);
+                time += song.duration;
+            }
+            File.WriteAllText(infor, string.Empty);
+            File.AppendAllText(infor, inforPlaylist[0] + "\n" + 
+                listSongs.Length.ToString() + " songs, " +ConvertToHoursAndSeconds(time) + "\n");
         }
         private void btn_next_back_Click(object sender, EventArgs e)
         {

@@ -16,6 +16,7 @@ namespace MediaPlayer
     {
         MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
+        string path;
         public userplaylist()
         {
             InitializeComponent();
@@ -31,7 +32,6 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        string path;
         public async void OpenUserControlB(string filepath)
         {
             path = filepath;
@@ -39,14 +39,11 @@ namespace MediaPlayer
             string list = Path.Combine(filepath, "listSongs.txt");
             BackColor = Color.Transparent;
             string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
-            using (StreamReader streamReader = new StreamReader(infor))
-            {
-                string s = streamReader.ReadLine();
-                name.Text = s;
-            }
-            int count = 0;
-            int time = 0;
+            name.Text = inforPlaylist[0];
+            label3.Text = inforPlaylist[1];
+            //int time = 0;
             if (File.ReadAllText(list).Length == 0)
             {
                 pic_thumb_artist.Image = Properties.Resources._3669182_video_library_ic_icon;
@@ -56,16 +53,15 @@ namespace MediaPlayer
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
+                int count = 0;
                 foreach (string line in listSongs)
                 {
-                    count++; 
+                    count++;
                     string ress = await zingMp3Api.GetInfoSong(line);
                     song = Utils.getInfoSong(ress);
-                    time += song.duration;
-                    uct_song uct_Song = new uct_song(count.ToString(), song) ;
-                    flow_song.Controls.Add(uct_Song) ;
+                    uct_song uct_Song = new uct_song(count.ToString(), song);
+                    flow_song.Controls.Add(uct_Song);
                 }
-                label3.Text = count.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
             }
         }
         private async void loaddata(string filepath)
@@ -74,14 +70,11 @@ namespace MediaPlayer
             string list = Path.Combine(filepath, "listSongs.txt");
             BackColor = Color.Transparent;
             string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
-            using (StreamReader streamReader = new StreamReader(infor))
-            {
-                string s = streamReader.ReadLine();
-                name.Text = s;
-            }
-            int count = 0;
-            int time = 0;
+            name.Text = inforPlaylist[0];
+            label3.Text = inforPlaylist[1];
+            //int time = 0;
             if (File.ReadAllText(list).Length == 0)
             {
                 pic_thumb_artist.Image = Properties.Resources._3669182_video_library_ic_icon;
@@ -91,16 +84,18 @@ namespace MediaPlayer
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
+                int count = 0;
+                int time = 0;
                 foreach (string line in listSongs)
                 {
                     count++;
                     string ress = await zingMp3Api.GetInfoSong(line);
                     song = Utils.getInfoSong(ress);
-                    time += song.duration;
                     uct_song uct_Song = new uct_song(count.ToString(), song);
                     flow_song.Controls.Add(uct_Song);
+                    time += song.duration;
                 }
-                label3.Text = count.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
+                label3.Text = listSongs.Length.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
             }
         }
         private void pictureBox3_Click(object sender, EventArgs e)//refresh
@@ -111,10 +106,22 @@ namespace MediaPlayer
 
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
-           // this.Hide();
+            // this.Hide();
+            string infor = Path.Combine(path, "playlistInfor.txt");
+            string[] lines = File.ReadAllLines(infor);
+            File.WriteAllText(infor, string.Empty);
+            File.AppendAllText(infor, lines[0] + "\n" + label3.Text + "\n");
+
             playlist play  = new playlist();
             panel2.Controls.Add(play);
             play.BringToFront();
+        }
+
+        private void pt_add_Click(object sender, EventArgs e)//add music
+        {
+            uct_create uct_Create = new uct_create(path);
+            panel2.Controls.Add(uct_Create);
+            uct_Create.BringToFront();
         }
     }
 }

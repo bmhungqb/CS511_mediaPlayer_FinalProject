@@ -1,4 +1,5 @@
-﻿using MediaPlayer.API;
+﻿using Guna.UI2.WinForms;
+using MediaPlayer.API;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,32 +42,16 @@ namespace MediaPlayer
             string list = Path.Combine(filepath, "listSongs.txt");
             BackColor = Color.Transparent;
             string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
-            string playlistName = "";
-            using (StreamReader streamReader = new StreamReader(infor))
-            {
-                string s;
-                while ((s = streamReader.ReadLine()) != null)
-                    playlistName = s;
-            }
-            label4.Text = playlistName;
-            int time = 0;
-            if (File.ReadAllText(list).Length == 0)
-            {
-                pictureBox4.Image = Properties.Resources._3669182_video_library_ic_icon;
-            }
-            else
-            {
+            label4.Text = inforPlaylist[0];
+            if (label4.Text == "Bài hát yêu thích")
+                guna2Button1.Visible = false;
+            label6.Text = inforPlaylist[1];
+            if (listSongs.Length != 0) { 
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
-                foreach (string line in listSongs)
-                {
-                    string ress = await zingMp3Api.GetInfoSong(line);
-                    song = Utils.getInfoSong(ress);
-                    time += song.duration;
-                }
-                label6.Text = listSongs.Length.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
             }
         }
         private async void uct_playlist1_Load(object sender, EventArgs e)
@@ -75,32 +60,17 @@ namespace MediaPlayer
             string list = Path.Combine(filepath, "listSongs.txt");
             BackColor = Color.Transparent;
             string[] listSongs = File.ReadAllLines(list);
+            string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
-            string playlistName="";
-            using (StreamReader streamReader = new StreamReader(infor))
-            {
-                string s;
-                while ((s = streamReader.ReadLine()) != null)
-                    playlistName = s;
-            }
-            label4.Text = playlistName;
-            int time = 0;
-            if (File.ReadAllText(list).Length == 0)
-            {
-                pictureBox4.Image = Properties.Resources._3669182_video_library_ic_icon;
-            }
-            else
+            label4.Text = inforPlaylist[0];
+            if (label4.Text=="Bài hát yêu thích")
+                guna2Button1.Visible = false;
+            label6.Text = inforPlaylist[1];
+            if (listSongs.Length != 0)
             {
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
-                foreach (string line in listSongs)
-                {
-                    string ress = await zingMp3Api.GetInfoSong(line);
-                    song = Utils.getInfoSong(ress);
-                    time += song.duration;
-                }
-                label6.Text = listSongs.Length.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
             }
         }
         private void label4_Click(object sender, EventArgs e)
@@ -110,6 +80,11 @@ namespace MediaPlayer
         private void uct_playlist1_Click(object sender, EventArgs e)
         {
             OpenUserControlBRequested?.Invoke(this, EventArgs.Empty);
+        }
+        public event EventHandler DelPlaylistRequested;
+        private void guna2Button1_Click(object sender, EventArgs e)//remove folder
+        {
+            DelPlaylistRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

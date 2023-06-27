@@ -40,7 +40,7 @@
             // panel
             // 
             this.panel.AutoScroll = true;
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel.BackColor = System.Drawing.Color.Black;
             this.panel.Location = new System.Drawing.Point(0, 66);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1404, 508);
@@ -48,13 +48,13 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel1.Controls.Add(this.tb_search);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button2);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 60);
@@ -113,7 +113,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel1.Controls.Add(this.panel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -125,6 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.panel1);
             this.Name = "playlist";
             this.Size = new System.Drawing.Size(1404, 577);

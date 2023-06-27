@@ -63,13 +63,22 @@ namespace MediaPlayer
                 artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_chill.Controls.Add(artist_Popular);
             }
-            for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
+            for (int i = 1; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
             {
-                Playlist a = dataHomePage.artistPopular.listPlaylists[i];
+                label3.Text = "Năng lượng tích cực";
+                Playlist a = dataHomePage.energyPositive.listPlaylists[i];
                 artist_popular artist_Popular = new artist_popular(a);
                 artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_artist.Controls.Add(artist_Popular);
             }
+            //for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
+            //{
+            //    label3.Text = "Nghệ sĩ thịnh hành";
+            //    Playlist a = dataHomePage.artistPopular.listPlaylists[i];
+            //    artist_popular artist_Popular = new artist_popular(a);
+            //    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
+            //    flow_artist.Controls.Add(artist_Popular);
+            //}
         }
         private void Artist_Popular_OpenPlaylistRequested(object sender, EventArgs e)
         {

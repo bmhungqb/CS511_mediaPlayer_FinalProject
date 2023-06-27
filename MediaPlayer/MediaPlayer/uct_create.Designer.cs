@@ -28,76 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.list_song = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.add_song = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.list_song.SuspendLayout();
+            this.pictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.add_song.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.list_song);
-            this.flowLayoutPanel1.Controls.Add(this.add_song);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1404, 577);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // list_song
             // 
             this.list_song.AutoScroll = true;
-            this.list_song.Controls.Add(this.guna2CustomGradientPanel2);
-            this.list_song.Location = new System.Drawing.Point(3, 3);
+            this.list_song.BackColor = System.Drawing.Color.Black;
+            this.list_song.Location = new System.Drawing.Point(0, 229);
             this.list_song.Name = "list_song";
-            this.list_song.Size = new System.Drawing.Size(1376, 261);
+            this.list_song.Size = new System.Drawing.Size(813, 339);
             this.list_song.TabIndex = 2;
             // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
             this.guna2CustomGradientPanel2.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pic_thumb_artist);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.name);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.SystemColors.WindowFrame;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.SystemColors.WindowFrame;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.edit);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.PaleVioletRed;
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.DeepPink;
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.LavenderBlush;
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(3, 0);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1325, 251);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(810, 226);
             this.guna2CustomGradientPanel2.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.guna2Separator1);
-            this.panel1.Location = new System.Drawing.Point(3, 194);
+            this.panel1.Location = new System.Drawing.Point(3, 178);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1339, 52);
             this.panel1.TabIndex = 110;
@@ -108,25 +98,12 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1011, 8);
+            this.label7.Location = new System.Drawing.Point(573, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 28);
             this.label7.TabIndex = 95;
             this.label7.Text = "Time";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(10, 8);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 28);
-            this.label4.TabIndex = 92;
-            this.label4.Text = "#";
             // 
             // label5
             // 
@@ -134,7 +111,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(192, 8);
+            this.label5.Location = new System.Drawing.Point(102, 8);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 28);
@@ -148,7 +125,7 @@
             this.guna2Separator1.FillThickness = 2;
             this.guna2Separator1.Location = new System.Drawing.Point(3, 35);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1353, 13);
+            this.guna2Separator1.Size = new System.Drawing.Size(1333, 13);
             this.guna2Separator1.TabIndex = 96;
             // 
             // label3
@@ -157,7 +134,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(254, 140);
+            this.label3.Location = new System.Drawing.Point(267, 135);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(255, 25);
@@ -168,23 +145,24 @@
             // 
             this.name.AutoSize = true;
             this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(239, 31);
+            this.name.Location = new System.Drawing.Point(262, 60);
             this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(286, 109);
+            this.name.Size = new System.Drawing.Size(145, 55);
             this.name.TabIndex = 107;
             this.name.Text = "Name";
+            this.name.Click += new System.EventHandler(this.name_Click);
             // 
-            // add_song
+            // flowLayoutSearch
             // 
-            this.add_song.AutoScroll = true;
-            this.add_song.Controls.Add(this.guna2CustomGradientPanel1);
-            this.add_song.Location = new System.Drawing.Point(3, 270);
-            this.add_song.Name = "add_song";
-            this.add_song.Size = new System.Drawing.Size(1376, 317);
-            this.add_song.TabIndex = 1;
+            this.flowLayoutSearch.AutoScroll = true;
+            this.flowLayoutSearch.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutSearch.Location = new System.Drawing.Point(3, 78);
+            this.flowLayoutSearch.Name = "flowLayoutSearch";
+            this.flowLayoutSearch.Size = new System.Drawing.Size(545, 487);
+            this.flowLayoutSearch.TabIndex = 1;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -193,50 +171,37 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1345, 68);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(507, 68);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(594, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 28);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "Date created";
+            this.panel2.Controls.Add(this.flowLayoutSearch);
+            this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel2.Location = new System.Drawing.Point(833, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(551, 568);
+            this.panel2.TabIndex = 3;
             // 
-            // pictureBox7
+            // panel3
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 98;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.panel3.Controls.Add(this.guna2CustomGradientPanel2);
+            this.panel3.Controls.Add(this.list_song);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(816, 571);
+            this.panel3.TabIndex = 4;
             // 
-            // pic_thumb_artist
+            // panel4
             // 
-            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.BorderRadius = 10;
-            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.playlist;
-            this.pic_thumb_artist.ImageRotate = 0F;
-            this.pic_thumb_artist.Location = new System.Drawing.Point(37, 11);
-            this.pic_thumb_artist.Name = "pic_thumb_artist";
-            this.pic_thumb_artist.Size = new System.Drawing.Size(197, 181);
-            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_thumb_artist.TabIndex = 109;
-            this.pic_thumb_artist.TabStop = false;
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1401, 577);
+            this.panel4.TabIndex = 5;
             // 
             // tb_search
             // 
@@ -268,46 +233,100 @@
             this.tb_search.Size = new System.Drawing.Size(495, 52);
             this.tb_search.TabIndex = 1;
             this.tb_search.Click += new System.EventHandler(this.tb_search_Click);
+            this.tb_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_search_KeyDown);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BorderRadius = 12;
+            this.pictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
+            this.pictureBox4.ImageRotate = 0F;
+            this.pictureBox4.Location = new System.Drawing.Point(46, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(213, 169);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 111;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 98;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // edit
+            // 
+            this.edit.BackColor = System.Drawing.Color.Transparent;
+            this.edit.BorderRadius = 7;
+            this.edit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.edit.DefaultText = "";
+            this.edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.ForeColor = System.Drawing.Color.Black;
+            this.edit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.edit.Location = new System.Drawing.Point(272, 60);
+            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Name = "edit";
+            this.edit.PasswordChar = '\0';
+            this.edit.PlaceholderText = "";
+            this.edit.SelectedText = "";
+            this.edit.Size = new System.Drawing.Size(298, 50);
+            this.edit.TabIndex = 112;
+            this.edit.Visible = false;
+            this.edit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.edit_KeyDown);
             // 
             // uct_create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.panel4);
             this.Name = "uct_create";
-            this.Size = new System.Drawing.Size(1379, 577);
+            this.Size = new System.Drawing.Size(1404, 577);
             this.Load += new System.EventHandler(this.uct_create_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.list_song.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.add_song.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2TextBox tb_search;
         private System.Windows.Forms.FlowLayoutPanel list_song;
-        private System.Windows.Forms.FlowLayoutPanel add_song;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutSearch;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_thumb_artist;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI2.WinForms.Guna2TextBox edit;
     }
 }

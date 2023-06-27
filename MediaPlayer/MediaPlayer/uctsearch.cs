@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -24,44 +25,57 @@ namespace MediaPlayer
             InitializeComponent();
             panel1.Visible = false;
         }
-        string type_search = "artist,song,key,code";
+        //string type_search = "artist,song,key,code";
         private void guna2TextBox1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
             tb_search.Text = string.Empty;
         }
+        static string BoDauTiengViet(string chuoi)
+        {
+            string[] dauTiengViet = new string[] { "á", "à", "ả", "ã", "ạ", "â", "ấ", "ầ", "ẩ", "ẫ", "ậ", "ă", "ắ", "ằ", "ẳ", "ẵ", "ặ", "đ", "é", "è", "ẻ", "ẽ", "ẹ", "ê", "ế", "ề", "ể", "ễ", "ệ", "í", "ì", "ỉ", "ĩ", "ị", "ó", "ò", "ỏ", "õ", "ọ", "ô", "ố", "ồ", "ổ", "ỗ", "ộ", "ơ", "ớ", "ờ", "ở", "ỡ", "ợ", "ú", "ù", "ủ", "ũ", "ụ", "ư", "ứ", "ừ", "ử", "ữ", "ự", "ý", "ỳ", "ỷ", "ỹ", "ỵ" };
+            string[] khongDauTiengViet = new string[] { "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "d", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "i", "i", "i", "i", "i", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "y", "y", "y", "y", "y" };
+
+            for (int i = 0; i < dauTiengViet.Length; i++)
+            {
+                chuoi = Regex.Replace(chuoi, dauTiengViet[i], khongDauTiengViet[i]);
+                chuoi = Regex.Replace(chuoi, dauTiengViet[i].ToUpper(), khongDauTiengViet[i].ToUpper());
+            }
+
+            return chuoi;
+        }
         private async void btn_Click_Type_Search(object sender, EventArgs e)
         {
             Guna2Button button = sender as Guna2Button;
             button.Checked = true;
-            string resSearch = await zingMp3Api.Search(tb_search.Text);
+            string resSearch = await zingMp3Api.Search(BoDauTiengViet(tb_search.Text));
             Search search = new Search();
             search = Utils.handleSearch(resSearch);
             switch (button.Name)
             {
                 case "btn_all":
-                    type_search = "artist,song,key,code";
+                    //type_search = "artist,song,key,code";
                     btn_song.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
                     SearchMusicAll(search);
                     break;
                 case "btn_song":
-                    type_search = "song";
+                    //type_search = "song";
                     btn_all.Checked = false;
                     btn_artist.Checked = false;
                     btn_playlist.Checked = false;
                     SearchSong(search);
                     break;
                 case "btn_artist":
-                    type_search = "song";
+                    //type_search = "song";
                     btn_song.Checked = false;
                     btn_all.Checked = false;
                     btn_playlist.Checked = false;
                     SearchArtist(search);
                     break;
                 case "btn_playlist":
-                    type_search = "artist,song,key,code";
+                    //type_search = "artist,song,key,code";
                     btn_song.Checked = false;
                     btn_artist.Checked = false;
                     btn_all.Checked = false;
@@ -86,16 +100,15 @@ namespace MediaPlayer
                 //      SearchMusic();
             }
         }
-        private void clear()
-        {
-            flowLayoutSearch.Controls.Clear();
-            flowLayoutSearch.Controls.Add(panel_search);
-        }
+        //private void clear()
+        //{
+        //    flowLayoutSearch.Controls.Clear();
+        //    flowLayoutSearch.Controls.Add(panel_search);
+        //}
 
         private void SearchMusicAll(Search search)
         {
-            DeleteUctSongs();
-            //  clear();
+           DeleteUctSongs();
             flowLayoutSearch.Controls.Clear();
             search_all search_All = new search_all(search);
             flowLayoutSearch.Controls.Add(search_All);
@@ -104,7 +117,6 @@ namespace MediaPlayer
         private void SearchSong(Search search)
         {
             DeleteUctSongs();
-            //  clear();
             flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listSongs.Count; i++)
             {
@@ -115,7 +127,6 @@ namespace MediaPlayer
         private void SearchArtist(Search search)
         {
             DeleteUctSongs();
-            //   clear();
             flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listArtists.Count; i++)
             {
@@ -138,7 +149,6 @@ namespace MediaPlayer
         private void SearchPlaylist(Search search)
         {
             DeleteUctSongs();
-            //  clear();
             flowLayoutSearch.Controls.Clear();
             for (int i = 0; i < search.listPlaylists.Count; i++)
             {
