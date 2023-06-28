@@ -53,7 +53,7 @@ namespace MediaPlayer
                     mediaPlayer mediaPlayer = new mediaPlayer();
                     mediaPlayer.Show();
                     user.x = new User(tb_name.Text);
-                    this.Hide();
+                    //this.Hide();
                 }
                 else
                 {

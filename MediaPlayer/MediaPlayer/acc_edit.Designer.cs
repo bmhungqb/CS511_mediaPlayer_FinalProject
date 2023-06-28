@@ -318,12 +318,11 @@
             this.password.Location = new System.Drawing.Point(582, 412);
             this.password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.password.Name = "password";
-            this.password.PasswordChar = '●';
+            this.password.PasswordChar = '\0';
             this.password.PlaceholderText = "";
             this.password.SelectedText = "";
             this.password.Size = new System.Drawing.Size(450, 45);
             this.password.TabIndex = 111;
-            this.password.UseSystemPasswordChar = true;
             // 
             // tb_name
             // 

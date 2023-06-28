@@ -22,7 +22,7 @@ namespace MediaPlayer
             InitializeComponent();
         }
         uct_player player = new uct_player();
-         public void testPlayMusic(Song song)
+        public void testPlayMusic(Song song)
         {
             player.playMusic(song);
         }

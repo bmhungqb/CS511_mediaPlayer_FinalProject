@@ -34,5 +34,11 @@ namespace MediaPlayer
                 email.Text = s1[1];
             }
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)//log out
+        {
+            //mediaPlayer media = sender as mediaPlayer;
+            //media.close();
+        }
     }
 }

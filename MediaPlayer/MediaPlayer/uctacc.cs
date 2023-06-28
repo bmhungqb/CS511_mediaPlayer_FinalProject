@@ -37,7 +37,13 @@ namespace MediaPlayer
 
             }
             guna2CirclePictureBox1.ImageLocation = filepath;
-            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            string[] lines = File.ReadAllLines(Path.Combine(user.x.name, "infor.txt"));
+            File.WriteAllText(Path.Combine(user.x.name, "infor.txt"), string.Empty);
+            using (StreamWriter sw = new StreamWriter(Path.Combine(user.x.name, "infor.txt")))
+            {
+                sw.WriteLine(lines[0]);
+                sw.WriteLine(filepath);
+            }
         }
 
         private void guna2CirclePictureBox2_MouseLeave(object sender, EventArgs e)
@@ -49,6 +55,15 @@ namespace MediaPlayer
         private void uctacc_Load(object sender, EventArgs e)
         {
             BackColor = Color.Transparent;
+            string[] lines = File.ReadAllLines(Path.Combine(user.x.name, "infor.txt"));
+            if (lines.Length == 1)//chưa có ava
+            {
+                guna2CirclePictureBox1.Image = Properties.Resources.user;
+            }
+            else
+            {
+                guna2CirclePictureBox1.ImageLocation = lines[1];
+            }
             aboutme.FillColor2 = Color.DimGray;
             edit_profile.FillColor2 = Color.Transparent;
             acc_infor acc_Infor = new acc_infor();
