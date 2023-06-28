@@ -148,11 +148,14 @@
   <data name="hieuthuhai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\channels4_profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tymm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tymm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_ic_list242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_ic_list24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="510861_find_magnifying glass_search_zoom_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\510861_find_magnifying glass_search_zoom_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_record_hover_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_record_hover_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_ic_back_322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_back_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +205,9 @@
   <data name="playlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3669182_video_library_ic_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1564488_eye_show_transparent_view_explore_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564488_eye_show_transparent_view_explore_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tym" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tym.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -234,9 +240,6 @@
   </data>
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="new_ic_list242" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_ic_list24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_ic_repeat321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_ic_repeat32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -288,6 +291,9 @@
   </data>
   <data name="5402435_account_profile_user_avatar_man_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5402435_account_profile_user_avatar_man_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tymm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tymm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="phuongly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_d55287749f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -469,8 +475,8 @@
   <data name="7252723_volume_low_speaker_sound_music_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7252723_volume_low_speaker_sound_music_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_record_hover_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_record_hover_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9004799_arrow_direction_left_back_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9004799_arrow_direction_left_back_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\809403_magnifying glass_miscellaneous_view_zoom_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -487,7 +493,7 @@
   <data name="ic_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9004799_arrow_direction_left_back_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9004799_arrow_direction_left_back_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3844443_disable_eye_inactive_see_show_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3844443_disable_eye_inactive_see_show_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

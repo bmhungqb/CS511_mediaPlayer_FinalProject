@@ -294,3 +294,4 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_media
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.userplaylist.resources
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\CS511_MediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.uct_setting.resources
 D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.uct_setting.resources
+D:\UIT\nam2\HK2\C#\doan\CS511_mediaPlayer_FinalProject\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.ForgotPassword.resources

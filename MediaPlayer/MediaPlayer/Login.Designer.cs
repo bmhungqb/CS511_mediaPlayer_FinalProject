@@ -40,20 +40,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lb_title = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.AutoScroll = true;
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_signup);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_login);
-            this.guna2CustomGradientPanel1.Controls.Add(this.tb_password);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.tb_name);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.lb_title);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.tb_password);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.PaleVioletRed;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.DeepPink;
@@ -108,7 +118,7 @@
             this.btn_login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_login.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(408, 308);
+            this.btn_login.Location = new System.Drawing.Point(411, 326);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(180, 45);
             this.btn_login.TabIndex = 5;
@@ -133,6 +143,7 @@
             this.tb_password.ForeColor = System.Drawing.Color.Black;
             this.tb_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_password.Location = new System.Drawing.Point(298, 236);
+            this.tb_password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '●';
             this.tb_password.PlaceholderText = "";
@@ -171,6 +182,7 @@
             this.tb_name.ForeColor = System.Drawing.Color.Black;
             this.tb_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_name.Location = new System.Drawing.Point(298, 154);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tb_name.Name = "tb_name";
             this.tb_name.PasswordChar = '\0';
             this.tb_name.PlaceholderText = "";
@@ -206,6 +218,78 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderRadius = 12;
+            this.guna2TextBox1.BorderThickness = 0;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FillColor = System.Drawing.Color.LavenderBlush;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(298, 236);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(450, 45);
+            this.guna2TextBox1.TabIndex = 114;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Blue;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(643, 289);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(158, 36);
+            this.guna2GradientButton1.TabIndex = 115;
+            this.guna2GradientButton1.Text = "Forgot password?";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::MediaPlayer.Properties.Resources._1564488_eye_show_transparent_view_explore_icon;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(784, 236);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 112;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources._3844443_disable_eye_inactive_see_show_icon;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(784, 236);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 113;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +303,8 @@
             this.Text = "mediaPlayer";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +321,9 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_login;
         private Guna.UI2.WinForms.Guna2TextBox tb_password;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
     }
 }

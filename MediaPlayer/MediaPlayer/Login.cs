@@ -48,7 +48,7 @@ namespace MediaPlayer
                     string[] s1 = s.Split('\t');
                     pass = s1[4];
                 }
-                if (tb_password.Text == pass)
+                if (tb_password.Text == pass || guna2TextBox1.Text==pass)
                 {
                     mediaPlayer mediaPlayer = new mediaPlayer();
                     mediaPlayer.Show();
@@ -64,6 +64,26 @@ namespace MediaPlayer
             }
             else
                 MessageBox.Show("Account doesn't exists!", "Warning", MessageBoxButtons.OK);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox2.BringToFront();
+            tb_password.SendToBack();
+            guna2TextBox1.Text = tb_password.Text;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.BringToFront();
+            tb_password.BringToFront();
+            tb_password.Text = guna2TextBox1.Text;
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgot = new ForgotPassword();
+            forgot.Show();
         }
     }
 }

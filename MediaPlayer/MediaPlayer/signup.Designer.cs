@@ -63,10 +63,10 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.tb_email);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_signup);
-            this.guna2CustomGradientPanel1.Controls.Add(this.password);
             this.guna2CustomGradientPanel1.Controls.Add(this.tb_name);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.lb_title);
+            this.guna2CustomGradientPanel1.Controls.Add(this.password);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.PaleVioletRed;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.DeepPink;
@@ -319,12 +319,11 @@
             this.password.Location = new System.Drawing.Point(308, 491);
             this.password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.password.Name = "password";
-            this.password.PasswordChar = '●';
+            this.password.PasswordChar = '\0';
             this.password.PlaceholderText = "";
             this.password.SelectedText = "";
             this.password.Size = new System.Drawing.Size(450, 45);
             this.password.TabIndex = 4;
-            this.password.UseSystemPasswordChar = true;
             // 
             // tb_name
             // 
