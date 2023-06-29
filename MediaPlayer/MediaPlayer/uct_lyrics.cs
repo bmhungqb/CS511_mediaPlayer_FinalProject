@@ -31,18 +31,14 @@ namespace MediaPlayer
             song.lyric = Utils.getLyrics(resLyric);
             name.Text = song.title;
             pt_thumb.Image = Utils.getImage(song.thumbnailM);
-            int start = 0;
-            int end = 0;
             foreach (Sentence sentence in song.lyric.sentences)
             {
                 string line = "";
                 foreach (Word word in sentence.sentence)
                 {
                     line = line + " " + word.data;
-                    end += word.endTime - word.startTime;
                 }
-                lyrics_line line1 = new lyrics_line(line, start, end);
-                start = end;
+                lyrics_line line1 = new lyrics_line(line, sentence.sentence[0].startTime, sentence.sentence[sentence.sentence.Count-1].endTime);
                 pnl_flow_lyric.Controls.Add(line1);
             }
             timer_lyric.Enabled = false;
@@ -50,6 +46,8 @@ namespace MediaPlayer
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
             this.Hide();
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.toggleLyricKara();
         }
         public void toggleTimerLyric()
         {
@@ -119,25 +117,21 @@ namespace MediaPlayer
             song.lyric = Utils.getLyrics(resLyric);
             name.Text = song.title;
             pt_thumb.Image = Utils.getImage(song.thumbnailM);
-            int start = 0;
-            int end = 0;
             foreach (Sentence sentence in song.lyric.sentences)
             {
                 string line = "";
                 foreach (Word word in sentence.sentence)
                 {
                     line = line + " " + word.data;
-                    end += word.endTime - word.startTime;
                 }
-                lyrics_line line1 = new lyrics_line(line, start, end);
-                start = end;
+                lyrics_line line1 = new lyrics_line(line, sentence.sentence[0].startTime, sentence.sentence[sentence.sentence.Count-1].endTime);
                 pnl_flow_lyric.Controls.Add(line1);
             }
             timer_lyric.Enabled = false;
         }
         private void timer_lyric_Tick(object sender, EventArgs e)
         {
-            milisecond += 200;
+            milisecond += 500;
             foreach (lyrics_line item in pnl_flow_lyric.Controls)
             {
                 if (item.isActive(milisecond))

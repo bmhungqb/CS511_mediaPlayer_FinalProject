@@ -139,7 +139,7 @@ namespace MediaPlayer.API
                     foreach (JToken subsubitem in subitem.Value)
                     {
                         Sentence sen = new Sentence();
-                        sen.sentence = new List<Word> { new Word() };
+                        sen.sentence = new List<Word>();
                         foreach (JToken subsubsubitem in subsubitem["words"])
                         {
                             Word word = new Word();
@@ -197,7 +197,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "new-release" && subitem["title"].ToString() == "Mới phát hành")
                         {
                             homePage.newRelease = new SectionDetail();
-                            homePage.newRelease.listSongs = new List<Song> { new Song() };
+                            homePage.newRelease.listSongs = new List<Song> {};
                             homePage.newRelease.title = subitem["title"].ToString();
                             homePage.newRelease.sectionType = subitem["sectionType"].ToString();
                             JObject obj = (JObject)subitem["items"];
@@ -222,7 +222,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Chill")
                         {
                             homePage.chill = new SectionDetail();
-                            homePage.chill.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.chill.listPlaylists = new List<Playlist>();
                             homePage.chill.title = subitem["title"].ToString();
                             homePage.chill.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])
@@ -237,7 +237,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Nghệ sĩ thịnh hành")
                         {
                             homePage.artistPopular = new SectionDetail();
-                            homePage.artistPopular.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.artistPopular.listPlaylists = new List<Playlist>();
                             homePage.artistPopular.title = subitem["title"].ToString();
                             homePage.artistPopular.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])
@@ -252,7 +252,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Năng lượng tích cực")
                         {
                             homePage.energyPositive = new SectionDetail();
-                            homePage.energyPositive.listPlaylists = new List<Playlist> { new Playlist() };
+                            homePage.energyPositive.listPlaylists = new List<Playlist>();
                             homePage.energyPositive.title = subitem["title"].ToString();
                             homePage.energyPositive.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])

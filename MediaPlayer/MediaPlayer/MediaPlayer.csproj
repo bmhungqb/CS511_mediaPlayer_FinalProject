@@ -589,6 +589,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\DataStructure.txt" />
+    <None Include="Resources\ic_back48new_active.png" />
+    <None Include="Resources\ic_back48new.png" />
+    <None Include="Resources\ic_back64new.png" />
     <None Include="Resources\3844443_disable_eye_inactive_see_show_icon.png" />
     <None Include="Resources\1564488_eye_show_transparent_view_explore_icon.png" />
     <None Include="Resources\9004799_arrow_direction_left_back_icon.png" />

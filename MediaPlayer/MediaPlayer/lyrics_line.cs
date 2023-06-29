@@ -32,7 +32,11 @@ namespace MediaPlayer
         }
         public bool isActive(int time)
         {
-            return (start < time) && (end > time);
+            if(time > start && time < end)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

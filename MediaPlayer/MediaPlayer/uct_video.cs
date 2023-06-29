@@ -32,12 +32,20 @@ namespace MediaPlayer
             if(video != null)
             {
                 player.URL = video.linkFileTempVideo;
+                player.Visible = true;
+            }
+            else
+            {
+                name.Text = "This Music Video Does Not Exist";
+                player.Visible = false;
             }
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Hide();
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.toggleLyricKara();
         }
     }
 }

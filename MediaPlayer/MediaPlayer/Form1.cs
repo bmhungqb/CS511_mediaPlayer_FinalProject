@@ -34,6 +34,10 @@ namespace MediaPlayer
         {
             player.SetCurrentPlaylist(listSongs);
         }
+        public void toggleLyricKara()
+        {
+            player.toggleBackLyricKara();
+        }
         private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -60,7 +64,6 @@ namespace MediaPlayer
         private void UserControlA_OpenUCTVideo(object sender, EventArgs e)
         {
             uct_player player = sender as uct_player;
-            panel1.Controls.Clear();
             uct_video video = new uct_video(player.currentSong);
             // Gọi phương thức OpenUserControlB
             panel1.Controls.Add(video);

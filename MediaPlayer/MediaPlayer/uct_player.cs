@@ -293,5 +293,10 @@ namespace MediaPlayer
                 btn_repeat.Checked = !btn_repeat.Checked;
             }
         }
+        public void toggleBackLyricKara()
+        {
+            btn_kara.Checked = false;
+            btn_lyric.Checked = false;
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lb_record_timer = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_record = new Guna.UI2.WinForms.Guna2ImageButton();
             this.name = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -40,8 +39,8 @@
             this.pnl_flow_lyric = new System.Windows.Forms.FlowLayoutPanel();
             this.pt_thumb = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.timer_lyric = new System.Windows.Forms.Timer(this.components);
+            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).BeginInit();
@@ -49,8 +48,8 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_back);
             this.guna2CustomGradientPanel1.Controls.Add(this.lb_record_timer);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox7);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_record);
             this.guna2CustomGradientPanel1.Controls.Add(this.name);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -74,19 +73,6 @@
             this.lb_record_timer.TabIndex = 97;
             this.lb_record_timer.Text = "0:00:00";
             this.lb_record_timer.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 95;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // btn_record
             // 
@@ -179,8 +165,26 @@
             // 
             // timer_lyric
             // 
-            this.timer_lyric.Interval = 250;
+            this.timer_lyric.Interval = 500;
             this.timer_lyric.Tick += new System.EventHandler(this.timer_lyric_Tick);
+            // 
+            // btn_back
+            // 
+            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.HoverState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active;
+            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Image = global::MediaPlayer.Properties.Resources.ic_back48new;
+            this.btn_back.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_back.ImageRotate = 0F;
+            this.btn_back.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Location = new System.Drawing.Point(4, 14);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.PressedState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active1;
+            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Size = new System.Drawing.Size(48, 48);
+            this.btn_back.TabIndex = 98;
+            this.btn_back.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // uct_lyrics
             // 
@@ -192,7 +196,6 @@
             this.Size = new System.Drawing.Size(1404, 577);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).EndInit();
@@ -203,7 +206,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label name;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2ImageButton btn_record;
         private System.Windows.Forms.Timer timer;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_record_timer;
@@ -212,5 +214,6 @@
         private System.Windows.Forms.FlowLayoutPanel pnl_flow_lyric;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Timer timer_lyric;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_back;
     }
 }

@@ -31,7 +31,6 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -43,7 +42,6 @@
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +71,6 @@
             // 
             // guna2CustomGradientPanel2
             // 
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Transparent;
@@ -84,20 +81,6 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1404, 75);
             this.guna2CustomGradientPanel2.TabIndex = 1;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 95;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -217,7 +200,6 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -229,7 +211,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;

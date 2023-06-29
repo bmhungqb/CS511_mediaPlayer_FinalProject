@@ -30,13 +30,13 @@
         {
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.PictureBox();
             this.tb_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -63,18 +63,9 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1379, 60);
             this.guna2CustomGradientPanel1.TabIndex = 104;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.panel1.Controls.Add(this.panel);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 574);
-            this.panel1.TabIndex = 1;
-            // 
             // btn_back
             // 
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.Image = global::MediaPlayer.Properties.Resources._9004799_arrow_direction_left_back_icon;
             this.btn_back.Location = new System.Drawing.Point(10, 9);
             this.btn_back.Name = "btn_back";
@@ -137,6 +128,16 @@
             this.guna2Button2.TabIndex = 102;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel1.Controls.Add(this.panel);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1401, 574);
+            this.panel1.TabIndex = 1;
+            // 
             // playlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,8 +148,8 @@
             this.Size = new System.Drawing.Size(1404, 577);
             this.Load += new System.EventHandler(this.playlist_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
