@@ -53,7 +53,9 @@ namespace MediaPlayer
                     mediaPlayer mediaPlayer = new mediaPlayer();
                     mediaPlayer.Show();
                     user.x = new User(tb_name.Text);
-                    //this.Hide();
+                    //tb_name.Text = string.Empty;
+                    //tb_password.Text = string.Empty;
+                    this.Hide();
                 }
                 else
                 {

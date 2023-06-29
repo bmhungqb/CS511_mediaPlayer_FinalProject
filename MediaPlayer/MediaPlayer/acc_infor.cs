@@ -37,8 +37,9 @@ namespace MediaPlayer
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)//log out
         {
-            //mediaPlayer media = sender as mediaPlayer;
-            //media.close();
+            this.ParentForm.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
