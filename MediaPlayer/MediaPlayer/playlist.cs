@@ -39,16 +39,16 @@ namespace MediaPlayer
             foreach (string thuMuc in thuMucCon)
             {
                 string tenThuMuc = Path.GetFileName(thuMuc);
-                if (tenThuMuc == "records")
-                    continue;
-                else
-                {
+                //if (tenThuMuc == "records")
+                //    continue;
+                //else
+                //{
                     string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), tenThuMuc);
                     uct_playlist1 uct_Playlist = new uct_playlist1(filepath);
                     panel.Controls.Add(uct_Playlist);
                     uct_Playlist.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
                     uct_Playlist.DelPlaylistRequested += Uct_Playlist_DelPlaylistRequested;
-                }
+                //}
             }
         }
         public void reload()
@@ -58,16 +58,16 @@ namespace MediaPlayer
             foreach (string thuMuc in thuMucCon)
             {
                 string tenThuMuc = Path.GetFileName(thuMuc);
-                if (tenThuMuc == "records")
-                    continue;
-                else
-                {
+                //if (tenThuMuc == "records")
+                //    continue;
+                //else
+                //{
                     string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), tenThuMuc);
                     uct_playlist1 uct_Playlist = new uct_playlist1(filepath);
                     panel.Controls.Add(uct_Playlist);
                     uct_Playlist.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
                     uct_Playlist.DelPlaylistRequested += Uct_Playlist_DelPlaylistRequested;
-                }
+                //}
             }
         }
         private void Uct_Playlist_DelPlaylistRequested(object sender, EventArgs e)
@@ -133,10 +133,10 @@ namespace MediaPlayer
                 foreach (string thuMuc in thuMucCon)
                 {
                     string tenThuMuc = Path.GetFileName(thuMuc);
-                    if (tenThuMuc == "records")
-                        continue;
-                    else
-                    {
+                    //if (tenThuMuc == "records")
+                    //    continue;
+                    //else
+                    //{
                         string filepath = Path.Combine(Path.Combine(user.x.name, "playlists"), tenThuMuc);
                         string[] infor = File.ReadAllLines(Path.Combine(filepath, "playlistInfor.txt"));
                         if (infor[0] == tb_search.Text)
@@ -145,7 +145,7 @@ namespace MediaPlayer
                             panel.Controls.Add(uct_Playlist);
                             uct_Playlist.OpenUserControlBRequested += UserControlA_OpenUserControlBRequested;
                             uct_Playlist.DelPlaylistRequested += Uct_Playlist_DelPlaylistRequested;
-                        }
+                        //}
                     }
                 }
             }

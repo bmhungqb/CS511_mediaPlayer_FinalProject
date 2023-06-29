@@ -31,24 +31,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flow_song = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,9 +71,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.btn_back);
             this.guna2CustomGradientPanel2.Controls.Add(this.label1);
             this.guna2CustomGradientPanel2.Controls.Add(this.pic_thumb_artist);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.panel2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox4);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.name);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DeepSkyBlue;
@@ -88,6 +82,25 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1382, 322);
             this.guna2CustomGradientPanel2.TabIndex = 95;
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.HoverState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active;
+            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Image = global::MediaPlayer.Properties.Resources.ic_back;
+            this.btn_back.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_back.ImageRotate = 0F;
+            this.btn_back.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Location = new System.Drawing.Point(0, 4);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.PressedState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active1;
+            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btn_back.Size = new System.Drawing.Size(48, 48);
+            this.btn_back.TabIndex = 108;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // label1
             // 
@@ -110,21 +123,10 @@
             this.pic_thumb_artist.ImageRotate = 0F;
             this.pic_thumb_artist.Location = new System.Drawing.Point(63, 3);
             this.pic_thumb_artist.Name = "pic_thumb_artist";
-            this.pic_thumb_artist.Size = new System.Drawing.Size(243, 222);
+            this.pic_thumb_artist.Size = new System.Drawing.Size(243, 206);
             this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_thumb_artist.TabIndex = 106;
             this.pic_thumb_artist.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.player;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 215);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 100;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -187,17 +189,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(1353, 13);
             this.guna2Separator1.TabIndex = 96;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::MediaPlayer.Properties.Resources.download;
-            this.pictureBox4.Location = new System.Drawing.Point(1292, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 51);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -224,25 +215,6 @@
             this.name.TabIndex = 72;
             this.name.Text = "Name";
             // 
-            // btn_back
-            // 
-            this.btn_back.BackColor = System.Drawing.Color.Transparent;
-            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back.HoverState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active;
-            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(48, 48);
-            this.btn_back.Image = global::MediaPlayer.Properties.Resources.ic_back48new;
-            this.btn_back.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_back.ImageRotate = 0F;
-            this.btn_back.ImageSize = new System.Drawing.Size(48, 48);
-            this.btn_back.Location = new System.Drawing.Point(0, 4);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.PressedState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active1;
-            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(48, 48);
-            this.btn_back.Size = new System.Drawing.Size(48, 48);
-            this.btn_back.TabIndex = 108;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
             // uct_artist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,10 +227,8 @@
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,13 +238,11 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2PictureBox pic_thumb_artist;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.FlowLayoutPanel flow_song;

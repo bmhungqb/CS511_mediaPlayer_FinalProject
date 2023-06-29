@@ -157,6 +157,12 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucr_rec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucr_rec.Designer.cs">
+      <DependentUpon>ucr_rec.cs</DependentUpon>
+    </Compile>
     <Compile Include="uct_artist.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucr_rec.resx">
+      <DependentUpon>ucr_rec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uct_artist.resx">
       <DependentUpon>uct_artist.cs</DependentUpon>

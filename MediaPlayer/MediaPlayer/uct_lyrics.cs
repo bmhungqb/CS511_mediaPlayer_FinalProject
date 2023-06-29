@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Media;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+
 namespace MediaPlayer
 {
     public partial class uct_lyrics : UserControl
@@ -81,6 +84,19 @@ namespace MediaPlayer
             saveFileRecord.ShowDialog();
             record("save recsound " + saveFileRecord.FileName, "", 0, 0);
             record("close recsound", "", 0, 0);
+            string records = Path.Combine(Path.Combine(user.x.name, "playlists"), "records");
+            using (StreamWriter sw = File.AppendText(Path.Combine(records, "listSongs.txt")))
+            {
+                    // Ghi dòng mới vào cuối tệp tin
+                    sw.WriteLine(saveFileRecord.FileName);
+            }
+            string infor = Path.Combine(records, "playlistInfor.txt");
+            string list = Path.Combine(records, "listSongs.txt");
+            string[] listRecs = File.ReadAllLines(list);
+            string[] inforRecs = File.ReadAllLines(infor);
+            File.WriteAllText(infor, string.Empty);
+            File.AppendAllText(infor, inforRecs[0] + "\n" +
+                listRecs.Length.ToString() + " records" + "\n");
         }
         private void btn_record_Click(object sender, EventArgs e)
         {

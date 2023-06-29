@@ -49,8 +49,34 @@ namespace MediaPlayer
         {
             currentPlaylist = listSongs;
         }
+        public void playRec(string path)
+        {
+            player.URL = path;
+            string[] lines = File.ReadAllLines(Path.Combine(user.x.name, "infor.txt"));
+            if (lines.Length == 1)//chưa có ava
+            {
+                pt_thumb.Image = Properties.Resources.user;
+            }
+            else
+            {
+                pt_thumb.ImageLocation = lines[1];
+            }
+            string[] s = path.Split('\\');
+            lbl_song.Text = s[s.Length - 1];
+            lbl_singer.Text = user.x.name;
+            btn_Play.Checked = false;
+            player.controls.pause();
+            guna2ImageButton1.Visible = false;
+            guna2ImageButton1.Enabled = false;
+            lblPlayDuration.Visible = false;
+            lblPlayDuration.Enabled=false;
+        }
         public async void playMusic(Song song)
         {
+            guna2ImageButton1.Visible = true;
+            guna2ImageButton1.Enabled = true;
+            lblPlayDuration.Visible = true;
+            lblPlayDuration.Enabled = true;
             if (song == null)
             {
                 string res = await zingMp3Api.GetInfoSong("ZWADIOCC");

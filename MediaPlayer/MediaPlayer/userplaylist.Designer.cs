@@ -29,35 +29,32 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pt_add = new System.Windows.Forms.PictureBox();
-            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.flow_song = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pt_add = new System.Windows.Forms.PictureBox();
+            this.pic_thumb_artist = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pt_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.Controls.Add(this.pt_add);
             this.guna2CustomGradientPanel2.Controls.Add(this.pic_thumb_artist);
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.panel1);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox7);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
@@ -71,44 +68,6 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1385, 290);
             this.guna2CustomGradientPanel2.TabIndex = 94;
-            // 
-            // pt_add
-            // 
-            this.pt_add.BackColor = System.Drawing.Color.Transparent;
-            this.pt_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pt_add.Image = global::MediaPlayer.Properties.Resources._2931178_change_edit_pencil_creative_design_icon;
-            this.pt_add.Location = new System.Drawing.Point(1282, 10);
-            this.pt_add.Name = "pt_add";
-            this.pt_add.Size = new System.Drawing.Size(41, 51);
-            this.pt_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pt_add.TabIndex = 107;
-            this.pt_add.TabStop = false;
-            this.pt_add.Click += new System.EventHandler(this.pt_add_Click);
-            // 
-            // pic_thumb_artist
-            // 
-            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.BorderRadius = 17;
-            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
-            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources.phuongly;
-            this.pic_thumb_artist.ImageRotate = 0F;
-            this.pic_thumb_artist.Location = new System.Drawing.Point(63, 10);
-            this.pic_thumb_artist.Name = "pic_thumb_artist";
-            this.pic_thumb_artist.Size = new System.Drawing.Size(267, 215);
-            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_thumb_artist.TabIndex = 106;
-            this.pic_thumb_artist.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::MediaPlayer.Properties.Resources.player;
-            this.pictureBox2.Location = new System.Drawing.Point(336, 158);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 100;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -134,6 +93,7 @@
             this.label7.Size = new System.Drawing.Size(69, 28);
             this.label7.TabIndex = 95;
             this.label7.Text = "Time";
+            this.label7.Visible = false;
             // 
             // label4
             // 
@@ -170,32 +130,6 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(1376, 14);
             this.guna2Separator1.TabIndex = 96;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 76;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::MediaPlayer.Properties.Resources._3671846_refresh_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(1235, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 51);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label3
             // 
@@ -241,6 +175,59 @@
             this.panel2.Size = new System.Drawing.Size(1401, 577);
             this.panel2.TabIndex = 96;
             // 
+            // pt_add
+            // 
+            this.pt_add.BackColor = System.Drawing.Color.Transparent;
+            this.pt_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pt_add.Image = global::MediaPlayer.Properties.Resources._2931178_change_edit_pencil_creative_design_icon;
+            this.pt_add.Location = new System.Drawing.Point(1282, 10);
+            this.pt_add.Name = "pt_add";
+            this.pt_add.Size = new System.Drawing.Size(41, 51);
+            this.pt_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pt_add.TabIndex = 107;
+            this.pt_add.TabStop = false;
+            this.pt_add.Click += new System.EventHandler(this.pt_add_Click);
+            // 
+            // pic_thumb_artist
+            // 
+            this.pic_thumb_artist.BackColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.BorderRadius = 17;
+            this.pic_thumb_artist.FillColor = System.Drawing.Color.Transparent;
+            this.pic_thumb_artist.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
+            this.pic_thumb_artist.ImageRotate = 0F;
+            this.pic_thumb_artist.Location = new System.Drawing.Point(63, 10);
+            this.pic_thumb_artist.Name = "pic_thumb_artist";
+            this.pic_thumb_artist.Size = new System.Drawing.Size(267, 215);
+            this.pic_thumb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_thumb_artist.TabIndex = 106;
+            this.pic_thumb_artist.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::MediaPlayer.Properties.Resources._216437_back_arrow_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 76;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::MediaPlayer.Properties.Resources._3671846_refresh_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(1235, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // userplaylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,14 +237,13 @@
             this.Size = new System.Drawing.Size(1404, 577);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pt_add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pt_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_thumb_artist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,7 +251,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;

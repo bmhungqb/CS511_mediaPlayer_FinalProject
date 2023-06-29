@@ -58,6 +58,14 @@ namespace MediaPlayer
                     //tạo folder records trong playlists
                     string records = Path.Combine(playlists, "records");
                     Directory.CreateDirectory(records);
+                    using (StreamWriter sw = File.CreateText(Path.Combine(records, "playlistInfor.txt")))
+                    {
+
+                        string s = "Your records";
+                        sw.WriteLine(s);
+                        sw.WriteLine("0 records");
+                    }
+                    File.Create(Path.Combine(records, "listSongs.txt"));
 
                     //tạo folder favorites song
                     string favor = Path.Combine(playlists, "favor");

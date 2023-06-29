@@ -46,22 +46,27 @@ namespace MediaPlayer
             string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
             label4.Text = inforPlaylist[0];
-            if (label4.Text == "Bài hát yêu thích")
+            if (label4.Text == "Your favorite songs" || label4.Text == "Your records")
+            {
                 guna2Button1.Visible = false;
+            }
             label6.Text = inforPlaylist[1];
-            if (listSongs.Length != 0) { 
+            if (listSongs.Length != 0 && label4.Text != "Your records") { 
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
             }
-            foreach (string item in listSongs)
+            if (label4.Text != "Your records")
             {
-                string res = await zingMp3Api.GetInfoSong(item);
-                Song s = Utils.getInfoSong(res);
-                songs.Add(s);
+                foreach (string item in listSongs)
+                {
+                    string res = await zingMp3Api.GetInfoSong(item);
+                    Song s = Utils.getInfoSong(res);
+                    songs.Add(s);
+                }
+                mediaPlayer main = this.ParentForm as mediaPlayer;
+                main.UpdateCurrentListSongs(songs);
             }
-            mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.UpdateCurrentListSongs(songs);
         }
         private async void uct_playlist1_Load(object sender, EventArgs e)
         {
@@ -72,24 +77,26 @@ namespace MediaPlayer
             string[] inforPlaylist = File.ReadAllLines(infor);
             Song song = new Song();
             label4.Text = inforPlaylist[0];
-            if (label4.Text== "Your favorite songs")
+            if (label4.Text== "Your favorite songs" || label4.Text == "Your records")
                 guna2Button1.Visible = false;
             label6.Text = inforPlaylist[1];
-            if (listSongs.Length != 0)
+            if (listSongs.Length != 0 && label4.Text != "Your records")
             {
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
             }
-
-            foreach(string item in listSongs)
+            if (label4.Text != "Your records")
             {
-                string res = await zingMp3Api.GetInfoSong(item);
-                Song s = Utils.getInfoSong(res);
-                songs.Add(s);
+                foreach (string item in listSongs)
+                {
+                    string res = await zingMp3Api.GetInfoSong(item);
+                    Song s = Utils.getInfoSong(res);
+                    songs.Add(s);
+                }
+                mediaPlayer main = this.ParentForm as mediaPlayer;
+                main.UpdateCurrentListSongs(songs);
             }
-            mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.UpdateCurrentListSongs(songs);
         }
         private void label4_Click(object sender, EventArgs e)
         {

@@ -26,6 +26,10 @@ namespace MediaPlayer
         {
             player.playMusic(song);
         }
+        public void playRecs(string url)
+        {
+            player.playRec(url);
+        }
         public void UpdateCurrentListSongs(List<Song> listSongs)
         {
             player.UpdateListSong(listSongs);

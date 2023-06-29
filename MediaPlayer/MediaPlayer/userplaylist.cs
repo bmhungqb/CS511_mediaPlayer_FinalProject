@@ -44,12 +44,29 @@ namespace MediaPlayer
             name.Text = inforPlaylist[0];
             label3.Text = inforPlaylist[1];
             //int time = 0;
-            if (File.ReadAllText(list).Length == 0)
+            if (name.Text == "Your records" || name.Text == "Your favorite songs")
+            {
+                pt_add.Visible = false;
+                pt_add.Enabled = false;
+            }
+            if (name.Text == "Your records")
+            {
+                int count = 0;
+                foreach (string line in listSongs)
+                {
+                    count++;
+                    ucr_rec uct_Song = new ucr_rec(count.ToString(), line);
+                    flow_song.Controls.Add(uct_Song);
+                }
+            }
+            
+            if (File.ReadAllText(list).Length == 0 || name.Text=="Your records")
             {
                 pic_thumb_artist.Image = Properties.Resources._3669182_video_library_ic_icon;
             }
-            else
+            else if (name.Text!="Your records")
             {
+                label7.Visible = true; label7.Enabled = true;
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
@@ -79,12 +96,28 @@ namespace MediaPlayer
             name.Text = inforPlaylist[0];
             label3.Text = inforPlaylist[1];
             //int time = 0;
-            if (File.ReadAllText(list).Length == 0)
+            if (name.Text == "Your records" || name.Text == "Your favorite songs")
+            {
+                pt_add.Visible = false;
+                pt_add.Enabled = false;
+            }
+            if (name.Text == "Your records")
+            {
+                int count = 0;
+                foreach (string line in listSongs)
+                {
+                    count++;
+                    ucr_rec uct_Song = new ucr_rec(count.ToString(), line);
+                    flow_song.Controls.Add(uct_Song);
+                }
+            }
+            if (File.ReadAllText(list).Length == 0 || name.Text == "Your records")
             {
                 pic_thumb_artist.Image = Properties.Resources._3669182_video_library_ic_icon;
             }
-            else
+            else if (name.Text != "Your records")
             {
+                label7.Visible = true; label7.Enabled = true;
                 string res = await zingMp3Api.GetInfoSong(listSongs[0]);
                 song = Utils.getInfoSong(res);
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
