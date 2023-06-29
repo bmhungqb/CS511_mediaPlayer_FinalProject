@@ -26,6 +26,10 @@ namespace MediaPlayer
         {
             player.playMusic(song);
         }
+        public void UpdateCurrentListSongs(List<Song> listSongs)
+        {
+            player.UpdateListSong(listSongs);
+        }
         public void setCurrentListSong(List<Song> listSongs)
         {
             player.SetCurrentPlaylist(listSongs);

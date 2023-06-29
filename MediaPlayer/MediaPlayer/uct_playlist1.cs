@@ -20,6 +20,7 @@ namespace MediaPlayer
         public string filepath;
         MediaPlayer.API.ZingMp3Api zingMp3Api = new ZingMp3Api();
         MediaPlayer.API.Utils Utils = new Utils();
+        List<Song> songs = new List<Song>();
         public uct_playlist1(string path)
         {
             InitializeComponent();
@@ -53,6 +54,14 @@ namespace MediaPlayer
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
             }
+            foreach (string item in listSongs)
+            {
+                string res = await zingMp3Api.GetInfoSong(item);
+                Song s = Utils.getInfoSong(res);
+                songs.Add(s);
+            }
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.UpdateCurrentListSongs(songs);
         }
         private async void uct_playlist1_Load(object sender, EventArgs e)
         {
@@ -72,6 +81,15 @@ namespace MediaPlayer
                 song = Utils.getInfoSong(res);
                 pictureBox4.Image = Utils.getImage(song.thumbnail);
             }
+
+            foreach(string item in listSongs)
+            {
+                string res = await zingMp3Api.GetInfoSong(item);
+                Song s = Utils.getInfoSong(res);
+                songs.Add(s);
+            }
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.UpdateCurrentListSongs(songs);
         }
         private void label4_Click(object sender, EventArgs e)
         {

@@ -29,7 +29,10 @@ namespace MediaPlayer
             name.Text = song.title;
             string res = await zingMp3Api.GetVideo(song.songId);
             Video video = Utils.getVideo(res);
-            player.URL = video.linkFileTempVideo;
+            if(video != null)
+            {
+                player.URL = video.linkFileTempVideo;
+            }
         }
 
         private void btn_back_Click(object sender, EventArgs e)

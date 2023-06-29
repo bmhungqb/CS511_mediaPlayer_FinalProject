@@ -24,5 +24,13 @@ namespace MediaPlayer
         {
            guna2PictureBox1.Image = Utils.getImage(bannerItem.banner);
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            Song song = new Song();
+            song.songId = bannerItem.songId;
+            main.testPlayMusic(song);
+        }
     }
 }

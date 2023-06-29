@@ -47,6 +47,8 @@ namespace MediaPlayer
                 flowLayoutPanel1.Controls.Add(curr);
             }
             label3.Text = a.totalSongs.ToString() + " songs, " + ConvertToMinutesAndSeconds(a.totalDuration);
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.UpdateCurrentListSongs(song);
         }
 
        

@@ -14,6 +14,7 @@ using MediaPlayer.API;
 using Guna.UI2.WinForms;
 using System.Runtime.CompilerServices;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace MediaPlayer
 {
@@ -27,7 +28,11 @@ namespace MediaPlayer
         public uct_player()
         {
             InitializeComponent();
-            playMusic(null);
+        }
+        public void UpdateListSong(List<Song> list)
+        {
+            currentPlaylist.Clear();
+            currentPlaylist = list;
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
@@ -45,8 +50,6 @@ namespace MediaPlayer
         }
         public async void playMusic(Song song)
         {
-            
-
             if (song == null)
             {
                 string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
@@ -85,6 +88,27 @@ namespace MediaPlayer
             {
                 TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
+            }
+            else if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                if(btn_random.Checked)
+                {
+                    Random rdn = new Random();
+                    int OrderSong = rdn.Next(0,currentPlaylist.Count-1);
+                    currentSong = currentPlaylist[OrderSong];
+                    orderSong = OrderSong;
+                    if (currentPlaylist[orderSong].songId != null)
+                    {
+                        playMusic(currentPlaylist[orderSong]);
+                    }
+                }
+                else if(btn_repeat.Checked)
+                {
+                    if (currentPlaylist[orderSong].songId != null)
+                    {
+                        playMusic(currentPlaylist[orderSong]);
+                    }
+                }
             }
         }
         public event EventHandler OpenUCTPauseLyric;
@@ -172,26 +196,32 @@ namespace MediaPlayer
             Guna2ImageButton button = sender as Guna2ImageButton;
             if (button.Name == "btn_back")
             {
-                if (currentPlaylist != null)
+                if (currentPlaylist.Count > 0)
                 {
                     if (orderSong == 0)
                     {
                         orderSong = currentPlaylist.Count - 1;
                     }
                     else orderSong--;
-                    playMusic(currentPlaylist[orderSong]);
+                    if(currentPlaylist[orderSong].songId != null)
+                    {
+                        playMusic(currentPlaylist[orderSong]);
+                    }
                 }
             }
             else if (button.Name == "btn_next")
             {
-                if (currentPlaylist != null)
+                if (currentPlaylist.Count > 0)
                 {
                     if (orderSong + 1 == currentPlaylist.Count)
                     {
                         orderSong = 0;
                     }
                     else orderSong++;
-                    playMusic(currentPlaylist[orderSong]);
+                    if (currentPlaylist[orderSong].songId != null)
+                    {
+                        playMusic(currentPlaylist[orderSong]);
+                    }
                 }
             }
         }
@@ -237,6 +267,31 @@ namespace MediaPlayer
             }
         }
 
-       
+        private void uct_player_Load(object sender, EventArgs e)
+        {
+            if(currentPlaylist.Count == 0)
+            {
+                playMusic(null);
+            }
+            else
+            {
+                playMusic(currentPlaylist[0]);
+            }
+        }
+
+        private void btn_mode_click(object sender, EventArgs e)
+        {
+            Guna2ImageButton btn = sender as Guna2ImageButton;
+            if(btn.Name == "btn_random")
+            {
+                btn_repeat.Checked = false;
+                btn_random.Checked = !btn_random.Checked;
+            }
+            else if(btn.Name == "btn_repeat")
+            {
+                btn_random.Checked = false;
+                btn_repeat.Checked = !btn_repeat.Checked;
+            }
+        }
     }
 }

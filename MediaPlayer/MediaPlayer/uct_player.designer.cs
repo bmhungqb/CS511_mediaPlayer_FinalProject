@@ -41,8 +41,8 @@
             this.btn_speaker = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_lyric = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_kara = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_repeat = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_random = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_next = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Play = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -214,39 +214,41 @@
             this.btn_kara.TabIndex = 24;
             this.btn_kara.Click += new System.EventHandler(this.btn_kara_Click);
             // 
-            // guna2ImageButton5
+            // btn_repeat
             // 
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton5.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat32;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton5.Image = global::MediaPlayer.Properties.Resources._4634534_arrow_looping_music_repeat_icon1;
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton5.Location = new System.Drawing.Point(818, 20);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat321;
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton5.TabIndex = 23;
+            this.btn_repeat.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_repeat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_repeat.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat32;
+            this.btn_repeat.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_repeat.Image = global::MediaPlayer.Properties.Resources._4634534_arrow_looping_music_repeat_icon1;
+            this.btn_repeat.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_repeat.ImageRotate = 0F;
+            this.btn_repeat.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_repeat.Location = new System.Drawing.Point(818, 20);
+            this.btn_repeat.Name = "btn_repeat";
+            this.btn_repeat.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_repeat321;
+            this.btn_repeat.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_repeat.Size = new System.Drawing.Size(32, 32);
+            this.btn_repeat.TabIndex = 23;
+            this.btn_repeat.Click += new System.EventHandler(this.btn_mode_click);
             // 
-            // guna2ImageButton4
+            // btn_random
             // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_random32;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton4.Image = global::MediaPlayer.Properties.Resources._9104257_shuffle_random_mix_icon1;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(595, 19);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_random321;
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton4.TabIndex = 22;
+            this.btn_random.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_random.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_random.HoverState.Image = global::MediaPlayer.Properties.Resources.new_ic_random32;
+            this.btn_random.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_random.Image = global::MediaPlayer.Properties.Resources._9104257_shuffle_random_mix_icon1;
+            this.btn_random.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_random.ImageRotate = 0F;
+            this.btn_random.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_random.Location = new System.Drawing.Point(595, 19);
+            this.btn_random.Name = "btn_random";
+            this.btn_random.PressedState.Image = global::MediaPlayer.Properties.Resources.new_ic_random321;
+            this.btn_random.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_random.Size = new System.Drawing.Size(32, 32);
+            this.btn_random.TabIndex = 22;
+            this.btn_random.Click += new System.EventHandler(this.btn_mode_click);
             // 
             // btn_back
             // 
@@ -341,8 +343,8 @@
             this.Controls.Add(this.btn_speaker);
             this.Controls.Add(this.btn_lyric);
             this.Controls.Add(this.btn_kara);
-            this.Controls.Add(this.guna2ImageButton5);
-            this.Controls.Add(this.guna2ImageButton4);
+            this.Controls.Add(this.btn_repeat);
+            this.Controls.Add(this.btn_random);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_Play);
@@ -357,6 +359,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "uct_player";
             this.Size = new System.Drawing.Size(1460, 110);
+            this.Load += new System.EventHandler(this.uct_player_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pt_thumb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -377,8 +380,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton btn_Play;
         private Guna.UI2.WinForms.Guna2ImageButton btn_next;
         private Guna.UI2.WinForms.Guna2ImageButton btn_back;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_random;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_repeat;
         private Guna.UI2.WinForms.Guna2ImageButton btn_kara;
         private Guna.UI2.WinForms.Guna2ImageButton btn_lyric;
         private Guna.UI2.WinForms.Guna2ImageButton btn_speaker;

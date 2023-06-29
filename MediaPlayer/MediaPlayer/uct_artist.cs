@@ -61,6 +61,8 @@ namespace MediaPlayer
                 uct_song uct_Song = new uct_song((i + 1).ToString(), song[i]);
                 flow_song.Controls.Add(uct_Song);
             }
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.UpdateCurrentListSongs(song);
         }
 
         private void btn_back_Click(object sender, EventArgs e)

@@ -54,6 +54,7 @@ namespace MediaPlayer
                 song = Utils.getInfoSong(res);
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
                 int count = 0;
+                List<Song> songs = new List<Song>();
                 foreach (string line in listSongs)
                 {
                     count++;
@@ -61,7 +62,10 @@ namespace MediaPlayer
                     song = Utils.getInfoSong(ress);
                     uct_song uct_Song = new uct_song(count.ToString(), song);
                     flow_song.Controls.Add(uct_Song);
+                    songs.Add(song);
                 }
+                mediaPlayer main = this.ParentForm as mediaPlayer;
+                main.UpdateCurrentListSongs(songs);
             }
         }
         private async void loaddata(string filepath)
@@ -86,6 +90,7 @@ namespace MediaPlayer
                 pic_thumb_artist.Image = Utils.getImage(song.thumbnail);
                 int count = 0;
                 int time = 0;
+                List<Song> songs = new List<Song>();
                 foreach (string line in listSongs)
                 {
                     count++;
@@ -94,8 +99,11 @@ namespace MediaPlayer
                     uct_song uct_Song = new uct_song(count.ToString(), song);
                     flow_song.Controls.Add(uct_Song);
                     time += song.duration;
+                    songs.Add(song);
                 }
                 label3.Text = listSongs.Length.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
+                mediaPlayer main = this.ParentForm as mediaPlayer;
+                main.UpdateCurrentListSongs(songs);
             }
         }
         private void pictureBox3_Click(object sender, EventArgs e)//refresh

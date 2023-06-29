@@ -23,23 +23,6 @@ namespace MediaPlayer
         }
         private async void main_Load(object sender, EventArgs e)
         {
-            /* Test API
-                string res = await zingMp3Api.GetDetailPlaylist("ZOCIIUWW");
-                string res = await zingMp3Api.GetLyric("Z6B6ZDIB");
-                Lyric ress = Utils.getLyrics(res);
-                string ress = Utils.getLyrics(res);
-                string response = await zingMp3Api.GetListMV("ZOAC7BUF");
-                string res = await zingMp3Api.GetArtist("Thanh-Dat");
-                
-                string res = await zingMp3Api.GetArtist("Den");
-                Artist ar = Utils.getArtist(res);
-                string res = await zingMp3Api.GetListArtistSong("IW6BZA76");
-                string res = await zingMp3Api.GetVideo("Z6B6ZDIB");
-                Video v = Utils.getVideo(res);
-                string res = await zingMp3Api.GetInfoSong("ZOAC7BUF");
-                string res = await zingMp3Api.Search("Den");
-                Search searchData = Utils.handleSearch(res);
-            */
             BackColor = Color.Transparent;
             string response = await zingMp3Api.GetHome();
             dataHomePage = Utils.getHome(response);
@@ -70,6 +53,8 @@ namespace MediaPlayer
                 artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_artist.Controls.Add(artist_Popular);
             }
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.UpdateCurrentListSongs(dataHomePage.newRelease.listSongs);
             //for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
             //{
             //    label8.Text = "Popular Artists";

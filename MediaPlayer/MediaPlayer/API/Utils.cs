@@ -545,7 +545,7 @@ namespace MediaPlayer.API
                         playlist.thumbnail = subitem["thumbnail"].ToString();
                         playlist.thumbnailM = subitem["thumbnailM"].ToString();
                         playlist.sortDescription = subitem["sortDescription"].ToString();
-                        playlist.artistsNames = subitem["artistsNames"].ToString();
+                        //playlist.artistsNames = subitem["artistsNames"].ToString();
                         search.listPlaylists.Add(playlist);
                     }
                 }

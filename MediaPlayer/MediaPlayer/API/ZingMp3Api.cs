@@ -125,7 +125,10 @@ namespace MediaPlayer.API
 
                 foreach (var property in qs.GetType().GetProperties())
                 {
-                    queryString[property.Name] = property.GetValue(qs).ToString();
+                    if(property != null)
+                    {
+                        queryString[property.Name] = property.GetValue(qs).ToString();
+                    }
                 }
 
                 string url = $"{URL}{path}?{queryString}";
@@ -202,8 +205,8 @@ namespace MediaPlayer.API
             }
         }
 
-        //Get Top 100 - Khong can thiet
-        public async Task<dynamic> GetTop100()
+        //Get Top 100 - Doing
+        public async Task<string> GetTop100()
         {
             try
             {

@@ -30,13 +30,13 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flow_new = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.flow_new = new System.Windows.Forms.FlowLayoutPanel();
             this.flow_banner = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flow_chill = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.flow_artist = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,13 +67,27 @@
             this.panel1.Size = new System.Drawing.Size(1359, 1268);
             this.panel1.TabIndex = 4;
             // 
-            // flow_new
+            // label8
             // 
-            this.flow_new.AutoScroll = true;
-            this.flow_new.Location = new System.Drawing.Point(3, 453);
-            this.flow_new.Name = "flow_new";
-            this.flow_new.Size = new System.Drawing.Size(1348, 233);
-            this.flow_new.TabIndex = 18;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 981);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(270, 50);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Popular Artists";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 688);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 50);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Chill";
             // 
             // label1
             // 
@@ -85,6 +99,14 @@
             this.label1.Size = new System.Drawing.Size(235, 50);
             this.label1.TabIndex = 21;
             this.label1.Text = "New Release";
+            // 
+            // flow_new
+            // 
+            this.flow_new.AutoScroll = true;
+            this.flow_new.Location = new System.Drawing.Point(3, 453);
+            this.flow_new.Name = "flow_new";
+            this.flow_new.Size = new System.Drawing.Size(1348, 233);
+            this.flow_new.TabIndex = 18;
             // 
             // flow_banner
             // 
@@ -111,28 +133,6 @@
             this.flow_chill.Name = "flow_chill";
             this.flow_chill.Size = new System.Drawing.Size(1348, 238);
             this.flow_chill.TabIndex = 19;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 688);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 50);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Chill";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 981);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(270, 50);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Popular Artists";
             // 
             // flow_artist
             // 
