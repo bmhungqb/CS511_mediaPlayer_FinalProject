@@ -15,6 +15,7 @@ using Guna.UI2.WinForms;
 using System.Runtime.CompilerServices;
 using System.IO;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace MediaPlayer
 {
@@ -143,6 +144,18 @@ namespace MediaPlayer
         private void sliderMusic_Scroll(object sender, ScrollEventArgs e)
         {
             player.controls.currentPosition = sliderMusic.Value;
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.updatetimerLyricFromPlayer((int)player.controls.currentPosition* 1000);
+        }
+        private int ConvertTimeToSeconds(string time)
+        {
+            string[] timeParts = time.Split(':');
+            int hours = int.Parse(timeParts[0]);
+            int minutes = int.Parse(timeParts[1]);
+
+            int totalSeconds = (hours * 60 * 60) + (minutes * 60);
+
+            return totalSeconds;
         }
         public static string ConvertToHoursAndSeconds(int totalSeconds)
         {

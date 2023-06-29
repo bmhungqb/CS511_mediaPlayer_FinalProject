@@ -43,6 +43,10 @@ namespace MediaPlayer
             }
             timer_lyric.Enabled = false;
         }
+        public void updatetimerLyric(int time)
+        {
+            milisecond = time;
+        }
         private void pictureBox7_Click(object sender, EventArgs e)//back
         {
             this.Hide();

@@ -38,6 +38,14 @@ namespace MediaPlayer
         {
             player.toggleBackLyricKara();
         }
+        public void updatetimerLyricFromPlayer(int time)
+        {
+            uct_lyrics lyric = panel1.Controls.OfType<uct_lyrics>().FirstOrDefault();
+            if(lyric != null)
+            {
+                lyric.updatetimerLyric(time);
+            }
+        }
         private void mediaPlayer_Load_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
