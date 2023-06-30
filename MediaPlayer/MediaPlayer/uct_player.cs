@@ -26,7 +26,7 @@ namespace MediaPlayer
         public Song currentSong = new Song();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         List<Song> currentPlaylist = new List<Song> { };
-        bool isAutoPlay = true;
+        bool isAutoPlay = false;
         int orderSong = 0;
         public uct_player()
         {
