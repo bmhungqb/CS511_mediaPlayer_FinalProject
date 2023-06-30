@@ -26,43 +26,61 @@ namespace MediaPlayer
             BackColor = Color.Transparent;
             string response = await zingMp3Api.GetHome();
             dataHomePage = Utils.getHome(response);
-            for (int i = 0; i < dataHomePage.banner.listBanners.Count(); i++)
+            if(dataHomePage.banner.listBanners != null)
             {
-                BannerItem a = dataHomePage.banner.listBanners[i];
-                banner ban = new banner(a);
-                flow_banner.Controls.Add(ban);
+                for (int i = 0; i < dataHomePage.banner.listBanners.Count(); i++)
+                {
+                    BannerItem a = dataHomePage.banner.listBanners[i];
+                    banner ban = new banner(a);
+                    flow_banner.Controls.Add(ban);
+                }
             }
-            for (int i = 0; i < dataHomePage.newRelease.listSongs.Count(); i++)
+            if(dataHomePage.newRelease.listSongs != null)
             {
-                new_release new_Release = new new_release(dataHomePage.newRelease.listSongs[i]);
-                flow_new.Controls.Add(new_Release);
+                for (int i = 0; i < dataHomePage.newRelease.listSongs.Count(); i++)
+                {
+                    new_release new_Release = new new_release(dataHomePage.newRelease.listSongs[i]);
+                    flow_new.Controls.Add(new_Release);
+                }
             }
-            for (int i = 0; i < dataHomePage.chill.listPlaylists.Count(); i++)
+            if(dataHomePage.chill.listPlaylists != null)
             {
-                //usercontrol artist popular use for both chill & popular artists
-                Playlist a = dataHomePage.chill.listPlaylists[i];
-                artist_popular artist_Popular = new artist_popular(a);
-                artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
-                flow_chill.Controls.Add(artist_Popular);
+                for (int i = 0; i < dataHomePage.chill.listPlaylists.Count(); i++)
+                {
+                    //usercontrol artist popular use for both chill & popular artists
+                    Playlist a = dataHomePage.chill.listPlaylists[i];
+                    artist_popular artist_Popular = new artist_popular(a);
+                    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
+                    flow_chill.Controls.Add(artist_Popular);
+                }
             }
-            for (int i = 0; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
+            if(dataHomePage.energyPositive.listPlaylists != null)
             {
-                label8.Text = "Positive Energy";
-                Playlist a = dataHomePage.energyPositive.listPlaylists[i];
-                artist_popular artist_Popular = new artist_popular(a);
-                artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
-                flow_artist.Controls.Add(artist_Popular);
+                for (int i = 0; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
+                {
+                    label8.Text = "Positive Energy";
+                    Playlist a = dataHomePage.energyPositive.listPlaylists[i];
+                    artist_popular artist_Popular = new artist_popular(a);
+                    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
+                    flow_artist.Controls.Add(artist_Popular);
+                }
+            }    
+            if(dataHomePage.artistPopular.listPlaylists != null)
+            {
+                for (int i = 0; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
+                {
+                    label8.Text = "Popular Artists";
+                    Playlist a = dataHomePage.artistPopular.listPlaylists[i];
+                    artist_popular artist_Popular = new artist_popular(a);
+                    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
+                    flow_artist.Controls.Add(artist_Popular);
+                }
             }
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.setCurrentListSong(dataHomePage.newRelease.listSongs);
-            //for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
-            //{
-            //    label8.Text = "Popular Artists";
-            //    Playlist a = dataHomePage.artistPopular.listPlaylists[i];
-            //    artist_popular artist_Popular = new artist_popular(a);
-            //    artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
-            //    flow_artist.Controls.Add(artist_Popular);
-            //}
+            if(dataHomePage.newRelease.listSongs != null)
+            {
+                main.setCurrentListSong(dataHomePage.newRelease.listSongs);
+            }
         }
         private void Artist_Popular_OpenPlaylistRequested(object sender, EventArgs e)
         {

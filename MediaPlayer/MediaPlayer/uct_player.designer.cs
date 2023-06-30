@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(12)))), ((int)(((byte)(24)))));
             this.Controls.Add(this.btn_video);
             this.Controls.Add(this.btn_speaker);
             this.Controls.Add(this.btn_lyric);
@@ -356,7 +356,7 @@
             this.Controls.Add(this.lbl_singer);
             this.Controls.Add(this.lbl_song);
             this.Controls.Add(this.pt_thumb);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uct_player";
             this.Size = new System.Drawing.Size(1460, 110);
             this.Load += new System.EventHandler(this.uct_player_Load);

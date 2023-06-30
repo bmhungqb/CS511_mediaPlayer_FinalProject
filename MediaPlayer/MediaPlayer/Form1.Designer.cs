@@ -50,7 +50,7 @@
             this.btn_setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_setting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_setting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_setting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_setting.ForeColor = System.Drawing.Color.White;
             this.btn_setting.Image = global::MediaPlayer.Properties.Resources.setting1;
@@ -71,7 +71,7 @@
             this.btn_account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_account.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_account.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_account.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_account.ForeColor = System.Drawing.Color.White;
             this.btn_account.Image = global::MediaPlayer.Properties.Resources._5402435_account_profile_user_avatar_man_icon;
@@ -92,7 +92,7 @@
             this.btn_list.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_list.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_list.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_list.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_list.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_list.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_list.ForeColor = System.Drawing.Color.White;
             this.btn_list.Image = global::MediaPlayer.Properties.Resources._9218457_list_checklist_menu_icon;
@@ -112,7 +112,7 @@
             this.btn_playlist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_playlist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_playlist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_playlist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_playlist.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_playlist.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_playlist.ForeColor = System.Drawing.Color.White;
             this.btn_playlist.Image = global::MediaPlayer.Properties.Resources._3669182_video_library_ic_icon;
@@ -132,7 +132,7 @@
             this.btn_rank.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_rank.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_rank.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_rank.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_rank.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_rank.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_rank.ForeColor = System.Drawing.Color.White;
             this.btn_rank.Image = global::MediaPlayer.Properties.Resources.rank1;
@@ -152,7 +152,7 @@
             this.btn_home.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_home.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_home.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_home.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_home.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_home.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_home.ForeColor = System.Drawing.Color.White;
             this.btn_home.Image = global::MediaPlayer.Properties.Resources._2931150_building_home_homepage_house_architecture_icon;
@@ -172,7 +172,7 @@
             this.btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.btn_search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_search.ForeColor = System.Drawing.Color.White;
             this.btn_search.Image = global::MediaPlayer.Properties.Resources._510861_find_magnifying_glass_search_zoom_icon1;
@@ -202,6 +202,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(12)))), ((int)(((byte)(24)))));
             this.flowLayoutPanel1.Controls.Add(this.btn_list);
             this.flowLayoutPanel1.Controls.Add(this.btn_setting);
             this.flowLayoutPanel1.Controls.Add(this.btn_account);
