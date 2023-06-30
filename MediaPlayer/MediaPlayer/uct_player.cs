@@ -35,6 +35,7 @@ namespace MediaPlayer
         public void handleRemovePlayStateChange()
         {
             player.PlayStateChange -= Player_PlayStateChange;
+            player.PlayStateChange -= Player_PlayStateChangeRecord;
         }
         public void HandleModeAutoPlay(bool auto)
         {
@@ -53,11 +54,10 @@ namespace MediaPlayer
         {
             currentPlaylist.Clear();
             currentPlaylist = listSongs;
-            MessageBox.Show(currentPlaylist.Count.ToString());
         }
-        public void playRec(string path)
+        public void playRec(Song song)
         {
-            player.URL = path;
+            player.URL = song.filePathRecord;
             string[] lines = File.ReadAllLines(Path.Combine(user.x.name, "infor.txt"));
             if (lines.Length == 1)//chưa có ava
             {
@@ -67,22 +67,48 @@ namespace MediaPlayer
             {
                 pt_thumb.ImageLocation = lines[1];
             }
-            string[] s = path.Split('\\');
+            string[] s = song.filePathRecord.Split('\\');
             lbl_song.Text = s[s.Length - 1];
             lbl_singer.Text = user.x.name;
             btn_Play.Checked = false;
-            player.controls.pause();
-            guna2ImageButton1.Visible = false;
-            guna2ImageButton1.Enabled = false;
-            lblPlayDuration.Visible = false;
-            lblPlayDuration.Enabled=false;
+            player.controls.stop();
+            player.PlayStateChange += Player_PlayStateChangeRecord;
+            handleVisibleRecordoOrSong(false);
         }
+        void handleVisibleRecordoOrSong(bool isSong)
+        {
+            guna2ImageButton1.Visible = isSong;
+            guna2ImageButton1.Enabled = isSong;
+            btn_random.Visible = isSong;
+            btn_back.Visible = isSong;
+            btn_next.Visible = isSong;
+            btn_repeat.Visible = isSong;
+            btn_video.Visible = isSong;
+            btn_kara.Visible = isSong;
+            btn_lyric.Visible = isSong;
+        }
+        private void Player_PlayStateChangeRecord(int NewState)
+        {
+            if (NewState == (int)WMPLib.WMPPlayState.wmppsReady)
+            {
+                player.controls.pause();
+                btn_Play.Checked = false;
+            }
+            else if (NewState == (int)WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                lblPlayDuration.Text = player.currentMedia.durationString;
+                TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
+                sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
+            }
+            else if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                btn_Play.Checked = false;
+            }
+        }
+
         public async void playMusic(Song song)
         {
-            guna2ImageButton1.Visible = true;
-            guna2ImageButton1.Enabled = true;
-            lblPlayDuration.Visible = true;
-            lblPlayDuration.Enabled = true;
+            handleVisibleRecordoOrSong(true);
             if (song == null)
             {
                 string res = await zingMp3Api.GetInfoSong("ZWADIOCC");
@@ -146,7 +172,7 @@ namespace MediaPlayer
                     orderSong = OrderSong;
                     if (currentPlaylist[orderSong].songId != null)
                     {
-                        player.PlayStateChange -= Player_PlayStateChange;
+                        handleRemovePlayStateChange();
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }
@@ -154,7 +180,7 @@ namespace MediaPlayer
                 {
                     if (currentPlaylist[orderSong].songId != null)
                     {
-                        player.PlayStateChange -= Player_PlayStateChange;
+                        handleRemovePlayStateChange();
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }
@@ -169,7 +195,7 @@ namespace MediaPlayer
                         else orderSong++;
                         if (currentPlaylist[orderSong].songId != null)
                         {
-                            player.PlayStateChange -= Player_PlayStateChange;
+                            handleRemovePlayStateChange();
                             playMusic(currentPlaylist[orderSong]);
                         }
                     }
@@ -282,7 +308,7 @@ namespace MediaPlayer
                     else orderSong--;
                     if(currentPlaylist[orderSong].songId != null)
                     {
-                        player.PlayStateChange -= Player_PlayStateChange;
+                        handleRemovePlayStateChange();
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }
@@ -298,7 +324,7 @@ namespace MediaPlayer
                     orderSong++;
                     if (currentPlaylist[orderSong] != null)
                     {
-                        player.PlayStateChange -= Player_PlayStateChange;
+                        handleRemovePlayStateChange();
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }

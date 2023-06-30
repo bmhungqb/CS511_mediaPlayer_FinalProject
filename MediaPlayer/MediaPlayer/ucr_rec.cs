@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MediaPlayer.API;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,15 @@ namespace MediaPlayer
     {
         string ID;
         public string filepath;
+        Song song = new Song();
         public ucr_rec(string id, string path)
         {
             InitializeComponent();
             ID= id;
             filepath= path;
             BackColor = Color.Transparent;
+            song.isRecord = true;
+            song.filePathRecord = filepath;
         }
 
         private void ucr_rec_Load(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace MediaPlayer
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.playRecs(filepath);
+            main.playRecs(song);
         }
         public event EventHandler DelRecRequested;
         private void guna2Button1_Click(object sender, EventArgs e)

@@ -27,9 +27,10 @@ namespace MediaPlayer
             player.handleRemovePlayStateChange();
             player.playMusic(song);
         }
-        public void playRecs(string url)
+        public void playRecs(Song song)
         {
-            player.playRec(url);
+            player.handleRemovePlayStateChange();
+            player.playRec(song);
         }
         public void setCurrentListSong(List<Song> listSongs)
         {

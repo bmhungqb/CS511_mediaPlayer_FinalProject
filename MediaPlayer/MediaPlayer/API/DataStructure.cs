@@ -71,7 +71,9 @@ namespace MediaPlayer.API
         public string thumbnailM {  get; set; }
         public string thumbnail {  get; set; }
         public int score { get; set; }
-        public Video video { get; set; }   
+        public Video video { get; set; }
+        public bool isRecord { get; set; } = false;
+        public string filePathRecord { get;set; }
     }
     public class Playlist
     {
