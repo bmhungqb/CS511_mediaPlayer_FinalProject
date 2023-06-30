@@ -55,14 +55,14 @@ namespace MediaPlayer
             label3.Text = convert(artist.totalFollow) + " follows";
             pic_thumb_artist.Image = Utils.getImage(artist.thumbnail);
             string res = await zingMp3.GetListArtistSong(artist.artistId);
-            List<Song> song = Utils.getListArtistSong(res);
-            for (int i = 0; i < song.Count; i++)
+            List<Song> songs = Utils.getListArtistSong(res);
+            for (int i = 0; i < songs.Count; i++)
             {
-                uct_song uct_Song = new uct_song((i + 1).ToString(), song[i]);
+                uct_song uct_Song = new uct_song((i + 1).ToString(), songs[i]);
                 flow_song.Controls.Add(uct_Song);
             }
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.UpdateCurrentListSongs(song);
+            main.setCurrentListSong(songs);
         }
 
         private void btn_back_Click(object sender, EventArgs e)

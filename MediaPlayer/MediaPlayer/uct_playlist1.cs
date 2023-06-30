@@ -65,7 +65,7 @@ namespace MediaPlayer
                     songs.Add(s);
                 }
                 mediaPlayer main = this.ParentForm as mediaPlayer;
-                main.UpdateCurrentListSongs(songs);
+                main.setCurrentListSong(songs);
             }
         }
         private async void uct_playlist1_Load(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace MediaPlayer
                     songs.Add(s);
                 }
                 mediaPlayer main = this.ParentForm as mediaPlayer;
-                main.UpdateCurrentListSongs(songs);
+                main.setCurrentListSong(songs);
             }
         }
         private void label4_Click(object sender, EventArgs e)

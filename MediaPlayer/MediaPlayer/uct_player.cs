@@ -25,20 +25,20 @@ namespace MediaPlayer
         MediaPlayer.API.Utils Utils = new Utils();
         public Song currentSong = new Song();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
-        List<Song> currentPlaylist = new List<Song>();
-        bool isAutoPlay = true; 
+        List<Song> currentPlaylist = new List<Song> { };
+        bool isAutoPlay = true;
+        int orderSong = 0;
         public uct_player()
         {
             InitializeComponent();
         }
+        public void handleRemovePlayStateChange()
+        {
+            player.PlayStateChange -= Player_PlayStateChange;
+        }
         public void HandleModeAutoPlay(bool auto)
         {
             isAutoPlay = auto;
-        }
-        public void UpdateListSong(List<Song> list)
-        {
-            currentPlaylist.Clear();
-            currentPlaylist = list;
         }
         public static string ConvertToMinutesAndSeconds(int totalSeconds)
         {
@@ -49,10 +49,11 @@ namespace MediaPlayer
 
             return formattedTime;
         }
-        int orderSong = 0;
         public void SetCurrentPlaylist(List<Song> listSongs)
         {
+            currentPlaylist.Clear();
             currentPlaylist = listSongs;
+            MessageBox.Show(currentPlaylist.Count.ToString());
         }
         public void playRec(string path)
         {
@@ -122,6 +123,11 @@ namespace MediaPlayer
                 {
                     player.controls.play();
                     btn_Play.Checked = true;
+                }
+                else
+                {
+                    player.controls.pause();
+                    btn_Play.Checked = false;   
                 }
             }
             else if (NewState == (int)WMPLib.WMPPlayState.wmppsPlaying)
@@ -287,10 +293,10 @@ namespace MediaPlayer
                 {
                     if (orderSong + 1 == currentPlaylist.Count)
                     {
-                        orderSong = 0;
+                        orderSong = -1;
                     }
-                    else orderSong++;
-                    if (currentPlaylist[orderSong].songId != null)
+                    orderSong++;
+                    if (currentPlaylist[orderSong] != null)
                     {
                         player.PlayStateChange -= Player_PlayStateChange;
                         playMusic(currentPlaylist[orderSong]);

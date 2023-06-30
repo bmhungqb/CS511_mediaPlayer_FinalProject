@@ -83,7 +83,7 @@ namespace MediaPlayer
                     songs.Add(song);
                 }
                 mediaPlayer main = this.ParentForm as mediaPlayer;
-                main.UpdateCurrentListSongs(songs);
+                main.setCurrentListSong(songs);
             }
         }
 
@@ -165,7 +165,7 @@ namespace MediaPlayer
                 }
                 label3.Text = listSongs.Length.ToString() + " songs, " + ConvertToMinutesAndSeconds(time);
                 mediaPlayer main = this.ParentForm as mediaPlayer;
-                main.UpdateCurrentListSongs(songs);
+                main.setCurrentListSong(songs);
             }
         }
 

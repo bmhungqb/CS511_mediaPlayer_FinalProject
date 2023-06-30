@@ -60,30 +60,33 @@ namespace MediaPlayer.API
             string urlSong = null;
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
-            JObject property1 = (JObject)jsonObject["data"];
-            string audioUrl = property1["128"].ToString();
-            using (HttpRequest http = new HttpRequest())
+            if (jsonObject["err"].ToString() == "0")
             {
-                try
+                JObject property1 = (JObject)jsonObject["data"];
+                string audioUrl = property1["128"].ToString();
+                using (HttpRequest http = new HttpRequest())
                 {
-                    // Send a GET request to download the audio
-                    HttpResponse res = http.Get(audioUrl);
-
-                    // Check if the request was successful
-                    if (res.StatusCode == HttpStatusCode.OK)
+                    try
                     {
-                        // Retrieve the audio data as a byte array
-                        byte[] audioData = res.ToBytes();
+                        // Send a GET request to download the audio
+                        HttpResponse res = http.Get(audioUrl);
 
-                        urlSong = Path.GetTempFileName();
-                        // Save the audio data to the temporary file
-                        File.WriteAllBytes(urlSong, audioData);
-                        return urlSong;
+                        // Check if the request was successful
+                        if (res.StatusCode == HttpStatusCode.OK)
+                        {
+                            // Retrieve the audio data as a byte array
+                            byte[] audioData = res.ToBytes();
+
+                            urlSong = Path.GetTempFileName();
+                            // Save the audio data to the temporary file
+                            File.WriteAllBytes(urlSong, audioData);
+                            return urlSong;
+                        }
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
+                    }
                 }
             }
             return urlSong;
@@ -128,7 +131,7 @@ namespace MediaPlayer.API
         public Lyric getLyrics(string data)
         {
             Lyric lyrics = new Lyric();
-            lyrics.sentences = new List<Sentence>();
+            lyrics.sentences = new List<Sentence> { };
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             JObject res = (JObject)jsonObject["data"];
@@ -139,7 +142,7 @@ namespace MediaPlayer.API
                     foreach (JToken subsubitem in subitem.Value)
                     {
                         Sentence sen = new Sentence();
-                        sen.sentence = new List<Word>();
+                        sen.sentence = new List<Word>{ };
                         foreach (JToken subsubsubitem in subsubitem["words"])
                         {
                             Word word = new Word();
@@ -172,6 +175,8 @@ namespace MediaPlayer.API
             homePage.chill = new SectionDetail();
             homePage.artistPopular = new SectionDetail();
             homePage.energyPositive = new SectionDetail();
+            homePage.banner = new SectionDetail();
+            homePage.banner.listBanners = new List<BannerItem> {};
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             JObject property1 = (JObject)jsonObject["data"];
@@ -183,8 +188,6 @@ namespace MediaPlayer.API
                     {
                         if (subitem["sectionType"].ToString() == "banner")
                         {
-                            homePage.banner = new SectionDetail();
-                            homePage.banner.listBanners = new List<BannerItem> { new BannerItem() };
                             homePage.banner.sectionType = subitem["sectionType"].ToString();
                             foreach(JToken subsubitem in subitem["items"])
                             {
@@ -200,7 +203,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "new-release" && subitem["title"].ToString() == "Mới phát hành")
                         {
                             homePage.newRelease = new SectionDetail();
-                            homePage.newRelease.listSongs = new List<Song> {};
+                            homePage.newRelease.listSongs = new List<Song> { };
                             homePage.newRelease.title = subitem["title"].ToString();
                             homePage.newRelease.sectionType = subitem["sectionType"].ToString();
                             JObject obj = (JObject)subitem["items"];
@@ -225,7 +228,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Chill")
                         {
                             homePage.chill = new SectionDetail();
-                            homePage.chill.listPlaylists = new List<Playlist>();
+                            homePage.chill.listPlaylists = new List<Playlist> { };
                             homePage.chill.title = subitem["title"].ToString();
                             homePage.chill.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])
@@ -240,7 +243,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Nghệ sĩ thịnh hành")
                         {
                             homePage.artistPopular = new SectionDetail();
-                            homePage.artistPopular.listPlaylists = new List<Playlist>();
+                            homePage.artistPopular.listPlaylists = new List<Playlist>{ };
                             homePage.artistPopular.title = subitem["title"].ToString();
                             homePage.artistPopular.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])
@@ -255,7 +258,7 @@ namespace MediaPlayer.API
                         else if (subitem["sectionType"].ToString() == "playlist" && subitem["title"].ToString() == "Năng lượng tích cực")
                         {
                             homePage.energyPositive = new SectionDetail();
-                            homePage.energyPositive.listPlaylists = new List<Playlist>();
+                            homePage.energyPositive.listPlaylists = new List<Playlist>{ };
                             homePage.energyPositive.title = subitem["title"].ToString();
                             homePage.energyPositive.sectionType = subitem["sectionType"].ToString();
                             foreach (JObject subsubitem in subitem["items"])
@@ -281,8 +284,8 @@ namespace MediaPlayer.API
         public Song getInfoSong(string data)
         {
             Song song = new Song();
-            song.artists = new List<Artist>();
-            song.genres = new List<Genre>();
+            song.artists = new List<Artist>{ };
+            song.genres = new List<Genre>{ };
             song.album = new Album();
             song.lyric = new Lyric();
             dynamic response = JsonConvert.DeserializeObject(data);
@@ -318,8 +321,8 @@ namespace MediaPlayer.API
             JObject res = (JObject)jsonObject["data"];
 
             Artist artist = new Artist();
-            artist.listSongs = new List<Song>();
-            artist.listAlbums = new List<Album>();
+            artist.listSongs = new List<Song>{ };
+            artist.listAlbums = new List<Album>{ };
             artist.artistId = res["id"].ToString();
             artist.name = res["name"].ToString();
             artist.alias = res["alias"].ToString();
@@ -344,7 +347,7 @@ namespace MediaPlayer.API
          */
         public List<Song> getListArtistSong(string data) 
         {
-            List<Song> list = new List<Song>();
+            List<Song> list = new List<Song>{ };
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
             JObject res = (JObject)jsonObject["data"];
@@ -448,11 +451,11 @@ namespace MediaPlayer.API
             playlist.thumbnailM = res["thumbnailM"].ToString();
             playlist.sortDescription = res["sortDescription"].ToString();
             playlist.artistsNames = res["artistsNames"].ToString();
-            playlist.artists = new List<Artist>();
-            playlist.genres = new List<Genre>();
+            playlist.artists = new List<Artist>{ };
+            playlist.genres = new List<Genre>{ };
             playlist.totalLike = int.Parse(res["like"].ToString());
             playlist.totalListen = int.Parse(res["listen"].ToString());
-            playlist.listSongs = new List<Song> { new Song() };
+            playlist.listSongs = new List<Song>{ };
             JObject obj = (JObject)res["song"];
             foreach (var subsubitem in obj.Properties())
             {
@@ -486,10 +489,10 @@ namespace MediaPlayer.API
         public Search handleSearch(string data)
         {
             Search search = new Search();
-            search.listArtists = new List<Artist>();
-            search.listSongs = new List<Song>();
-            search.listVideos = new List<Video>();
-            search.listPlaylists = new List<Playlist>();
+            search.listArtists = new List<Artist>{ };
+            search.listSongs = new List<Song>{ };
+            search.listVideos = new List<Video>{ };
+            search.listPlaylists = new List<Playlist>{ };
 
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
@@ -558,11 +561,11 @@ namespace MediaPlayer.API
         public ChartHome getHomeChart(string data)
         {
             ChartHome chart = new ChartHome();
-            chart.listSongs = new List<Song>();
+            chart.listSongs = new List<Song>{ };
             chart.chart = new Chart();
-            chart.chart.top1 = new List<dataChart>();
-            chart.chart.top2 = new List<dataChart>();
-            chart.chart.top3 = new List<dataChart>();
+            chart.chart.top1 = new List<dataChart>{ };
+            chart.chart.top2 = new List<dataChart>{ };
+            chart.chart.top3 = new List<dataChart>{ };
             chart.chart.times = new List<string>();
             dynamic response = JsonConvert.DeserializeObject(data);
             JObject jsonObject = (JObject)response;
@@ -595,7 +598,7 @@ namespace MediaPlayer.API
                             int i = 1;
                             foreach(var subsubsubitem in subsubitem.Value)
                             {
-                                List<dataChart> list = new List<dataChart>();
+                                List<dataChart> list = new List<dataChart>{ };
                                 foreach(var subsubsubsubitem in subsubsubitem)
                                 {
                                     foreach(JToken subsubsubsubsubitem in subsubsubsubitem)

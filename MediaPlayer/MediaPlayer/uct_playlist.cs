@@ -35,20 +35,20 @@ namespace MediaPlayer
           //  guna2CustomGradientPanel2.Width = 1370;
             string res = await zingMp3Api.GetDetailPlaylist(a.playlistId);
             a=Utils.getPlaylist(res);
-            List<Song> song = a.listSongs;
+            List<Song> songs = a.listSongs;
             name.Text = a.title;
             pic_thumb_artist.Image = Utils.getImage(a.thumbnailM);
             //List<string> lyricsList = lyrics.lyric;
             //// Thực hiện các hành động cần thiết khi mở UserControlB
             int i;
-            for (i = 1; i < song.Count; i++) 
+            for (i = 1; i < songs.Count; i++) 
             {
-                uct_song curr = new uct_song(i.ToString(),song[i]);
+                uct_song curr = new uct_song(i.ToString(),songs[i]);
                 flowLayoutPanel1.Controls.Add(curr);
             }
             label3.Text = a.totalSongs.ToString() + " songs, " + ConvertToMinutesAndSeconds(a.totalDuration);
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.UpdateCurrentListSongs(song);
+            main.setCurrentListSong(songs);
         }
 
        

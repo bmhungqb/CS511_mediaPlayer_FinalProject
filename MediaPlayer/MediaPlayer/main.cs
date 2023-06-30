@@ -26,18 +26,18 @@ namespace MediaPlayer
             BackColor = Color.Transparent;
             string response = await zingMp3Api.GetHome();
             dataHomePage = Utils.getHome(response);
-            for (int i = 1; i < dataHomePage.banner.listBanners.Count(); i++)
+            for (int i = 0; i < dataHomePage.banner.listBanners.Count(); i++)
             {
                 BannerItem a = dataHomePage.banner.listBanners[i];
                 banner ban = new banner(a);
                 flow_banner.Controls.Add(ban);
             }
-            for (int i = 1; i < dataHomePage.newRelease.listSongs.Count(); i++)
+            for (int i = 0; i < dataHomePage.newRelease.listSongs.Count(); i++)
             {
                 new_release new_Release = new new_release(dataHomePage.newRelease.listSongs[i]);
                 flow_new.Controls.Add(new_Release);
             }
-            for (int i = 1; i < dataHomePage.chill.listPlaylists.Count(); i++)
+            for (int i = 0; i < dataHomePage.chill.listPlaylists.Count(); i++)
             {
                 //usercontrol artist popular use for both chill & popular artists
                 Playlist a = dataHomePage.chill.listPlaylists[i];
@@ -45,7 +45,7 @@ namespace MediaPlayer
                 artist_Popular.OpenPlaylistRequested += Artist_Popular_OpenPlaylistRequested;
                 flow_chill.Controls.Add(artist_Popular);
             }
-            for (int i = 1; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
+            for (int i = 0; i < dataHomePage.energyPositive.listPlaylists.Count(); i++)
             {
                 label8.Text = "Positive Energy";
                 Playlist a = dataHomePage.energyPositive.listPlaylists[i];
@@ -54,7 +54,7 @@ namespace MediaPlayer
                 flow_artist.Controls.Add(artist_Popular);
             }
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.UpdateCurrentListSongs(dataHomePage.newRelease.listSongs);
+            main.setCurrentListSong(dataHomePage.newRelease.listSongs);
             //for (int i = 1; i < dataHomePage.artistPopular.listPlaylists.Count(); i++)
             //{
             //    label8.Text = "Popular Artists";

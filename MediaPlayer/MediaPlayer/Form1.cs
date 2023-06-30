@@ -24,15 +24,12 @@ namespace MediaPlayer
         uct_player player = new uct_player();
         public void testPlayMusic(Song song)
         {
+            player.handleRemovePlayStateChange();
             player.playMusic(song);
         }
         public void playRecs(string url)
         {
             player.playRec(url);
-        }
-        public void UpdateCurrentListSongs(List<Song> listSongs)
-        {
-            player.UpdateListSong(listSongs);
         }
         public void setCurrentListSong(List<Song> listSongs)
         {
