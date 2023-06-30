@@ -29,6 +29,8 @@ namespace MediaPlayer
             currentChart = Utils.getHomeChart(res);
             loadChart(currentChart);
             loadSongs(currentChart);
+            mediaPlayer main = this.ParentForm as mediaPlayer;
+            main.setCurrentListSong(currentChart.listSongs);
         }
         private void loadChart(ChartHome chartdata)
         {
@@ -69,7 +71,7 @@ namespace MediaPlayer
             int i = 1;
             foreach (Song song in chartdata.listSongs)
             {
-                if (i > 30) return;
+                //if (i > 30) return;
                 pnl_flow_rank.Controls.Add(new uct_song(i.ToString(), song));
                 i++;
             }
