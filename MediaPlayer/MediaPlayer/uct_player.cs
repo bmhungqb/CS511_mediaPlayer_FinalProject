@@ -95,7 +95,7 @@ namespace MediaPlayer
             string dataSong = await zingMp3Api.GetSong(currentSong.songId);
             player.URL = Utils.getSong(dataSong);
 
-            player.PlayStateChange += Player_PlayStateChange;
+            player.PlayStateChange += Player_PlayStateChange; 
             lblPlayDuration.Text = ConvertToMinutesAndSeconds(currentSong.duration);
             lbl_song.Text = currentSong.title;
             btn_Play.Checked = false;
