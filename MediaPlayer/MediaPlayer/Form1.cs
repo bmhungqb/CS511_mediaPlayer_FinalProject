@@ -42,6 +42,10 @@ namespace MediaPlayer
         {
             player.toggleBackLyricKara();
         }
+        public void handleModeAutoPlay(bool res)
+        {
+            player.HandleModeAutoPlay(res);
+        }
         public void updatetimerLyricFromPlayer(int time)
         {
             uct_lyrics lyric = panel1.Controls.OfType<uct_lyrics>().FirstOrDefault();

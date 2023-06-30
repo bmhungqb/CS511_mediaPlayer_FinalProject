@@ -134,6 +134,7 @@
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.Lime;
             this.guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 7;
             this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.Fuchsia;
+            this.guna2ToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ToggleSwitch1.Location = new System.Drawing.Point(1155, 131);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(55, 25);
@@ -144,6 +145,7 @@
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.Lime;
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderRadius = 7;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.Lime;
+            this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
             // guna2HtmlLabel3
             // 

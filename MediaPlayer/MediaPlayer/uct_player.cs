@@ -31,6 +31,10 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
+        public void HandleModeAutoPlay(bool auto)
+        {
+            isAutoPlay = auto;
+        }
         public void UpdateListSong(List<Song> list)
         {
             currentPlaylist.Clear();
