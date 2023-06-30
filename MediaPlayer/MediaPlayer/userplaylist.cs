@@ -56,6 +56,7 @@ namespace MediaPlayer
                 {
                     count++;
                     ucr_rec uct_Song = new ucr_rec(count.ToString(), line);
+                    uct_Song.DelRecRequested += Uct_Song_DelRecRequested;
                     flow_song.Controls.Add(uct_Song);
                 }
             }
@@ -85,6 +86,33 @@ namespace MediaPlayer
                 main.UpdateCurrentListSongs(songs);
             }
         }
+
+        private void Uct_Song_DelRecRequested(object sender, EventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Do you want to delete this record?", "Warning", MessageBoxButtons.YesNo);
+            if (dlr == DialogResult.Yes)
+            {
+                ucr_rec rec = sender as ucr_rec;
+                string recToRemove = rec.filepath;
+                string list = Path.Combine(path, "listSongs.txt");
+                string[] lines = File.ReadAllLines(list);
+                if (Array.IndexOf(lines, recToRemove) != -1)
+                {
+                    lines = lines.Where(line => line != recToRemove).ToArray();
+                    File.WriteAllLines(list, lines);
+                }
+                string infor = Path.Combine(path, "playlistInfor.txt");
+                string[] listRecs = File.ReadAllLines(list);
+                string[] inforRecs = File.ReadAllLines(infor);
+                File.WriteAllText(infor, string.Empty);
+                File.AppendAllText(infor, inforRecs[0] + "\n" +
+                    listRecs.Length.ToString() + " records" + "\n");
+                File.Delete(recToRemove);
+                flow_song.Controls.Clear();
+                loaddata(path);
+            }
+        }
+
         private async void loaddata(string filepath)
         {
             string infor = Path.Combine(filepath, "playlistInfor.txt");
@@ -108,6 +136,7 @@ namespace MediaPlayer
                 {
                     count++;
                     ucr_rec uct_Song = new ucr_rec(count.ToString(), line);
+                    uct_Song.DelRecRequested += Uct_Song_DelRecRequested;
                     flow_song.Controls.Add(uct_Song);
                 }
             }
@@ -139,6 +168,7 @@ namespace MediaPlayer
                 main.UpdateCurrentListSongs(songs);
             }
         }
+
         private void pictureBox3_Click(object sender, EventArgs e)//refresh
         {
             flow_song.Controls.Clear();

@@ -15,7 +15,7 @@ namespace MediaPlayer
     public partial class ucr_rec : UserControl
     {
         string ID;
-        string filepath;
+        public string filepath;
         public ucr_rec(string id, string path)
         {
             InitializeComponent();
@@ -58,6 +58,11 @@ namespace MediaPlayer
         {
             mediaPlayer main = this.ParentForm as mediaPlayer;
             main.playRecs(filepath);
+        }
+        public event EventHandler DelRecRequested;
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DelRecRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

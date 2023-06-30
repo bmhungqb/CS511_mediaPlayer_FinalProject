@@ -1,2 +1,1 @@
-D:\UIT\nam2\HK2\C#\khanhien.wav
-D:\UIT\nam2\HK2\C#\1.wav
+C:\Users\khanh\Downloads\1.wav
