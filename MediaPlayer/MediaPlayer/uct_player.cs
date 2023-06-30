@@ -26,6 +26,7 @@ namespace MediaPlayer
         public Song currentSong = new Song();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         List<Song> currentPlaylist = new List<Song>();
+        bool isAutoPlay = true; 
         public uct_player()
         {
             InitializeComponent();
@@ -111,13 +112,22 @@ namespace MediaPlayer
         }
         private void Player_PlayStateChange(int NewState)
         {
-            if (NewState == (int)WMPLib.WMPPlayState.wmppsPlaying)
+            if(NewState == (int)WMPLib.WMPPlayState.wmppsReady)
+            {
+                if(isAutoPlay)
+                {
+                    player.controls.play();
+                    btn_Play.Checked = true;
+                }
+            }
+            else if (NewState == (int)WMPLib.WMPPlayState.wmppsPlaying)
             {
                 TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
             }
             else if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
             {
+                btn_Play.Checked = false;
                 if(btn_random.Checked)
                 {
                     Random rdn = new Random();
@@ -126,6 +136,7 @@ namespace MediaPlayer
                     orderSong = OrderSong;
                     if (currentPlaylist[orderSong].songId != null)
                     {
+                        player.PlayStateChange -= Player_PlayStateChange;
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }
@@ -133,7 +144,24 @@ namespace MediaPlayer
                 {
                     if (currentPlaylist[orderSong].songId != null)
                     {
+                        player.PlayStateChange -= Player_PlayStateChange;
                         playMusic(currentPlaylist[orderSong]);
+                    }
+                }
+                else
+                {
+                    if (currentPlaylist.Count > 0)
+                    {
+                        if (orderSong + 1 == currentPlaylist.Count)
+                        {
+                            orderSong = 0;
+                        }
+                        else orderSong++;
+                        if (currentPlaylist[orderSong].songId != null)
+                        {
+                            player.PlayStateChange -= Player_PlayStateChange;
+                            playMusic(currentPlaylist[orderSong]);
+                        }
                     }
                 }
             }
@@ -244,6 +272,7 @@ namespace MediaPlayer
                     else orderSong--;
                     if(currentPlaylist[orderSong].songId != null)
                     {
+                        player.PlayStateChange -= Player_PlayStateChange;
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }
@@ -259,6 +288,7 @@ namespace MediaPlayer
                     else orderSong++;
                     if (currentPlaylist[orderSong].songId != null)
                     {
+                        player.PlayStateChange -= Player_PlayStateChange;
                         playMusic(currentPlaylist[orderSong]);
                     }
                 }

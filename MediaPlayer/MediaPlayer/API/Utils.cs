@@ -188,10 +188,13 @@ namespace MediaPlayer.API
                             homePage.banner.sectionType = subitem["sectionType"].ToString();
                             foreach(JToken subsubitem in subitem["items"])
                             {
-                                BannerItem banner = new BannerItem();
-                                banner.banner = subsubitem["banner"].ToString();
-                                banner.songId = subsubitem["encodeId"].ToString();
-                                homePage.banner.listBanners.Add(banner);
+                                if (subsubitem["type"].ToString() == "1")
+                                {
+                                    BannerItem banner = new BannerItem();
+                                    banner.banner = subsubitem["banner"].ToString();
+                                    banner.songId = subsubitem["encodeId"].ToString();
+                                    homePage.banner.listBanners.Add(banner);
+                                }
                             }
                         }
                         else if (subitem["sectionType"].ToString() == "new-release" && subitem["title"].ToString() == "Mới phát hành")
