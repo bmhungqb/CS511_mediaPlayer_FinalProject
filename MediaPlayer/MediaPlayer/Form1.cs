@@ -22,10 +22,10 @@ namespace MediaPlayer
             InitializeComponent();
         }
         uct_player player = new uct_player();
-        public void testPlayMusic(Song song)
+        public void testPlayMusic(Song song,int id = -1)
         {
             player.handleRemovePlayStateChange();
-            player.playMusic(song);
+            player.playMusic(song,id);
         }
         public void playRecs(Song song)
         {

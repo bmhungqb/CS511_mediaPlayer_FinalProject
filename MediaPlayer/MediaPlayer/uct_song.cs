@@ -85,7 +85,7 @@ namespace MediaPlayer
         private void pt_thumb_Click(object sender, EventArgs e)
         {
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            main.testPlayMusic(currentSong);
+            main.testPlayMusic(currentSong,int.Parse(ID));
         }
         public static string ConvertToHoursAndSeconds(int totalSeconds)
         {

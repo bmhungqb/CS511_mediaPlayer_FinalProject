@@ -77,7 +77,7 @@ namespace MediaPlayer
                 }
             }
             mediaPlayer main = this.ParentForm as mediaPlayer;
-            if(dataHomePage.newRelease.listSongs != null)
+            if(dataHomePage.newRelease.listSongs != null && dataHomePage.newRelease.listSongs.Count > 0)
             {
                 main.setCurrentListSong(dataHomePage.newRelease.listSongs);
             }

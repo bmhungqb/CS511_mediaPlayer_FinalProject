@@ -106,8 +106,12 @@ namespace MediaPlayer
             }
         }
 
-        public async void playMusic(Song song)
+        public async void playMusic(Song song,int id = -1)
         {
+            if(id != -1 && id-1 >=0 && id <= currentPlaylist.Count)
+            {
+                orderSong = id-1;
+            }
             handleVisibleRecordoOrSong(true);
             if (song == null)
             {
