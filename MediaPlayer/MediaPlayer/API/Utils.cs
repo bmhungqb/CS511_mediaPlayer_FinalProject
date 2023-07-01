@@ -457,7 +457,9 @@ namespace MediaPlayer.API
             playlist.totalListen = int.Parse(res["listen"].ToString());
             playlist.listSongs = new List<Song>{ };
             JObject obj = (JObject)res["song"];
-            foreach (var subsubitem in obj.Properties())
+            if(obj != null)
+            {
+                foreach (var subsubitem in obj.Properties())
             {
                 if (subsubitem.Name == "items")
                 {
@@ -483,6 +485,7 @@ namespace MediaPlayer.API
                 {
               playlist.totalDuration = int.Parse(subsubitem.Value.ToString());
                 }
+            }
             }
             return playlist;
         }
