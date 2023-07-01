@@ -61,6 +61,7 @@
             this.btn_playlist.BackColor = System.Drawing.Color.Transparent;
             this.btn_playlist.BorderColor = System.Drawing.Color.Transparent;
             this.btn_playlist.BorderRadius = 22;
+            this.btn_playlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_playlist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_playlist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_playlist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -82,6 +83,7 @@
             this.btn_artist.BackColor = System.Drawing.Color.Transparent;
             this.btn_artist.BorderColor = System.Drawing.Color.Transparent;
             this.btn_artist.BorderRadius = 22;
+            this.btn_artist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_artist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_artist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_artist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -103,6 +105,7 @@
             this.btn_song.BackColor = System.Drawing.Color.Transparent;
             this.btn_song.BorderColor = System.Drawing.Color.Transparent;
             this.btn_song.BorderRadius = 22;
+            this.btn_song.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_song.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_song.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_song.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -124,6 +127,7 @@
             this.btn_all.BackColor = System.Drawing.Color.Transparent;
             this.btn_all.BorderColor = System.Drawing.Color.Transparent;
             this.btn_all.BorderRadius = 22;
+            this.btn_all.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_all.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_all.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_all.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

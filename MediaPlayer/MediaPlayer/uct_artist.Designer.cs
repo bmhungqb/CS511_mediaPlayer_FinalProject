@@ -90,7 +90,7 @@
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.HoverState.Image = global::MediaPlayer.Properties.Resources.ic_back48new_active;
             this.btn_back.HoverState.ImageSize = new System.Drawing.Size(48, 48);
-            this.btn_back.Image = global::MediaPlayer.Properties.Resources.ic_back;
+            this.btn_back.Image = global::MediaPlayer.Properties.Resources.ic_back48new1;
             this.btn_back.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_back.ImageRotate = 0F;
             this.btn_back.ImageSize = new System.Drawing.Size(48, 48);
@@ -219,6 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.panel1);
             this.Name = "uct_artist";
             this.Size = new System.Drawing.Size(1382, 1239);

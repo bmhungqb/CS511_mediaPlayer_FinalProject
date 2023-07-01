@@ -87,6 +87,7 @@
             this.guna2GradientButton1.AutoRoundedCorners = true;
             this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton1.BorderRadius = 21;
+            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

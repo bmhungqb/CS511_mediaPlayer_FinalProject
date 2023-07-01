@@ -73,6 +73,7 @@
             this.guna2Button1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Button1.BorderRadius = 19;
             this.guna2Button1.BorderThickness = 3;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -113,7 +114,7 @@
             this.Controls.Add(this.lb_singer);
             this.Controls.Add(this.lb_song);
             this.Controls.Add(this.pt_thumb);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "add_song";
             this.Size = new System.Drawing.Size(1329, 100);
             this.Load += new System.EventHandler(this.add_song_Load);

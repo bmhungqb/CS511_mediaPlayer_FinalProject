@@ -65,6 +65,7 @@
             // btn_send
             // 
             this.btn_send.BorderRadius = 20;
+            this.btn_send.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_send.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_send.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_send.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -82,6 +83,7 @@
             // btn_check
             // 
             this.btn_check.BorderRadius = 20;
+            this.btn_check.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_check.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_check.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_check.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

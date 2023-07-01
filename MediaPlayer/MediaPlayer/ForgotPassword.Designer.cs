@@ -70,6 +70,7 @@
             // btn_send
             // 
             this.btn_send.BorderRadius = 20;
+            this.btn_send.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_send.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_send.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_send.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -107,6 +108,7 @@
             // guna2GradientButton2
             // 
             this.guna2GradientButton2.BorderRadius = 20;
+            this.guna2GradientButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

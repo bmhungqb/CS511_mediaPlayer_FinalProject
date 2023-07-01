@@ -125,8 +125,16 @@ namespace MediaPlayer
             player.PlayStateChange += Player_PlayStateChange; 
             lblPlayDuration.Text = ConvertToMinutesAndSeconds(currentSong.duration);
             lbl_song.Text = currentSong.title;
-            btn_Play.Checked = false;
-            player.controls.pause();
+            if(isAutoPlay)
+            {
+                btn_Play.Checked = true;
+                player.controls.play();
+            }   
+            else
+            {
+                btn_Play.Checked = false;
+                player.controls.pause();
+            }
             lbl_singer.Text = currentSong.artistsNames;
             pt_thumb.Image = Utils.getImage(currentSong.thumbnail);
 
@@ -160,6 +168,7 @@ namespace MediaPlayer
             {
                 TimeSpan durationTimeSpan = TimeSpan.FromSeconds(player.controls.currentItem.duration);
                 sliderMusic.Maximum = (int)durationTimeSpan.TotalSeconds;
+                lblPlayDuration.Text = player.currentMedia.durationString;
             }
             else if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
             {

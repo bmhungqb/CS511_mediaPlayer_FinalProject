@@ -75,6 +75,7 @@
             // pt_artist
             // 
             this.pt_artist.BackColor = System.Drawing.Color.Transparent;
+            this.pt_artist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pt_artist.ImageRotate = 0F;
             this.pt_artist.Location = new System.Drawing.Point(3, 3);
             this.pt_artist.Name = "pt_artist";
